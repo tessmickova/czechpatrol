@@ -1,5 +1,545 @@
 [
   {
+    "id": "k-c3468e9af885959a",
+    "zachyceno": "2026-11-22T21:00:29.885Z",
+    "publikovano": "2026-11-22T20:55:34.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/un-autovehicul-al-stb-a-fost-implicat-intr-un-accident-rutier-trei-pasageri-au-fost-raniti-4048233",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Un autovehicul al STB a fost implicat într-un accident rutier. Trei pasageri au fost răniți",
+    "shrnuti": "Un autovehicul al Societăţii de Transport Bucureşti a fost implicat îmtr-un accident rutier care s-a produs duminică seară pe Şoseaua Bucureşti-Târgovişte, trei persoane fiind rănite.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d3adc4de5d9a4835",
+    "zachyceno": "2026-11-22T21:00:28.357Z",
+    "publikovano": "2026-11-22T20:55:24.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3448954/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Umweltschutzorganisationen üben Kritik",
+    "shrnuti": "Nach dem erfolglosen Ende der Weltklimakonferenz COP31 sparen Umweltschutz- und Menschrechtsorganisationen nicht mit Kritik an den Teilnehmenden. Der Gipfel war gescheitert, da sich die Delegierten nicht auf eine gemeinsame Abschlusserklärung einigen konnten. Die EU und weitere Staaten lehnten den l",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-81a750689dd20da3",
+    "zachyceno": "2026-11-22T21:00:28.695Z",
+    "publikovano": "2026-11-22T20:53:57.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://turystyka.rp.pl/lotniska/art45525531-strajk-w-belgii-wstrzymuje-ruch-lotniczy-lotniska-w-brukseli-i-charleroi-odwoluja-loty",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Strajk w Belgii wstrzymuje ruch lotniczy. Lotniska w Brukseli i Charleroi odwołują loty",
+    "shrnuti": "W poniedziałek, 23 listopada, regularna obsługa ruchu lotniczego na belgijskich lotniskach zostanie wstrzymana na 14 godzin. Powodem jest ogólnokrajowy strajk związków zawodowych, do którego dołączą kontrolerzy ruchu lotniczego. Utrudnienia dotkną dziesiątki tysięcy podróżnych.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b9e8907265993d9d",
+    "zachyceno": "2026-11-22T21:00:28.627Z",
+    "publikovano": "2026-11-22T20:53:28.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/domov/c/ps-a-demokrati-si-prispevok-za-volby-rozdielia-v-pomere-4-1-ak-budu-mat-uspech-pride-aj-bonus?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "PS a Demokrati si príspevok za voľby rozdielia v pomere 4:1, ak budú mať úspech, príde aj bonus",
+    "shrnuti": "Naď hovorí o emisároch, Gröhling vyzýva, aby radšej predstavili, ako budú spoločne vládnuť.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6e793ad5e0e3803b",
+    "zachyceno": "2026-11-22T21:00:30.185Z",
+    "publikovano": "2026-11-22T20:50:32.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/sub-amenintarea-lui-le-pen-germania-vrea-un-mecanism-prin-care-finantarea-ucrainei-sa-fie-protejata-de-eventuale-veto-uri-ale-guvernelor-ue.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sub amenințarea lui Le Pen, Germania vrea un mecanism prin care finanțarea Ucrainei să fie protejată de eventuale veto-uri ale guvernelor UE",
+    "shrnuti": "Germania încearcă să introducă în următorul buget pe termen lung al Uniunii Europene un mecanism de finanțare pentru Ucraina care să nu poată fi blocat ușor de guvernele statelor membre, relatează Politico. Inițiativa Berlinului urmărește inclusiv să împiedice eventuale obstrucționări din partea uno",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f0f6808a2c16a770",
+    "zachyceno": "2026-11-22T21:00:28.608Z",
+    "publikovano": "2026-11-22T20:49:36.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/video/wann-aufruestung-gefaehrlich-wird-europas-dilemma-mit-russland-ld.10071812",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "VIDEO - Wann Aufrüstung gefährlich wird: Europas Dilemma mit Russland",
+    "shrnuti": "Russland produziert immer mehr Drohnen und Munition. Europas Nato-Staaten reagieren mit neuen Abwehrsystemen und weitreichenden Waffen. Doch was zur Abschreckung dienen soll, könnte im Ernstfall eine gefährliche Eskalation auslösen. Ein hypothetisches Szenario in Kaliningrad zeigt, wie schnell milit",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-adab7da7d496c6af",
+    "zachyceno": "2026-11-22T21:00:28.713Z",
+    "publikovano": "2026-11-22T20:48:51.000Z",
+    "zdroj": {
+      "nazev": "HVG (Maďarsko)",
+      "url": "https://hvg.hu/itthon/20261122_semjen-zsolt-azert-retvari-bencenek-adna-at-a-partot-mert-slagfertig-es-o-epitgette-eveken-at",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Semjén a „slágfertig” Rétváriról és a „dörzsölt” Sesztákról mesélt Bayer Zsoltnak",
+    "shrnuti": "A KDNP elnöke a stafétaátadásról, Seszták Miklósról és saját magáról is beszélt Bayer Zsolt műsorában.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a31fb3b5d8c9237c",
+    "zachyceno": "2026-11-22T21:00:28.951Z",
+    "publikovano": "2026-11-22T20:46:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/suomi/art-2000012430086.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sää | Lumisateet saapuvat etelään, aamuksi luvassa huonoa ajokeliä",
+    "shrnuti": "Huonon ajokelin varoitus on voimassa maanantaiaamuna Etelä- ja Itä-Suomessa. Etelärannikolla lumet saattavat sulaa jo päivän aikana.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6385e030728de7c1",
+    "zachyceno": "2026-11-22T21:00:28.358Z",
+    "publikovano": "2026-11-22T20:45:54.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3448978/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nestroy-Preis: Felicitas Brucker erhält Regiepreis für „Cache“",
+    "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e04446d687eb90fa",
+    "zachyceno": "2026-11-22T21:00:28.102Z",
+    "publikovano": "2026-11-22T20:43:05.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/live/2026/nov/23/anthony-albanese-digital-duty-of-care-labor-greens-coalition-one-nation-angus-taylor-pauline-hanson-penny-wong-ai-ntwnfb",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Australian politics live: small business carveout in digital duty of care; countdown to pass key legislation begins",
+    "shrnuti": "Get our breaking news email , free app or daily news podcast ‘Very difficult to bridge that divide’: Watt Cabinet minister Murray Watt says it’s increasingly difficult to bridge the divide between nations on climate policy after a pretty frustrating and disappointing COP summit that didn’t reach a f",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-70333bd0d0ed460d",
+    "zachyceno": "2026-11-22T21:00:29.404Z",
+    "publikovano": "2026-11-22T20:41:36.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2640649",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nieuwe aanvallen op tankers bij Straat van Hormuz gemeld",
+    "shrnuti": "In de Straat van Hormuz zijn nieuwe aanvallen gemeld op de civiele scheepvaart. Volgens Iraanse staatsmedia zijn nog eens twee tankers in brand gevlogen door ontploffende zeemijnen. De Britse maritieme autoriteit UKMTO meldt één incident met betrekking tot een tanker en \"militaire eenheden\". Dat geb",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f7728782cfc8c1c2",
+    "zachyceno": "2026-11-22T21:00:28.610Z",
+    "publikovano": "2026-11-22T20:41:35.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/international/die-usa-nach-den-midterms-trotz-harscher-kritik-bezeichnet-trump-putin-erneut-als-freund-ld.10056111",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "LIVE-TICKER - Die USA nach den Midterms: Demokraten im Repräsentantenhaus so stark wie zuletzt 1992",
+    "shrnuti": "Die neuesten Meldungen aus den USA während der zweiten Amtszeit von Präsident Donald Trump.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-00cd6d88487e2832",
+    "zachyceno": "2026-11-22T21:00:28.203Z",
+    "publikovano": "2026-11-22T20:38:31.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/11/22/finland-confirms-russia-is-towing-drone-hit-cargo-ship-after-baltic-sea-attack",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Finland confirms Russia is towing drone-hit cargo ship after Baltic Sea attack",
+    "shrnuti": "Russian authorities begin towing a damaged military-linked cargo vessel after a suspected Ukrainian drone attack near Finnish waters, highlighting growing security risks in the Baltic Sea.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1d8ac3d86e19ad5f",
+    "zachyceno": "2026-11-22T21:00:28.697Z",
+    "publikovano": "2026-11-22T20:36:33.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/polityka/art45525741-turcy-protestuja-w-obronie-wolnych-mediow-tlumy-na-ulicach-w-stambule",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Turcy protestują w obronie wolnych mediów. Tłumy na ulicach w Stambule",
+    "shrnuti": "Kilka tysięcy osób protestowało w Stambule przeciwko przejmowaniu niezależnych mediów i represjom wobec opozycji. To reakcja na kolejną interwencję władz w redakcji telewizji krytycznej wobec rządu.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0821869aad22bc42",
+    "zachyceno": "2026-11-22T21:00:29.887Z",
+    "publikovano": "2026-11-22T20:35:40.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/se-teme-aur-de-nicusor-dan-dungaciu-vor-fi-diverse-presiuni-de-un-tip-sau-de-altul-4048219",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Se teme AUR de Nicușor Dan? Dungaciu: „Vor fi diverse presiuni de un tip sau de altul”",
+    "shrnuti": "Prim-vicepreședintele AUR, Dan Dungaciu, a spus la Digi24 că temerile președintelui Nicușor Dan față de rezultatul alegerilor din 2028 sunt legate de faptul că „România e guvernată prost”. Pe de altă parte, întrebat dacă AUR se teme de Nicușor Dan, Dungaciu a susținut că se așteaptă la „presiuni, nu",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0ee256f0a6ff48c2",
+    "zachyceno": "2026-11-22T21:00:30.187Z",
+    "publikovano": "2026-11-22T20:30:50.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/o-teorie-despre-originea-vietii-pe-pamant-pusa-sub-semnul-intrebarii-de-simulari-ce-rol-au-avut-cometele.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "O teorie despre originea vieții pe Pământ, pusă sub semnul întrebării de simulări / Ce rol au avut cometele",
+    "shrnuti": "O teorie potrivit căreia cometele au adus pe Pământ moleculele necesare apariției vieții ar putea avea nevoie de o revizuire, după ce noi simulări computerizate au arătat că aceste corpuri cerești ar fi avut șanse foarte mici să transporte până la suprafața planetei substanțe organice intacte, relat",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-45966cca481bcaec",
+    "zachyceno": "2026-11-22T21:00:28.360Z",
+    "publikovano": "2026-11-22T20:29:32.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3448977/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US-Popstar Miley Cyrus hat zum zweiten Mal geheiratet",
+    "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6f1c80342f2cefc3",
+    "zachyceno": "2026-11-22T21:00:28.953Z",
+    "publikovano": "2026-11-22T20:27:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/urheilu/art-2000012428910.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Salibandy | Kimmo Nurminen voitti salibandyn puheenjohtajavaalin – taustassa puhutteleva piirre",
+    "shrnuti": "Salibandyliitolle valittiin puheenjohtaja, joka hoiti jo aiemmin samankaltaista virkaa.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c7dff704a3ea5c49",
+    "zachyceno": "2026-11-22T21:00:27.437Z",
+    "publikovano": "2026-11-22T20:26:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/historie/uzkokolejka-zabezpecuje-prejezdy-na-trasach-mezi-jihoceskym-krajem-a-vysocinou_2611222126_mkm",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Úzkokolejka zabezpečuje přejezdy na trasách mezi Jihočeským krajem a Vysočinou, signalizace je dar",
+    "shrnuti": "Jindřichohradecká úzkokolejka, která na jaře obnovila po 3,5 letech provoz, postupně opravuje tratě a zabezpečuje přejezdy. Nejnověji získal zabezpečení přejezd v Nekrasíně u Jarošova nad Nežárkou, kde železnice křížila silnici pod nebezpečným úhlem. Světelnou signalizaci má zatím 11 ze 135 křížení.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c60ed1b60973f89c",
+    "zachyceno": "2026-11-22T21:00:29.436Z",
+    "publikovano": "2026-11-22T20:19:23.000Z",
+    "zdroj": {
+      "nazev": "VRT NWS (Belgie)",
+      "url": "https://www.vrt.be/vrtnws/nl/2026/11/22/grote-brand-in-luikse-aldi-supermarkt.rss.xml",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Grote brand in Aldi-supermarkt in Luik, parket sluit brandstichting niet uit",
+    "shrnuti": "In een deelgemeente in Luik, Wandre, is een grote brand uitgebroken in een Aldi-supermarkt. Dat meldt de Luikse brandweer, die ter plaatse is. Volgens het parket van Luik zou het om criminele feiten kunnen gaan. Er zijn geen slachtoffers, maar de materiële schade zou wel groot zijn.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-58e941bd0d61f9c3",
+    "zachyceno": "2026-11-22T21:00:28.168Z",
+    "publikovano": "2026-11-22T20:16:42.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/americas/20261122-democrat-hubbard-wins-north-carolina-recount-clinching-historic-house-majority",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Democrat Hubbard wins North Carolina recount, clinching historic House majority",
+    "shrnuti": "Democrat Chuck Hubbard was elected to the US House of Representatives from North Carolina on Sunday after defeating veteran Republican Virginia Foxx, who chairs the powerful House Rules Committee. His victory gave Democrats their best general election result in decades, winning at least 258 seats in",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-307c61a1b9993d33",
+    "zachyceno": "2026-11-22T21:00:28.714Z",
+    "publikovano": "2026-11-22T20:14:00.000Z",
+    "zdroj": {
+      "nazev": "HVG (Maďarsko)",
+      "url": "https://hvg.hu/kultura/20261122_ev-elejen-ujranyit-a-nyitott-muhely-finta-laszlo-emlekesttel",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Év elején újranyit a Nyitott Műhely - Finta László emlékesttel",
+    "shrnuti": "Finta László kulturális szervező, a Nyitott Műhely alapítója nemrég hunyt el, de tisztelői nem akarják, hogy életműve ne létezzen tovább.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a8910d0fa1a0d3ae",
+    "zachyceno": "2026-11-22T21:00:29.727Z",
+    "publikovano": "2026-11-22T20:13:28.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/tennis/2026/11/22/news/alcaraz_zverev_finals_risultato-425742717/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Alcaraz, primo trionfo alle Finals: Zverev battuto in due set",
+    "shrnuti": "Lo spagnolo chiude 6-2, 7-6 ma il tedesco spreca 3 set point per andare al terzo",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-cd6f37f418951838",
+    "zachyceno": "2026-11-22T21:00:29.868Z",
+    "publikovano": "2026-11-22T20:10:21.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/deportes/baloncesto/liga-endesa/2026/11/22/6b030f2be9cf4a725e8b457f.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Un extraordinario Ricky Rubio hace sudar la novena al Madrid en una noche de récord y homenaje en el Palacio",
+    "shrnuti": "El Joventut lleva al límite a los blancos, en su semana más espesa de la temporada. Pedro Martínez se convirtió en el entrenador con más partidos en la historia de la ACB y Lolo Sainz recibió un emocionante reconocimiento. Andrés Feliz, determinante Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6c25acc67b03f2ef",
+    "zachyceno": "2026-11-22T21:00:30.189Z",
+    "publikovano": "2026-11-22T20:10:10.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/un-jandarm-din-bacau-a-castigat-patru-medalii-la-cupa-mondiala-de-skandenberg-de-la-constanta.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Un jandarm din Bacău a câștigat patru medalii la Cupa Mondială de skandenberg de la Constanța",
+    "shrnuti": "Un jandarm din cadrul Inspectoratului de Jandarmi Județean (IJJ) „Ștefan cel Mare” Bacău a obținut patru medalii la competiția internațională de skandenberg Iron Arm World Cup, desfășurată în acest weekend la Constanța, scrie Agerpres. Sergentul major Bogdan Tarnoviețchi a câștigat o medalie de aur,",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-88317aa1d847aac3",
+    "zachyceno": "2026-11-22T21:00:28.672Z",
+    "publikovano": "2026-11-22T20:09:40.000Z",
+    "zdroj": {
+      "nazev": "TVN24 (Polsko)",
+      "url": "https://tvn24.pl/swiat/donald-trump-nazwal-wladimira-putina-przyjacielem-ekspertka-to-jest-bardzo-wazny-komunikat-dla-prezydenta-rosji-st9352322?source=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Spotkanie Donalda Trumpa i Władimira Putina. Ekspertka o \"bardzo ważnym komunikacie\" dla prezydenta Rosji",
+    "shrnuti": "Dla Władimira Putina nazwanie go przez Donalda Trumpa \"przyjacielem\" to bardzo ważny komunikat - oceniła w \"Faktach po Faktach\" w TVN24 doktor Anna Maria Dyner, analityczka Polskiego Instytutu Spraw Międzynarodowych. Doktor Patrycja Sasnal, również ekspertka PISM, mówiła o jedynej rzeczy, która łącz",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8d5f48d48428ef0f",
+    "zachyceno": "2026-11-22T21:00:27.545Z",
+    "publikovano": "2026-11-22T20:09:32.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-trump-vnima-putina-jako-partaka-na-golf-ne-politika-rika-expertka-321150",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trump vnímá Putina jako parťáka na golf, ne politika, říká expertka",
+    "shrnuti": "„Nejde nutně o politickou mazanost, ale spíš o součást jeho povahy,“ říká socioložka Mabel Berezinová z Cornellovy univerzity o Trumpově vztahu k Putinovi a Si Ťin-pchingovi. Podle ní vnímá tyto vazby jako osobní, ne politické.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3c250980adaec847",
+    "zachyceno": "2026-11-22T21:00:28.205Z",
+    "publikovano": "2026-11-22T20:07:57.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/11/22/germany-tests-kamikaze-drones-and-ai-targeting-technology-in-lithuania",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Germany tests Kamikaze drones and AI targeting technology in Lithuania",
+    "shrnuti": "The Bundeswehr's latest military trials highlight Germany's growing investment in unmanned weapons, artificial intelligence and preparations to defend NATO's eastern flank.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8a95e01926a4613f",
+    "zachyceno": "2026-11-22T21:00:27.509Z",
+    "publikovano": "2026-11-22T20:06:24.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-jen-oci-za-nikabem-nemecka-policie-pouzila-pri-patrani-po-pohresovane-neobvykly-snimek-40609910",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Jen oči za nikábem. Německá policie použila při pátrání po pohřešované neobvyklý snímek",
+    "shrnuti": "Pouze oči jsou vidět na fotografii, kterou zveřejnila německá policie pátrající po pohřešované čtrnáctileté dívce ze saského Chemnitzu (Saská Kamenice). Zbytek tváře dívky, která v pátek nepřišla na školní výlet, zakrývá nikáb. Na bizarní situaci upozornil web německého listu Bild.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3b3fd4109443eed8",
+    "zachyceno": "2026-11-22T21:00:28.513Z",
+    "publikovano": "2026-11-22T20:04:43.000Z",
+    "zdroj": {
+      "nazev": "Der Standard (Rakousko)",
+      "url": "https://www.derstandard.at/story/3000000350458/black-wings-bleiben-an-ice-spitzenreiter-bozen-dran?ref=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Black Wings bleiben an ICE-Spitzenreiter Bozen dran",
+    "shrnuti": "Linzer gewannen Heimspiel gegen den VSV. Knappe Erfolge für Salzburg und den KAC",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-dc0dff2b791328a0",
+    "zachyceno": "2026-11-22T21:00:28.294Z",
+    "publikovano": "2026-11-22T20:04:30.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1688196.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "tagesschau in 100 Sekunden",
+    "shrnuti": "tagesschau in 100 Sekunden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-9757e136983e4530",
+    "zachyceno": "2026-11-22T21:00:27.301Z",
+    "publikovano": "2026-11-22T20:04:02.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/116730/6395560",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "FW-WRN: Verkehrsunfall auf der Capeller Straße",
+    "shrnuti": "Werne (ots) - Am Sonntagnachmittag wurden die Leitung der Feuerwehr, der Löschzug Mitte sowie die Löschgruppe Holthausen der Freiwilligen Feuerwehr Werne um 14:35 Uhr mit dem Alarmstichwort \"TH2 Person - Verkehrsunfall, zwei PKW, unklare Lage\" auf ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7bec128b8c3a5ec9",
+    "zachyceno": "2026-11-22T21:00:28.361Z",
+    "publikovano": "2026-11-22T20:03:03.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3448976/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Israel: Gespräche zwischen Parteien von Eisenkot und Netanjahu",
+    "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-9a80ab8c1ceb638f",
     "zachyceno": "2026-11-22T20:02:46.494Z",
     "publikovano": "2026-11-22T20:00:16.000Z",
@@ -97,6 +637,22 @@
     "kategorie": [
       "rusko"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bc9ec05f15bff001",
+    "zachyceno": "2026-11-22T21:00:29.520Z",
+    "publikovano": "2026-11-22T19:58:35.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/article/2026/11/22/a-istanbul-des-milliers-de-manifestants-ont-denonce-la-mise-sous-tutelle-des-medias-d-opposition-par-l-etat_6814246_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "A Istanbul, des milliers de manifestants ont dénoncé la mise sous tutelle des médias d’opposition par l’Etat",
+    "shrnuti": "La manifestation a été organisée à l’appel du principal parti d’opposition de Turquie, le Yeni Parti (« Nouveau Parti »), après que la chaîne d’opposition Sözcü TV a vu ses bureaux perquisitionnés, mardi, plusieurs de ses dirigeants arrêtés, et un administrateur nommé à sa tête par le gouvernement.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -262,6 +818,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-40960ccd0a048982",
+    "zachyceno": "2026-11-22T21:00:29.728Z",
+    "publikovano": "2026-11-22T19:49:42.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/22/news/de_gennaro_suicidio_reazioni_d_alema_di_pietro_contorno_contrada-425742668/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "De Gennaro, la morte che divide. D’Alema: “Come sono andate certe cose non lo sapremo mai”",
+    "shrnuti": "Le reazioni dalla politica alla magistratura. Di Pietro: “Le critiche alla procura di Caltanissetta sono calunnie”. Il figlio di Contrada: “Mio padre lottò fino alla fine”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-9fe903dd0d182333",
     "zachyceno": "2026-11-22T20:02:48.091Z",
     "publikovano": "2026-11-22T19:46:27.000Z",
@@ -289,6 +861,22 @@
     },
     "titulek": "„Dollármédiáról” is képeztek újságírókat Erdélyben magyar közpénzből",
     "shrnuti": "Demeter Szilárd korábbi miniszteri biztoshoz köthető cégnek is jutott pénz.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-932659ebe70f8b0a",
+    "zachyceno": "2026-11-22T21:00:29.730Z",
+    "publikovano": "2026-11-22T19:45:20.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/calcio/serie-a/2026/11/22/news/milan_frosinone_gol-425742655/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Il Milan vince e diverte: Frosinone leggero, 5-1 a San Siro",
+    "shrnuti": "Un’autorete di Calvani apre le marcature. Poi in serie Gonçalo Ramos, Masini, Jashari, Cisse, Pulisic",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -427,6 +1015,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-1081d1b983f04cd9",
+    "zachyceno": "2026-11-22T21:00:27.303Z",
+    "publikovano": "2026-11-22T19:37:04.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/161590/6395559",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "FW Stuttgart: Kellerbrand in Mehrfamilienhaus",
+    "shrnuti": "Stuttgart (ots) - - Kabelbrand im Keller - Verrauchter Treppenraum - Mehrere Personen noch im Gebäude Am Sonntagabend erreichten die Feuerwehr Stuttgart gegen 19:07 Uhr mehrere Notrufe und meldeten Rauch im Treppenraum eines Mehrfamilienhauses in ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-7a188e260602d018",
     "zachyceno": "2026-11-22T20:02:45.917Z",
     "publikovano": "2026-11-22T19:35:38.000Z",
@@ -470,6 +1074,22 @@
     },
     "titulek": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
     "shrnuti": "John Kennedy looks to Trump leaders as he asks how China evidently bypassed export controls for Nvidia’s top AI chips Invoking Greek mythology, US senator John Kennedy has characterized former Nvidia chief executive officer Jensen Huang ’s reported affair with a suspected Chinese spy as “the most ex",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7814f6c5e5c3f520",
+    "zachyceno": "2026-11-22T21:00:29.732Z",
+    "publikovano": "2026-11-22T19:33:24.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/calcio/serie-a/juventus/2026/11/22/news/woltemade_spalletti_chiede_centravanti-425742632/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Woltemade non basta a Spalletti: “Mi manca un centravanti. Inutile dire: via l’allenatore”",
+    "shrnuti": "Il tedesco è stato decisivo con il Venezia, ma il tecnico che si sente in bilico chiede interventi sul mercato",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -1401,6 +2021,22 @@
     "titulek": "”Upptrappade läget på Östersjön kan skapa nytt Hormuz”",
     "shrnuti": "Finland fick plötsligt en brinnande rysk vapenfraktare på halsen. Myndigheterna här i Finland både säger och visar att de har läget under kontroll. Men fortsätter utvecklingen så riskerar Östersjön att förvandlas till ett nytt Svarta havet – eller Hormuzsundet.",
     "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ad6535382549c086",
+    "zachyceno": "2026-11-22T21:00:27.606Z",
+    "publikovano": "2026-11-22T18:58:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/juventus-turin-diky-ctyrem-brankam-po-prestavce-rozdrtil-benatky/2905071?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Juventus Turín díky čtyřem brankám po přestávce rozdrtil Benátky",
+    "shrnuti": "Řím - Juventus Turín rozdrtil ve 12. kole italské fotbalové ligy nováčka z Benátek 4:0 a v neúplné tabulce postoupil na šesté místo. Všechny góly padly až po přestávce. Trenér Luciano Spalletti si ve...",
+    "duvod": "vylouceno-tematem",
     "kategorie": [],
     "posouzeni": null
   },
@@ -3341,6 +3977,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-c22f41d475aa84d5",
+    "zachyceno": "2026-11-22T21:00:29.897Z",
+    "publikovano": "2026-11-22T17:35:22.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/un-militar-beat-si-drogat-a-lovit-cu-masina-un-politist-in-timpul-unei-control-rutier-in-timis-apoi-a-fugit-4047895",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Un pompier beat și drogat care a lovit cu mașina un polițist în timpul unei control rutier a fost reținut",
+    "shrnuti": "Un poliţist de la Serviciul Rutier Timiş a fost lovit cu autoturismul de un şofer oprit în trafic, care a refuzat să se legitimeze în timpul controlului. Agentul de Poliţie a fost lovit în momentul în care a vrut să verifice numărul de înmatriculare al maşinii. Bărbatul aflat la volan a fugit de la ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-1d965adf03626bc9",
     "zachyceno": "2026-11-22T20:02:45.264Z",
     "publikovano": "2026-11-22T17:35:00.000Z",
@@ -3981,6 +4633,22 @@
     "titulek": "„Hrabalovi jsem říkala synečku.“ Magda Vášáryová uvádí své filmy na přehlídce v New Yorku",
     "shrnuti": "Muzeum moderního umění v New Yorku přináší do 6. prosince přehlídku československé kinematografie Shadows of the Spring: The Normalization Era in Czechoslovakia (Stíny jara: Normalizační éra v Československu). Hlavním hostem retrospektivy je slovenská herečka a diplomatka Magda Vášáryová.",
     "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-abcced665bdec550",
+    "zachyceno": "2026-11-22T21:00:29.522Z",
+    "publikovano": "2026-11-22T17:00:11.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/m-styles/article/2026/11/22/en-martinique-tous-les-chemins-menent-au-rhum_6814232_4497319.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "En Martinique, tous les chemins mènent au rhum",
+    "shrnuti": "En obtenant son appellation d’origine contrôlée il y a trente ans, le rhum produit sur l’île antillaise a fait du passage dans les distilleries une étape incontournable pour les touristes. Un engouement qui profite à tous les établissements, des plus connus aux plus confidentiels.",
+    "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
   },
@@ -5140,6 +5808,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-f18447eb72de5043",
+    "zachyceno": "2026-11-22T21:00:28.112Z",
+    "publikovano": "2026-11-22T16:14:46.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/environment/2026/nov/22/cop31-climate-talks-set-to-end-in-deep-division-as-key-deal-rejected",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cop31 climate talks break down as key deal rejected",
+    "shrnuti": "EU, UK and some of developing world object to main text that ‘failed to meet the moment’ and did not mention fossil fuels The EU, the UK and allies in the developing world rejected what they called an unacceptable deal on the future of the climate, which failed even to mention fossil fuels, in a dra",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-eb569dbd22a01755",
     "zachyceno": "2026-11-22T20:02:46.695Z",
     "publikovano": "2026-11-22T16:14:00.000Z",
@@ -5199,6 +5883,22 @@
     },
     "titulek": "KOMMENTAR - Die globale Klimapolitik erleidet einen Realitätsschock",
     "shrnuti": "Die jüngste Klimakonferenz, COP31, ist an den weltweiten Interessenkonflikten in der Klimapolitik gescheitert. Trotzdem schreitet die Energiewende voran.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-9b27bad5b35d79c7",
+    "zachyceno": "2026-11-22T21:00:28.966Z",
+    "publikovano": "2026-11-22T16:10:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/maailma/art-2000012429303.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ilmasto | Ministeri Multala: YK:n ilmasto­kokous oli pettymys, Turkki osasyyllinen",
+    "shrnuti": "YK:n ennätyspitkä ilmastokokous on päättymässä ilman poliittista yleispäätöstä. Neuvottelut ajautuivat umpikujaan muun muassa fossiilisten polttoaineiden vuoksi.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -6319,6 +7019,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-d1ac1ff13f44dd30",
+    "zachyceno": "2026-11-22T21:00:29.858Z",
+    "publikovano": "2026-11-22T15:28:15.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/cronica/2026/11/21/6b015b0221efa0930c8b4597.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Los profetas de la remontada de Pedro Sánchez",
+    "shrnuti": "Tezanos, Redondo y Becerra, son los tres expertos que, contra el resto, pronostican que \"hay partido\" o, directamente, que PP y Vox no van a obtener mayoría absoluta. Buscan movilizar a la izquierda. Sus detractores les acusan de ser \"intoxicadores natos\". Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-a7c9831855c09853",
     "zachyceno": "2026-11-22T16:02:50.287Z",
     "publikovano": "2026-11-22T15:27:39.000Z",
@@ -6396,6 +7114,24 @@
     "shrnuti": "Hunderte Fahrzeuglenker erhielten Abmahnbriefe mit Forderungen über mehrere hundert Euro. Jetzt wurde der Abriss der Tankstelle gestoppt: Das Areal dürfte kontaminiert sein",
     "duvod": "bez-skutku",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-eb73e5e17443aaf4",
+    "zachyceno": "2026-11-22T21:00:27.583Z",
+    "publikovano": "2026-11-22T15:25:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/olomouc/zpravy/prostejov-vrbatky-srazka-vlak-dopravni-nehoda.A261122_143533_olomouc-zpravy_aya#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Na přejezdu v Prostějově se srazil vlak s autem. Dva lidé na místě zemřeli",
+    "shrnuti": "Na železničním přejezdu nedaleko stanice Prostějov hlavní nádraží na trati mezi Prostějovem a Vrbátkami se v neděli po poledni srazil rychlík s osobním automobilem. Ve vozidle zemřeli dva lidé, třetí cestující utrpěl těžké zranění. Ve vlaku nebyl nikdo zraněn, sdělil mluvčí Správy železnic pro mimoř",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "infrastruktura"
+    ],
     "posouzeni": null
   },
   {
@@ -7440,736 +8176,6 @@
     },
     "titulek": "Průvody pekelníků v Rakousku provázelo násilí. Dva účastníci skončili v nemocnici",
     "shrnuti": "Několik násilných incidentů během průvodů pekelníků zaznamenaly v sobotu večer úřady v rakouské spolkové zemi Korutany. Dva muži utrpěli zranění a skončili v nemocnici, jak informují rakouská média.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0061efac48e756af",
-    "zachyceno": "2026-11-22T14:51:21.601Z",
-    "publikovano": "2026-11-22T14:45:00.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/eurologus/20261122_propagandahaboru-orosz-dezinformacio-eu-bovites",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Propagandaháború: hogyan igyekszik az orosz dezinformáció megakadályozni az EU bővítését",
-    "shrnuti": "Moldovában földkisajátítással riogatnak, az ukránoknak azt üzenik, hogy hiába dolgoznak az uniós tagságért, az EU-ban pedig azzal keltenek félelmet, hogy Ukrajna felvétele felemésztené a közös költségvetést. Riport arról, hogyan szabják a helyi félelmekhez az EU-bővítés ellen terjesztett üzeneteket ",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-09616fab1c9c8543",
-    "zachyceno": "2026-11-22T14:51:21.814Z",
-    "publikovano": "2026-11-22T14:45:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/popkulttuuri/art-2000012423271.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "60-vuotias | Petri Tamminen on koko ikänsä pyrkinyt eroon häpeästä",
-    "shrnuti": "Kirjailija Petri Tamminen on tuntenut pelkoa ja ulkopuolisuutta lapsuudesta lähtien. Paitsi kirjastossa.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-83848061208a367b",
-    "zachyceno": "2026-11-22T14:51:21.816Z",
-    "publikovano": "2026-11-22T14:45:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/mielipide/art-2000012415439.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruoka | Suomalainen ruoka saa yhä enemmän näkyvyyttä Ranskassa",
-    "shrnuti": "Suomalaisen ruokakulttuurin tunnettuutta edistetään Ranskassa aktiivisesti osana maakuvatyötä.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-44d2742fbb55e95e",
-    "zachyceno": "2026-11-22T14:51:21.546Z",
-    "publikovano": "2026-11-22T14:44:01.000Z",
-    "zdroj": {
-      "nazev": "Telex (Maďarsko)",
-      "url": "https://telex.hu/gazdasag/2026/11/22/palankai-tibor-kozgazdasz-eu-csatlakozas-tanar-professzor",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Palánkai Tibor – a professzor, akinek az óráira azok is bejártak, akiknek nem kellett",
-    "shrnuti": "Generációk tanultak tőle közgazdaságtant, és fontos szerepet játszott Magyarország uniós csatlakozásának előkészítésében. Egykori tanítványa emlékezik a 88 éves korában elhunyt világhírű professzorra.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6fd14ffb418da79f",
-    "zachyceno": "2026-11-22T14:51:21.940Z",
-    "publikovano": "2026-11-22T14:43:49.000Z",
-    "zdroj": {
-      "nazev": "SVT Nyheter (Švédsko)",
-      "url": "https://www.svt.se/sport/ishockey/har-far-finskan-revansch-pa-svenska-succemalvakten",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Här får finskan revansch på svenska succémålvakten",
-    "shrnuti": "Ebba Svensson Träff såg till att Sverige tog VM-medalj när hon räddade Emmi Juuselas straff i bronsmatchen. Men i SDHL fick Juusela revansch – när hon avgjorde matchen för sitt SDE mot Svensson Träffs Linköping. – Kul, hon är en fantastisk målvakt, säger Juusela efteråt.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-58393bf538c7d562",
-    "zachyceno": "2026-11-22T14:51:21.135Z",
-    "publikovano": "2026-11-22T14:43:17.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/inland/regional/badenwuerttemberg/kohlenmonoxid-vergiftung-kirche-allgaeu-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "19 Verletzte nach Kohlenmonoxid-Austritt in Kirche im Allgäu",
-    "shrnuti": "In einer Kirche im Allgäu wurden 19 Menschen durch Kohlenmonoxid vergiftet - vier davon schwer. Eine defekte Heizung verursachte offenbar das Gasleck während eines Gottesdienstes.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a280aa4414d6a7d5",
-    "zachyceno": "2026-11-22T14:51:20.405Z",
-    "publikovano": "2026-11-22T14:41:32.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-svet-jednani-na-klimaticke-konferenci-zkolabovala-po-neshode-na-deklaraci-40609893",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Jednání na klimatické konferenci zkolabovala po neshodě na deklaraci",
-    "shrnuti": "Jednání na nejdéle trvající klimatické konferenci OSN v historii COP31 zkolabovala, uvedla agentura Reuters. Stalo se tak poté, co se státy neshodly na společné deklaraci, jak již dříve řekl předseda konference a turecký ministr životního prostředí Murat Kurum.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-913ac376d269674f",
-    "zachyceno": "2026-11-22T14:51:21.519Z",
-    "publikovano": "2026-11-22T14:41:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/rzecz-o-prawie/art45496351-tomasz-salwa-komisyjny-projekt-ustroju-prokuratury-a-niezaleznosc-prokuratora",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tomasz Salwa: Komisyjny projekt ustroju prokuratury a niezależność prokuratora",
-    "shrnuti": "Propozycja komisji kodyfikacyjnej nie zapewnia dostatecznych gwarancji niezależności prokuratora. Łączy szerokie uprawnienia ingerowania w przydział spraw z mechanizmami oceny i odpowiedzialności, które osłabiają stabilność służby",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e932e88230e02eb1",
-    "zachyceno": "2026-11-22T14:51:21.817Z",
-    "publikovano": "2026-11-22T14:41:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/maailma/art-2000012429301.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tämä tiedetään | Suomi harkitsi venäläis­aluksen haltuunottoa, mutta riskejä pidettiin liian suurina",
-    "shrnuti": "HS kokosi, mitä drooni-iskujen kohteeksi joutuneesta Sparta II -rahtialuksesta tiedetään.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1eb64cfeef9fb733",
-    "zachyceno": "2026-11-22T14:51:21.547Z",
-    "publikovano": "2026-11-22T14:40:41.000Z",
-    "zdroj": {
-      "nazev": "Telex (Maďarsko)",
-      "url": "https://telex.hu/belfold/2026/11/22/lopott-bicajon-fogtak-el-a-rendorok-a-mezoturi-edesszaju-betorot",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Cukrászdákba tört be, pénzt és édességet lopott, autót tett tönkre a mezőtúri betörő, akit lopott biciklin fogtak el a rendőrök",
-    "shrnuti": "Egy autót is elkötött az édesszájú férfi, de annak hamar kitörte a kerekét egy rossz manőverrel.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-fe6ddc0262e5862e",
-    "zachyceno": "2026-11-22T16:02:52.796Z",
-    "publikovano": "2026-11-22T14:40:28.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/cel-putin-14-oameni-sunt-dati-disparuti-dupa-ce-o-drona-ruseasca-a-lovit-o-cladire-in-regiunea-kiev.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "UPDATE | Cel puțin două persoane ucise și patru rănite în urma unui nou atac rusesc asupra unui bloc de locuințe din zona Kievului",
-    "shrnuti": "UPDATE: Atacul rusesc din cursul dimineții de duminică asupra blocului de locuințe a provocat moartea a cel puțin două persoane și rănirea altor patru, au anunțat autoritățile. Aproape o duzină de persoane ar fi fost prinse sub dărâmături. Noul atac a vizat un o clădire cu cinci etaje din localitate",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9e82febd80a90bc4",
-    "zachyceno": "2026-11-22T14:51:21.941Z",
-    "publikovano": "2026-11-22T14:39:58.000Z",
-    "zdroj": {
-      "nazev": "SVT Nyheter (Švédsko)",
-      "url": "https://www.svt.se/nyheter/inrikes/klimatmotet-misslyckas-det-kan-handa-nu",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Klimatmötet misslyckas – det kan hända nu",
-    "shrnuti": "Förhandlingarna på FN:s klimatmöte COP31 har brutit samman efter att EU valt att inte acceptera slutdeklarationen. Vad som händer nu vet ingen säkert, men enligt experterna lär fler röster höjas för att reformera hela processen.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3903393aac458a35",
-    "zachyceno": "2026-11-22T14:51:21.204Z",
-    "publikovano": "2026-11-22T14:39:40.000Z",
-    "zdroj": {
-      "nazev": "ORF News (Rakousko)",
-      "url": "https://orf.at/stories/3448952/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bitcoin steigt wieder über Marke von 60.000 Dollar",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-30dfeeb96e591fc4",
-    "zachyceno": "2026-11-22T14:51:22.656Z",
-    "publikovano": "2026-11-22T14:39:40.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/un-ucrainean-a-murit-dupa-ce-s-a-ratacit-in-muntii-maramuresului-alti-doi-au-fost-recuperati-de-salvatori-4047981",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Un ucrainean a murit după ce s-a rătăcit în Munţii Maramureşului. Alţi doi au fost recuperaţi de salvatori",
-    "shrnuti": "Un ucrainean a murit după ce s-ar fi rătăcit în Munţii Maramureşului, alţi doi fiind găsiţi cu sprijinul unei echipe mixte formate din poliţişti de frontieră şi salvamontişti, a informat, duminică, purtătorul de cuvânt al Inspectoratului Teritorial al Poliţiei de Frontieră Sighetu Marmaţiei, Alina P",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8f71ef1aba6633d6",
-    "zachyceno": "2026-11-22T16:02:48.947Z",
-    "publikovano": "2026-11-22T14:39:06.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117712/6395527",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDKO: Mögliche Gefährdung des Straßenverkehrs",
-    "shrnuti": "Koblenz (ots) - Am 22.11.2026 gegen 13:50 Uhr kam es im Bereich \"An der Moselbrücke\" in Fahrtrichtung der Balduinbrücke in Koblenz zu einem Verkehrsvorgang. Ein aus der Innenstadt kommender schwarzer Mercedes habe hierbei den Kreuzungsbereich ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-200d5984eccad206",
-    "zachyceno": "2026-11-22T14:51:21.943Z",
-    "publikovano": "2026-11-22T14:37:28.000Z",
-    "zdroj": {
-      "nazev": "SVT Nyheter (Švédsko)",
-      "url": "https://www.svt.se/nyheter/lokalt/norrbotten/skickade-hotfullt-julkort-till-sig-sjalv-kvinna-fran-lulea-doms",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Skickade hotfullt julkort till sig själv – kvinna från Luleå döms",
-    "shrnuti": "En kvinna i 35-årsåldern polisanmälde ett julkort innehållande dödshot. Men det ska senare visa sig att hon själv författat kortet och nu döms kvinnan till villkorlig dom för bevisförvanskning och falsk angivelse. – Det var ett ovanligt ärende, säger åklagaren Moa Grahn.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9a22986fcb1d1397",
-    "zachyceno": "2026-11-22T14:51:22.218Z",
-    "publikovano": "2026-11-22T14:37:15.000Z",
-    "zdroj": {
-      "nazev": "NOS Nieuws (Nizozemsko)",
-      "url": "https://nos.nl/l/2640594",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Partij voor de Dieren viert 20 jaar in de Tweede Kamer als 'luis in de pels'",
-    "shrnuti": "De Partij voor de Dieren vierde vandaag in Nieuwegein een jubileum: het is twintig jaar geleden dat de partij, tot verrassing van velen, voor het eerst zetels in de Tweede Kamer behaalde. \"Sindsdien is de Partij voor de Dieren niet meer weg te denken\", zei partijleider Christine Teunissen in haar co",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c82946e7fa3dd522",
-    "zachyceno": "2026-11-22T14:51:21.490Z",
-    "publikovano": "2026-11-22T14:36:04.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/biznes/turystyka/szykuje-sie-paraliz-lotniska-port-spodziewa-sie-powaznych-zaklocen-st9351771?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Szykuje się paraliż lotniska. Port \"spodziewa się poważnych zakłóceń\"",
-    "shrnuti": "W poniedziałek większość lotów na brukselskim lotnisku Zaventem zostanie odwołana - przekazał port lotniczy w komunikacie. Jako powód wskazano planowane manifestacje przeciwko polityce oszczędnościowej rządu Belgii.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-115b53ed8fdc127b",
-    "zachyceno": "2026-11-22T16:02:48.949Z",
-    "publikovano": "2026-11-22T14:36:02.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/126721/6395525",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "LPI-GTH: Unfall unter Alkoholeinfluss",
-    "shrnuti": "Heyda (ots) - Samstagabend gegen 20:20 Uhr befuhr ein 40-Jähriger mit einem Pkw VW Caddy die Straße Auf der Heide in Heyda aus Richtung Brauhausgasse kommend in Fahrtrichtung Ilmenau.Nach Durchfahren einer Rechtskurve kam der VW-Fahrer nach rechts ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4c8c9fb3f742e8ee",
-    "zachyceno": "2026-11-22T14:51:23.008Z",
-    "publikovano": "2026-11-22T14:35:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-defense/4187403-ukrainian-troops-take-part-in-international-drone-crucible-exercises.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Ukrainian troops take part in international Drone Crucible exercises",
-    "shrnuti": "Ukrainian military personnel took part in joint drone exercises alongside troops from the United States, the United Kingdom, Germany and Latvia.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4b6dfc9caca24255",
-    "zachyceno": "2026-11-22T14:51:22.084Z",
-    "publikovano": "2026-11-22T14:34:32.000Z",
-    "zdroj": {
-      "nazev": "NRK (Norsko)",
-      "url": "https://www.nrk.no/sport/nrk-ekspert-tror-nye-regler-kan-fore-til-viljefall-1.18082925",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Frykter hoppere vil falle med vilje: – Da er du passe idiot",
-    "shrnuti": "I et forsøk på å forenkle hoppsporten, kan FIS ha spent bein på seg selv.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e86381dc858f290b",
-    "zachyceno": "2026-11-22T16:02:49.324Z",
-    "publikovano": "2026-11-22T14:33:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/klimaticka-konference-cop31-deklarace-jednani-osn-eu.A261122_141921_zahranicni_votr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hádka a kolaps na klimatické konferenci. Země OSN mají aspoň rekord v její délce",
-    "shrnuti": "Státy na nejdéle trvající klimatické konferenci OSN v historii COP31 se neshodly na společné deklaraci, řekl podle médií předseda konference a turecký ministr životního prostředí Murat Kurum. Jednání zkolabovala. Generální tajemník OSN António Guterres vyjádřil nad výsledkem zklamání.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6cf818d15669e2a8",
-    "zachyceno": "2026-11-22T14:51:21.521Z",
-    "publikovano": "2026-11-22T14:33:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/rzecz-o-prawie/art45496411-maciej-zaborowski-adwokackie-wrozby",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Maciej Zaborowski: Adwokackie wróżby",
-    "shrnuti": "Ludzie listy piszą. Do adwokatów również. I często mają już wszystko: opis zdarzeń, dowody, oczekiwany wynik. Potrzebują tylko kogoś, kto znajdzie rozwiązanie łączące te trzy elementy.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2f9a6904c6b93b76",
-    "zachyceno": "2026-11-22T16:02:48.952Z",
-    "publikovano": "2026-11-22T14:32:02.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/110969/6395524",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-AA: Pressemitteilung Polizeipräsidium Aalen vom 22.11.2026",
-    "shrnuti": "Aalen (ots) - Backnang: Ladengeschäft nach Bombendrohung geräumt - Aufgrund einer Bombendrohung, die bei einer Drogerie in der Grabenstraße einging, wurde das Gebäude am Samstagabend gegen 18:45 Uhr von der Polizei geräumt. Bei der ...",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-11882184d773aae5",
-    "zachyceno": "2026-11-22T14:51:21.944Z",
-    "publikovano": "2026-11-22T14:31:56.000Z",
-    "zdroj": {
-      "nazev": "SVT Nyheter (Švédsko)",
-      "url": "https://www.svt.se/nyheter/utrikes/gransbevakningen-maste-utga-fran-att-lasten-kan-vara-explosiv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Gränsbevakningen: ”Måste utgå från att lasten kan vara explosiv”",
-    "shrnuti": "Alla personer har evakuerats från fraktfartyget som attackerades med drönare i Finska viken. Släckningsarbetet pågår – finns risk för omfattande miljöskador om branden ej fås under kontroll. ”Fartyget har haft militär last tidigare och man måste utgå ifrån att det kan vara explosivt”, enligt Gränsbe",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d909994f1881a403",
-    "zachyceno": "2026-11-22T16:02:48.954Z",
-    "publikovano": "2026-11-22T14:31:13.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/68441/6395523",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-VER: Pressemeldung der PI Verden/Osterholz vom 22.11.2026",
-    "shrnuti": "Landkreise Verden und Osterholz (ots) - Guten Tag aus Verden, aufgrund der Einsatzlage heute die Pressemeldung etwas verspätet. Pressemeldungen vom 22.11.2026 Achim: Verkehrsunfallflucht In der Nacht von Freitag auf Samstag, gegen 04:00 Uhr, befuhr ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d99511174dc6cb5b",
-    "zachyceno": "2026-11-22T14:51:21.473Z",
-    "publikovano": "2026-11-22T14:30:41.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/ch1mwd8/po-vrazde-na-toalete-isiel-na-druhy-den-operovat-pacientov-v-usa-odsudili-polskeho-lekara-na-trest-smrti/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Po vražde na toalete išiel na druhý deň operovať pacientov. V USA odsúdili poľského lekára na trest smrti",
-    "shrnuti": "Telo obete sa dodnes nenašlo a lekár sa pred súdom obhajoval sám.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-47a6991e62698f4a",
-    "zachyceno": "2026-11-22T14:51:22.962Z",
-    "publikovano": "2026-11-22T14:30:37.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/colonisti-israelieni-au-incendiat-masini-in-sate-palestiniene-din-cisiordania-gadi-eisenkot-denunta-terorismul-evreiesc.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Coloniști israelieni au incendiat mașini în sate palestiniene din Cisiordania / Gadi Eisenkot denunță „terorismul evreiesc”",
-    "shrnuti": "Coloniști israelieni radicali au atacat, în noaptea de sâmbătă spre duminică, trei sate palestiniene din apropiere de Ramallah, în Cisiordania ocupată. Aceștia au incendiat automobile și au lăsat în urmă graffiti, potrivit relatărilor localnicilor citate de Reuters. Gadi Eisenkot, liderul opoziției ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-083edc6536be47a6",
-    "zachyceno": "2026-11-22T20:02:47.644Z",
-    "publikovano": "2026-11-22T14:30:05.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/sciences/article/2026/11/22/le-poisson-a-poumons-eclaire-l-enigme-de-la-sortie-de-la-mer-des-vertebres_6814219_1650684.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Le « poisson à poumons » éclaire l’énigme de la sortie de la mer des vertébrés",
-    "shrnuti": "L’été venu, le dipneuste africain s’enterre et transforme sa peau grâce à une toxine véhiculée par le système immunitaire. Et si nos ancêtres avaient emprunté le même chemin il y a 400 millions d’années ?",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6e40d3a975e55406",
-    "zachyceno": "2026-11-22T16:02:51.866Z",
-    "publikovano": "2026-11-22T14:30:02.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/sport/article/2026/11/22/le-paris-basketball-et-sa-singuliere-offensive-sur-le-terrain-social_6814218_3242.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Le Paris Basketball et sa singulière offensive sur le terrain social",
-    "shrnuti": "L’équipe de la capitale, qui affronte Gravelines-Dunkerque, le 22 novembre, a diffusé, jeudi 19, un montage vidéo défendant le 18ᵉ arrondissement, où elle est établie. A la suite du mouvement lycéen, le club intensifie ses actions, en se focalisant sur les discriminations et les inégalités sociales.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-43d9ae71e24a9284",
-    "zachyceno": "2026-11-22T14:51:21.603Z",
-    "publikovano": "2026-11-22T14:30:00.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/elet/20261122_a-tokeletes-oldalastol-a-meg-tokeletesebb-paradicsomos-tesztaig-7-szakacskonyv-karacsonyra-a-hvg-tol",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "A tökéletes oldalastól a még tökéletesebb paradicsomos tésztáig: 7 szakácskönyv karácsonyra a HVG-től",
-    "shrnuti": "Milyen a klasszikus francia konyha? Milyen az olasz konyha két arca? Hogyan fogjunk neki a fermentálásnak, és hogyan érhetjük el, hogy fenntartható legyen a háztartásunk?",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c5c60fb09f6f7b5a",
-    "zachyceno": "2026-11-22T14:51:20.332Z",
-    "publikovano": "2026-11-22T14:29:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/kultura/vytvarne-umeni/40-let-tvorby-sochare-susky-papir-oznacuje-za-pamet-sve-prace-galerie-lazne_2611221529_eml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "40 let tvorby sochaře Sušky. Papír označuje za paměť své práce, galerie Lázně Liberec vystavuje i jeho kresby",
-    "shrnuti": "Tvůrce monumentálních soch z kovu Čestmír Suška vystavuje v krajské galerii Lázně v Liberci méně známou část své tvorby. Má tam v pěti místnostech kresby, velkoformátové pastely, tisky, skici, deníky a další práce na papíře, které vytvořil od 70. let minulého století. Takto rozsáhlý retrospektivní v",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f84694706ba1dcf3",
-    "zachyceno": "2026-11-22T16:02:48.956Z",
-    "publikovano": "2026-11-22T14:27:58.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/126721/6395522",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "LPI-GTH: Stromkabel entwendet- Zeugenaufruf",
-    "shrnuti": "Ichterhausen / Amt Wachenburg (ots) - Bisher unbekannte Täter haben Sonntagnacht gegen 01:15 Uhr in der Erfurter Straße in Ichtershausen ca. 50m Starkstromkabel entwendet, welches von einem Anhänger zu einem Stromkasten verlegt wurde. Des ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b04084e639b094e0",
-    "zachyceno": "2026-11-22T14:51:21.946Z",
-    "publikovano": "2026-11-22T14:27:29.000Z",
-    "zdroj": {
-      "nazev": "SVT Nyheter (Švédsko)",
-      "url": "https://www.svt.se/sport/fotboll/matilda-vinberg-med-lackert-mal-mot-manchester-city",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Matilda Vinberg med läckert mål mot Manchester City",
-    "shrnuti": "Matilda Vinberg visar fin form inför Sveriges avgörande VM-playoff. 23-åringen svarade för en assist och ett läckert mål när Tottenham besegrade ligatvåan Manchester City. – Här gör hon allting rätt, säger SVT Sports kommentator Linus Eklund.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-22ef4bc2b8ad024a",
-    "zachyceno": "2026-11-22T14:51:22.658Z",
-    "publikovano": "2026-11-22T14:27:15.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/paolo-bulgari-unul-dintre-oamenii-din-spatele-celebrului-brand-bvlgari-a-murit-la-89-de-ani-4047977",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Paolo Bulgari, unul dintre oamenii din spatele celebrului brand Bvlgari, a murit la 89 de ani",
-    "shrnuti": "Paolo Bulgari, omul care a contribuit la transformarea celebrei case italiene de bijuterii Bvlgari într-unul dintre cele mai cunoscute branduri de lux din lume, a murit la vârsta de 89 de ani. Acesta a condus compania timp de mai multe decenii și a contribuit la extinderea afacerii de familie pe pie",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b29d76760af197e9",
-    "zachyceno": "2026-11-22T14:51:22.632Z",
-    "publikovano": "2026-11-22T14:26:46.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/deportes/motociclismo/2026/11/22/6b02f570e9cf4a96128b4586.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Marc Márquez conquista en Portimao su décimo título mundial",
-    "shrnuti": "El piloto de Ducati fue conservador en la carrera portuguesa para hacer historia. Acabó noveno, lo que necesitaba para ser campeón. Victoria de Marco Bezzechi Leer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9b7e710bccc75f3f",
-    "zachyceno": "2026-11-22T14:51:22.964Z",
-    "publikovano": "2026-11-22T14:26:12.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/gaurile-negre-se-pot-despica-ca-niste-pantaloni-daca-se-rotesc-prea-repede-sugereaza-un-studiu-de-astrofizica.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Găurile negre se pot despica „ca niște pantaloni” dacă se rotesc prea repede, sugerează un studiu de astrofizică",
-    "shrnuti": "Se știe că găurile negre se ciocnesc și se contopesc în evenimente de fuziune extrem de violente, însă o nouă cercetare sugerează că aceste corpuri cerești masive se pot și fragmenta în obiecte mai mici, asemenea unei perechi de pantaloni care se despică pe mijloc, potrivit Live Science Într-un stud",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d0a83ff2d3ffbc37",
-    "zachyceno": "2026-11-22T16:02:49.326Z",
-    "publikovano": "2026-11-22T14:26:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/kultura/film-televize/cesky-horor-thankskilling-day-sp-releasing-petr-kubik.A261122_144443_filmvideo_aya#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Český horor uspěl v zahraničí. Thankskilling Day koupil americký distributor",
-    "shrnuti": "Horor Thankskilling Day českých tvůrců Petra Kubíka a JC Kováře uspěl v zahraničí. Distribuční práva k filmu získala americká společnost SP Releasing. Snímek o smrtící únikové hře z pražského areálu ČKD bude uveden pod názvem Red Escape. Do českých kin vstoupí 26. listopadu, tvůrci nyní zveřejnili f",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-74c33a5056631d93",
-    "zachyceno": "2026-11-22T14:51:21.491Z",
-    "publikovano": "2026-11-22T14:25:40.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/swiat/meksyk-el-chapo-isidro-zatrzymany-dziennikarz-relacjonuje-akcje-policji-kiedy-padaja-strzaly-st9352089?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Dziennikarz relacjonował akcję służb. Wtedy padły strzały",
-    "shrnuti": "Reporter lokalnej telewizji w Meksyku relacjonował akcję policji w mieście Guasave w stanie Sinaloa po tym, jak został zatrzymany baron narkotykowy Isidro Meza-Flores. W pewnym momencie za jego plecami padły strzały, co zmusiło go i jego operatora do schowania się za samochodem.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-209e8f86984464f3",
-    "zachyceno": "2026-11-22T14:51:21.424Z",
-    "publikovano": "2026-11-22T14:24:47.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/international/fossile-brennstoffe-und-geldsorgen-bringen-die-globalen-klimaverhandlungen-zum-scheitern-ld.10068913",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Die EU sagt Nein und verhindert ein neues Klimaabkommen. Dahinter steckt ein Streit um Kohle, Öl und Geld",
-    "shrnuti": "Am Weltklimagipfel in der Türkei haben fast 200 Staaten zwei Wochen lang über neue Massnahmen gegen die Erderwärmung verhandelt. Die Einigung scheitert. Dennoch macht die Energiewende in vielen Regionen der Welt konkrete Fortschritte.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-976f1dd9e4674af0",
-    "zachyceno": "2026-11-22T14:51:21.443Z",
-    "publikovano": "2026-11-22T14:24:42.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/podcasty/c/kde-usetrit-a-co-ziskat-navyse-lego-insider-weekend-2026-a-nase-oblubene-vlaky?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kde ušetriť a čo získať navyše? 'LEGO® Insider Weekend 2026' a naše obľúbené vlaky",
-    "shrnuti": "Nový podcast Brickmic.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-23386a71988921e2",
-    "zachyceno": "2026-11-22T14:51:21.057Z",
-    "publikovano": "2026-11-22T14:23:49.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/22/cop31-climate-talks-fail-after-eu-and-others-reject-final-deal-proposal",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "COP31 climate talks fail after EU and others reject final deal proposal",
-    "shrnuti": "A new COP31 draft agreement had been published early on Sunday amid a row over fossil fuels, which have been a flashpoint at the talks.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9c855415891736c4",
-    "zachyceno": "2026-11-22T14:51:20.500Z",
-    "publikovano": "2026-11-22T14:23:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/na-klimaticke-konferenci-nebyla-shoda-na-deklaraci-jednani-zkolabovala/2904003?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Na klimatické konferenci nebyla shoda na deklaraci, jednání zkolabovala",
-    "shrnuti": "Antalya (Turecko) - Jednání na nejdéle trvající klimatické konferenci OSN v historii COP31 zkolabovala, uvedla agentura Reuters. Stalo se tak poté, co se státy neshodly na společné deklaraci, jak již...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4e7f9837e4c518e0",
-    "zachyceno": "2026-11-22T14:51:21.029Z",
-    "publikovano": "2026-11-22T14:22:56.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/asia-pacific/20261122-the-week-in-pictures-xi-hosts-trump-and-putin-cop31-and-more-french-protests",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "The week in pictures: Xi hosts Trump and Putin, COP31 and new French protests",
-    "shrnuti": "From the unprecedented Shenzhen summit in China that saw President Xi Jinping host his US and Russian counterparts, Donald Trump and Vladimir Putin, to tough talks at COP31 in Antalya, Turkey and another week of French protests over the cost of living, FRANCE 24 looks back at some of the most striki",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c3a9de98059cf654",
-    "zachyceno": "2026-11-22T14:51:21.549Z",
-    "publikovano": "2026-11-22T14:22:41.000Z",
-    "zdroj": {
-      "nazev": "Telex (Maďarsko)",
-      "url": "https://telex.hu/kulfold/2026/11/22/theresa-may-brexit-nope-andy-burnham-brit-eu-viszony-nepszavazas",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Theresa Mayt ledöbbentette, hogy a brit kormány araszolgat az EU felé",
-    "shrnuti": "Andy Burnham kormányfő nemrég több ügyben megállapodott az EU-val, és meglebegtette egy „breturn”-népszavazás megtartását is.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
