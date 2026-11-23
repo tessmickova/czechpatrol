@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-23T12:02:52.836Z",
+  "aktualizovano": "2026-11-23T16:02:56.756Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Cloudflare Workers API – Delayed or Inconsistent Responses",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/00dp7cliyqqt",
+          "aktualizovano": "2026-11-23T13:52:34.093Z"
+        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -18,7 +23,7 @@
         "Ahmedabad, India - (AMD)",
         "Albuquerque, United States - (ABQ)"
       ],
-      "zkontrolovano": "2026-11-23T12:02:52.836Z",
+      "zkontrolovano": "2026-11-23T16:02:56.756Z",
       "chyba": null
     },
     {
@@ -27,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-23T12:02:52.836Z",
+      "zkontrolovano": "2026-11-23T16:02:56.756Z",
       "chyba": null
     },
     {
@@ -36,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-23T12:02:52.836Z",
+      "zkontrolovano": "2026-11-23T16:02:56.756Z",
       "chyba": null
     }
   ]

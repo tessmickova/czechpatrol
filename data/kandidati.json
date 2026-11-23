@@ -1,5 +1,128 @@
 [
   {
+    "id": "k-f4b845dd5578aefb",
+    "zachyceno": "2026-11-23T16:02:46.923Z",
+    "publikovano": "2026-11-23T15:58:56.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/11/23/finland-summons-russian-ambassador-as-it-condemns-russias-dangerous-and-reckless-actions-i",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Finland summons Russian ambassador as it condemns Russia's 'dangerous and reckless actions' in Europe",
+    "titulekPuvodni": "Finland summons Russian ambassador as it condemns Russia's 'dangerous and reckless actions' in Europe",
+    "shrnuti": "It comes after a Russian helicopter was suspected of having violated Finnish airspace on Saturday afternoon, off the coast of Loviisa.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "violated+airspace"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Finland summons Russian ambassador as it condemns Russia's 'dangerous and reckless actions' in Europe | Euronews\nAdvertisement\nBy&nbsp Nathan Rennolds\nPublished on\n23 November 2026 - 16:58 GMT+1\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nIt comes after a Russian helicopter was suspected of having violated Finnish airspace on Saturday afternoon, off the coast of Loviisa.\nFinland announced on Monday that it had summoned the Russian ambassador as it condemned Moscow's strikes on Ukraine and hit out at what it called Russia's \"dangerous and reckless actions\" in Europe.\nADVERTISEMENT\nADVERTISEMENT\n\"We strongly condemn Russia's illegal war of aggression and its escalating strikes against civilian targets in Ukraine. We stand in solidarity with Denmark, Poland and our other European partners,\" the foreign ministry said in a post on social media.\nIt comes after a Russian helicopter was suspected of having violated Finnish airspace on Saturday afternoon, off the coast of Loviisa.\nFinnish Defence Minister Antti Häkkänen said the incident may have been related to \"rescue or monitoring operations\" involving the Russian cargo ship…",
+      "stazeno": "2026-11-23T16:02:49.836Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ec8ebcb08c430892",
+    "zachyceno": "2026-11-23T16:02:45.905Z",
+    "publikovano": "2026-11-23T14:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/polska-ochrana-se-bude-posilovat-rika-k-dalsim-moznym-krokum-aliance_2611231500_eml",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Polská ochrana se bude posilovat, říká k dalším možným krokům Aliance generálporučík Macko",
+    "titulekPuvodni": "Polská ochrana se bude posilovat, říká k dalším možným krokům Aliance generálporučík Macko",
+    "shrnuti": "Varšava brzy dostane od spojenců silnou podporu na ochranu své východní hranice, oznámil polský ministr obrany Władysław Kosiniak-Kamysz poté, co ruské rakety narušily tamní vzdušný prostor. „Jakmile operujete v ukrajinském vzdušném prostoru a nemáte na to mandát Rady bezpečnosti OSN, může vás druhá",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusil+vzdusny prostor",
+      "vzdusny prostor",
+      "aliance",
+      "hranice",
+      "rusk"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "narusil+vzdusny prostor"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-23T16:02:49.880Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-57b362213f3ad4e2",
+    "zachyceno": "2026-11-23T16:02:49.692Z",
+    "publikovano": "2026-11-23T12:31:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/23/8064207/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland to summon Russian ambassador after three Russian missiles breached its airspace",
+    "titulekPuvodni": "Poland to summon Russian ambassador after three Russian missiles breached its airspace",
+    "shrnuti": "Maciej Wewiór has said Poland will summon Ambassador Georgy Mikhno once military and intelligence procedures conclude following the 20 November airspace violation.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "airspace violation",
+      "violat+airspace",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "breached+airspace"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Warsaw prepares to summon Russian envoy after three Kh-101 missiles entered Polish airspace | Ukrainska Pravda\nStock photo: Getty Images\nPoland's Ministry of Foreign Affairs will summon Russian Ambassador in Warsaw, Georgy Mikhno, in connection with the violation of Polish airspace by three Russian missiles on 20 November.\nSource: Polish media outlet Onet , citing Foreign Ministry spokesperson Maciej Wewiór, as reported by European Pravda\nDetails: The ministry's spokesperson told journalists on Monday that \"the Ambassador of the Russian Federation will be summoned, but first certain procedures must be completed, including by the military and intelligence services\".\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"The aim is not to summon merely for the sake of summoning,\" Wewiór added.\nBackground:\nThe ambassador is being summoned over an incident in which Russian missiles violated Polish airspace during attacks on Ukraine on 20 November. Debris from Kh-101 cruise missiles was found at three locations: Nowy Lipowiec in Lublin Voivodeship, and Rudnik nad Sanem and Mołodycz in Subcarpathian Voivodeship.\nOn 21 November, Polish Foreign Minister Radosław Sikorski announced that the government would express…",
+      "stazeno": "2026-11-23T16:02:50.036Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-347a87d704ac5ba5",
     "zachyceno": "2026-11-23T08:03:27.744Z",
     "publikovano": "2026-11-22T19:43:00.000Z",
@@ -1206,60 +1329,151 @@
     }
   },
   {
-    "id": "k-a041316e122191cb",
-    "zachyceno": "2026-11-02T16:33:23.411Z",
-    "publikovano": "2026-11-02T15:39:01.000Z",
+    "id": "k-73cf0c4f5ddc154d",
+    "zachyceno": "2026-11-23T16:02:46.529Z",
+    "publikovano": null,
     "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/RI42p6E/polsko-posilnuje-hranicu-s-kaliningradom-tajne-sluzby-varovali-pred-moznymi-sabotazami/",
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/4-eu-countries-plan-joint-investigation-into-starlink-arson-attacks-media-reports/",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Poľsko posilňuje hranicu s Kaliningradom. Tajné služby varovali pred možnými sabotážami",
-    "titulekPuvodni": "Poľsko posilňuje hranicu s Kaliningradom. Tajné služby varovali pred možnými sabotážami",
-    "shrnuti": "Poľská polícia označuje operáciu za preventívnu. Varovania hovoria aj o možnosti pokusov ozbrojených skupín prekročiť hranicu z ruskej Kaliningradskej oblasti.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
+    "titulek": "4 EU countries plan joint investigation into Starlink arson attacks, media reports",
+    "titulekPuvodni": "4 EU countries plan joint investigation into Starlink arson attacks, media reports",
+    "shrnuti": "",
+    "kodZeme": "EU",
+    "zeme": "EU",
     "kategorie": [
-      "sabotaz",
-      "rusko"
+      "sabotaz"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "sabotaz",
-      "rusk"
+      "arson"
     ],
-    "naliehave": {
-      "druh": "hranice-nato",
-      "stupen": 2,
-      "proc": "posil+hranic"
-    },
+    "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Poľsko posilňuje hranicu s Kaliningradom. Tajné služby varovali pred možnými sabotážami\n| Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n8 °C -\nBratislava\npondelok 2. 11.\n2. 11.\nCezária\nCézar\nSprávy dnes 02. Nov 2026 o 16:39\n1 min. čítania\nPridať do Google\nPoľsko posilňuje hranicu s Kaliningradom. Tajné služby varovali pred možnými sabotážami\n1 fotka v galérii\nŠtátna volebná komisia Poľska odmietla dvoch kandidátov pre neplatné podpisy, Poľsko Zdroj: istock\nTASR\nAktuality.sk\nUložiť článok\nPoľská polícia označuje operáciu za preventívnu. Varovania hovoria aj o možnosti pokusov ozbrojených skupín prekročiť hranicu z ruskej Kaliningradskej oblasti.\nV súvislosti s informáciami o možných diverzných a sabotážnych akciách na hranici s ruskou Kaliningradskou oblasťou tam poľské bezpečnostné zložky vyslali policajné posily. Zriadili tiež štáb koordinujúci operáciu polície, armády, pohraničnej stráže a špeciálnych služieb vo Varmsko-mazurskom a Podleskom vojvodstve, oznámil v pondelok hlavný veliteľ polície Marek Boroň. Informuje o tom varšavský spravodajca TASR podľa agentúry PAP.\nAko uviedla stanica RMF FM, poľské orgány minulý týždeň dostali varovania od…",
-      "stazeno": "2026-11-02T16:33:28.068Z",
+      "text": "4 EU countries plan joint investigation into Starlink arson attacks, media reports 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar 4 EU countries plan joint investigation into Starlink arson attacks, media reports\nNovember 23, 2026 3:34 pm • 2 min read\nPrefer on Google\nby Léopold Rannou\nTwo men, arrested on suspicion of carrying out an arson attack in September in Poland on a ground station belonging to the Starlink satellite network, are being escorted to their car by police and court officials as they leave the magistrate's court in Nürtingen, Germany, on Oct. 13, 2026 (Jan-Philipp Strobel/picture alliance/Getty Images)\nPoland, Germany, Lithuania, and Bulgaria plan to establish a joint investigative team to probe arson attacks targeting Starlink satellite communications infrastructure in Bulgaria, Lithuania and Poland, Polish radio RMF24 reported on Nov. 23. Starshield, the militarized version of SpaceX' Starlink satellite internet system, has become a critical communication tool for Ukrainian forces, supporting battlefield…",
+      "stazeno": "2026-11-23T16:02:50.391Z",
       "stav": 200
     }
   },
   {
-    "id": "k-a96f6b9aebeae78b",
-    "zachyceno": "2026-11-02T15:03:07.302Z",
-    "publikovano": "2026-11-02T14:34:01.000Z",
+    "id": "k-541472b70ea70b07",
+    "zachyceno": "2026-11-23T16:02:46.526Z",
+    "publikovano": null,
     "zdroj": {
-      "nazev": "Notes from Poland",
-      "url": "https://notesfrompoland.com/2026/11/02/poland-launches-operation-along-russian-border-in-response-to-reports-of-planned-sabotage/",
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/falling-drone-debris-sparks-fire-in-central-kyiv-2-rescued-3-injured-including-foreign-national/",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Poland launches operation along Russian border in response to reports of planned sabotage",
-    "titulekPuvodni": "Poland launches operation along Russian border in response to reports of planned sabotage",
-    "shrnuti": "Additional police officers, including counter-terrorism forces, have been sent to the border region.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
+    "titulek": "Falling drone debris sparks fire in central Kyiv, 2 rescued, 3 injured, including foreign national",
+    "titulekPuvodni": "Falling drone debris sparks fire in central Kyiv, 2 rescued, 3 injured, including foreign national",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
     "kategorie": [
-      "sabotaz",
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Falling drone debris sparks fire in central Kyiv, 2 rescued, 5 injured, including foreign national\nFalling drone debris sparks fire in central Kyiv, 2 rescued, 5 injured, including foreign national\nby Léopold Rannou\nNovember 23, 2026 4:20 PM 2 min read\nBurned can in the aftermath of the russian drone attack on the center of Kyiv, Ukraine, on Nov. 23, 2026. (Serhii Korovaynyi / The Kyiv Independent)\nWar Prefer on Google\nby Léopold Rannou\nEditor's note: This is a developing story and will be updated as more information becomes available. Falling debris from Russian drones sparked fire in central Kyiv's Shevchenkivskyi district on Nov. 23, Kyiv Mayor Vitalii Klitschko said at around 3:30 p.m. local time. Preliminary reports indicate two people were rescued, and five others injured, including a foreign national, Klitschko said . Russia has intensified its attacks on Kyiv over the past several weeks. On Nov. 17, Russian ballistic missiles struck two key bridges across the Dnipro River. Two days later, a drone crashed near the Dutch and Austrian embassies , shattering windows at both missions and damaging St. Volodymyr's Cathedral.\nShattered windows in the aftermath of the russian drone…",
+      "stazeno": "2026-11-23T16:02:50.783Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ab5999f8d042c0b4",
+    "zachyceno": "2026-11-23T16:02:46.504Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "LRT English (Litva)",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3123322/how-a-kaliningrad-air-raid-alert-turned-into-an-operation-against-lithuania",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "How a Kaliningrad air raid alert turned into an operation against Lithuania",
+    "titulekPuvodni": "How a Kaliningrad air raid alert turned into an operation against Lithuania",
+    "shrnuti": "",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "air raid alert"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "How a Kaliningrad air raid alert turned into an operation against Lithuania - LRT\n\r\n\r\nNaujienų srautas\nNews\n35 min. ago\nLithuania plans joint investigation with three EU countries into Starlink arson attacks\nNews\n59 min. ago\nHow a Kaliningrad air raid alert turned into an operation against Lithuania\nNews\n4 h ago\nVilnius marks Lithuania’s Armed Forces Day – photos\nNews\n7 h ago\nLithuanian citizens freed in DR Congo: ‘They were tourists’\nNews\n8 h ago\nLithuanian officials deny country’s involvement in alleged Kaliningrad attacks\nNews\n10 h ago\nAll we could do was drive. Notes on the five years of Sienos Grupė – opinion\nNews\n10 h ago\nPeople in Lithuania increasingly turning to paid AI services\nNews\n1 d ago\nThe loneliest people in Lithuania are youths – why?\nNews\n1 d ago\nLithuanian-speaking robot joins library staff: ‘It can read, tell stories'\nNews\n2 d ago\nHitler under the Christmas tree? Seriously? – opinion\nNews\n2 d ago\nChasing storms and Baltic gold: Lithuanian retiree’s passion for amber fishing\nNews\n3 d ago\nLithuania to launch second daily train connection to Riga via Daugavpils\nNews\n3 d ago\nLithuanian, European troops rehearse potential postwar deployment to Ukraine\nNews\n3 d…",
+      "stazeno": "2026-11-23T16:02:50.954Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-daa93342486671e0",
+    "zachyceno": "2026-11-23T16:02:46.501Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "LRT English (Litva)",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3123336/lithuania-plans-joint-investigation-with-three-eu-countries-into-starlink-arson-attacks",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Lithuania plans joint investigation with three EU countries into Starlink arson attacks",
+    "titulekPuvodni": "Lithuania plans joint investigation with three EU countries into Starlink arson attacks",
+    "shrnuti": "",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arson"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Lithuania plans joint investigation with three EU countries into Starlink arson attacks - LRT\n\r\n\r\nNaujienų srautas\nNews\n35 min. ago\nLithuania plans joint investigation with three EU countries into Starlink arson attacks\nNews\n59 min. ago\nHow a Kaliningrad air raid alert turned into an operation against Lithuania\nNews\n4 h ago\nVilnius marks Lithuania’s Armed Forces Day – photos\nNews\n7 h ago\nLithuanian citizens freed in DR Congo: ‘They were tourists’\nNews\n8 h ago\nLithuanian officials deny country’s involvement in alleged Kaliningrad attacks\nNews\n10 h ago\nAll we could do was drive. Notes on the five years of Sienos Grupė – opinion\nNews\n10 h ago\nPeople in Lithuania increasingly turning to paid AI services\nNews\n1 d ago\nThe loneliest people in Lithuania are youths – why?\nNews\n1 d ago\nLithuanian-speaking robot joins library staff: ‘It can read, tell stories'\nNews\n2 d ago\nHitler under the Christmas tree? Seriously? – opinion\nNews\n2 d ago\nChasing storms and Baltic gold: Lithuanian retiree’s passion for amber fishing\nNews\n3 d ago\nLithuania to launch second daily train connection to Riga via Daugavpils\nNews\n3 d ago\nLithuanian, European troops rehearse potential postwar deployment to…",
+      "stazeno": "2026-11-23T16:02:51.543Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a1d2726f77946830",
+    "zachyceno": "2026-11-23T16:02:49.754Z",
+    "publikovano": "2026-11-23T15:49:53.000Z",
+    "zdroj": {
+      "nazev": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/23/moscow-summons-estonian-diplomat-over-border-closure-a94352",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Moscow Summons Estonian Diplomat Over Border Closure",
+    "titulekPuvodni": "Moscow Summons Estonian Diplomat Over Border Closure",
+    "shrnuti": "Russia’s Foreign Ministry warned that the planned border closure would backfire against Estonia and Europe more broadly.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
       "hranice",
       "rusko"
     ],
@@ -1267,21 +1481,569 @@
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "sabotage",
+      "border closure",
       "border",
       "russia"
     ],
-    "naliehave": {
-      "druh": "hranice-nato",
-      "stupen": 2,
-      "proc": "launches+border"
-    },
+    "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Poland launches operation along Russian border in response to reports of planned sabotage | Notes From Poland\n\r\n\r\nPoland launches operation along Russian border in response to reports of planned sabotage\nNov 2, 2026 | Defence\nKeep our news free from ads and paywalls by making a donation to support our work!\nNotes from Poland is run by a small editorial team and is published by an independent, non-profit foundation that is funded through donations from our readers. We cannot do what we do without your support.\nPolish police have launched a special operation to secure the area along the border with the Russian exclave of Kaliningrad after receiving information that acts of sabotage may take place there in the coming days.\nThe operation – which has involved sending additional officers, including counter-terrorism forces, to the northeastern Podlasie and Warmia-Masuria provinces – was first reported by broadcaster RMF and confirmed by the national police chief, Marek Boroń.\n“Police are putting security measures in place around the Kaliningrad region in anticipation of possible incidents that could lead to acts of sabotage,” he told RMF. “ This is based on information we also have from…",
-      "stazeno": "2026-11-02T15:03:10.952Z",
+      "text": "Moscow Summons Estonian Diplomat Over Border Closure - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nNov. 23, 2026\nThe Estonian Embassy in Moscow.\nYekaterina Borisova (CC BY-SA 4.0)\nRussia&rsquo;s Foreign Ministry said Monday that it summoned Estonia&rsquo;s top diplomat in Moscow to protest the Baltic country&rsquo;s decision to close all border crossings with Russia starting next month.\nEstonia announced last week that it would close its three road border crossings with Russia for at least six months beginning on Dec. 1 after Estonian security services said they foiled a Moscow-linked plot against a local drone manufacturer.\nRussia, in response, has accused Estonia of erecting a &ldquo;new Iron Curtain&rdquo; and promised retaliatory measures.\nThe Foreign Ministry told Estonia&rsquo;s charg&eacute; d&rsquo;affaires Marek &Uuml;htegi that the &ldquo;unfounded&rdquo; accusations exposed Tallinn&rsquo;s &ldquo;fierce Russophobia.&rdquo; The ministry warned that the planned border closure would backfire against Estonia and Europe more broadly.\n&ldquo;Closing the state border will primarily deliver…",
+      "stazeno": "2026-11-23T16:02:51.953Z",
       "stav": 200
     }
+  },
+  {
+    "id": "k-97e5a541e8ca5f64",
+    "zachyceno": "2026-11-23T16:02:46.806Z",
+    "publikovano": "2026-11-23T15:46:40.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/live/2026/nov/23/russia-ukraine-war-zelenskyy-libya-benghazi-drone-attack-ship-merkury-un-nato-europe-latest-news-updates",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Moscow accuses Estonia of acting ‘on verge of unleashing open war with Russia’ – Europe live",
+    "titulekPuvodni": "Moscow accuses Estonia of acting ‘on verge of unleashing open war with Russia’ – Europe live",
+    "shrnuti": "Estonia has continued to deny it has allowed Ukrainian drones to operate from its territory despite repeated unsubstantiated claims from the Kremlin Turning to Ukraine, Nato’s Rutte stresses the need to secure the flow of “crucial supplies” or air defence weapons and ammunition to Ukraine. “ It help",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+eston+war",
+      "dron",
+      "drone",
+      "nato",
+      "russia",
+      "kreml",
+      "kremlin"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "EU sanctions package intended to ‘keep pressure’ on Russia and ‘strike harder’ at its ability to fund Ukraine war – Europe live | Europe | The Guardian\nSkip to main content Skip to navigation\nSkip to key events\nEurope live with Jakub Krupa Europe\nEU sanctions package intended to ‘keep pressure’ on Russia and ‘strike harder’ at its ability to fund Ukraine war – Europe live\nEuropean Commission president Ursula von der Leyen sets out 22nd package of sanctions\nLIVE  Updated  38m ago\nJakub Krupa (now) and Yohannes Lowe (earlier)\nMon 23 Nov 2026 10.46 EST First published on Mon 23 Nov 2026 03.50 EST\nShare\nKey events\n14m ago\nEuropean Commission again attempting to increase pressure on Russia - snap analysis\n37m ago\n'Russia’s dangerous and reckless actions in Europe are unacceptable,' Finland says as it summons Russian ambassador\n52m ago\nEU to 'ban Russian teams, athletes competing under Russian flag'\n54m ago\nEU to block Europeans from taking senior governing roles in Russia\n54m ago\nEU to propose visa ban for Russian ex-combatants\n55m ago\nEU expanding energy sanctions against Russia\n1h ago\nEU sanctions 'extend transaction bank' and 'crack down on crypto, payment networks'\n1h ago\nNew…",
+      "stazeno": "2026-11-23T16:02:52.125Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-19c482d8e60c23be",
+    "zachyceno": "2026-11-23T16:02:47.580Z",
+    "publikovano": "2026-11-23T15:31:05.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/konflikty-zbrojne/art45530691-merz-o-rosyjskich-rakietach-polska-moze-liczyc-na-nasza-pelna-solidarnosc",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Merz o rosyjskich rakietach: Polska może liczyć na naszą pełną solidarność",
+    "titulekPuvodni": "Merz o rosyjskich rakietach: Polska może liczyć na naszą pełną solidarność",
+    "shrnuti": "Kanclerz Niemiec Friedrich Merz wezwał Rosję do „natychmiastowego zaprzestania niebezpiecznych prowokacji” i zapewnił, że Polska może liczyć na „naszą pełną solidarność”. Szef niemieckiego rządu złożył tę deklarację trzy dni po naruszeniu polskiej przestrzeni powietrznej.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rosyjskie rakiety rozbiły się w Polsce. Merz apeluje do Moskwy - rp.pl\n\r\nReklama\nWydarzenia\nŚwiat\nKonflikty zbrojne\nMerz o rosyjskich rakietach: Polska może liczyć na naszą pełną solidarność\nKanclerz Niemiec Friedrich Merz wezwał Rosję do „natychmiastowego zaprzestania niebezpiecznych prowokacji” i zapewnił, że Polska może liczyć na „naszą pełną solidarność”. Szef niemieckiego rządu złożył tę deklarację trzy dni po naruszeniu polskiej przestrzeni powietrznej.\nAktualizacja:\n23.11.2026 17:01\nPublikacja:\n23.11.2026 16:31\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nFriedrich Merz\nKanclerz Niemiec o rosyjskich prowokacjach\nFoto: REUTERS/Liesa Johannssen\nReklama\nReklama\nReklama\nPAP, oprac.\nAdam Zygiel\n- Chcę to powiedzieć bardzo jasno i jednoznacznie: Rosja musi natychmiast zaprzestać tych niebezpiecznych prowokacji – powiedział kanclerz na wspólnej konferencji prasowej w Berlinie z sekretarzem generalnym NATO Markiem Rutte.\nReklama\nReklama\n- Polska może liczyć na naszą pełną solidarność – oświadczył.\n- A gdyby zaszła taka potrzeba, NATO będzie oczywiście bronić każdego centymetra terytorium Sojuszu – dodał szef niemieckiego rządu.\nRosyjskie rakiety rozbiły się…",
+      "stazeno": "2026-11-23T16:02:52.146Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f6991c51022353ff",
+    "zachyceno": "2026-11-23T16:02:47.493Z",
+    "publikovano": "2026-11-23T15:11:34.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/LL3hTlm/na-ukrajine-ich-stihaju-za-vlastizradu-skryvaju-sa-na-domasi-lidri-hnutia-allatra-ziskali-falosne-pasy-eu/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Na Ukrajine ich stíhajú za vlastizradu, skrývajú sa na Domaši. Lídri hnutia Allatra získali falošné pasy EÚ",
+    "titulekPuvodni": "Na Ukrajine ich stíhajú za vlastizradu, skrývajú sa na Domaši. Lídri hnutia Allatra získali falošné pasy EÚ",
+    "shrnuti": "Kým rumunské súdy sa dnes snažia stovky takýchto pasov zrušiť a na Ukrajine čelia lídri hnutia obvineniam z vlastizrady, slovenská polícia ich preverovanie v septembri tohto roka zastavila.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "obvin+vlastizrad"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Na Ukrajine ich stíhajú za vlastizradu, skrývajú sa na Domaši. Lídri hnutia Allatra získali falošné pasy EÚ | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n3 °C -\nBratislava\npondelok 23. 11.\n23. 11.\nKlement\nSlovensko dnes 23. Nov 2026 o 16:11\n2 min. čítania\nPridať do Google\nNa Ukrajine ich stíhajú za vlastizradu, skrývajú sa na Domaši. Lídri hnutia Allatra získali falošné pasy EÚ\n1 fotka v galérii\nLogo sekty Tvorivá spoločnosť. Zdroj: Hoaxy a podvody - Ministerstvo vnútra SR/ FB\nAktuality.sk\nUložiť článok\nKým rumunské súdy sa dnes snažia stovky takýchto pasov zrušiť a na Ukrajine čelia lídri hnutia obvineniam z vlastizrady, slovenská polícia ich preverovanie v septembri tohto roka zastavila.\nNa východe Slovenska už roky pôsobí skupina ľudí z Ukrajiny a Ruska napojená na sporné hnutie Allatra, ktorá sa k výhodám Európskej únie dostala podvodom. Medzinárodná investigatíva, na ktorej sa podieľalo aj Investigatívne centrum Jána Kuciaka (ICJK) , odhalila, že vrcholní predstavitelia hnutia získali pravé rumunské doklady na základe sfalšovaných osvedčení o občianstve.\nČo je AllatRa?\nAllatRa je nové náboženské hnutie pochádzajúce z Ukrajiny, ktoré registrovali…",
+      "stazeno": "2026-11-23T16:02:52.766Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b84907311a58635e",
+    "zachyceno": "2026-11-23T16:02:46.119Z",
+    "publikovano": "2026-11-23T15:06:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/rusko-hrozi-estonsku-pohybujete-se-na-hranici-rozpoutani-otevrene-valky.A261123_151955_zahranicni_bro#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusko hrozí Estonsku: Pohybujete se na hranici rozpoutání otevřené války",
+    "titulekPuvodni": "Rusko hrozí Estonsku: Pohybujete se na hranici rozpoutání otevřené války",
+    "shrnuti": "Ruské ministerstvo zahraničí varovalo Estonsko, že jeho nedávné kroky, včetně uzavření hraničních přechodů s Ruskem, údajného poskytování estonského vzdušného prostoru Ukrajině či kontrol ruských lodí v Baltském moři, se pohybují na hranici rozpoutání otevřené války s Ruskem.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "uzavreni hranic",
+      "hranic+kontrol",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Jste na pokraji otevřené války, varuje Rusko Estonce - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich web�…",
+      "stazeno": "2026-11-23T16:02:54.070Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8c7bb7c3947718b8",
+    "zachyceno": "2026-11-23T16:02:49.667Z",
+    "publikovano": "2026-11-23T15:04:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/23/8064242/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rutte sceptical of single European military: Putin would be in Rotterdam before we decide how to act",
+    "titulekPuvodni": "Rutte sceptical of single European military: Putin would be in Rotterdam before we decide how to act",
+    "shrnuti": "NATO Secretary General Mark Rutte warned a separate EU military alongside national militaries could slow responses, saying Putin could reach Rotterdam first.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "hybridni",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+nato+response",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-47fd0e6abdd259a7",
+    "zachyceno": "2026-11-23T16:02:49.631Z",
+    "publikovano": "2026-11-23T14:41:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4187737-drone-debris-falls-in-three-kyiv-districts-injuries-reported.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Drone debris falls in three Kyiv districts, injuries reported",
+    "titulekPuvodni": "Drone debris falls in three Kyiv districts, injuries reported",
+    "shrnuti": "In Kyiv's Shevchenkivskyi district, falling drone debris set two cars on fire and caused a blaze on the first floor of a five-story residential building.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-a8879751e963b7b5",
+    "zachyceno": "2026-11-23T16:02:46.139Z",
+    "publikovano": "2026-11-23T14:23:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/rusko-baltske-more-libye-stredozemni-more-lode-kaliningrad.A261123_090542_zahranicni_aha#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusové polykají výprask na moři. A chystají se na blokádu Kaliningradu",
+    "titulekPuvodni": "Rusové polykají výprask na moři. A chystají se na blokádu Kaliningradu",
+    "shrnuti": "Boje mezi Ruskem s Ukrajinou se naplno přelily na evropská moře. Už se zdaleka neválčí jen v tom Černém, Kyjev o víkendu zasáhl dvě ruské lodě u břehů Libye. Pro putinovský režim je však daleko nepříjemnější útok ve Finském zálivu a tajemstvím opředený nálet dronů na Kaliningrad.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-6d64270ccc78f65b",
+    "zachyceno": "2026-11-23T16:02:49.674Z",
+    "publikovano": "2026-11-23T14:07:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/23/8064230/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drone debris falls in central Kyiv, US citizen among those injured",
+    "titulekPuvodni": "Russian drone debris falls in central Kyiv, US citizen among those injured",
+    "shrnuti": "Debris from Russian drones has fallen near Independence Square in Kyiv, sparking fires at a five-storey residential building.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-0d9abd249fc2f14c",
+    "zachyceno": "2026-11-23T16:02:46.906Z",
+    "publikovano": "2026-11-23T14:04:23.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/video/20261123-ukraine-sending-the-message-that-we-can-attack-you-where-we-want",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine sending the message that 'we can attack you where we want'",
+    "titulekPuvodni": "Ukraine sending the message that 'we can attack you where we want'",
+    "shrnuti": "Ukraine carried out an attack on a Russian warship moored at a port in Libya, President Volodymyr Zelensky said Monday, claiming that maritime drones sank the navy vessel in a surprise assault the previous day. With the attack, as well as the fact that Kyiv has claimed responsibility, Ukraine is sen",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-291462250719ed54",
+    "zachyceno": "2026-11-23T16:02:49.716Z",
+    "publikovano": "2026-11-23T13:35:53.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/23/moscow-and-st-petersburg-residents-report-disruptions-to-mobile-and-home-internet-services",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Moscow and St. Petersburg residents report disruptions to mobile and home internet services",
+    "titulekPuvodni": "Moscow and St. Petersburg residents report disruptions to mobile and home internet services",
+    "shrnuti": "Residents of Moscow and St. Petersburg began reporting internet outages on the morning of November 23, according to Downdetector, which said complaints about internet service peaked around eight a.m. The cause of the problems was not known.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "internet outage"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-328f6df18a8f10ed",
+    "zachyceno": "2026-11-23T16:02:47.504Z",
+    "publikovano": "2026-11-23T13:32:47.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/Y39z5Kl/europska-komisia-celi-rozsiahlemu-kybernetickemu-utoku-podozrenia-padaju-na-skupinu-ktora-je-napojena-na-cinu/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Európska komisia čelí rozsiahlemu kybernetickému útoku. Podozrenia padajú na skupinu, ktorá je napojená na Čínu",
+    "titulekPuvodni": "Európska komisia čelí rozsiahlemu kybernetickému útoku. Podozrenia padajú na skupinu, ktorá je napojená na Čínu",
+    "shrnuti": "Ani po mesiaci sa odborníkom Európskej komisie nepodarilo úplne zvládnuť prebiehajúci kybernetický útok, za ktorým podľa bruselských zdrojov stojí skupina spájaná s Čínou.",
+    "kodZeme": "BE",
+    "zeme": "Belgie",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kyberneticky utok",
+      "kybernetick"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-3652e702edaa3269",
+    "zachyceno": "2026-11-23T16:02:46.163Z",
+    "publikovano": "2026-11-23T13:14:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/nato-rusko-druzice-jaderna-zbran-vesmir.A261123_130846_zahranicni_dtt#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusko chce vyslat do vesmíru družici s atomovkou, varují západní rozvědky",
+    "titulekPuvodni": "Rusko chce vyslat do vesmíru družici s atomovkou, varují západní rozvědky",
+    "shrnuti": "Rusko plánuje ještě letos vynést do vesmíru družici s jadernou zbraní, jsou přesvědčeny zpravodajské služby západních zemí, píší německá veřejnoprávní média WDR a NDR a deník Süddeutsche Zeitung. Kreml uvedl, že takové zprávy by neměly být brány vážně. Německý kancléř Friedrich Merz řekl, že podobné",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kreml+nemeck+jadern",
+      "rusk",
+      "kreml"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-681e27b69c4a16b3",
+    "zachyceno": "2026-11-23T16:02:46.203Z",
+    "publikovano": "2026-11-23T13:11:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/soucasti-vybavy-hasicu-v-cesku-budou-nove-neprustrelne-vesty/2905488?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Součástí výbavy hasičů v Česku budou nově neprůstřelné vesty",
+    "titulekPuvodni": "Součástí výbavy hasičů v Česku budou nově neprůstřelné vesty",
+    "shrnuti": "Praha - Součástí výbavy hasičů budou nově také neprůstřelné vesty a další pomůcky chránící před střelami, střepinami či výbuchy. Sbor dostane 1000 sad ochranných prostředků, nyní obdržel první dodávku...",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-e354362180b7e654",
+    "zachyceno": "2026-11-23T16:02:49.763Z",
+    "publikovano": "2026-11-23T13:09:25.000Z",
+    "zdroj": {
+      "nazev": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/23/kremlin-dismisses-reports-about-alleged-nuclear-armed-satellite-launch-a94349",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kremlin Dismisses Reports About Alleged Nuclear-Armed Satellite Launch",
+    "titulekPuvodni": "Kremlin Dismisses Reports About Alleged Nuclear-Armed Satellite Launch",
+    "shrnuti": "German media reported that Western intelligence agencies believe Russia plans to launch a nuclear-armed satellite called Sputnik-S as early as December 2026.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kreml+german+nuclear",
+      "russia",
+      "kreml",
+      "kremlin"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-8cfab3ecadc98c2e",
+    "zachyceno": "2026-11-23T16:02:46.868Z",
+    "publikovano": "2026-11-23T13:08:15.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/european-commission-personal-data-leak-cyberattack-disruption/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
+    "titulekPuvodni": "EU Commission confirms personal data leak after cyberattack, warns of further disruption",
+    "shrnuti": "Names and email addresses were leaked in the cyberattack, according to one EU official, who warned that the full extent of the breach remains unclear.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-f0a0473d1dbc70e2",
+    "zachyceno": "2026-11-23T16:02:49.687Z",
+    "publikovano": "2026-11-23T13:00:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/23/8064214/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia recruits agents in Europe through Discord: over 20 million job ads identified by Ukrainian intelligence",
+    "titulekPuvodni": "Russia recruits agents in Europe through Discord: over 20 million job ads identified by Ukrainian intelligence",
+    "shrnuti": "Defence Intelligence of Ukraine says Russian secret services have posted over 20 million disguised job ads on Discord in 2026, offering US$1,500-3,000 for espionage and sabotage tasks.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "espionage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-d95c0f27de733493",
+    "zachyceno": "2026-11-23T16:02:45.921Z",
+    "publikovano": "2026-11-23T12:43:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/vesmir/rusko-planuje-vynest-do-vesmiru-druzici-s-jadernou-zbrani-pisi-nemecka-media_2611231343_vdv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusko plánuje vynést do vesmíru družici s jadernou zbraní, píšou německá média. Kreml to odmítá",
+    "titulekPuvodni": "Rusko plánuje vynést do vesmíru družici s jadernou zbraní, píšou německá média. Kreml to odmítá",
+    "shrnuti": "Rusko plánuje ještě letos vynést do vesmíru družici s jadernou zbraní, jsou přesvědčeny zpravodajské služby západních zemí, píšou v pondělí německá veřejnoprávní média WDR a NDR a deník Süddeutsche Zeitung. Kreml podle agentury Reuters uvedl, že takové zprávy by neměly být brány vážně.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kreml+nemeck+jadern",
+      "rusk",
+      "kreml"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-f6350176734749df",
+    "zachyceno": "2026-11-23T16:02:47.481Z",
+    "publikovano": "2026-11-23T12:41:44.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5709580/ficova-metrologia-s-ruskymi-vojnovymi-zlocincami/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ficova metrológia s ruskými vojnovými zločincami",
+    "titulekPuvodni": "Ficova metrológia s ruskými vojnovými zločincami",
+    "shrnuti": "Kým jedenásť európskych armád kúsok za našou severnou hranicou nacvičovalo, ako ochrániť budúci mier na Ukrajine, Ficova vláda nacvičovala s Moskvou metrológiu a spoznávanie kultúrneho dedičstva. Rusko medzitým poslalo do Poľska tri riadené strely.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "hranic+armad",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-7e455167e0263786",
@@ -1446,6 +2208,35 @@
       "stav": 403,
       "chyba": "HTTP 403"
     }
+  },
+  {
+    "id": "k-3a0f6d51f2689f29",
+    "zachyceno": "2026-11-23T16:02:49.698Z",
+    "publikovano": "2026-11-23T11:39:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/23/8064197/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrainian Su-27 hits Russian bridge and command post with GBU bombs in one sortie – video",
+    "titulekPuvodni": "Ukrainian Su-27 hits Russian bridge and command post with GBU bombs in one sortie – video",
+    "shrnuti": "A Ukrainian Su-27 pilot struck a road bridge and a Russian command post with GBU guided bombs in a single sortie in the 3rd Army Corps' area of operations in Donetsk Oblast.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-f1f73cbc63908d24",
@@ -9630,868 +10421,6 @@
     "vyrez": {
       "text": "Skutki naruszenia przestrzeni powietrznej. Minister infrastruktury: 34 pociągi i 4 samoloty zostały opóźnione | TVN24 Biznes\nBiznes\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nNotowania\nPieniądze\nNieruchomości\nRynki\nDla firm\nWięcej\nPrawo\nZe świata\nTech\nHandel\nMoto\nDla seniora\nTurystyka\nCzytaj\nSłuchaj\nOglądaj\nDariusz Klimczak: w związku z naruszeniem polskiej przestrzeni powietrznej opóźnione były 34 pociągi i 4 samoloty\nŹródło wideo: TVN24\nŹródło zdj. gł.: Artur Węgrzynowicz, tvnwarszawa.pl\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze materiały częściej pojawiały się w Twoich wynikach wyszukiwania.\n34 pociągi i cztery samoloty były opóźnione w piątek w związku z naruszeniem polskiej przestrzeni…",
       "stazeno": "2026-11-20T15:02:21.283Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-db2504c698692379",
-    "zachyceno": "2026-11-20T16:02:11.827Z",
-    "publikovano": "2026-11-20T13:58:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/20/8063825/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian missile hits house in Ivano-Frankivsk Oblast but fails to explode – photos",
-    "titulekPuvodni": "Russian missile hits house in Ivano-Frankivsk Oblast but fails to explode – photos",
-    "shrnuti": "On the morning of 20 November, during a large-scale Russian attack on Ivano-Frankivsk Oblast, a missile struck a house in the Burshtyn hromada. Two people were rescued from the house. A hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territori",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "missile struck",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian missile hits house in Ivano-Frankivsk Oblast but fails to explode – photos | Ukrainska Pravda\nScreenshot\nOn the morning of 20 November, during a large-scale Russian attack on Ivano-Frankivsk Oblast, a missile struck a house in the Burshtyn hromada . Two people were rescued from the house. A hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories.\nSource : Oleksandr Khorunzhyi, spokesperson for the State Emergency Service of Ukraine (SES), in a comment to Ukrainska Pravda; SES Main Directorate in Ivano-Frankivsk Oblast ; Svitlana Onyshchuk , Head of Ivano-Frankivsk Oblast Military Administration\nDetails : By the afternoon, a video was circulating on social media showing a missile that had pierced the roof of a house in a village near Burshtyn but had not exploded.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nSES spokesperson Oleksandr Khorunzhyi said bomb disposal experts from the National Police were working at the scene. The missile strike caused a small fire. SES personnel rescued two people from the house.\n\r\n\r\n\r\nPhoto: SES\n\r\n\r\n\r\n\r\nVasyl Andriieshyn, head of the Burshtyn hromada, told Suspilne, Ukraine's public broadcaster, that…",
-      "stazeno": "2026-11-20T20:03:19.890Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a886a640989826f7",
-    "zachyceno": "2026-11-20T15:02:15.251Z",
-    "publikovano": "2026-11-20T13:35:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/wojsko/art45518511-mamy-znieczulice-niepewnosc-i-brak-zaufania-do-tych-sygnalow-gen-polko-ostrzega-po-alarmach-w-polsce",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Mamy znieczulicę, niepewność i brak zaufania do tych sygnałów”. Gen. Polko ostrzega po alarmach w Polsce",
-    "titulekPuvodni": "„Mamy znieczulicę, niepewność i brak zaufania do tych sygnałów”. Gen. Polko ostrzega po alarmach w Polsce",
-    "shrnuti": "W związku z rosyjskim atakiem na Ukrainę mieszkańcy części wschodniej Polski otrzymali alerty RCB, a wojsko poinformowało o podejrzeniu naruszenia polskiej przestrzeni powietrznej. Gen. Roman Polko, który przebywał w Lublinie, gdzie mógł osobiście obserwować reakcje mieszkańców na alarm, ocenił w ro",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "narusz+przestrzeni powietrzn"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Gen. Roman Polko po alarmach mówi o zagrożeniach i obronie powietrznej. „Mamy znieczulicę” - rp.pl\nReklama\nWydarzenia\nKraj\nWojsko\n„Mamy znieczulicę, niepewność i brak zaufania do tych sygnałów”. Gen. Polko ostrzega po alarmach w Polsce\nW związku z rosyjskim atakiem na Ukrainę mieszkańcy części wschodniej Polski otrzymali alerty RCB, a wojsko poinformowało o podejrzeniu naruszenia polskiej przestrzeni powietrznej. Gen. Roman Polko, który przebywał w Lublinie, gdzie mógł osobiście obserwować reakcje mieszkańców na alarm, ocenił w rozmowie z TVN24, że konieczne są zmiany zarówno w systemie ostrzegania ludności, jak i w sposobie reagowania na zagrożenia powietrzne.\nAktualizacja:\n20.11.2026 09:21\nPublikacja:\n20.11.2026 14:35\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nByły dowódca GROM-u: System alarmowania powinien przekazywać w końcu jakieś informacje, a nie służyć tylko do straszenia\nFoto: tv.rp.pl\nReklama\nReklama\nReklama\nAda Michalak\nW nocy z 19 na 20 listopada Kijów stał się celem rosyjskiego ataku z wykorzystaniem pocisków balistycznych. W związku z zagrożeniem mieszkańcy województw podkarpackiego i lubelskiego otrzymali alerty Rządowego Centrum…",
-      "stazeno": "2026-11-20T15:02:21.912Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-66e7b289b6136820",
-    "zachyceno": "2026-11-20T13:16:42.617Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "RTL Today (Lucembursko)",
-      "url": "https://today.rtl.lu/news/world/russia-pummels-ukraine-after-putin-vowed-painful-attack-1540038716",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bridge retaliation Russia pummels Ukraine, missile hits Poland, after Putin threat",
-    "titulekPuvodni": "Bridge retaliation Russia pummels Ukraine, missile hits Poland, after Putin threat",
-    "shrnuti": "",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+poland+threat",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Bridge retaliation: Russia pummels Ukraine, missile hits Poland, after Putin threat - RTL Today\nBridge retaliation Russia pummels Ukraine, missile hits Poland, after Putin threat\nAFP\nPublished: 20.11.26 13:31 , Update: 20.11.26 14:10\nRussia has increased strikes on Ukraine as temperatures dip\n© AFP\nMoscow pounded Ukraine with massive strikes Friday, with Kyiv saying at least six people were killed in the capital, and neighbouring Poland reporting two Russian missiles likely landed in the south-east corner of the NATO country, accusing Moscow of a \"provocation.\" \nHours earlier, Russia's Vladimir Putin vowed a \"painful\" response to Kyiv's strikes on Moscow's Crimea bridge after holding a summit with China's Xi Jinping and US President Donald Trump. \nUkraine's Volodymyr Zelensky called the night-time strikes one of Moscow's largest of the entire war, denouncing Russian \"terror.\"\nZelensky -- who met with allies in Berlin Thursday -- said Putin's attempts to \"redraw the world\" with Xi and Trump had been a \"failure.\"\nIn China, Putin said he \"shared responsibility\" for global peace with Xi and Trump and issued a \"declaration toward peace\" that made no mention of Moscow's almost five-year…",
-      "stazeno": "2026-11-20T13:16:45.192Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-94fa1d506df71782",
-    "zachyceno": "2026-11-20T13:16:42.455Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3120288/lithuanian-european-troops-rehearse-potential-postwar-deployment-to-ukraine",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuanian, European troops rehearse potential postwar deployment to Ukraine",
-    "titulekPuvodni": "Lithuanian, European troops rehearse potential postwar deployment to Ukraine",
-    "shrnuti": "",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "troops+deploy"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Lithuanian, European troops rehearse potential postwar deployment to Ukraine - LRT\n\r\n\r\nNaujienų srautas\nNews\n11 min. ago\nLithuanian, European troops rehearse potential postwar deployment to Ukraine\nNews\n3 h ago\n‘Admin’ to ‘skibiditoilet’: most popular unsafe passwords in Lithuania and globally\nNews\n4 h ago\nNausėda says Trump expects Europe to play greater role in Ukraine peace efforts\nNews\n5 h ago\nLithuania ranks fifth-lowest in EU for tax revenue as share of GDP\nNews\n5 h ago\nLithuania marks 108th Armed Forces anniversary with four days of events\nNews\n7 h ago\nLRT English Newsletter: Don’t drink and smash\nNews\n21 h ago\nLithuania plans to cut foreign worker quota to 24,400 in 2027\nNews\n1 d ago\nLithuanian parliament sends 2027 budget back to government amid criticism\nNews\n1 d ago\nNausėda says Lithuania can still establish military division by 2030\nNews\n1 d ago\nLithuanian liberals threaten no-confidence motion over Taiwan representative office name\nNews\n1 d ago\nLithuanian border guard sentenced for killing cigarette smuggler\nNews\n1 d ago\nAuditor: Lithuania needs higher defence spending to meet military goals\nNews\n1 d ago\nMormon-funded organisation digitises historical Lithuanian…",
-      "stazeno": "2026-11-20T13:16:45.519Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d61b9ed09bbaea52",
-    "zachyceno": "2026-11-20T15:02:15.195Z",
-    "publikovano": "2026-11-20T13:11:09.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/polska/swiatowe-media-o-obiektach-znalezionych-w-polsce-cytuja-mieszkancow-st9349159?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Światowe media o obiektach znalezionych w Polsce",
-    "titulekPuvodni": "Światowe media o obiektach znalezionych w Polsce",
-    "shrnuti": "Temat obiektów, które wskutek naruszenia polskiej przestrzeni powietrznej spadły na terytorium naszego kraju, budzi zainteresowanie na świecie. Informuje o tym szereg zagranicznych mediów.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "narusz+przestrzeni powietrzn"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Naruszenie polskiej przestrzeni powietrznej. Światowe media o obiektach znalezionych w Polsce - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nWójt gminy Aleksandrów usłyszał huk, potem zobaczył czarny dym\nŹródło wideo: Reuters\nŹródło zdj. gł.: tvn24.pl\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze materiały częściej pojawiały się w…",
-      "stazeno": "2026-11-20T15:02:22.177Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-31dea73d0d9378a8",
-    "zachyceno": "2026-11-20T13:16:43.300Z",
-    "publikovano": "2026-11-20T12:47:43.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/qNQJu8V/tusk-hovori-o-moznej-ruskej-provokacii-rakety-a-dron-dopadli-pri-miestach-vojenskych-cviceni/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tusk hovorí o možnej ruskej provokácii. Rakety a dron dopadli pri miestach vojenských cvičení",
-    "titulekPuvodni": "Tusk hovorí o možnej ruskej provokácii. Rakety a dron dopadli pri miestach vojenských cvičení",
-    "shrnuti": "Poľské úrady tvrdia, že na ich územie pravdepodobne dopadli dve rakety a jeden dron pochádzajúce z Ruska. Incident si nevyžiadal obete ani škody, NATO však pripravuje ďalší postup.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+dopadl",
-      "dron",
-      "nato",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Tusk hovorí o možnej ruskej provokácii. Rakety a dron dopadli pri miestach vojenských cvičení | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n13 °C -\nBratislava\npiatok 20. 11.\n20. 11.\nFélix\nSprávy dnes 20. Nov 2026 o 13:47\n1 min. čítania\nPridať do Google\nTusk hovorí o možnej ruskej provokácii. Rakety a dron dopadli pri miestach vojenských cvičení\n1 fotka v galérii\nDonald Tusk Zdroj: reuters\nTASR\nAktuality.sk\nUložiť článok\nPoľské úrady tvrdia, že na ich územie pravdepodobne dopadli dve rakety a jeden dron pochádzajúce z Ruska. Incident si nevyžiadal obete ani škody, NATO však pripravuje ďalší postup.\nObjekty, ktoré narušili poľský vzdušný priestor a spadli na územie krajiny, mohli predstavovať zámernú provokáciu zo strany Ruska. Uviedol to v piatok poľský premiér Donald Tusk. Upozornil, že dopadli v blízkosti miest, kde sa konajú vojenské cvičenia jednotiek krajín koalície ochotných. Informuje o tom varšavský spravodajca TASR.\n„Nie je to len môj názor, ale aj názor mojich zahraničných partnerov, že posledný incident nevyzerá ako náhoda. Zdá sa, že máme dočinenia s úmyselnou provokáciou,“ povedal Tusk.\nReakcia NATO na incident\nPremiér informoval, že…",
-      "stazeno": "2026-11-20T13:16:45.879Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-53390e42c41a3df2",
-    "zachyceno": "2026-11-20T13:16:42.553Z",
-    "publikovano": "2026-11-20T12:46:47.000Z",
-    "zdroj": {
-      "nazev": "Notes from Poland",
-      "url": "https://notesfrompoland.com/2026/11/20/two-ukrainians-charged-with-vandalising-polish-monuments-on-behalf-of-russia/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Two Ukrainians charged with vandalising Polish monuments on behalf of Russia",
-    "titulekPuvodni": "Two Ukrainians charged with vandalising Polish monuments on behalf of Russia",
-    "shrnuti": "Prosecutors say the operation was intended to fuel hostility between Poles and Ukrainians.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "charged with+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Two Ukrainians charged with vandalising Polish monuments on behalf of Russia | Notes From Poland\n\r\n\r\nTwo Ukrainians charged with vandalising Polish monuments on behalf of Russia\nNov 20, 2026 | Defence , Law , Society\nWhy are you now seeing adverts on our website for the first time? Click here to learn more.\nKeep our news free from paywalls by making a donation to support our work!\nNotes from Poland is run by a small editorial team and is published by an independent, non-profit foundation that is funded through donations from our readers. We cannot do what we do without your support.\nTwo Ukrainians have been charged in Poland with working on behalf of Russia to paint slogans praising the Ukrainian Insurgent Army (UPA), a nationalist formation responsible for massacring Poles during World War Two, on three monuments in the Polish city of Poznań.\nPolish prosecutors say that the operation was intended to fuel hostility between Poles and Ukrainians. The incidents in Poznań were part of a seemingly coordinated wave of similar graffiti on monuments in three other Polish cities.\nUkraińcy malowali na pomnikach hasła „Sława UPA”. Działali na zlecenie wywiadu https://t.co/knLgZzo8ct\n&mdash;…",
-      "stazeno": "2026-11-20T13:16:47.348Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-43cdf16e1921627b",
-    "zachyceno": "2026-11-20T13:16:42.256Z",
-    "publikovano": "2026-11-20T12:46:17.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/2264723/slova-o-zajmu-o-mir-vystridalo-putinovo-net-a-zaplava-raket-a-dronu-tri-spadly-v-polsku/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Slova o zájmu o mír vystřídalo Putinovo „nět“ a záplava raket a dronů, tři spadly v Polsku",
-    "titulekPuvodni": "Slova o zájmu o mír vystřídalo Putinovo „nět“ a záplava raket a dronů, tři spadly v Polsku",
-    "shrnuti": "Analýza: Premiér Babiš ještě téměř ani nedořekl, že Rusko podle Donalda Trumpa tentokrát vážně chce mír, a začal jeden z největších ruských vzdušných útoků na Ukrajinu. Stovky raket a dronů zabily za noc nejméně osm lidí, často mířily na západ země. Několik raket nebo dronů vniklo do Polska.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+spadl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Slova o zájmu o mír vystřídalo Putinovo „nět“ a záplava raket a dronů, tři spadly v Polsku &mdash; Deník N\nŽena prochází před Rusy poničenou budovou v Kyjevě. Ukrajinskou metropoli i mnoho jiných částí země, především na západě, zasáhl v noci na 20. listopadu kombinovaný ruský dronový a raketový útok. Foto: Efrem Lukatsky, AP/ČTK,\nAnalýza: Premiér Babiš ještě téměř ani nedořekl, že Rusko podle Donalda Trumpa tentokrát vážně chce mír, a začal jeden z největších ruských vzdušných útoků na Ukrajinu. Stovky raket a dronů zabily za noc nejméně osm lidí, často mířily na západ země. Několik raket nebo dronů vniklo do Polska.\nVíce o poslechu Deníku N\nPřidat Deník N mezi oblíbené zdroje\nZ titulkových vyjádření politiků, kteří na přední stránky novin mají vzhledem ke své funkci snadný přístup, to včera večer mohlo vypadat, že mír v rusko-ukrajinské válce může být na spadnutí.\nČeský premiér Andrej Babiš na sítích optimisticky sdělil , že na včerejší jednání koalice ochotných v Berlíně , jehož se Babiš účastnil, zavolal po summitu v Číně americký prezident Donald Trump. Ten podle něj Evropě sdělil, že mu Putin řekl, že „je připraven jednat o ukončení války“. (Před dvěma lety nově zvolený…",
-      "stazeno": "2026-11-20T13:16:47.423Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d0470a8539f58485",
-    "zachyceno": "2026-11-20T13:16:42.774Z",
-    "publikovano": "2026-11-20T12:43:31.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/article/russian-missile-incursion-into-poland-seems-intentional-tusk-says/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
-    "titulekPuvodni": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’",
-    "shrnuti": "“This doesn’t look like an accident,” the Polish prime minister warned.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "incursion+poland+warn",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Tusk: Russian cruise missile incursion into Poland seems ‘intentional’ – POLITICO\nSkip to main content\nAdvertisement\nPolish Prime Minister Donald Tusk said Friday that Russian projectiles entering his country's territory appeared to be part of an “intentional provocation” from Moscow, hours after U.S. President Donald Trump characterized earlier Russian incursions as happening by \"mistake.\"\nOne object exploded, but no one was hurt and there was no damage, Tusk said at a press conference. The incursion occurred as Russia launched a massive missile and drone assault on Ukraine , killing at least five people and damaging three major bridges in Kyiv.\n“This doesn’t look like an accident,” Tusk said, adding that he was choosing his words carefully because the matter was serious.\nAdvertisement\nSpeaking to Fox News on Thursday , Trump said that \"Putin has been landing drones in Poland and a couple of little missiles, by mistake,\" referring to previous incidents.\n\"To put it mildly, I don’t always agree with the American side’s assessment and interpretation of these incidents,” Tusk said in the press conference.\nHe added that U.S. officials have access to the wreckage from Friday's…",
-      "stazeno": "2026-11-20T13:16:48.420Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d93fefb1e9f1cea5",
-    "zachyceno": "2026-11-20T13:16:42.165Z",
-    "publikovano": "2026-11-20T12:41:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/domaci/aktivista-palestina-demonstrace-transparent-hesla-podnecovani-nenavist-soud.A261120_101524_domaci_iri#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sympatizant teroristů? Nenávist k Židům jsem nešířil, odmítl u soudu aktivista",
-    "titulekPuvodni": "Sympatizant teroristů? Nenávist k Židům jsem nešířil, odmítl u soudu aktivista",
-    "shrnuti": "Za zvýšených bezpečnostních opatření projednával Obvodní soud pro Prahu 1 případ propalestinského aktivisty, který podle obžaloby na demonstracích v Praze podněcoval k nenávisti vůči Izraeli a projevoval sympatie k teroristům. Cizinec vinu odmítá. Tvrdí, že proti Židům nikdy negativně nevystupoval a",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zhar"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Nenávist k Židům jsem nešířil, odmítl u soudu aktivista - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich…",
-      "stazeno": "2026-11-20T13:16:48.468Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-70417318e7628b39",
-    "zachyceno": "2026-11-20T13:16:43.323Z",
-    "publikovano": "2026-11-20T12:40:58.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/sluzby/art45520301-niemieckie-media-o-rosyjskich-rakietach-w-polsce-bild-pisze-wprost-o-uderzeniu-pociskow",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Niemieckie media o rosyjskich rakietach w Polsce. „Bild” pisze wprost o uderzeniu pocisków",
-    "titulekPuvodni": "Niemieckie media o rosyjskich rakietach w Polsce. „Bild” pisze wprost o uderzeniu pocisków",
-    "shrnuti": "Niemieckie media szeroko komentują incydent z rosyjskimi rakietami i dronem, które spadły na terytorium Polski. „Bild” pisze o rosyjskich pociskach manewrujących, a „Die Welt” i „Der Spiegel” podkreślają znaczenie Polski dla NATO i pomocy Ukrainie.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+spadł",
-      "dron",
-      "drone",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "„Rosyjskie pociski uderzają w Polskę”. Niemieckie media alarmują po wydarzeniach na wschodzie kraju - rp.pl\nReklama\nWydarzenia\nKraj\nSłużby\nNiemieckie media o rosyjskich rakietach w Polsce. „Bild” pisze wprost o uderzeniu pocisków\nNiemieckie media szeroko komentują incydent z rosyjskimi rakietami i dronem, które spadły na terytorium Polski. „Bild” pisze o rosyjskich pociskach manewrujących, a „Die Welt” i „Der Spiegel” podkreślają znaczenie Polski dla NATO i pomocy Ukrainie.\nAktualizacja:\n20.11.2026 13:55\nPublikacja:\n20.11.2026 13:40\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nSłużby pracują na miejscu zdarzenia w miejscowości Rudnik nad Sanem\nFoto: PAP/Piotr Polak\nReklama\nReklama\nReklama\nUrszula Lesman\nNiemieckie media szczegółowo informują o naruszeniu polskiej przestrzeni powietrznej przez obiekty pochodzące z Rosji. „Der Spiegel”, „Die Welt” i agencja dpa, powołując się na polskie władze, podają, że na terytorium Polski spadły prawdopodobnie dwa pociski manewrujące i dron. Z kolei „Bild” zwraca uwagę na skalę alarmu lotniczego, a publiczna telewizja ARD wiąże wydarzenia ze zmasowanym rosyjskim atakiem na Ukrainę.\nReklama\nReklama\nCzytaj więcej\nKonflikty…",
-      "stazeno": "2026-11-20T13:16:51.709Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-169aa948a1b820e7",
-    "zachyceno": "2026-11-20T13:16:42.106Z",
-    "publikovano": "2026-11-20T12:39:09.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-zacharovova-estonsko-buduje-novou-zeleznou-oponu-40609701",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zacharovová: Estonsko buduje novou železnou oponu",
-    "titulekPuvodni": "Zacharovová: Estonsko buduje novou železnou oponu",
-    "shrnuti": "Mluvčí ruské diplomacie Marija Zacharovová prohlásila, že Estonsko svým rozhodnutím uzavřít hranice s Ruskem chce vybudovat novou železnou oponu. Informovala o tom ruská státní agentura TASS krátce poté, co estonská vláda oznámila, že od 1. prosince úplně uzavře hranice.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "hranice",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "hranic+uzavr",
-      "hranice",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Zacharovová: Estonsko buduje novou železnou oponu - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nZacharovová: Estonsko buduje novou železnou oponu\nVojtěch Bauer\n1:45\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 20. 11., 13:39\nMluvčí ruské diplomacie Marija Zacharovová prohlásila, že Estonsko svým rozhodnutím uzavřít hranice s Ruskem chce vybudovat novou železnou oponu. Informovala o tom ruská státní agentura TASS krátce poté, co estonská vláda oznámila, že od 1. prosince úplně uzavře hranice.\nFoto: Evgenia Novozhenina, Reuters\nMluvčí ministerstva zahraničí Marija Zacharova\nČlánek\n„Takové kroky jsou ve skutečnosti rovnocenné pokusům o vybudování nové železné opony pod falešnou záminkou jakési hrozby z východu,“ řekla mluvčí ruského ministerstva zahraničí. Podle ní uzavření hranic „přesně zapadá“ do „rusofobní linie“ Estonska.\nZacharovová dále pohrozila této pobaltské zemi odvetnými opatřeními. „V případě, že Tallinn tyto plány uskuteční, naše země přijme nezbytná politicko-diplomatická protiopatření k zajištění svých národních zájmů,“ cituje TASS mluvčí ruské diplomacie.\nMluvčí ruské diplomacie reagovala na prohlášení estonské vlády, která v pátek přijala…",
-      "stazeno": "2026-11-20T13:16:52.047Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-037269830c1087bb",
-    "zachyceno": "2026-11-20T13:16:42.728Z",
-    "publikovano": "2026-11-20T12:34:30.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/world/2026/nov/20/russian-missiles-drone-poland-attacks-ukraine",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian missiles and drone reportedly hit Poland during attacks on Ukraine",
-    "titulekPuvodni": "Russian missiles and drone reportedly hit Poland during attacks on Ukraine",
-    "shrnuti": "Polish PM calls strikes, which took place amid western military exercises, ‘an intentional provocation’ by Moscow Two Russian cruise missiles and a jet-powered drone are reported to have crashed in Poland during Russian air attacks on Ukraine that took place amid major western military exercises by ",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "nato",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "invasion+poland+president",
-      "dron+crashed",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian missiles and drone reportedly hit Poland during attacks on Ukraine | Poland | The Guardian\nSkip to main content Skip to navigation\nA security camera view shows an explosion in the distance after an unknown object fell near the Ukrainian border, in Aleksandrów, Poland. Photograph: Social Media/Reuters\nView image in fullscreen\nA security camera view shows an explosion in the distance after an unknown object fell near the Ukrainian border, in Aleksandrów, Poland. Photograph: Social Media/Reuters\nRussian missiles and drone reportedly hit Poland during attacks on Ukraine\nPolish PM calls strikes, which took place amid western military exercises, ‘an intentional provocation’ by Moscow\nTwo Russian cruise missiles and a jet-powered drone are reported to have crashed in Poland during Russian air attacks on Ukraine that took place amid major western military exercises by allied countries.\nUkraine’s president, Volodymyr Zelenskyy, said it was “one of the largest attacks” since the full-scale Russian invasion in 2022, with at least eight people killed and nearly 30 injured in Ukraine.\n“The Russians spread this attack across many cities and regions of Ukraine. Absolutely all the targets…",
-      "stazeno": "2026-11-20T13:16:52.940Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-27b8ade503b37e35",
-    "zachyceno": "2026-11-20T15:02:15.209Z",
-    "publikovano": "2026-11-20T12:31:14.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/swiat/naruszenie-polskiej-przestrzeni-powietrznej-sekretarz-generalny-nato-mark-rutte-solidaryzujemy-sie-z-polska-st9349272?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "\"Solidaryzujemy się z Polską\". Jest zapowiedź sekretarza generalnego NATO",
-    "titulekPuvodni": "\"Solidaryzujemy się z Polską\". Jest zapowiedź sekretarza generalnego NATO",
-    "shrnuti": "Solidaryzujemy się z Polską oraz będziemy dalej wzmacniać naszą zdolność do odstraszania i obrony - oświadczył sekretarz generalny NATO Mark Rutte. Ocenił, że naruszenie polskiej przestrzeni powietrznej jest \"konsekwencją trwającej wojny Rosji przeciwko Ukrainie\".",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "narusz+przestrzeni powietrzn",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Naruszenie polskiej przestrzeni powietrznej. Sekretarz generalny NATO Mark Rutte: solidaryzujemy się z Polską - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nTusk: trzy rosyjskie obiekty naruszyły polską przestrzeń powietrzną\nŹródło wideo: TVN24\nŹródło zdj. gł.: PAP/EPA/HANNIBAL HANSCHKE\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby…",
-      "stazeno": "2026-11-20T15:02:22.231Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-417000052cb69c85",
-    "zachyceno": "2026-11-20T13:16:43.326Z",
-    "publikovano": "2026-11-20T12:30:13.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/wojsko/art45520321-po-alarmie-w-polsce-wojskowy-ostrzega-przed-rosja-przestala-sie-przejmowac",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Po alarmie w Polsce wojskowy ostrzega przed Rosją. „Przestała się przejmować”",
-    "titulekPuvodni": "Po alarmie w Polsce wojskowy ostrzega przed Rosją. „Przestała się przejmować”",
-    "shrnuti": "Po naruszeniu polskiej przestrzeni powietrznej przez trzy obiekty płk rez. Piotr Lewandowski ocenił, że alerty RCB i syreny alarmowe zadziałały, ale mieszkańcy terenów przygranicznych potrzebują szybszych i bardziej precyzyjnych ostrzeżeń. – Z tymi aplikacjami spóźniliśmy się fatalnie – powiedział w",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "narusz+przestrzeni powietrzn"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Rakiety i dron naruszyły polską przestrzeń. Płk Lewandowski komentuje niepokojący incydent - rp.pl\nReklama\nWydarzenia\nKraj\nWojsko\nPo alarmie w Polsce wojskowy ostrzega przed Rosją. „Przestała się przejmować”\nPo naruszeniu polskiej przestrzeni powietrznej przez trzy obiekty płk rez. Piotr Lewandowski ocenił, że alerty RCB i syreny alarmowe zadziałały, ale mieszkańcy terenów przygranicznych potrzebują szybszych i bardziej precyzyjnych ostrzeżeń. – Z tymi aplikacjami spóźniliśmy się fatalnie – powiedział w rozmowie z Wirtualną Polską.\nAktualizacja:\n20.11.2026 14:05\nPublikacja:\n20.11.2026 13:30\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nSłużby pracują na miejscu zdarzenia w miejscowości Rudnik nad Sanem. Policja sprawdza zgłoszenia dotyczące możliwego upadku obiektu na Podkarpaciu.\nFoto: PAP/Piotr Polak\nReklama\nReklama\nReklama\nAda Michalak\nPłk rez. Piotr Lewandowski, weteran misji w Iraku i Afganistanie, w rozmowie z Wirtualną Polską odniósł się do piątkowych wydarzeń – ogłoszenia alarmu w Polsce oraz tego, że polską przestrzeń powietrzną naruszyły trzy obiekty, według polskich władz najprawdopodobniej dwie rosyjskie rakiety i dron…",
-      "stazeno": "2026-11-20T13:16:52.973Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-940982d7c2fcdabc",
-    "zachyceno": "2026-11-20T13:16:45.126Z",
-    "publikovano": "2026-11-20T12:25:00.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/11/20/poland-condemns-russian-provocation-after-3-airspace-violations-a94331",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland Condemns Russian 'Provocation' After 3 Airspace Violations",
-    "titulekPuvodni": "Poland Condemns Russian 'Provocation' After 3 Airspace Violations",
-    "shrnuti": "The latest incident comes after European countries warned against any attempt to decide a peace in Ukraine over their heads.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "airspace violation",
-      "violat+airspace",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Poland Condemns Russian 'Provocation' After 3 Airspace Violations - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nBy Reuters\nNov. 20, 2026\nPolice officers and firefighters near the site of a possible object falling near Nowy Lipowiec, Poland.\nREUTERS / Kacper Pempel\nRussia violated Poland's airspace overnight with three objects that were likely two missiles and a drone, the Polish defense minister said on Friday, as he denounced what he called a \"provocation\" from Moscow.\nThe Russian Embassy in Warsaw did not immediately respond to an emailed request for comment.\nDrones have repeatedly strayed into the airspace of countries on NATO's eastern flank since Russia invaded Ukraine in February 2022, fueling tension with the NATO military alliance and stoking fears that the war could spread.\n\"There has been a violation of Polish airspace and an incursion by objects from the Russian Federation,\" Defense Minister Władysław Kosiniak-Kamysz told a news conference.\n\"There was an Kh-101 missile... In the second case, one can also speak of a missile; in the third, it was most likely a jet-powered drone.\"\nThe…",
-      "stazeno": "2026-11-20T13:16:53.406Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-25edd2737969128e",
-    "zachyceno": "2026-11-20T13:16:43.283Z",
-    "publikovano": "2026-11-20T12:15:38.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5705284/prestavat-zhorene-orlie-hniezdo-alebo-ponechat-ruiny-nemecko-sa-dohaduje-o-hitlerovo-dedicstvo/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Prestavať zhorené Orlie hniezdo alebo ponechať ruiny? Nemecko sa dohaduje o Hitlerovo dedičstvo",
-    "titulekPuvodni": "Prestavať zhorené Orlie hniezdo alebo ponechať ruiny? Nemecko sa dohaduje o Hitlerovo dedičstvo",
-    "shrnuti": "Podpaľačský útok na Orlie hniezdo, niekdajšie horské útočisko Adolfa Hitlera, otvoril debatu o tom, ako by Nemecko malo naložiť s miestom, ktoré je spojené s temnou nacistickou minulosťou.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "naloz",
-      "utok na"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-20T15:02:22.290Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-1b9a7ca98bfe06e4",
-    "zachyceno": "2026-11-20T12:03:16.705Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/poland-reports-airspace-violation-during-russian-attack-on-ukraine-investigates-debris-crash/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "2 Russian Kh-101 missiles, drone, fall on Poland during Russian attack on Ukraine.",
-    "titulekPuvodni": "2 Russian Kh-101 missiles, drone, fall on Poland during Russian attack on Ukraine.",
-    "shrnuti": "",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "2 Russian Kh-101 missiles, drone, fall on Poland during Russian attack on Ukraine 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar 2 Russian Kh-101 missiles, drone, fall on Poland during Russian attack on Ukraine\nNovember 20, 2026 11:11 am • 3 min read\nPrefer on Google\nby Kateryna Hodunova\nPhoto for illustrative purposes. A Polish Air Force Lockheed Martin F-16 Fighting Falcon fighter jet cuts through a clear blue sky during a static equipment presentation and dynamic combat training display by sub-units of the Polish 18th Mechanized Division at the Land Forces Training Center in Nowa Deba, Poland, on Sept. 7, 2026. (Artur Widak/NurPhoto via Getty Images)\nPolish Defense Minister Wladyslaw Kosiniak-Kamysz said at a press conference that two missiles and a jet-powered drone fell on Polish territory during Russia's overnight attack on Nov. 20, Polish broadcaster RMF24 reported.\nThe missiles came down at Nowy Lipowiec and Rudnik nad Sanem, while the jet-powered drone fell at Molodycz, RMF24 said , citing Kosiniak-Kamysz.\n\"This…",
-      "stazeno": "2026-11-20T12:03:20.000Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9e1d109d21128909",
-    "zachyceno": "2026-11-20T13:16:45.070Z",
-    "publikovano": "2026-11-20T12:00:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/20/8063798/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukraine strikes three Russian ballistic missile launchers overnight – Zelenskyy",
-    "titulekPuvodni": "Ukraine strikes three Russian ballistic missile launchers overnight – Zelenskyy",
-    "shrnuti": "President Volodymyr Zelenskyy has reported that Ukrainian forces struck three Russian ballistic missile launchers on the night of 19-20 November, when Russia launched a large-scale attack on Ukraine.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukraine strikes three Russian ballistic missile launchers overnight – Zelenskyy | Ukrainska Pravda\nPresident Volodymyr Zelenskyy. Photo: Office of the President of Ukraine\nPresident Volodymyr Zelenskyy has reported that Ukrainian forces struck three Russian ballistic missile launchers on the night of 19-20 November, when Russia launched a large-scale attack on Ukraine.\nSource: Zelenskyy on X (Twitter)\nQuote from Zelenskyy: \"Our warriors who are doing their best with the means available to us to destroy Russian ballistic missile launchers also deserve special recognition. Tonight, we struck three launchers.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: The president stressed that one launcher had been destroyed, while the results of the strikes on the other two were still being assessed.\nBackground:\nOn the night of 19-20 November, Russian forces attacked the Podilsko-Voskresenskyi, Darnytskyi and Pivdennyi bridges in Kyiv. Traffic across the Podilskyi Bridge was partially restricted. The attack killed six local residents and injured another 15.\nAlso on the night of 19-20 November, Russian forces struck a railway station in Lviv , killing two people and injuring another 10.\nYurii Ihnat,…",
-      "stazeno": "2026-11-20T20:03:19.944Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e271426a9d9d8bdd",
-    "zachyceno": "2026-11-20T12:03:19.356Z",
-    "publikovano": "2026-11-20T11:41:41.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/11/20/ex-head-of-russian-youth-patriotism-center-arrested-on-embezzlement-charges-a94330",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ex-Head of Russian Youth Patriotism Center Arrested on Embezzlement Charges",
-    "titulekPuvodni": "Ex-Head of Russian Youth Patriotism Center Arrested on Embezzlement Charges",
-    "shrnuti": "The center, which is overseen by Russia’s federal youth agency, runs programs aimed at fostering patriotism among children and young people.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ex-Head of Russian Youth Patriotism Center Arrested on Embezzlement Charges - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nNov. 20, 2026\nYelena Belikova.\nVK\nRussia&rsquo;s Federal Security Service (FSB) arrested the former head of a state-run youth patriotism center in Moscow on suspicion of stealing public funds earmarked for its programs, the RBC news outlet reported Friday, citing two people familiar with the case.\nYelena Belikova, who ran the Russian Center for Patriotic Education until September, faces up to 10 years in prison on a charge of large-scale embezzlement. The FSB is investigating the case.\nMoscow&rsquo;s Lefortovsky District Court on Thursday barred Belikova from contacting other defendants or witnesses in the case, sending or receiving mail and using the internet.\nBelikova stepped down as director on Sept. 2, according to the SPARK corporate database. Her former deputy, Dmitry Stepyko, is now serving as acting director.\nThe center, which is overseen by Russia&rsquo;s federal youth agency, runs programs aimed at fostering patriotism among children and young people.\nIt organizes…",
-      "stazeno": "2026-11-20T12:03:20.300Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-11463fbce275a739",
-    "zachyceno": "2026-11-20T12:03:17.033Z",
-    "publikovano": "2026-11-20T11:39:29.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/20/european-commission-staff-criticise-lack-of-communication-over-cyberattack",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "European Commission staff criticise lack of communication over cyberattack",
-    "titulekPuvodni": "European Commission staff criticise lack of communication over cyberattack",
-    "shrnuti": "The main civil servants’ union has criticized senior management for letting staff learn of the breach from the press, as employees fear their personal data is at risk.",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "European Commission staff criticise lack of communication over cyberattack | Euronews\nAdvertisement\nBy&nbsp Vincenzo Genovese\nPublished on\n20 November 2026 - 12:39 GMT+1\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nThe main civil servants’ union has criticized senior management for letting staff learn of the breach from the press, as employees fear their personal data is at risk.\nEuropean Commission staff have voiced frustration over the lack of communication surrounding a large-scale cyberattack that struck the institution in October.\nADVERTISEMENT\nADVERTISEMENT\nRenouveau & Démocratie (R&D), the main trade union representing EU civil servants, criticised the Commission's handling of the incident, saying staff were not notified when the cyberattack was detected on 22 October and that the institution only acknowledged it after it was reported in the media.\n“This failure of internal communication is unacceptable,” R&D chair Cristiano Sebastiani said in a statement on Thursday. Staff should not “have to learn from a newspaper headline” that their personal data could be at risk, he added.\nFor several days, officials have been…",
-      "stazeno": "2026-11-20T12:03:20.406Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-3302d137aaae6028",
-    "zachyceno": "2026-11-20T12:03:17.543Z",
-    "publikovano": "2026-11-20T11:39:23.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/rosyjskie-drony-nad-polska/art45520101-rosyjskie-media-o-incydencie-w-polsce-rbk-cytuje-lawrowa-meduza-wskazuje-na-ataki-kremla",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rosyjskie media o incydencie w Polsce. RBK cytuje Ławrowa, Meduza wskazuje na ataki Kremla",
-    "titulekPuvodni": "Rosyjskie media o incydencie w Polsce. RBK cytuje Ławrowa, Meduza wskazuje na ataki Kremla",
-    "shrnuti": "Rosyjskie media informują o naruszeniu polskiej przestrzeni powietrznej przez dwa pociski i drona, ale unikają wskazywania ich pochodzenia. Część redakcji przypomina wcześniejsze zapewnienia Moskwy, że nie atakuje państw NATO. Kreml nie skomentował dotąd piątkowych wydarzeń.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "narusz+przestrzeni powietrzn",
-      "dron",
-      "nato",
-      "kreml"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Rosyjskie rakiety i dron spadły na Polskę. Co piszą rosyjskie media? Kreml milczy - rp.pl\nReklama\nWydarzenia\nKraj\nRosyjskie drony nad Polską\nRosyjskie media o incydencie w Polsce. RBK cytuje Ławrowa, Meduza wskazuje na ataki Kremla\nRosyjskie media informują o naruszeniu polskiej przestrzeni powietrznej przez dwa pociski i drona, ale unikają wskazywania ich pochodzenia. Część redakcji przypomina wcześniejsze zapewnienia Moskwy, że nie atakuje państw NATO. Kreml nie skomentował dotąd piątkowych wydarzeń.\nAktualizacja:\n20.11.2026 13:02\nPublikacja:\n20.11.2026 12:39\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nRosyjskie rakiety i dron w Polsce. Prokremlowskie media ostrożne, niezależne piszą o ataku Rosji\nFoto: Bloomberg\nReklama\nReklama\nReklama\nUrszula Lesman\nRosyjskie media, takie jak „Wiedomosti” czy agencja\nInterfax, informują o ogłoszeniu alarmu w Polsce po tym, jak polską przestrzeń\npowietrzną naruszyły trzy obiekty, według polskich władz najprawdopodobniej\ndwie rosyjskie rakiety i dron odrzutowy. W swoich doniesieniach nie wskazują\njednak jednoznacznie pochodzenia tych obiektów ani nie zamieszczają komentarzy\nrosyjskich władz na temat piątkowego…",
-      "stazeno": "2026-11-20T12:03:20.422Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6eaaa791b1a67876",
-    "zachyceno": "2026-11-20T12:03:18.575Z",
-    "publikovano": "2026-11-20T11:37:48.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/esteri/2026/11/20/news/vendetta_putin_pioggia_di_missili_ucraina_leopoli_kiev-425737594/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "La vendetta di Putin: pioggia di missili sull’Ucraina da Leopoli a Kiev",
-    "titulekPuvodni": "La vendetta di Putin: pioggia di missili sull’Ucraina da Leopoli a Kiev",
-    "shrnuti": "Il massiccio attacco di Mosca, come aveva già anticipato ieri il Cremlino, arriva in risposta al raid contro lo strategico ponte di Kerch che unisce Russia e Crimea. Blackout sulla capitale, colpita la rete idrica più importante del Paese",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "blackout",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "La vendetta di Putin: pioggia di missili sull’Ucraina da Leopoli a Kiev - la Repubblica\n\r\n\r\n\r\nBlack Friday\n2 mesi gratis\nScarica l'app\nMenu\nRicerca\nNotifiche\nBlack Friday\n2 mesi gratis\nBlack Friday\n2 mesi gratis\nEdicola\nRedazione\nScriveteci\n20 Novembre 2026 alle 12:37\n2 minuti di lettura\nAbbonati per leggere anche\nLeggi i commenti",
-      "stazeno": "2026-11-20T12:03:20.718Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-40d270133935bbd6",
-    "zachyceno": "2026-11-20T12:03:17.700Z",
-    "publikovano": "2026-11-20T11:35:27.000Z",
-    "zdroj": {
-      "nazev": "Postimees (Estonsko, anglicky)",
-      "url": "https://pmo.ee/8587116",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Estonian-Russian border to be closed from December 1 for an initial six months",
-    "titulekPuvodni": "Estonian-Russian border to be closed from December 1 for an initial six months",
-    "shrnuti": "Russia has recently carried out several consecutive attacks against Estonia, and the hostile activity is not abating. Therefore, the government decided to suspend border crossings at all five Estonian-Russian land border crossing points from December 1: Narva-1, Narva-2, Koidula, Luhamaa, and Saatse",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "hranice",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border+closed",
-      "border",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-20T12:03:20.997Z",
-      "stav": 999,
-      "chyba": "robots.txt stahování nepovoluje"
-    }
-  },
-  {
-    "id": "k-55787fd432659c5d",
-    "zachyceno": "2026-11-20T12:03:18.381Z",
-    "publikovano": "2026-11-20T11:31:30.000Z",
-    "zdroj": {
-      "nazev": "ANSA (Itálie, anglicky)",
-      "url": "https://www.ansa.it/english/news/world/2026/11/20/salvini-urges-kyiv-to-shut-down-site-with-nazi-blacklist-including_cd5144b9-1809-4049-9cce-a8cf9363f690.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Salvini urges Kyiv to shut down site with 'Nazi blacklist' including him",
-    "titulekPuvodni": "Salvini urges Kyiv to shut down site with 'Nazi blacklist' including him",
-    "shrnuti": "(ANSA) - ROME, 20 NOV - Deputy Premier, Transport Minister and right-wing League party leader Matteo Salvini on Friday called on the Ukraine authorities to shut down a site which he said featured a \"Nazi-style blacklist\" of enemies of Ukraine including himself. Salvini, who before the Uraine war was",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+nazi",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Salvini urges Kyiv to shut down site with 'Nazi blacklist' including him - World - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave; adatto alle tue…",
-      "stazeno": "2026-11-20T12:03:21.388Z",
       "stav": 200
     }
   }
