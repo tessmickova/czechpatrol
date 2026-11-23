@@ -946,3 +946,18 @@ výpadek družic, ne krátký výpadek jednoho zařízení.
 Kanál: tipy chodí nejvýš jeden za 20 hodin, takže tip o družicích odejde
 hned po nasazení a tip o aplikaci Czujni nejdřív o 20 hodin později
 s ranním nebo večerním během.
+
+### Body a naplánované odeslání tipu (doplněno 24. 11. 2026)
+
+Provozovatelka chtěla tipy „podrobněji, přehledně, stručně, přesně“ a tipy
+k noční události ne ve dvě ráno.
+
+- **`body`**: nejvýš šest konkrétních bodů, každý do 160 znaků (hlídá
+  `npm run kontrola:data`, včetně zákazu rad v krizi). Kanál je pošle jako
+  odrážky pod textem, web je ukáže po rozbalení tipu.
+- **`odeslat`** (ISO čas): čas určila provozovatelka, takže neplatí odstup
+  20 hodin; tip odejde první během po tom čase a dřív ne (ranní běhy jsou
+  v 5:30 a 6:30 UTC). Dva naplánované najednou jdou po jednom za běh, dřívější
+  první. Tipy bez pole čekají na odstup dál.
+- Odkazy u typů útoků smějí vést jen na úřady (`testy/typy-utoku.test.ts`);
+  přibyl 72h.gov.cz. Média patří do zdrojů tipu, ne do katalogu.

@@ -870,6 +870,18 @@ export interface Tip {
   hrozby?: string[];
   /** Stránka webu s podrobnostmi (cesta, např. „/vesmir/“). Web i kanál na ni odkážou. */
   odkaz?: string;
+  /**
+   * Konkrétní body (24. 11. 2026, provozovatelka: „podrobněji, přehledně,
+   * stručně, přesně“). Nejvýš šest, každý do 160 znaků; v kanálu jako
+   * odrážky, na webu po rozbalení.
+   */
+  body?: string[];
+  /**
+   * Kdy tip poslat do kanálu (ISO čas). Provozovatelka tím sama určila čas,
+   * takže neplatí odstup 20 hodin mezi tipy; dřív tip neodejde. Bez pole
+   * platí obvyklé pořadí.
+   */
+  odeslat?: string;
 }
 
 /* ---------------- opatření zemí ---------------- */

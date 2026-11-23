@@ -11,7 +11,7 @@ import { sestavPrehledTypu, TYPY_UTOKU, typProKategorie, typProKyber } from "../
   jen na úřady, které web používá i jinde (jiné se tu neověřují); a každý
   zveřejněný případ s kategorií útoku má svůj typ, jinak by u něj chyběla rada.
 */
-const DOMENY = ["hzscr.cz", "nukib.gov.cz", "mvcr.cz", "drozd.mzv.cz", "mzv.gov.cz", "rozhlas.cz", "obcan.portal.gov.cz", "chmi.cz"];
+const DOMENY = ["hzscr.cz", "72h.gov.cz", "nukib.gov.cz", "mvcr.cz", "drozd.mzv.cz", "mzv.gov.cz", "rozhlas.cz", "obcan.portal.gov.cz", "chmi.cz"];
 const MIMO_RADY = /\b(\d+\s?(mg|ml)\b|dávk|jodid|tablet|chlor\b|savo|převař|jistič|rozvaděč|pojistk|agregát)/i;
 
 const texty = (t) => [t.nazev, t.kratce, t.coToJe, t.proObcana, ...t.predem, ...t.kdyzNastane];

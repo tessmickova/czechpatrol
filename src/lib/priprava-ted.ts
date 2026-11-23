@@ -46,7 +46,9 @@ const TLAK_NOVEHO_RIZIKA = 3;
 export function novaRizika(ted = Date.now()): NoveRiziko[] {
   return tipy(ted)
     .filter((t) => new Date(t.kdy).getTime() <= ted)
-    .flatMap((t) => (t.hrozby ?? []).filter((h): h is Hrozba => h in NAZVY_HROZEB).map((h) => ({ hrozba: h, nadpis: t.nadpis, kdy: t.kdy, odkaz: t.odkaz ?? null })));
+    .flatMap((t) => (t.hrozby ?? []).filter((h): h is Hrozba => h in NAZVY_HROZEB).map((h) => ({ hrozba: h, nadpis: t.nadpis, kdy: t.kdy, odkaz: t.odkaz ?? null })))
+    // Víc tipů ke stejnému riziku tlačí jen jednou; platí ten nejnovější.
+    .filter((r, i, vse) => vse.findIndex((x) => x.hrozba === r.hrozba) === i);
 }
 
 export function tlakHrozeb(ted = Date.now(), rizika: NoveRiziko[] = novaRizika(ted)): TlakHrozby[] {

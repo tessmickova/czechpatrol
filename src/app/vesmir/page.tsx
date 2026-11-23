@@ -43,6 +43,9 @@ const ZDROJE = [
   { k: "euspa", nazev: "EUSPA — GNSS for timing and synchronisation", url: "https://www.euspa.europa.eu/gnss-timing-and-synchronisation" },
   { k: "uk", nazev: "Vláda Spojeného království — The economic impact on the UK of a disruption to GNSS (2023)", url: "https://www.gov.uk/government/publications/report-the-economic-impact-on-the-uk-of-a-disruption-to-gnss" },
   { k: "dcf", nazev: "Meinberg — DCF77 longwave time signal", url: "https://www.meinbergglobal.com/english/info/dcf77.htm" },
+  { k: "cisaG", nazev: "CISA — Electromagnetic Pulse (EMP) Protection and Resilience Guidelines for Critical Infrastructure and Equipment (2019)", url: "https://www.cisa.gov/sites/default/files/publications/19_0307_CISA_EMP-Protection-Resilience-Guidelines.pdf" },
+  { k: "cisa", nazev: "CISA — Electromagnetic Pulse", url: "https://www.cisa.gov/topics/risk-management/electromagnetic-pulse" },
+  { k: "remm", nazev: "REMM (ministerstvo zdravotnictví USA) — Electromagnetic Pulse (EMP) Following a Nuclear Detonation", url: "https://remm.hhs.gov/EMP.htm" },
 ] as const;
 type KlicZdroje = (typeof ZDROJE)[number]["k"];
 const CISLO = new Map<string, number>(ZDROJE.map((z, i) => [z.k, i + 1]));
@@ -102,11 +105,28 @@ const DOPADY: { co: string; jakMoc: ReactNode; jakDlouho: ReactNode; kde: ReactN
   },
 ];
 
+/*
+  Co by doma reálně přestalo fungovat (24. 11. 2026, provozovatelka): dvě
+  situace vedle sebe, protože se liší pravděpodobností. Výpadek družic na
+  nízké dráze je podle studií hlavní následek; puls nad Evropou je nejistý.
+*/
+const PRISTROJE: { co: string; druzice: ReactNode; puls: ReactNode }[] = [
+  { co: "Satelitní internet (Starlink) a satelitní spojení", druzice: <>vypadne<Z k="rand" /></>, puls: <>vypadne<Z k="rand" /></> },
+  { co: "Navigace v mobilu a v autě (GPS, Galileo)", druzice: <>spíš funguje — družice jsou mnohem výš<Z k={["dtra", "rand"]} /></>, puls: <>přístroj bez kabelu bývá odolnější<Z k="cisaG" /></> },
+  { co: "Satelitní televize", druzice: <>spíš funguje<Z k={["dtra", "rand"]} /></>, puls: <>přijímač na anténě a v zásuvce je ohrožený<Z k="cisaG" /></> },
+  { co: "Předpověď počasí", druzice: <>méně přesná<Z k="rand" /></>, puls: <>méně přesná<Z k="rand" /></> },
+  { co: "Elektřina ze sítě", druzice: <>beze změny</>, puls: <>ohrožená: puls může poškodit velké části sítě<Z k="cisa" /></> },
+  { co: "Voda, topení a další služby řízené elektronikou", druzice: <>beze změny</>, puls: <>ohrožené spolu se sítí a jejími řídicími systémy<Z k="cisa" /></> },
+  { co: "Mobilní telefon", druzice: <>funguje</>, puls: <>přístroj spíš vydrží, síť ne — bez ní nezavoláte<Z k="cisaG" /></> },
+  { co: "Rádio na baterie (FM, DAB+)", druzice: <>funguje</>, puls: <>spíš vydrží, zvlášť vypnuté a bez antény na kabelu<Z k="cisaG" /></> },
+  { co: "Spotřebiče v zásuvce: lednice, počítač, router, televize", druzice: <>fungují</>, puls: <>ohrožené, nejvíc ty na dlouhých kabelech a anténách<Z k="cisaG" /></> },
+];
+
 export default function Vesmir() {
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16">
       <HlavickaStranky
-        stitek="Téma · 23. 11. 2026"
+        stitek="Téma · 23. 11. 2026, doplněno 24. 11."
         nadpis="Jaderná zbraň na oběžné dráze: co by vypadlo a jak se připravit"
         uvod="Německá média píšou, že Rusko může ještě letos vynést na oběžnou dráhu družici s jadernou hlavicí. Co z toho je doložené, co by výbuch ve vesmíru zasáhl, na jak dlouho a co s tím doma i v práci. Přehled místo paniky."
       />
@@ -142,6 +162,46 @@ export default function Vesmir() {
                 </article>
               ))}
             </div>
+          </Oddil>
+
+          <Oddil
+            id="co-prestane"
+            nadpis="Co by doma reálně přestalo fungovat"
+            uvod="Dvě situace vedle sebe. Výpadek družic na nízké dráze je podle studií hlavní následek výbuchu ve vesmíru. Puls, který by zasáhl i elektroniku v Evropě, je nejistý: záleží na výšce a místě výbuchu."
+          >
+            {/* bez-stropu: tabulka má šířku danou sloupci, ne strop délky řádku pro odstavce. */}
+            <div className="bez-stropu overflow-hidden rounded-[18px] border border-linka">
+              <div className="hidden grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)_minmax(0,1fr)] gap-4 border-b border-linka px-4 py-2.5 sm:grid">
+                <span className="stitek">Přístroj nebo služba</span>
+                <span className="stitek">Jen výpadek družic</span>
+                <span className="stitek">Kdyby puls zasáhl Evropu</span>
+              </div>
+              <ul className="divide-y divide-linka">
+                {PRISTROJE.map((r) => (
+                  <li key={r.co} className="grid gap-1 px-4 py-3 text-male leading-snug sm:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)_minmax(0,1fr)] sm:gap-4">
+                    <span className="font-semibold text-inkoust">{r.co}</span>
+                    <span className="text-tlum"><span className="text-tlum2 sm:hidden">Jen výpadek družic: </span>{r.druzice}</span>
+                    <span className="text-tlum"><span className="text-tlum2 sm:hidden">Kdyby puls zasáhl Evropu: </span>{r.puls}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Oddil>
+
+          <Oddil
+            id="elektronika"
+            nadpis="Jak chránit elektroniku"
+            uvod={<>Podle pokynů americké agentury pro kritickou infrastrukturu CISA, psaných pro firmy a úřady; pro domácnost platí v menším<Z k="cisaG" />.</>}
+          >
+            <Body>
+              <li><b className="font-semibold text-inkoust">Záloha mimo provoz:</b> náhradní rádio, starý telefon a powerbanku zabalit do alobalu nebo uložit do uzavřené kovové krabice<Z k="cisaG" />.</li>
+              <li><b className="font-semibold text-inkoust">Při varování:</b> co nepotřebujete, vypnout a odpojit od zásuvky, antény, telefonní a datové linky; kabel vytáhnout na straně přístroje<Z k="cisaG" />.</li>
+              <li><b className="font-semibold text-inkoust">Přepěťová ochrana</b> aspoň proti blesku na napájení, anténě i datech, a jednu náhradní mít doma<Z k="cisaG" />.</li>
+              <li><b className="font-semibold text-inkoust">Bez kabelu je líp:</b> telefon a rádio na baterie jsou odolnější než přístroje v zásuvce; zapnuté nebo nabíjené méně<Z k="cisaG" />.</li>
+              <li><b className="font-semibold text-inkoust">Po výpadku:</b> zkusit přístroj znovu zapnout; ne každý, který zhasne, je zničený<Z k="remm" />.</li>
+              <li><b className="font-semibold text-inkoust">Ve firmě:</b> náhradní kusy důležitých zařízení uložit stíněně a odpojené, s postupem, jak systém znovu spustit<Z k="cisaG" />.</li>
+              <li><b className="font-semibold text-inkoust">Naše rada navíc:</b> nejvíc pomůže to, co jede bez elektroniky — kontakty a mapa na papíře, hotovost, domluva v rodině, kde se sejdete.</li>
+            </Body>
           </Oddil>
 
           <Oddil
