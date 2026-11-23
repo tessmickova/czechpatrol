@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-23T00:02:57.558Z",
+  "aktualizovano": "2026-11-23T01:31:40.644Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -13,21 +13,30 @@
         }
       ],
       "postizene": [
+        "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
         "Ahmedabad, India - (AMD)",
-        "Albuquerque, United States - (ABQ)",
-        "Arica, Chile - (ARI)"
+        "Albuquerque, United States - (ABQ)"
       ],
-      "zkontrolovano": "2026-11-23T00:02:57.558Z",
+      "zkontrolovano": "2026-11-23T01:31:40.644Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-23T00:02:57.558Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Phone tab on desktop clients",
+          "odkaz": "https://stspg.io/dqmw1j2fr2wy",
+          "aktualizovano": "2026-11-22T17:00:53.005-08:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone - NORTH AMERICA"
+      ],
+      "zkontrolovano": "2026-11-23T01:31:40.644Z",
       "chyba": null
     },
     {
@@ -36,7 +45,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-23T00:02:57.558Z",
+      "zkontrolovano": "2026-11-23T01:31:40.644Z",
       "chyba": null
     }
   ]
