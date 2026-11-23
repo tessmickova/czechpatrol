@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-23T09:41:00.738Z",
+  "aktualizovano": "2026-11-23T12:02:52.836Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,19 +18,16 @@
         "Ahmedabad, India - (AMD)",
         "Albuquerque, United States - (ABQ)"
       ],
-      "zkontrolovano": "2026-11-23T09:41:00.738Z",
+      "zkontrolovano": "2026-11-23T12:02:52.836Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - NORTH AMERICA"
-      ],
-      "zkontrolovano": "2026-11-23T09:41:00.738Z",
+      "postizene": [],
+      "zkontrolovano": "2026-11-23T12:02:52.836Z",
       "chyba": null
     },
     {
@@ -39,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-23T09:41:00.738Z",
+      "zkontrolovano": "2026-11-23T12:02:52.836Z",
       "chyba": null
     }
   ]
