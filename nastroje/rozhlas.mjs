@@ -1267,7 +1267,8 @@ export function sestavTip(t) {
     "",
   ];
   for (const z of t.zdroje ?? []) radky.push(`Zdroj: <a href="${esc(z.url)}">${esc(z.nazev)}</a>`);
-  radky.push("", WEB);
+  // Tip s vlastní stránkou (23. 11. 2026) odkáže rovnou na ni, ne na úvod.
+  radky.push("", /^\/[\w/#?=&-]*$/.test(t.odkaz ?? "") ? `Podrobně: ${WEB}${t.odkaz}` : WEB);
   return radky.join("\n");
 }
 

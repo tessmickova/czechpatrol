@@ -18,7 +18,7 @@ export function PripravitTed({ priprava }: { priprava: Data }) {
       <HlavickaWidgetu
         ikona="stit"
         nazev="AI radí dle aktuální situace"
-        napoveda={<span className="block">Tři věci pro domácnost podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Přepočítává se po každém sběru. Není to předpověď ani úřední pokyn.</span>}
+        napoveda={<span className="block">Tři věci pro domácnost podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Nové riziko, ke kterému platí náš tip k přípravě, má v kartě jedno místo. Přepočítává se po každém sběru. Není to předpověď ani úřední pokyn.</span>}
         meta={<span className="cislice">přepočítáno {datumCasPraha(priprava.prepocitano)}</span>}
       />
       <ol className="grid sm:grid-cols-3 sm:divide-x sm:divide-y-0">
@@ -40,6 +40,7 @@ export function PripravitTed({ priprava }: { priprava: Data }) {
       </ol>
       <PatickaWidgetu akce={<Link href="/odolnost/?seznam=72h" className="whitespace-nowrap font-semibold text-tlum hover:text-inkoust">celý seznam a kalkulačka →</Link>}>
         Největší tlak: {hlavni.map((h) => NAZVY_HROZEB[h.klic]).join(", ")}. Z doložených záznamů, ne z předpovědi.
+        {priprava.noveRiziko?.odkaz && <> Nové riziko: <Link href={priprava.noveRiziko.odkaz} className="odkaz">{priprava.noveRiziko.nadpis}</Link>.</>}
       </PatickaWidgetu>
     </section>
   );

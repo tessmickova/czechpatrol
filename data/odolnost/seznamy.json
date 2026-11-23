@@ -1,6 +1,6 @@
 {
-  "_poznamka": "Tři seznamy k přípravě domácnosti. „72h“ vychází z doporučení HZS ČR pro zásoby a evakuační zavazadlo; „rozsireny“ je rozšířený seznam z praxe komunit připravenosti; „ai“ jsou tipy projektu pro běžný život, sepsané s pomocí AI a označené tak. Každá položka má hrozby, na které odpovídá — podle nich se počítá karta „Připravit teď“ (src/lib/priprava.ts). Množství jsou orientační, ne úřední norma.",
-  "verze": "2026-09-26",
+  "_poznamka": "Tři seznamy k přípravě domácnosti. „72h“ vychází z doporučení HZS ČR pro zásoby a evakuační zavazadlo; „rozsireny“ je rozšířený seznam z praxe komunit připravenosti; „ai“ jsou tipy projektu pro běžný život, sepsané s pomocí AI a označené tak. Každá položka má hrozby, na které odpovídá — podle nich se počítá karta „Připravit teď“ (src/lib/priprava.ts). Množství jsou orientační, ne úřední norma. „satelity“ (23. 11. 2026) je nový typ rizika: dlouhý a rozsáhlý výpadek služeb z družic po útoku ve vesmíru — ne krátký výpadek jednoho zařízení.",
+  "verze": "2026-11-23",
   "hrozby": {
     "elektrina": "výpadek elektřiny",
     "voda": "výpadek vody",
@@ -11,7 +11,8 @@
     "zdravi": "zdravotní nouze",
     "hotovost": "výpadek plateb",
     "evakuace": "evakuace nebo omezení pohybu",
-    "pozar": "požár a únik plynu"
+    "pozar": "požár a únik plynu",
+    "satelity": "dlouhý výpadek družic"
   },
   "seznamy": {
     "72h": {
@@ -601,6 +602,37 @@
             "informace"
           ],
           "funkce": "informace"
+        },
+        {
+          "klic": "druzice-zavislosti",
+          "nazev": "Sepsat, co doma a v práci stojí na družicích",
+          "popis": "Satelitní internet a televize, navigace, sledování aut a zásilek, přesný čas v serverovně. Ke každé věci jedna náhrada, která jede bez družic.",
+          "hrozby": [
+            "satelity",
+            "komunikace",
+            "doprava"
+          ],
+          "funkce": null
+        },
+        {
+          "klic": "mapa-bez-navigace",
+          "nazev": "Autoatlas v autě a trasy bez navigace",
+          "popis": "Cestu do práce, do školy a za rodinou znát i bez GPS. Papírová mapa nepotřebuje signál ani baterii.",
+          "hrozby": [
+            "satelity",
+            "doprava"
+          ],
+          "funkce": "doprava"
+        },
+        {
+          "klic": "internet-druha-cesta",
+          "nazev": "Druhá cesta na internet a k televizi",
+          "popis": "Kdo má jen satelitní internet nebo satelitní televizi, potřebuje zálohu: mobilní data, pevné připojení nebo anténu pro pozemní vysílání DVB-T2.",
+          "hrozby": [
+            "satelity",
+            "komunikace"
+          ],
+          "funkce": "komunikace"
         }
       ]
     }

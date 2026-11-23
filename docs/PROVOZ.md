@@ -914,3 +914,35 @@ do komunity. Web to říká u polí a na stránce Soukromí (čl. 13 GDPR).
 Záznam bez pohybu ze strany provozovatele (stav `novy`/`nezajem`) se po
 roce maže. Migrace `0007` tabulku z `0006` staví znovu (byla nasazena
 prázdná).
+
+
+## Nové riziko z tipu a téma Vesmír (doplněno 23. 11. 2026)
+
+Provozovatelka 23. 11. 2026: zprávy o ruské družici s jadernou hlavicí
+(WDR, NDR, SZ) vyhodnotit jako **nový typ rizika** — dlouhý a rozsáhlý
+výpadek družic, ne krátký výpadek jednoho zařízení.
+
+- **Hrozba `satelity`** („dlouhý výpadek družic“) v
+  `data/odolnost/seznamy.json`, k ní tři položky v seznamu AI tipů
+  (`druzice-zavislosti`, `mapa-bez-navigace`, `internet-druha-cesta`).
+- **Tip s polem `hrozby`** (`data/tipy.json`): dokud platí (`kdy` až
+  `platiDo`), dává té hrozbě tlak 3 a v kartě „AI radí“ má jisté místo
+  (`novaRizika`, `pripravitTed` v `src/lib/priprava-ted.ts`). Karta pod
+  seznamem odkáže na stránku z pole `odkaz`. Po `platiDo` se karta vrátí
+  k výpočtu jen z doloženého. Bez tipu se nic nemění.
+- **Pole `odkaz`** u tipu: web ukáže „Podrobně na webu“, kanál místo
+  odkazu na úvod napíše `Podrobně: https://czechpatrol.cz<odkaz>`
+  (jen cesta na našem webu, cizí adresu `sestavTip` ignoruje).
+- **Stránka `/vesmir/`**: co je doložené, co by výbuch zasáhl (jak moc,
+  jak dlouho, kde), příprava doma a v práci, co nevíme. Každé tvrzení má
+  číslovaný zdroj. Když přibudou nové doložené informace, doplnit je tam
+  s datem; když tip vyprší, stránka zůstává.
+- **Czujni** v průvodci (krok Cestování): neúřední polská aplikace, stav
+  `obecne`, výhrada v `poznamka` je u neúředních položek vidět přímo
+  v průvodci. Provozovatele se 23. 11. 2026 ověřit nepodařilo (web
+  aplikace byl z prostředí nedostupný) — při další kontrole doplnit, nebo
+  položku stáhnout.
+
+Kanál: tipy chodí nejvýš jeden za 20 hodin, takže tip o družicích odejde
+hned po nasazení a tip o aplikaci Czujni nejdřív o 20 hodin později
+s ranním nebo večerním během.

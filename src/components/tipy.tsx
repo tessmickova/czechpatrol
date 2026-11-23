@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HlavickaWidgetu } from "./widgety";
 import { datumPraha } from "@/lib/cas";
 import { tipy } from "@/lib/data-lehka";
@@ -45,6 +46,7 @@ export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: num
             </div>
             <p className="mt-1 text-male leading-snug text-tlum">{x.text}</p>
             <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+              {x.odkaz && <Link href={x.odkaz} className="odkaz text-drobne font-semibold text-tlum">Podrobně na webu →</Link>}
               {x.zdroje.map((z) => (
                 <a key={z.url} href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz text-drobne text-tlum2">
                   {z.nazev} ↗

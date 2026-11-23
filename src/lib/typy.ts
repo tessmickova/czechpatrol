@@ -862,6 +862,14 @@ export interface Tip {
   zdroje: Zdroj[];
   /** Kdy tip zmizí z přehledu. null = platí, dokud ho někdo nesundá. */
   platiDo: string | null;
+  /**
+   * Nový typ rizika, o kterém tip je (23. 11. 2026). Dokud tip platí, má to
+   * riziko jisté místo v kartě „AI radí“ (src/lib/priprava-ted.ts). Klíče
+   * jsou hrozby ze seznamů zásob (data/odolnost/seznamy.json).
+   */
+  hrozby?: string[];
+  /** Stránka webu s podrobnostmi (cesta, např. „/vesmir/“). Web i kanál na ni odkážou. */
+  odkaz?: string;
 }
 
 /* ---------------- opatření zemí ---------------- */

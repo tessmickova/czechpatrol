@@ -174,6 +174,8 @@ function RadekNastroje({ n, odpovedi, odpovez, zarizeni }: { n: OficialniNastroj
             )}
             <p>{n.kCemu}</p>
             <ul className="list-disc pl-4">{n.coNastavit.map((c) => <li key={c}>{c}</li>)}</ul>
+            {/* Neúřední zdroj (Downdetector, Czujni — 23. 11. 2026): výhrada musí být vidět u položky, ne jen v datech. */}
+            {n.stav === "obecne" && n.poznamka && <p className="text-tlum2">{n.poznamka}</p>}
             <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
               {n.webUrl && <a href={n.webUrl} target="_blank" rel={VEN} className="odkaz">Web provozovatele ↗</a>}
               {n.oficialniZdroj && n.oficialniZdroj !== n.webUrl && <a href={n.oficialniZdroj} target="_blank" rel={VEN} className="odkaz">Oficiální informace ↗</a>}

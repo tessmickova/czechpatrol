@@ -1,5 +1,52 @@
 [
   {
+    "klic": "druzice-jaderna-zbran-2026-11",
+    "nadpis": "Zprávy o ruské jaderné zbrani na oběžné dráze: co by vypadlo a jak se připravit",
+    "text": "Podle WDR, NDR a SZ (23. 11.) považují západní tajné služby za možné, že Rusko ještě letos vynese do vesmíru družici s jadernou hlavicí; Kreml to odmítá. Výbuch by vyřadil hlavně družice na nízké dráze (satelitní internet, snímky Země, část meteorologie), škody by přibývaly týdny až měsíce. Doma: rádio na baterie, mapa v autě. Ve firmě: sepsat, co stojí na družicích a GPS.",
+    "kdy": "2026-11-23",
+    "zdroje": [
+      {
+        "nazev": "Český rozhlas — Rusko plánuje vynést do vesmíru družici s jadernou zbraní, píšou německá média",
+        "url": "https://www.irozhlas.cz/veda-technologie/vesmir/rusko-planuje-vynest-do-vesmiru-druzici-s-jadernou-zbrani-pisi-nemecka-media_2611231343_vdv",
+        "typ": "media",
+        "publikovano": "2026-11-23T12:43:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "RAND — dopady jaderného výbuchu ve velké výšce na civilní družice (2025)",
+        "url": "https://www.rand.org/pubs/research_reports/RRA3028-3.html",
+        "typ": "analysis",
+        "publikovano": null,
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "platiDo": "2027-01-31",
+    "hrozby": [
+      "satelity"
+    ],
+    "odkaz": "/vesmir/"
+  },
+  {
+    "klic": "czujni-aplikace-2026-11",
+    "nadpis": "Na cesty do Polska: aplikace Czujni ukazuje varování před útokem ze vzduchu",
+    "text": "Czujni je bezplatná polská aplikace: na jednom místě ukazuje polské úřední výstrahy RCB a RSO, mapu hrozeb ze vzduchu podle hlášení lidí a výstrahy počasí. Hodí se na cesty do Polska a do pohraničí. Není úřední, hlášení lidí nikdo neověřuje a provozovatele jsme zatím neověřili. V Česku platí sirény, varování na mobil a krizové vysílání.",
+    "kdy": "2026-11-23",
+    "zdroje": [
+      {
+        "nazev": "CZUJNI — web aplikace",
+        "url": "https://czujni.com/",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "pl"
+      }
+    ],
+    "platiDo": "2027-02-28",
+    "odkaz": "/pripravenost/"
+  },
+  {
     "klic": "nukib-ruske-kyberutoky-2026-11",
     "nadpis": "Aktuální hrozba: ruské kyberútoky míří i na domácí routery a kamery",
     "text": "NÚKIB 10. 11. 2026 varoval před dlouhodobými útoky skupin podporovaných ruským státem a nevylučuje ani pokusy zničit data nebo vyřadit systémy. Útočníci plošně hledají špatně zabezpečené routery a kamery. Pro domácnost: změnit výchozí hesla routeru a kamer, aktualizovat je, neklikat na spěchající odkazy, kód z SMS nikomu nesdělovat. Pro jistotu mít doma vodu, jídlo a rádio na baterie na pár dní.",

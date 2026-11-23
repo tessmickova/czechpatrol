@@ -1,4 +1,5 @@
 import { incidenty, kampane, pravniStav, provoz } from "./data";
+import { tipy } from "./data-lehka";
 import { stavPaliv } from "./palivo";
 import { NAZVY_HROZEB, seznamy, type Hrozba, type KlicSeznamu, type PolozkaSeznamu } from "./priprava";
 import { UROVNE } from "./skala";
@@ -33,7 +34,22 @@ const SLUZBY: Record<string, Hrozba[]> = {
   vycestovani: ["evakuace"],
 };
 
-export function tlakHrozeb(ted = Date.now()): TlakHrozby[] {
+/*
+  Nové riziko (23. 11. 2026, provozovatelka): tip k přípravě může nést hrozbu,
+  kterou doložené záznamy neumějí zachytit — třeba jaderná zbraň na oběžné
+  dráze. Dokud tip platí, dává té hrozbě tlak a v kartě má jisté místo
+  (pripravitTed). Bez tipu se nic nemění: karta dál počítá jen z doloženého.
+*/
+export interface NoveRiziko { hrozba: Hrozba; nadpis: string; kdy: string; odkaz: string | null }
+const TLAK_NOVEHO_RIZIKA = 3;
+
+export function novaRizika(ted = Date.now()): NoveRiziko[] {
+  return tipy(ted)
+    .filter((t) => new Date(t.kdy).getTime() <= ted)
+    .flatMap((t) => (t.hrozby ?? []).filter((h): h is Hrozba => h in NAZVY_HROZEB).map((h) => ({ hrozba: h, nadpis: t.nadpis, kdy: t.kdy, odkaz: t.odkaz ?? null })));
+}
+
+export function tlakHrozeb(ted = Date.now(), rizika: NoveRiziko[] = novaRizika(ted)): TlakHrozby[] {
   const skore = new Map<Hrozba, number>();
   /* Důvody s vahou: v kartě se ukáže ten, který k tlaku přispěl nejvíc. */
   const duvody = new Map<Hrozba, Map<string, number>>();
@@ -50,6 +66,7 @@ export function tlakHrozeb(ted = Date.now()): TlakHrozby[] {
   pridej("voda", 1, "zásoba vody je základ na 72 hodin");
   const mesic = new Date(ted).getMonth() + 1;
   if (mesic >= 10 || mesic <= 3) pridej("teplo", 1.5, "topná sezóna");
+  for (const r of rizika) pridej(r.hrozba, TLAK_NOVEHO_RIZIKA, `nové riziko: ${r.nadpis}`);
 
   // Narušené služby a platná opatření v Česku.
   for (const p of provoz().polozky) {
@@ -98,11 +115,11 @@ export function tlakHrozeb(ted = Date.now()): TlakHrozby[] {
 }
 
 export interface PripravitPolozka extends PolozkaSeznamu { seznam: KlicSeznamu; hrozba: Hrozba; duvod: string; skore: number }
-export interface PripravitTed { polozky: PripravitPolozka[]; hrozby: TlakHrozby[]; prepocitano: string }
+export interface PripravitTed { polozky: PripravitPolozka[]; hrozby: TlakHrozby[]; prepocitano: string; noveRiziko: NoveRiziko | null }
 
 /** Tři položky pro domácnost podle tlaku hrozeb; každá z jiné oblasti (funkce). */
-export function pripravitTed(ted = Date.now()): PripravitTed {
-  const tlak = tlakHrozeb(ted);
+export function pripravitTed(ted = Date.now(), rizika: NoveRiziko[] = novaRizika(ted)): PripravitTed {
+  const tlak = tlakHrozeb(ted, rizika);
   const podle = new Map(tlak.map((t) => [t.klic, t]));
   const kandidati: PripravitPolozka[] = [];
   for (const s of seznamy()) {
@@ -127,5 +144,16 @@ export function pripravitTed(ted = Date.now()): PripravitTed {
     funkce.add(f); hrozby.add(k.hrozba); vybrane.push(k);
     if (vybrane.length === 3) break;
   }
-  return { polozky: vybrane, hrozby: tlak.slice(0, 5), prepocitano: new Date(ted).toISOString() };
+  /*
+    Nové riziko z platného tipu má v kartě jisté místo: když na něj žádná
+    vybraná položka neodpovídá, nahradí třetí položku ta nejlepší, která na
+    něj odpovídá a je z jiné oblasti než první dvě.
+  */
+  const nove = rizika[0] ?? null;
+  if (nove && !vybrane.some((v) => v.hrozba === nove.hrozba)) {
+    const zbytek = vybrane.slice(0, 2);
+    const nahrada = kandidati.find((k) => k.hrozby.includes(nove.hrozba) && !zbytek.some((v) => (v.funkce ?? v.klic) === (k.funkce ?? k.klic)));
+    if (nahrada) vybrane.splice(0, vybrane.length, ...zbytek, { ...nahrada, hrozba: nove.hrozba, duvod: `nové riziko: ${nove.nadpis}` });
+  }
+  return { polozky: vybrane, hrozby: tlak.slice(0, 5), prepocitano: new Date(ted).toISOString(), noveRiziko: nove && vybrane.some((v) => v.hrozba === nove.hrozba) ? nove : null };
 }
