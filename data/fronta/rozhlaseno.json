@@ -56,6 +56,10 @@
     "letecky-poplach-rodina-2026-11": {
       "kdy": "2026-11-24T05:52:22.105Z",
       "messageId": 76
+    },
+    "emp-elektronika-2026-11": {
+      "kdy": "2026-11-24T06:30:25.275Z",
+      "messageId": 77
     }
   },
   "prehledy": {
@@ -676,6 +680,11 @@
       "kdy": "2026-11-23T18:30:17.846Z",
       "zaznamu": 0,
       "neodeslan": "nic nového"
+    },
+    "2026-11-24-rano": {
+      "kdy": "2026-11-24T06:30:25.275Z",
+      "zaznamu": 0,
+      "neodeslan": "nic od 7/10"
     }
   },
   "navrhy": {
