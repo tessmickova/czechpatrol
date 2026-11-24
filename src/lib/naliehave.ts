@@ -17,6 +17,7 @@ export const NAZVY_NALIEHAVE = {
   "pravni-stav-cr": "mimořádný právní stav v ČR",
   "hranice-cr": "uzavření hranic ČR",
   "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
+  "letecky-poplach-nato": "letecký poplach v zemi Aliance",
   "hranice-nato": "posílení hranice NATO s Ruskem nebo Běloruskem",
 } as const;
 
@@ -45,6 +46,8 @@ export const PLATNOST_HODIN: Record<DruhNaliehave, number> = {
   "pravni-stav-cr": 14 * DEN,
   "hranice-cr": 7 * DEN,
   "vzdusny-prostor-nato": 3 * DEN,
+  /* Poplach je po odvolání minulostí; den stačí, aby ho viděl i ten, kdo spal. */
+  "letecky-poplach-nato": 1 * DEN,
   "hranice-nato": 7 * DEN,
 };
 
@@ -55,7 +58,7 @@ export const PLATNOST_HODIN: Record<DruhNaliehave, number> = {
 */
 const STUPEN: Record<DruhNaliehave, 1 | 2> = {
   "mobilizace-rusko": 1, "priprava-mobilizace": 2, "krizove-vysilani": 1, "clanek-nato": 1,
-  "pravni-stav-cr": 1, "hranice-cr": 1, "vzdusny-prostor-nato": 2, "hranice-nato": 2,
+  "pravni-stav-cr": 1, "hranice-cr": 1, "vzdusny-prostor-nato": 2, "letecky-poplach-nato": 2, "hranice-nato": 2,
 };
 
 type Naliehava = { druh: string; stupen?: number | null };

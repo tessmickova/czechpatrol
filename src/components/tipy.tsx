@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HlavickaWidgetu } from "./widgety";
 import { datumPraha } from "@/lib/cas";
 import { tipy } from "@/lib/data-lehka";
@@ -44,7 +45,16 @@ export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: num
               <span className="text-male font-semibold text-inkoust">{x.nadpis}</span>
             </div>
             <p className="mt-1 text-male leading-snug text-tlum">{x.text}</p>
+            {x.body && x.body.length > 0 && (
+              <details className="group mt-1">
+                <summary className="inline-flex min-h-[28px] cursor-pointer list-none items-center gap-1 text-drobne font-semibold text-tlum hover:text-inkoust">
+                  Jak na to ({x.body.length}) <Ikona nazev="dolu" velikost={11} tah={2} trida="transition-transform group-open:rotate-180" />
+                </summary>
+                <ul className="mt-1 list-disc space-y-1 pl-4 text-drobne leading-snug text-tlum">{x.body.map((b) => <li key={b}>{b}</li>)}</ul>
+              </details>
+            )}
             <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
+              {x.odkaz && <Link href={x.odkaz} className="odkaz text-drobne font-semibold text-tlum">Podrobně na webu →</Link>}
               {x.zdroje.map((z) => (
                 <a key={z.url} href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz text-drobne text-tlum2">
                   {z.nazev} ↗
@@ -84,7 +94,9 @@ export function TipyBox({ ted = Date.now() }: { ted?: number }) {
                 </summary>
                 <div className="px-4 pb-3">
                   <p className="text-male leading-snug text-tlum">{x.text}</p>
+                  {x.body && x.body.length > 0 && <ul className="mt-1.5 list-disc space-y-1 pl-4 text-drobne leading-snug text-tlum">{x.body.map((b) => <li key={b}>{b}</li>)}</ul>}
                   <p className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
+                    {x.odkaz && <Link href={x.odkaz} className="odkaz text-drobne font-semibold text-tlum">Podrobně na webu →</Link>}
                     {x.zdroje.map((z) => (
                       <a key={z.url} href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz text-drobne text-tlum2">{z.nazev} ↗</a>
                     ))}

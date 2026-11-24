@@ -51,6 +51,7 @@ const NAZVY_NALEHAVOSTI = {
   "pravni-stav-cr": "právní stav ČR",
   "hranice-cr": "hranice ČR",
   "vzdusny-prostor-nato": "vzdušný prostor Aliance",
+  "letecky-poplach-nato": "letecký poplach",
 };
 
 function stav() {

@@ -914,3 +914,69 @@ do komunity. Web to říká u polí a na stránce Soukromí (čl. 13 GDPR).
 Záznam bez pohybu ze strany provozovatele (stav `novy`/`nezajem`) se po
 roce maže. Migrace `0007` tabulku z `0006` staví znovu (byla nasazena
 prázdná).
+
+
+## Nové riziko z tipu a téma Vesmír (doplněno 23. 11. 2026)
+
+Provozovatelka 23. 11. 2026: zprávy o ruské družici s jadernou hlavicí
+(WDR, NDR, SZ) vyhodnotit jako **nový typ rizika** — dlouhý a rozsáhlý
+výpadek družic, ne krátký výpadek jednoho zařízení.
+
+- **Hrozba `satelity`** („dlouhý výpadek družic“) v
+  `data/odolnost/seznamy.json`, k ní tři položky v seznamu AI tipů
+  (`druzice-zavislosti`, `mapa-bez-navigace`, `internet-druha-cesta`).
+- **Tip s polem `hrozby`** (`data/tipy.json`): dokud platí (`kdy` až
+  `platiDo`), dává té hrozbě tlak 3 a v kartě „AI radí“ má jisté místo
+  (`novaRizika`, `pripravitTed` v `src/lib/priprava-ted.ts`). Karta pod
+  seznamem odkáže na stránku z pole `odkaz`. Po `platiDo` se karta vrátí
+  k výpočtu jen z doloženého. Bez tipu se nic nemění.
+- **Pole `odkaz`** u tipu: web ukáže „Podrobně na webu“, kanál místo
+  odkazu na úvod napíše `Podrobně: https://czechpatrol.cz<odkaz>`
+  (jen cesta na našem webu, cizí adresu `sestavTip` ignoruje).
+- **Stránka `/vesmir/`**: co je doložené, co by výbuch zasáhl (jak moc,
+  jak dlouho, kde), příprava doma a v práci, co nevíme. Každé tvrzení má
+  číslovaný zdroj. Když přibudou nové doložené informace, doplnit je tam
+  s datem; když tip vyprší, stránka zůstává.
+- **Czujni** v průvodci (krok Cestování): neúřední polská aplikace, stav
+  `obecne`, výhrada v `poznamka` je u neúředních položek vidět přímo
+  v průvodci. Provozovatele se 23. 11. 2026 ověřit nepodařilo (web
+  aplikace byl z prostředí nedostupný) — při další kontrole doplnit, nebo
+  položku stáhnout.
+
+Kanál: tipy chodí nejvýš jeden za 20 hodin, takže tip o družicích odejde
+hned po nasazení a tip o aplikaci Czujni nejdřív o 20 hodin později
+s ranním nebo večerním během.
+
+### Body a naplánované odeslání tipu (doplněno 24. 11. 2026)
+
+Provozovatelka chtěla tipy „podrobněji, přehledně, stručně, přesně“ a tipy
+k noční události ne ve dvě ráno.
+
+- **`body`**: nejvýš šest konkrétních bodů, každý do 160 znaků (hlídá
+  `npm run kontrola:data`, včetně zákazu rad v krizi). Kanál je pošle jako
+  odrážky pod textem, web je ukáže po rozbalení tipu.
+- **`odeslat`** (ISO čas): čas určila provozovatelka, takže neplatí odstup
+  20 hodin; tip odejde první během po tom čase a dřív ne (ranní běhy jsou
+  v 5:30 a 6:30 UTC). Dva naplánované najednou jdou po jednom za běh, dřívější
+  první. Tipy bez pole čekají na odstup dál.
+- Odkazy u typů útoků smějí vést jen na úřady (`testy/typy-utoku.test.ts`);
+  přibyl 72h.gov.cz. Média patří do zdrojů tipu, ne do katalogu.
+
+### Polský letecký poplach ve sběru (doplněno 24. 11. 2026)
+
+Výstrahu RCB pro Lublinsko (23. 11., zhruba 22:30–23:53) a narušení
+vzdušného prostoru ruským dronem zachytil sběr až v běhu v 01:02: předchozí
+běh byl ve 22:57 a první polské články vyšly ve 23:05. Přišly bez značky
+naléhavosti, protože spouštěče znaly jen česká a anglická slovesa.
+
+- Spouštěč `vzdusny-prostor-nato` zná polsky „narusz-“, „wlecia-“,
+  „wtargn-“ a „przestrzeń powietrzna“.
+- Nový druh `letecky-poplach-nato` (stupeň 2, platí den): výstraha
+  obyvatelům před útokem ze vzduchu v zemi Aliance — „zagrożenie atakiem
+  z powietrza“, „letecký poplach“, „air raid“. RCB a polská vojvodství
+  stačí jako Polsko. Výstraha RCB před počasím sem nepatří (test).
+- Stupeň 2 = nahoru ve frontě, rámeček „naléhavé“ na webu, box Incidenty na
+  hranicích. Do kanálu jde jen stupeň 1; polský poplach tam pošle člověk
+  (mimořádná zpráva), protože bývá při každém velkém úderu na západ Ukrajiny.
+- Ukrajinské monitorovací kanály (mapy tras dronů) sběr nečte: nejsou ověřené
+  a přesná trasa je víc, než civilista v Česku potřebuje (BEZPECNOST-OBSAHU.md).

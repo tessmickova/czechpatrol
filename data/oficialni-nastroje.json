@@ -143,6 +143,37 @@
     "kratce": "Registrace cesty do zahraničí u ministerstva zahraničí."
   },
   {
+    "id": "czujni",
+    "nazev": "Czujni",
+    "provozovatel": "Soukromá komunitní aplikace z Polska, není úřední zdroj; provozovatele jsme zatím neověřili",
+    "kategorie": "cestovani",
+    "ikona": "radar",
+    "kratce": "Polská mapa hrozeb ze vzduchu a úřední výstrahy RCB, RSO.",
+    "popis": "Bezplatná aplikace z Polska. Podle svého webu sdružuje polské úřední výstrahy (RCB, RSO), mapu hrozeb ze vzduchu na živo podle hlášení lidí, výstrahy počasí IMGW a kryty v okolí.",
+    "kCemu": "Vidět, jaké výstrahy platí v Polsku a co lidé hlásí ve vzdušném prostoru kolem.",
+    "kdyPomuze": "Na cestě do Polska nebo v pohraničí, když tam vyhlásí letecký poplach.",
+    "procMit": "Úřední poplach RCB ukáže zvlášť, odlišený od hlášení lidí.",
+    "iosUrl": null,
+    "androidUrl": null,
+    "webUrl": "https://czujni.com/",
+    "oficialniZdroj": null,
+    "overeno": null,
+    "adresaOverena": null,
+    "dostupnost": "aplikace",
+    "coNastavit": [
+      "Na iPhonu jde o webovou aplikaci: otevřít app.czujni.com v Safari a přidat na plochu",
+      "Před cestou do Polska povolit oznámení",
+      "V Česku mají přednost sirény, varování na mobil a krizové vysílání"
+    ],
+    "proKoho": [
+      "kdo jezdí do Polska",
+      "kdo bydlí u polských hranic"
+    ],
+    "stav": "obecne",
+    "doporuceno": false,
+    "poznamka": "Není úřední zdroj. Údaje máme jen z webu aplikace (23. 11. 2026); provozovatele ani původ dat jsme nezávisle neověřili a nezávislé recenze jsme nenašli. Hlášení lidí může být mylné."
+  },
+  {
     "id": "sireny-jsvv",
     "nazev": "Sirény a varovné hlášení (JSVV)",
     "provozovatel": "Hasičský záchranný sbor ČR",

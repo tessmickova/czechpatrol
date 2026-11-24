@@ -48,6 +48,10 @@
     "nukib-ruske-kyberutoky-2026-11": {
       "kdy": "2026-11-11T04:26:10.840Z",
       "messageId": 68
+    },
+    "druzice-jaderna-zbran-2026-11": {
+      "kdy": "2026-11-23T22:31:20.986Z",
+      "messageId": 74
     }
   },
   "prehledy": {
@@ -1389,6 +1393,12 @@
       "historie": 1,
       "cesta": "hned",
       "messageId": 73
+    },
+    "i-2026-11-23-lublin-rcb-dron": {
+      "kdy": "2026-11-23T23:41:19.031Z",
+      "historie": 1,
+      "cesta": "hned",
+      "messageId": 75
     }
   },
   "snimky": {
@@ -1439,6 +1449,12 @@
       "slug": "finsky-zaliv-drony-lod-sparta-ii-2026",
       "styl": "kratka",
       "messageId": 73
+    },
+    "i-2026-11-23-lublin-rcb-dron": {
+      "kdy": "2026-11-23T23:41:19.031Z",
+      "slug": "polsko-lublinsko-alert-rcb-rusky-dron-2026",
+      "styl": "kratka",
+      "messageId": 75
     }
   },
   "kyber": {

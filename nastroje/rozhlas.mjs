@@ -804,6 +804,7 @@ const NAZVY_SIGNALU = {
   "hranice-cr": "uzavření hranic ČR",
   "priprava-mobilizace": "přípravy mobilizace v Rusku",
   "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
+  "letecky-poplach-nato": "letecký poplach v zemi Aliance",
 };
 
 
@@ -1247,14 +1248,27 @@ const TIP_KAZDYCH_H = 20;
 */
 const tipCeka = (t, poslane) => !poslane[t.klic] || (t.znovu && String(poslane[t.klic].kdy ?? "") < t.znovu);
 
+/*
+  `odeslat` (ISO čas, 24. 11. 2026) = čas určila provozovatelka: tip odejde
+  první během po něm, bez ohledu na odstup 20 hodin, a dřív ne. Tak jdou
+  tipy k noční události ráno, ne ve dvě v noci. Bez pole platí odstup.
+*/
+const naplanovany = (t) => t.odeslat && !Number.isNaN(new Date(t.odeslat).getTime());
+
 export function vyberTip(tipy, stav, { ted = Date.now() } = {}) {
   const poslane = stav.tipy ?? {};
   const posledni = Math.max(0, ...Object.values(poslane).filter((x) => !x?.ticho).map((x) => new Date(x?.kdy ?? 0).getTime() || 0));
-  if (ted - posledni < TIP_KAZDYCH_H * 3_600_000) return null;
-  return (tipy ?? [])
+  const kandidati = (tipy ?? [])
     .filter((t) => t?.klic && tipCeka(t, poslane))
     .filter((t) => (t.zdroje ?? []).some((z) => /^https?:\/\//.test(z?.url ?? "")))
-    .filter((t) => !t.platiDo || new Date(t.platiDo).getTime() > ted)
+    .filter((t) => !t.platiDo || new Date(t.platiDo).getTime() > ted);
+  const vcas = kandidati
+    .filter((t) => naplanovany(t) && new Date(t.odeslat).getTime() <= ted)
+    .sort((a, b) => String(a.odeslat).localeCompare(String(b.odeslat)))[0];
+  if (vcas) return vcas;
+  if (ted - posledni < TIP_KAZDYCH_H * 3_600_000) return null;
+  return kandidati
+    .filter((t) => !naplanovany(t))
     .sort((a, b) => String(b.kdy).localeCompare(String(a.kdy)))[0] ?? null;
 }
 
@@ -1264,10 +1278,13 @@ export function sestavTip(t) {
     "",
     `<b>${esc(t.nadpis)}</b>`,
     esc(t.text),
+    // Konkrétní body (24. 11. 2026) jako odrážky — přehledně, bez dalšího textu.
+    ...((t.body ?? []).length ? ["", ...t.body.map((b) => `• ${esc(b)}`)] : []),
     "",
   ];
   for (const z of t.zdroje ?? []) radky.push(`Zdroj: <a href="${esc(z.url)}">${esc(z.nazev)}</a>`);
-  radky.push("", WEB);
+  // Tip s vlastní stránkou (23. 11. 2026) odkáže rovnou na ni, ne na úvod.
+  radky.push("", /^\/[\w/#?=&-]*$/.test(t.odkaz ?? "") ? `Podrobně: ${WEB}${t.odkaz}` : WEB);
   return radky.join("\n");
 }
 

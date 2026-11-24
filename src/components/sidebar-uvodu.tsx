@@ -216,13 +216,19 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
                   <span className="cislice mt-[1px] text-velke font-bold leading-none text-tlum">{i + 1}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-male font-bold leading-snug text-inkoust">{p.nazev}</span>
-                    <span className="block text-mikro text-tlum2">{NAZVY_HROZEB[p.hrozba]}</span>
+                    <span className="block text-mikro text-tlum2">{NAZVY_HROZEB[p.hrozba]}{p.hrozba === priprava.noveRiziko?.hrozba && " · nové riziko"}</span>
                   </span>
                   <Ikona nazev="nahoru" velikost={12} tah={2} trida="mt-1 shrink-0 rotate-90 text-tlum2 group-hover:text-akcent" />
                 </Link>
               </li>
             ))}
           </ol>
+        )}
+        {/* Nové riziko z platného tipu (23. 11. 2026): odkaz na téma s podrobnostmi. */}
+        {priprava?.noveRiziko?.odkaz && (
+          <p className="px-4 pt-1 text-mikro leading-snug text-tlum2">
+            Nové riziko: <Link href={priprava.noveRiziko.odkaz} className="odkaz">{priprava.noveRiziko.nadpis}</Link>
+          </p>
         )}
         <div className="flex flex-wrap gap-2 px-4 pb-4 pt-2">
           <Tlacitko kam="/pripravenost/" varianta="plny" velikost="s" ikona="stit">Projít průvodce</Tlacitko>

@@ -9,14 +9,17 @@
     "proObcana": "V Česku zatím bez přímého dopadu. Na cestách po východě Evropy se může zpozdit let nebo uzavřít oblast kolem dopadu.",
     "predem": [
       "Zapnout varování na mobil a znát tři tóny sirén.",
-      "Před cestou do Polska, Pobaltí nebo Rumunska se zaregistrovat v DROZD, aby vás stát uměl najít."
+      "Před cestou do Polska, Pobaltí nebo Rumunska se zaregistrovat v DROZD, aby vás stát uměl najít.",
+      "Vybrat doma místo pro letecký poplach: uprostřed budovy, bez oken, aspoň dvě pevné zdi mezi vámi a venkem (chodba, předsíň, šatna). Sklep jen nepoškozený, bez plynu a s druhým východem."
     ],
     "kdyzNastane": [
+      "Při leteckém poplachu pryč od oken a zůstat uvnitř; do veřejného úkrytu jen tehdy, když je cesta bezpečná a je na ni čas.",
       "K troskám se nepřibližovat a nedotýkat se jich; volat 158 nebo 112.",
       "Řídit se pokyny místních úřadů, zpoždění letu řešit s dopravcem."
     ],
     "odkazy": [
       { "nazev": "Hasičský záchranný sbor ČR", "url": "https://www.hzscr.cz/" },
+      { "nazev": "72h.gov.cz — Kam se ukrýt", "url": "https://www.72h.gov.cz/cs/ukryt" },
       { "nazev": "DROZD — registrace před cestou", "url": "https://drozd.mzv.cz/" },
       { "nazev": "Základy za minutu: tóny sirén", "url": "/pripravenost/#zaklady" }
     ]

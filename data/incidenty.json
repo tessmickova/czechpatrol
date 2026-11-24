@@ -16955,5 +16955,113 @@
     "novy": true,
     "aiZpracovano": true,
     "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-11-23-lublin-rcb-dron",
+    "slug": "polsko-lublinsko-alert-rcb-rusky-dron-2026",
+    "titulek": "Polsko: v pondělí večer varovalo RCB 18 okresů a měst Lublinského vojvodství před útokem ze vzduchu; armáda potvrdila krátké narušení vzdušného prostoru ruským dronem, od sestřelu upustila",
+    "kratkyTitulek": "Lublinsko: výstraha před útokem ze vzduchu, ruský dron krátce nad Polskem",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-11-23T00:00:00Z",
+    "datumZjisteni": "2026-11-23T00:00:00Z",
+    "aktualizovano": "2026-11-24T00:05:48.355Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "oficialni",
+    "puvodce": "rusko",
+    "druh": "pripad",
+    "fakta": [
+      "V pondělí 23. 11. 2026 večer rozeslalo polské Vládní centrum bezpečnosti (RCB) na mobily v 18 okresech a městech Lublinského vojvodství výstrahu: „Hrozí útok ze vzduchu. Najděte bezpečné místo.“ Souviselo to s ruskými údery na Ukrajinu.",
+      "Ve 22:47 polské Operační velitelství oznámilo nasazení protivzdušné obrany a krátké narušení vzdušného prostoru ruským dronem. Souhlas k sestřelu byl vydán; když dron zamířil na východ, armáda kvůli riziku pro civilisty nestřílela.",
+      "Ve 23:53 RCB výstrahu odvolalo: v Polsku podle něj žádná hrozba není. Na Lublinsku podle místních médií zněly sirény."
+    ],
+    "neznameho": [
+      "Kudy přesně dron letěl, jak dlouho byl nad Polskem a jakého byl typu, armáda neupřesnila.",
+      "O škodách nebo zraněních zprávy nepíšou."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "TVN24 — „Krótkotrwałe naruszenie polskiej przestrzeni”. Alert RCB i komunikat wojska",
+        "url": "https://tvn24.pl/polska/alert-rcb-w-wojewodztwie-lubelskim-ostrzezenie-dowodztwa-operacyjnego-st9354055",
+        "typ": "media",
+        "publikovano": "2026-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Kurier Lubelski — Rosyjski dron naruszył polską przestrzeń powietrzną. Wojsko miało zgodę na zestrzelenie",
+        "url": "https://kurierlubelski.pl/rosyjski-dron-naruszyl-polska-przestrzen-powietrzna-wojsko-mialo-zgode-na-zestrzelenie/ar/c1p2-29552023",
+        "typ": "media",
+        "publikovano": "2026-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Rzeczpospolita — Rosyjski dron naruszył przestrzeń powietrzną Polski. Wojsko miało zgodę na zestrzelenie",
+        "url": "https://www.rp.pl/wojsko/art45532721-rosyjski-dron-naruszyl-przestrzen-powietrzna-polski-wojsko-mialo-zgode-na-zestrzelenie",
+        "typ": "media",
+        "publikovano": "2026-11-23T23:08:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Dziennik Wschodni — Alert na Lubelszczyźnie odwołany. Rosyjski dron naruszył polską przestrzeń powietrzną",
+        "url": "https://www.dziennikwschodni.pl/artykul/394305,alert-na-lubelszczyznie-odwolany-rosyjski-dron-naruszyl-polska-przestrzen-powietrzna",
+        "typ": "media",
+        "publikovano": "2026-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Polsat News — Rosja atakowała Ukrainę. Alerty RCB dla Lubelszczyzny",
+        "url": "https://www.polsatnews.pl/wiadomosc/2026-11-23/rosja-atakuje-ukraine-rcb-wydalo-alert/",
+        "typ": "media",
+        "publikovano": "2026-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "RMF24 — Alert RCB do mieszkańców Lubelszczyzny. Chodzi o rosyjski powietrzny atak na Ukrainę",
+        "url": "https://www.rmf24.pl/fakty/polska/news-alert-rcb-do-mieszkancow-lubelszczyzny-chodzi-o-rosyjski-pow,nIdn,1027359",
+        "typ": "media",
+        "publikovano": "2026-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Wirtualna Polska — Alert RCB w lubelskim. „Zagrożenie atakiem z powietrza”",
+        "url": "https://wiadomosci.wp.pl/alert-rcb-w-lubelskim-podniesiono-gotowosc-systemu-obrony-powietrznej-7354248198182912a",
+        "typ": "media",
+        "publikovano": "2026-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-11-23T23:35:05.272Z",
+        "text": "Ověřeno a zveřejněno na pokyn provozovatelky.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-11-24T00:05:48.355Z",
+        "text": "Doplněn zdroj Rzeczpospolita, který zachytil automatický sběr v 01:02.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]

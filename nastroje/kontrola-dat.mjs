@@ -228,7 +228,13 @@ for (const t of tipy) {
   if (!(t.zdroje ?? []).some((z) => /^https?:\/\//.test(z?.url ?? ""))) chyby.push(`${kde}: bez zdroje s adresou`);
   if (t.kdy && !platneDatum(t.kdy)) chyby.push(`${kde}: neplatné datum`);
   if ((t.text ?? "").length > 400) chyby.push(`${kde}: text je delší než 400 znaků`);
-  if (/\b(odjeďte|utíkejte|vyberte hotovost|nakupte|zásobte se)\b/i.test(`${t.nadpis ?? ""} ${t.text ?? ""}`)) {
+  // Body (24. 11. 2026): přehledně a stručně — nejvýš šest, každý do 160 znaků.
+  if (t.body !== undefined) {
+    if (!Array.isArray(t.body) || t.body.length > 6) chyby.push(`${kde}: bodů musí být nejvýš šest`);
+    for (const b of Array.isArray(t.body) ? t.body : []) if (typeof b !== "string" || !b.trim() || b.length > 160) chyby.push(`${kde}: bod je prázdný nebo delší než 160 znaků („${String(b).slice(0, 40)}…“)`);
+  }
+  if (t.odeslat !== undefined && Number.isNaN(new Date(t.odeslat).getTime())) chyby.push(`${kde}: neplatný čas odeslání`);
+  if (/\b(odjeďte|utíkejte|vyberte hotovost|nakupte|zásobte se)\b/i.test(`${t.nadpis ?? ""} ${t.text ?? ""} ${(Array.isArray(t.body) ? t.body : []).join(" ")}`)) {
     chyby.push(`${kde}: tip radí, co má člověk dělat v krizi — to tenhle web nedělá`);
   }
 }

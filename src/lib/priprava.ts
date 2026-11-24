@@ -5,7 +5,7 @@ import seznamyData from "../../data/odolnost/seznamy.json";
 
   Karta na úvodní straně (24. 9. 2026). Nepředpovídá: sčítá doložené věci
   z posledních 30 dnů (záznamy podle oblasti, narušené služby, platná
-  opatření, skok cen paliva, operace proti občanům) do tlaku na deset
+  opatření, skok cen paliva, operace proti občanům) do tlaku na jedenáct
   hrozeb pro domácnost a k nim vybere položky ze seznamů zásob
   (data/odolnost/seznamy.json). Přepočítává se při každém sestavení webu,
   tedy po každém sběru, který něco změnil.
@@ -13,7 +13,8 @@ import seznamyData from "../../data/odolnost/seznamy.json";
   Základní tlak (informace, voda) je tu vždycky: bez něj by karta v klidném
   týdnu ukazovala nesmysly z okrajových oblastí.
 */
-export type Hrozba = "elektrina" | "voda" | "teplo" | "komunikace" | "informace" | "doprava" | "zdravi" | "hotovost" | "evakuace" | "pozar";
+/* „satelity“ (23. 11. 2026): dlouhý a rozsáhlý výpadek družic po útoku ve vesmíru — nový typ rizika, ne krátký výpadek jednoho zařízení. */
+export type Hrozba = "elektrina" | "voda" | "teplo" | "komunikace" | "informace" | "doprava" | "zdravi" | "hotovost" | "evakuace" | "pozar" | "satelity";
 
 export interface PolozkaSeznamu {
   klic: string;
@@ -43,4 +44,4 @@ export function seznamy(): Seznam[] {
   (26. 9. 2026): čte záznamy webu, a dokud byl tady, táhl celý datový
   modul i do komponent v prohlížeči, které potřebují jen seznamy zásob.
 */
-export type { PripravitPolozka, PripravitTed, TlakHrozby } from "./priprava-ted";
+export type { NoveRiziko, PripravitPolozka, PripravitTed, TlakHrozby } from "./priprava-ted";

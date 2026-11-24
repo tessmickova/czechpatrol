@@ -1,5 +1,141 @@
 [
   {
+    "klic": "letecky-poplach-rodina-2026-11",
+    "nadpis": "Letecký poplach: jak ochránit rodinu — ověřená pravidla",
+    "text": "Polsko 23. 11. večer varovalo část Lublinského vojvodství před útokem ze vzduchu, v Česku se nic neděje. Pravidla níže jsou z instrukce polského ministerstva vnitra a hasičů (2026) a z doporučení českých úřadů. Platí pro letecký poplach kdekoli.",
+    "body": [
+      "Předem vybrat doma místo: uprostřed budovy, bez oken, aspoň dvě pevné zdi mezi vámi a venkem — chodba, předsíň, šatna, koupelna.",
+      "Sklep jen nepoškozený, bez plynu a s víc než jedním východem. Ne místnost s okny ani s plynovým kotlem.",
+      "Při poplachu hned pryč od oken a zůstat uvnitř. Do veřejného úkrytu jen tehdy, když je cesta bezpečná a je na ni čas.",
+      "Do úkrytu rádio na baterie, nabitý telefon, vodu a léky; řídit se pokyny úřadů.",
+      "Trosek dronu nebo rakety se nedotýkat a nepřibližovat se k nim; volat 112 nebo 158.",
+      "V Česku varují sirény (kolísavý tón 140 s = Všeobecná výstraha) a zprávy na mobil."
+    ],
+    "kdy": "2026-11-24",
+    "zdroje": [
+      {
+        "nazev": "Forsal — Atak z powietrza. MSWiA wydało instrukcję dla Polaków. Obowiązuje zasada dwóch ścian",
+        "url": "https://forsal.pl/kraj/bezpieczenstwo/artykuly/11346435,atak-z-powietrza-mswia-wydalo-instrukcje-dla-polakow-obowiazuje-zasada-dwoch-scian.html",
+        "typ": "media",
+        "publikovano": null,
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "72h.gov.cz — Kam se ukrýt",
+        "url": "https://www.72h.gov.cz/cs/ukryt",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "HZS ČR — Co dělat po zaznění všeobecné výstrahy",
+        "url": "https://www.krizport.cz/system/files/files/download/12-sireny-1.pdf",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "cs"
+      }
+    ],
+    "platiDo": "2027-02-28",
+    "odkaz": "/typy-utoku/#drony",
+    "odeslat": "2026-11-24T05:30:00Z"
+  },
+  {
+    "klic": "emp-elektronika-2026-11",
+    "nadpis": "Jaderný výbuch ve vesmíru: co by doma přestalo fungovat a jak chránit elektroniku",
+    "text": "Navazuje na zprávy o ruské jaderné družici (23. 11.). Nejjistěji by vypadly služby z družic na nízké dráze. Jestli by puls zasáhl i elektroniku v Evropě, záleží na výšce výbuchu, a tu nikdo nezná. Ochrana podle americké agentury pro kritickou infrastrukturu CISA:",
+    "body": [
+      "Vypadne: satelitní internet (Starlink), satelitní spojení, snímky Země; předpověď počasí bude méně přesná.",
+      "Spíš vydrží: navigace GPS a satelitní televize — jejich družice obíhají mnohem výš.",
+      "Kdyby puls zasáhl Evropu: nejvíc ohrožená je elektrická síť a přístroje na dlouhých kabelech — zásuvka, anténa, telefonní a datová linka.",
+      "Telefon a rádio na baterie bez kabelu spíš vydrží, ale bez sítě nezavoláte. Zapnutý nebo nabíjený přístroj je zranitelnější.",
+      "Záloha: náhradní rádio, starý telefon a powerbanku zabalit do alobalu nebo dát do uzavřené kovové krabice.",
+      "Při varování vypnout a odpojit od zásuvky, antény a sítě, co nepotřebujete. Pomůže i přepěťová ochrana aspoň proti blesku."
+    ],
+    "kdy": "2026-11-24",
+    "zdroje": [
+      {
+        "nazev": "CISA — EMP Protection and Resilience Guidelines (2019)",
+        "url": "https://www.cisa.gov/sites/default/files/publications/19_0307_CISA_EMP-Protection-Resilience-Guidelines.pdf",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CISA — Electromagnetic Pulse",
+        "url": "https://www.cisa.gov/topics/risk-management/electromagnetic-pulse",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "RAND — dopady jaderného výbuchu ve velké výšce na civilní družice (2025)",
+        "url": "https://www.rand.org/pubs/research_reports/RRA3028-3.html",
+        "typ": "analysis",
+        "publikovano": null,
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "platiDo": "2027-01-31",
+    "hrozby": [
+      "satelity"
+    ],
+    "odkaz": "/vesmir/#elektronika",
+    "odeslat": "2026-11-24T06:30:00Z"
+  },
+  {
+    "klic": "druzice-jaderna-zbran-2026-11",
+    "nadpis": "Zprávy o ruské jaderné zbrani na oběžné dráze: co by vypadlo a jak se připravit",
+    "text": "Podle WDR, NDR a SZ (23. 11.) považují západní tajné služby za možné, že Rusko ještě letos vynese do vesmíru družici s jadernou hlavicí; Kreml to odmítá. Výbuch by vyřadil hlavně družice na nízké dráze (satelitní internet, snímky Země, část meteorologie), škody by přibývaly týdny až měsíce. Doma: rádio na baterie, mapa v autě. Ve firmě: sepsat, co stojí na družicích a GPS.",
+    "kdy": "2026-11-23",
+    "zdroje": [
+      {
+        "nazev": "Český rozhlas — Rusko plánuje vynést do vesmíru družici s jadernou zbraní, píšou německá média",
+        "url": "https://www.irozhlas.cz/veda-technologie/vesmir/rusko-planuje-vynest-do-vesmiru-druzici-s-jadernou-zbrani-pisi-nemecka-media_2611231343_vdv",
+        "typ": "media",
+        "publikovano": "2026-11-23T12:43:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "RAND — dopady jaderného výbuchu ve velké výšce na civilní družice (2025)",
+        "url": "https://www.rand.org/pubs/research_reports/RRA3028-3.html",
+        "typ": "analysis",
+        "publikovano": null,
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "platiDo": "2027-01-31",
+    "hrozby": [
+      "satelity"
+    ],
+    "odkaz": "/vesmir/"
+  },
+  {
+    "klic": "czujni-aplikace-2026-11",
+    "nadpis": "Na cesty do Polska: aplikace Czujni ukazuje varování před útokem ze vzduchu",
+    "text": "Czujni je bezplatná polská aplikace: na jednom místě ukazuje polské úřední výstrahy RCB a RSO, mapu hrozeb ze vzduchu podle hlášení lidí a výstrahy počasí. Hodí se na cesty do Polska a do pohraničí. Není úřední, hlášení lidí nikdo neověřuje a provozovatele jsme zatím neověřili. V Česku platí sirény, varování na mobil a krizové vysílání.",
+    "kdy": "2026-11-23",
+    "zdroje": [
+      {
+        "nazev": "CZUJNI — web aplikace",
+        "url": "https://czujni.com/",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "pl"
+      }
+    ],
+    "platiDo": "2027-02-28",
+    "odkaz": "/pripravenost/"
+  },
+  {
     "klic": "nukib-ruske-kyberutoky-2026-11",
     "nadpis": "Aktuální hrozba: ruské kyberútoky míří i na domácí routery a kamery",
     "text": "NÚKIB 10. 11. 2026 varoval před dlouhodobými útoky skupin podporovaných ruským státem a nevylučuje ani pokusy zničit data nebo vyřadit systémy. Útočníci plošně hledají špatně zabezpečené routery a kamery. Pro domácnost: změnit výchozí hesla routeru a kamer, aktualizovat je, neklikat na spěchající odkazy, kód z SMS nikomu nesdělovat. Pro jistotu mít doma vodu, jídlo a rádio na baterie na pár dní.",

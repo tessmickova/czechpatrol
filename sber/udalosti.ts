@@ -150,6 +150,8 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
   ] },
   { kategorie: "drony", slova: [
     "airspace violation", "violated airspace", "narusil vzdusny prostor", "naruseni vzdusneho prostoru",
+    /* Výstraha obyvatelům před útokem ze vzduchu (24. 11. 2026): polské RCB, česky i anglicky. */
+    "atakiem z powietrza", "atak z powietrza", "ataku z powietrza", "utok ze vzduchu", "utokem ze vzduchu", "letecky poplach", "leteckeho poplachu",
     "sestrel", "shot down", "dopad dronu", "drone crash", "drone incursion",
     "uzavreni letiste", "airport closed", "pozastavila provoz letiste", "grounded flights",
   ] },
@@ -650,7 +652,7 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
       */
       "cetin", "vypadky24"], presna: ["cr", "o2"] },
   { kod: "SK", nazev: "Slovensko", slova: ["slovak", "slovensk", "bratislav", "kosic"] },
-  { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "polac", "warsaw", "varsav", "rzeszow", "gdansk", /* polsky (2. 10. 2026) */ "polsce", "warszaw", "lublin"] },
+  { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "polac", "warsaw", "varsav", "rzeszow", "gdansk", /* polsky (2. 10. 2026) */ "polsce", "warszaw", "lublin", /* vojvodství u hranice s Ukrajinou (24. 11. 2026) */ "lubelsk", "lubelszczy", "podkarpack"] },
   { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr", /* německy (2. 10. 2026) */ "deutschland", "munchen"] },
   { kod: "AT", nazev: "Rakousko", slova: ["austria", "rakousk", "vienna", "viden"] },
   { kod: "HU", nazev: "Maďarsko", slova: ["hungary", "hungarian", "madarsk", "budapest"] },
@@ -832,6 +834,7 @@ export type DruhNaliehavosti =
   | "pravni-stav-cr"
   | "hranice-cr"
   | "vzdusny-prostor-nato"
+  | "letecky-poplach-nato"
   | "hranice-nato";
 
 export interface Naliehavost {
@@ -923,9 +926,31 @@ const SPOUSTECE: {
     */
     druh: "vzdusny-prostor-nato",
     stupen: 2,
-    sloveso: ["narusil", "narusila", "narusily", "vnikl", "vnikla", "violated", "violates", "breached", "entered"],
-    predmet: ["vzdusny prostor", "vzdusneho prostoru", "airspace"],
+    sloveso: ["narusil", "narusila", "narusily", "vnikl", "vnikla", "violated", "violates", "breached", "entered",
+      /*
+        Polsky (24. 11. 2026): „krótkotrwałe naruszenie polskiej przestrzeni
+        powietrznej“ (TVN24) a „dron naruszył przestrzeń powietrzną Polski“
+        (Rzeczpospolita) přišly sběrem, ale bez značky naléhavosti — spouštěč
+        znal jen česká a anglická slovesa.
+      */
+      "narusz", "wlecia", "wtargn"],
+    predmet: ["vzdusny prostor", "vzdusneho prostoru", "airspace", "przestrzen powietrzn", "przestrzeni powietrzn"],
     kontext: NATO_STATY,
+  },
+  {
+    /*
+      Letecký poplach pro obyvatele členského státu Aliance (24. 11. 2026):
+      polské RCB 23. 11. varovalo Lublinsko „Zagrożenie atakiem z powietrza“
+      a zpráva o tom nenesla žádné z hledaných sloves. Stupeň 2 jako narušení
+      vzdušného prostoru: nahoru ve frontě a na webu, do kanálu až člověk.
+    */
+    druh: "letecky-poplach-nato",
+    stupen: 2,
+    sloveso: ["alert", "zagroz", "ostrzez", "alarm", "syren", "vystrah", "varovan", "varuj", "hrozb", "hrozi", "poplach", "sireny", "warning", "sirens"],
+    predmet: ["atakiem z powietrza", "atak z powietrza", "ataku z powietrza", "utok ze vzduchu", "utokem ze vzduchu", "utoku ze vzduchu",
+      "letecky poplach", "leteckeho poplachu", "letecky alarm", "air attack", "air raid", "air-raid"],
+    /* Polské RCB je samo o sobě Polsko; titulek často jmenuje jen vojvodství. */
+    kontext: [...NATO_STATY, "rcb", "rzadowe centrum bezpieczenstwa", "lubelsk", "podkarpack"],
   },
   {
     /*

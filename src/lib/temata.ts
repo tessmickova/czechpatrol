@@ -49,6 +49,6 @@ export function temaZpravy(x: ProTema): Tema | null {
   if (jeNamorni(text)) return "vody";
   const druh = x.naliehave?.druh;
   const hranicni = (ZEME_HRANIC as readonly string[]).includes(x.kodZeme ?? "");
-  if (hranicni && (x.kategorie.includes("hranice") || x.kategorie.includes("drony") || druh === "hranice-nato" || druh === "vzdusny-prostor-nato")) return "hranice";
+  if (hranicni && (x.kategorie.includes("hranice") || x.kategorie.includes("drony") || druh === "hranice-nato" || druh === "vzdusny-prostor-nato" || druh === "letecky-poplach-nato")) return "hranice";
   return null;
 }

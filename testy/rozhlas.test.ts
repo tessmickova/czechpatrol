@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
-import { stojiRanniPrehled, sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
+import { stojiRanniPrehled, sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou, sestavTip } from "../nastroje/rozhlas.mjs";
 import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
@@ -975,6 +975,28 @@ describe("tip k přípravě", () => {
   it("nejvýš jeden tip za 20 hodin", () => {
     const stav = { tipy: { jiny: { kdy: new Date(ted - 5 * 3_600_000).toISOString() } } };
     expect(vyberTip([tip], stav, { ted })).toBeNull();
+  });
+  it("naplánovaný tip odejde v určený čas i přes odstup 20 hodin, dřív ne", () => {
+    const stav = { tipy: { jiny: { kdy: new Date(ted - 2 * 3_600_000).toISOString() } } };
+    const rano = { ...tip, klic: "rano", odeslat: new Date(ted + 3_600_000).toISOString() };
+    expect(vyberTip([rano], stav, { ted })).toBeNull();
+    expect(vyberTip([rano], stav, { ted: ted + 3_600_000 })?.klic).toBe("rano");
+    // Dva naplánované najednou: dřívější první, druhý v dalším běhu.
+    const druhy = { ...tip, klic: "druhy", odeslat: new Date(ted + 2 * 3_600_000).toISOString() };
+    expect(vyberTip([druhy, rano], stav, { ted: ted + 3 * 3_600_000 })?.klic).toBe("rano");
+    expect(vyberTip([druhy, rano], { tipy: { ...stav.tipy, rano: { kdy: new Date(ted + 3 * 3_600_000).toISOString() } } }, { ted: ted + 3 * 3_600_000 })?.klic).toBe("druhy");
+    // Neplánovaný tip čeká na odstup dál.
+    expect(vyberTip([tip], { tipy: { rano: { kdy: new Date(ted).toISOString() } } }, { ted: ted + 3_600_000 })).toBeNull();
+  });
+  it("body tipu jdou do kanálu jako odrážky", () => {
+    const t = sestavTip({ ...tip, body: ["první <b>", "druhý"] });
+    expect(t).toContain("• první &lt;b&gt;");
+    expect(t).toContain("• druhý");
+  });
+  it("tip s vlastní stránkou odkáže na ni; cizí nebo nesmyslný odkaz ne", () => {
+    expect(sestavTip({ ...tip, odkaz: "/vesmir/" })).toContain("Podrobně: https://czechpatrol.cz/vesmir/");
+    expect(sestavTip(tip)).toMatch(/\nhttps:\/\/czechpatrol\.cz$/);
+    expect(sestavTip({ ...tip, odkaz: "https://jinde.example/" })).not.toContain("jinde.example");
   });
 });
 

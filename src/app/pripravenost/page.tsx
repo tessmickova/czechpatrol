@@ -33,6 +33,15 @@ export default function Pripravenost() {
             </span>
             <Ikona nazev="nahoru" velikost={14} tah={2} trida="shrink-0 rotate-90 text-tlum2 group-hover:text-akcent" />
           </Link>
+          {/* Téma (23. 11. 2026): nový typ rizika — dlouhý výpadek družic po jaderném výbuchu ve vesmíru. */}
+          <Link href="/vesmir/" className="group -mt-9 mb-12 flex items-center gap-3 rounded-[18px] border border-linka p-4 transition-colors hover:border-akcent">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="globus" velikost={18} tah={1.9} /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-zaklad font-semibold leading-snug text-inkoust">Jaderná zbraň na oběžné dráze: co by vypadlo</span>
+              <span className="mt-0.5 block text-male leading-snug text-tlum">Družice, navigace, spojení. Jak se připravit doma i v práci.</span>
+            </span>
+            <Ikona nazev="nahoru" velikost={14} tah={2} trida="shrink-0 rotate-90 text-tlum2 group-hover:text-akcent" />
+          </Link>
           <PripravenostKlient nastroje={oficialniNastroje()} />
           <CoDal bez="/pripravenost/" />
         </div>
