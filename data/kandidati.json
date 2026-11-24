@@ -1291,35 +1291,71 @@
     }
   },
   {
-    "id": "k-c742d8b32792f10d",
-    "zachyceno": "2026-11-24T00:02:31.433Z",
-    "publikovano": "2026-11-23T23:08:18.000Z",
+    "id": "k-c24e303f5b99e3b2",
+    "zachyceno": "2026-11-24T04:02:34.169Z",
+    "publikovano": null,
     "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/wojsko/art45532721-rosyjski-dron-naruszyl-przestrzen-powietrzna-polski-wojsko-mialo-zgode-na-zestrzelenie",
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russian-unmanned-aerial-vehicle-violates-polish-airspace-days-after-missile-incursion/",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Rosyjski dron naruszył przestrzeń powietrzną Polski. Wojsko miało zgodę na zestrzelenie",
-    "titulekPuvodni": "Rosyjski dron naruszył przestrzeń powietrzną Polski. Wojsko miało zgodę na zestrzelenie",
-    "shrnuti": "Rosyjski dron krótkotrwale naruszył polską przestrzeń powietrzną podczas nocnego ataku na zachodnią Ukrainę – poinformowało Dowództwo Operacyjne Rodzajów Sił Zbrojnych. Wojsko otrzymało zgodę na zestrzelenie bezzałogowca, jednak po zmianie jego kursu na wschodni odstąpiono od użycia uzbrojenia.",
+    "titulek": "Russian unmanned aerial vehicle violates Polish airspace days after missile incursion.",
+    "titulekPuvodni": "Russian unmanned aerial vehicle violates Polish airspace days after missile incursion.",
+    "shrnuti": "",
     "kodZeme": "PL",
     "zeme": "Polsko",
     "kategorie": [
-      "drony"
+      "drony",
+      "rusko"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "narusz+przestrzen powietrzn",
-      "dron"
+      "violat+airspace",
+      "airspace",
+      "russia"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Rosyjski dron naruszył polską przestrzeń. Wojsko odstąpiło od użycia broni - rp.pl\nReklama\nWydarzenia\nKraj\nWojsko\nRosyjski dron naruszył przestrzeń powietrzną Polski. Wojsko miało zgodę na zestrzelenie\nRosyjski dron krótkotrwale naruszył polską przestrzeń powietrzną podczas nocnego ataku na zachodnią Ukrainę – poinformowało Dowództwo Operacyjne Rodzajów Sił Zbrojnych. Wojsko otrzymało zgodę na zestrzelenie bezzałogowca, jednak po zmianie jego kursu na wschodni odstąpiono od użycia uzbrojenia.\nAktualizacja:\n24.11.2026 00:55\nPublikacja:\n24.11.2026 00:08\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nZdjęcie ilustracyjne\nFoto: Leanid / Adobe Stock\nReklama\nReklama\nReklama\nRobert Biskupski\nDo naruszenia polskiej przestrzeni powietrznej doszło w trakcie rosyjskiego ataku na cele w zachodniej części Ukrainy. Rosyjski bezzałogowy statek powietrzny znalazł się nad terytorium Polski, co spowodowało uruchomienie odpowiednich sił i środków obrony powietrznej.\nReklama\nReklama\nJak poinformowało Dowództwo Operacyjne Rodzajów Sił Zbrojnych w komunikacie opublikowanym na platformie X, obiekt był nieprzerwanie obserwowany przez wojskowe systemy radiolokacyjne.\n„W odpowiedzi…",
-      "stazeno": "2026-11-24T00:02:33.063Z",
+      "text": "Russian unmanned aerial vehicle violates Polish airspace days after missile incursion 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar Russian unmanned aerial vehicle violates Polish airspace days after missile incursion\nNovember 24, 2026 2:48 am • 3 min read\nPrefer on Google\nby Lachlan Hyatt, The Kyiv Independent news desk\nA counter-drone radar and electro-optical tracking mast operates beneath overhead anti-drone protection netting above a camouflaged field encampment at the Nowa Deba Training Area on Nov. 20, 2026, in Nowa Deba, Poland. (Artur Widak/NurPhoto via Getty Images)\nA Russian unmanned aerial vehicle briefly entered Poland's airspace late on Nov. 22 during an attack on western Ukraine, Polish authorities announced.\nThe incursion comes just three days after three Russian missiles slammed into eastern Poland , prompting widespread international outcry and ramping up tensions between Russia and NATO member states. Around 11 p.m. local time, Poland 's Government Security Center issued an air-attack alert in parts of the…",
+      "stazeno": "2026-11-24T04:02:37.300Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e6b74634fc160e6f",
+    "zachyceno": "2026-11-24T04:02:34.501Z",
+    "publikovano": "2026-11-24T03:00:00.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/ukraine-peace-wont-end-russian-sabotage-in-europe-poland-warns/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Peace in Ukraine won’t end Russian sabotage in Europe, Poland warns",
+    "titulekPuvodni": "Peace in Ukraine won’t end Russian sabotage in Europe, Poland warns",
+    "shrnuti": "Poland’s intelligence minister says Moscow's hybrid campaign against Europe could persist whether the war goes Russia’s way or not.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Peace in Ukraine won’t end Russian sabotage in Europe, Poland warns – POLITICO\nSkip to main content\nAdvertisement\nA peace deal in Ukraine wouldn’t end Russia’s sabotage campaign against Europe, the minister overseeing Poland’s intelligence services has warned.\nRussian covert operations have intensified in recent months, Tomasz Siemoniak said in an interview Monday, describing how operatives have expanded beyond setting fires at warehouses and shopping centers to targeting railways, communications equipment and defense facilities.\nSome of the attacks aim to disrupt supplies to Ukraine, he said, but Moscow also wants to intimidate European governments and weaken NATO — objectives that would remain even if the war between Ukraine and Russia ends.\nAdvertisement\n“It is hard to imagine that a peace agreement would change the Russian leadership’s stance or stop it from carrying out these operations,” Siemoniak said.\nThe Russian Foreign Ministry and Russia’s mission to the EU didn’t immediately respond to requests for comment, but Moscow has previously denied responsibility for numerous attacks, plots and instances of vandalism attributed to it by Western intelligence services.\nHe linked…",
+      "stazeno": "2026-11-24T04:02:37.622Z",
       "stav": 200
     }
   },
@@ -2856,7 +2892,12 @@
       "vybuch"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Součástí výbavy hasičů v Česku budou nově neprůstřelné vesty | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSoučástí výbavy hasičů v Česku budou nově neprůstřelné vesty\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 23.11.2026 14:11 \r\nVydáno: 23.11.2026, 14:11 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTisková konference k zavádění osobních neprůstřelných vest do výbavy hasičů, 23. listopadu 2026, Praha. \r\nČTK/Šulová Kateřina \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPraha - Součástí výbavy hasičů budou nově také neprůstřelné vesty a další pomůcky chránící před střelami, střepinami či výbuchy. Sbor dostane 1000 sad ochranných prostředků, nyní obdržel první dodávku s 363 komplety. Novinářům to dnes řekl generální…",
+      "stazeno": "2026-11-24T04:02:37.782Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-e354362180b7e654",
@@ -2887,7 +2928,12 @@
       "kremlin"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Kremlin Dismisses Reports About Alleged Nuclear-Armed Satellite Launch - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nNov. 23, 2026\nA Russian rocket launch.\nRoscosmos\nThe Kremlin on Monday dismissed German media reports claiming that Russia is preparing to launch a nuclear-armed satellite into space before the end of the year.\nA joint investigation by German public broadcasters WDR and NDR with the newspaper S&uuml;ddeutsche Zeitung reported that Western intelligence agencies believe Russia plans to launch a nuclear-armed satellite called Sputnik-S as early as December 2026.\nIntelligence allegedly shared among NATO members indicated that the satellite was assembled several years ago and has been stored somewhere in the Moscow region. Warnings issued earlier this month suggested &ldquo;Sputnik-S&rdquo; could be placed into orbit within 60 days, where it would be ready for use &ldquo;within a short time,&rdquo; the media investigation said.\n&ldquo;We haven&rsquo;t seen the report. But there are so many &lsquo;alleged&rsquo; and &lsquo;possible&rsquo; claims in it, attributed to who knows whom, that…",
+      "stazeno": "2026-11-24T04:02:38.446Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-8cfab3ecadc98c2e",
@@ -2915,7 +2961,12 @@
       "cyber"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "EU Commission confirms personal data leak after cyberattack, warns of further disruption – POLITICO\nSkip to main content\nAdvertisement\nBRUSSELS — The European Commission said its EU Academy platform, which allows external users to take courses on EU policies, was compromised in the cyberattack first reported by POLITICO last week .\n\"We can confirm that the EU Academy platform has been affected by the detected cyber campaign against the Commission,\" spokesperson Thomas Regnier told reporters Monday. \"This resulted in a leak of personal data of EU Academy users.\"\nNames and email addresses were leaked, according to one EU official, who warned that the full extent of the data breach remains unclear. \"It's not over yet,\" said the official, who was granted anonymity to speak freely.\nAdvertisement\nThe exact scale of the breach remains under investigation, Regnier said, adding that public access to the EU Academy platform had been disabled as a precaution while additional security measures were put in place.\nThe Commission has not contacted affected users individually by email, instead publishing a general notice on the EU Academy website.\n\"There was no reach-out to individual users, but…",
+      "stazeno": "2026-11-24T04:02:38.636Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-f0a0473d1dbc70e2",
@@ -2946,7 +2997,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia recruits saboteurs and spies in Europe via Discord, Ukrainian intelligence says | Ukrainska Pravda\nStock photo\nRussian secret services are actively using not only Telegram and WhatsApp but also Discord, a platform popular with gamers, to recruit people in EU countries.\nSource: Defence Intelligence of Ukraine (DIU)\nDetails: Since the beginning of 2026, more than 20 million job advertisements have been posted on the platform, concealing offers to carry out various paid tasks. DIU said Russia aims to recruit people for espionage and sabotage activities in Central and Eastern Europe, particularly in the Baltic states.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe advertisements are disguised as offers of simple tasks with the opportunity to earn money quickly. Most are posted from disposable accounts registered using phone numbers from India, Iran and some Middle Eastern countries.\nRecruiters target financially vulnerable people, including local residents, refugees and migrants. Russian secret services pay particular attention to young people aged 18 to 25, as well as supporters of radical, populist, pacifist and ethnic movements.\nThose carrying out the tasks are offered between US$1,500 and…",
+      "stazeno": "2026-11-24T04:02:38.774Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-d95c0f27de733493",
@@ -2976,7 +3032,13 @@
       "kreml"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-24T04:02:38.858Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-f6350176734749df",
@@ -3005,7 +3067,13 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-24T04:02:38.924Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-7e455167e0263786",
@@ -3198,7 +3266,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrainian Su-27 hits Russian logistics and command post with GBU bombs | Ukrainska Pravda\nA Ukrainian Su-27 fighter jet has struck two Russian military assets in Donetsk Oblast in a single sortie.\nSource: 39th Tactical Aviation Brigade\nDetails: The brigade did not specify when exactly the strikes took place but noted that the combat mission was carried out by a pilot named Andrii within the area of responsibility of the 3rd Army Corps.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe strikes hit a reinforced concrete road bridge over a river and a company-level command and observation post belonging to a Russian motorised rifle regiment.\nQuote: \"GBU guided aerial bombs were used to carry out the mission.\"\n\r\n\r\n\r\n\r\n\r\n\r\nIn a world flooded with AI-generated content, journalism you can trust matters more than ever.\n\r\nEvery Ukrainska Pravda story is verified by experienced reporters, and translated and edited by humans who understand the context behind the news.\n\r\nSupport our work on Patreon \r\n\r\n\r\n\r\n\r\n\r\nYour support helps us keep reporting from Ukraine and making stories like this one accessible to readers around the world.\n\r\nBecome a Patreon supporter and help independent journalism reach beyond…",
+      "stazeno": "2026-11-24T04:02:39.060Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-f1f73cbc63908d24",
@@ -3456,7 +3529,12 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Medvěděv opět vyrukoval s hrozbou jaderného úderu - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nMedvěděv opět vyrukoval s hrozbou jaderného úderu\nVojtěch Bauer\n3:24\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nVčera 23. 11., 12:05\nRuský exprezident a místopředseda bezpečnostní rady Dmitrij Medvěděv prohlásil, že Ukrajina a země NATO již vytvořily situace, v nichž Rusko zvažuje možnost jaderného úderu. Podle státní agentury TASS to Medvěděv uvedl v článku pro Moskevský časopis mezinárodního práva. Vyjádření přichází krátce po jednání v Číně, kde se Washington, Moskva i Peking shodly, že chtějí vést dialog o snížení jaderného nebezpečí.\nFoto: Profimedia.cz\nRuský exprezident a místopředseda bezpečnostní rady Dmitrij Medvěděv\nČlánek\n„Formálně vzato v řadě případů strany, které se proti nám společně staví (Ukrajina, země NATO a několik západních zemí mimo alianci), již vyvolaly situace, v nichž Rusko zvažuje možnost provedení jaderného úderu,“ cituje TASS Medvěděva.\nMístopředseda bezpečnostní rady nicméně neuvedl konkrétní případy, kdy Aliance s Ukrajinou takovou situaci vytvořily. Celé znění článku, který má 26 stránek, je dostupné na webu časopisu .\nMedvěděv dále…",
+      "stazeno": "2026-11-24T04:02:39.098Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-be7da219c10412f5",
@@ -3485,7 +3563,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian strike hits civilian evacuation vehicle in Kramatorsk, killing two and injuring two | Ukrainska Pravda\nPhoto: Kramatorsk City Military Administration\nTwo people were killed and two others injured when a Russian attack hit a clearly marked evacuation vehicle in Kramatorsk, Donetsk Oblast, on 23 November.\nSource: Oleksandr Honcharenko , Head of Kramatorsk City Military Administration\nQuote: \"The Russians attacked a vehicle evacuating people from Kramatorsk today. The strike killed two Kramatorsk residents – a man and a woman.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Honcharenko said two others – a man and a woman who were being evacuated – were injured and are receiving medical treatment.\nQuote: \"The vehicle had clear markings indicating its purpose. It was being used to evacuate civilians. It could not be mistaken for an ordinary car or a vehicle used for any other purpose.\"\nDetails: Honcharenko also noted that the people inside the vehicle were trying to save themselves.\n\"Instead, the Russian attack cut short the lives of two people and left two others maimed,\" Honcharenko said.\nKramatorsk\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKramatorsk\nHe refused to abandon his birds:…",
+      "stazeno": "2026-11-24T04:02:39.914Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-fb67e7b226fd2d88",
@@ -3512,7 +3595,12 @@
       "bomb"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "German police respond to multiple school bomb threats\nSkip to content\nSkip to main menu\nSkip to more DW sites\nIn focus\nCOP31 AI Ukraine war\nLatest audio Latest videos\nLive TV\nAdvertisement\nhttps://p.dw.com/p/5PkYU\nPrefer DW on Google\nPolice responded to bomb threats against multiple schools but were working on the preliminary assumption they were hoaxes Image: Carsten Rehder/dpa/picture alliance Advertisement\nPolice in several locations across Germany reported large numbers of bomb threats targeting schools. \nThey said that while they were investigating the claims, they did not initially have reason to treat them as credible threats. \nMore than 400 schools in the southwestern state of Baden Württemberg received threats, and more than 250 in Saxony-Anhalt received the emails, with several other regions also targeted on Monday morning. \nWhat did police say about the bomb threats? \nPolice in Erfurt in Thuringia were among the first to issue a statement on the threats, saying they were responding to threats at \"multiple schools\" after morning warnings, including in Jena, Erfurt, Mühlhausen, Zella-Mehlis, Nordhausen, Gotha, Rudolstadt and Greiz. \n\"The same word-for-word threats were…",
+      "stazeno": "2026-11-24T04:02:39.949Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-c8b9e9b8417a1253",
@@ -10461,40 +10549,6 @@
     "vyrez": {
       "text": "Poland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil. — Meduza\nSkip to main content\nPoland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil.\nNovember 20, 2026, 5:09 pm\nSource: RMF24\nUpdate: Polish Defense Minister Władysław Kosiniak-Kamysz said three Russian objects fell on Polish territory: two missiles and a jet-powered drone. According to Kosiniak-Kamysz, a Kh-101 missile fell in the village of Nowy Lipowiec, another missile came down in the town of Rudnik nad Sanem, and the drone fell in Mołodycz. Air raid alerts went out in two Polish provinces bordering Ukraine as Russia attacked Ukraine overnight into November 20.\nAt about 6:50 a.m., residents of the Lublin and Subcarpathian provinces were warned of a possible air attack.\nJacek Goryszewski, a spokesman for the Polish Armed Forces Operational Command, said the military was investigating two possible violations of Polish airspace.\nPolice said they were “carrying out operations” in the village of Nowy Lipowiec, about 60 kilometers (37 miles) from the…",
       "stazeno": "2026-11-20T18:03:24.680Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f54e291e8561820e",
-    "zachyceno": "2026-11-20T18:03:17.003Z",
-    "publikovano": "2026-11-20T17:08:14.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/technology/2026/nov/20/cybersecurity-operation-thwarts-attack-on-uk-supermarket-fridges-and-freezers",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "UK operation wards off risk of cyber-attack on supermarket fridges and freezers",
-    "titulekPuvodni": "UK operation wards off risk of cyber-attack on supermarket fridges and freezers",
-    "shrnuti": "News of vulnerability comes after retailers in at least seven European countries hit by cyber-attacks A secret government cybersecurity operation recently warded off the risk of a cyber-attack on fridges and freezers in UK supermarkets, warehouses, restaurants, petrol stations and stadiums, it has e",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "hybridni",
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "UK operation wards off risk of cyber-attack on supermarket fridges and freezers | Cybercrime | The Guardian\nSkip to main content Skip to navigation\nEmpty fresh food refrigerators at an Intermarché supermarket in Névez, western France, in October, following a cyber-attack affecting the French supermarket chains. Photograph: Fred Tanneau/AFP/Getty Images\nView image in fullscreen\nEmpty fresh food refrigerators at an Intermarché supermarket in Névez, western France, in October, following a cyber-attack affecting the French supermarket chains. Photograph: Fred Tanneau/AFP/Getty Images\nUK operation wards off risk of cyber-attack on supermarket fridges and freezers\nNews of vulnerability comes after retailers in at least seven European countries hit by cyber-attacks\nA secret government cybersecurity operation recently warded off the risk of a cyber-attack on fridges and freezers in UK supermarkets, warehouses, restaurants, petrol stations and stadiums, it has emerged.\nAn attack would have been similar to those that have caused many millions of euros of damage in continental Europe in recent months. But, while many retailers have now been protected, researchers warned that many more could…",
-      "stazeno": "2026-11-20T18:03:24.773Z",
       "stav": 200
     }
   }

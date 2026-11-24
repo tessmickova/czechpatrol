@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-24T00:00:37.748Z",
+  "kdy": "2026-11-24T04:00:35.097Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -242,6 +242,7 @@
       "ok": true,
       "stav": null,
       "pocetPolozek": 1,
+      "chyba": "lupa: robots.txt nedostupný (RFC 9309: nestahovat)",
       "vysledek": "ok"
     },
     {
@@ -252,5 +253,5 @@
       "vysledek": "ok"
     }
   ],
-  "novychVeFronte": 3
+  "novychVeFronte": 0
 }

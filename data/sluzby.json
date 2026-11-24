@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-24T00:02:38.270Z",
+  "aktualizovano": "2026-11-24T04:02:40.354Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Cloudflare Workers API – Delayed or Inconsistent Responses",
           "odkaz": "https://www.cloudflarestatus.com/incidents/00dp7cliyqqt",
-          "aktualizovano": "2026-11-23T13:52:34.093Z"
+          "aktualizovano": "2026-11-24T01:28:49.900Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -18,12 +18,12 @@
         }
       ],
       "postizene": [
-        "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
         "Ahmedabad, India - (AMD)",
-        "Albuquerque, United States - (ABQ)"
+        "Albuquerque, United States - (ABQ)",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-24T00:02:38.270Z",
+      "zkontrolovano": "2026-11-24T04:02:40.354Z",
       "chyba": null
     },
     {
@@ -32,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-24T00:02:38.270Z",
+      "zkontrolovano": "2026-11-24T04:02:40.354Z",
       "chyba": null
     },
     {
@@ -41,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-24T00:02:38.270Z",
+      "zkontrolovano": "2026-11-24T04:02:40.354Z",
       "chyba": null
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "aktualizovano": "2026-11-24T00:02:50.617Z",
+  "aktualizovano": "2026-11-24T04:02:52.824Z",
   "uroven": "Y1",
-  "trend": null,
-  "trendPopis": "Trend se teď nepočítá.",
+  "trend": "nahoru",
+  "trendPopis": "Posledních 7 dní: 3 případy (součet závažnosti 10.7). Týden předtím: 0 případů (0).",
   "shrnuti": "Spočteno z ověřených případů za posledních 14 dní (3 případy) v 3 zemích. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.",
-  "overovaniStoji": "2026-11-21T20:00:27.340Z",
+  "overovaniStoji": null,
   "noveSignaly": {
     "celkem": 3,
     "kriticke": 0,
