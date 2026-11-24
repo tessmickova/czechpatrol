@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cestaOdkazu, normalizujDruhy, podpisRozhlasu, podpisVapid, povolenaAdresa, zasifrujZpravu } from "../src/push";
+import { cestaOdkazu, ctiCas, kdyDorucit, normalizujCas, normalizujDruhy, podpisRozhlasu, podpisVapid, povolenaAdresa, VYCHOZI_CAS, zasifrujZpravu } from "../src/push";
 import { b64u, zB64u } from "../src/pomocne";
 
 /*
@@ -92,6 +92,7 @@ async function prostredi() {
   // Cesta relativně k adresáři API — testy se spouštějí odtud (npm test v api/).
   const fs = (await import(/* @vite-ignore */ ["node", "fs"].join(":"))) as { readFileSync(p: string, k: string): string };
   sql.exec(fs.readFileSync("migrace/0010_push.sql", "utf-8"));
+  sql.exec(fs.readFileSync("migrace/0011_push_cas.sql", "utf-8"));
   sql.exec("CREATE TABLE limity (klic TEXT PRIMARY KEY, pocet INTEGER NOT NULL, okno_do TEXT NOT NULL)");
   const pripravit = (q: string) => {
     let args: unknown[] = [];
@@ -125,7 +126,7 @@ async function podepsany(telo: unknown) {
 
 describe("rozeslání", async () => {
   const { vi } = await import("vitest");
-  const { prihlasit, rozeslat, DAVKA } = await import("../src/push");
+  const { prihlasit, rozeslat, posliOdlozene, DAVKA } = await import("../src/push");
 
   it("pošle jen odběratelům daného druhu, po dávkách, a podruhé nic", async () => {
     const { sql, env } = await prostredi();
@@ -140,7 +141,8 @@ describe("rozeslání", async () => {
       return new Response(null, { status: url.endsWith("/0") ? 410 : 201 });
     });
     try {
-      const zprava = { id: "z1", druh: "hned", titulek: "Test", text: "t", odkaz: "https://czechpatrol.cz/udalosti/" };
+      // Závažnost 9 — jde hned i v noci, takže test nezávisí na denní době.
+      const zprava = { id: "z1", druh: "hned", titulek: "Test", text: "t", odkaz: "https://czechpatrol.cz/udalosti/", zavaznost: 9 };
       const prvni = await (await rozeslat(env, await podepsany(zprava))).json() as { odeslano: number; zruseno: number; dalsi: string | null };
       expect(prvni).toMatchObject({ odeslano: DAVKA - 1, zruseno: 1 });
       expect(prvni.dalsi).toBeTruthy();
@@ -157,6 +159,39 @@ describe("rozeslání", async () => {
     }
   });
 
+  it("v noci tip odloží do sedmi ráno, pak ho plánovač doručí", async () => {
+    const { sql, env } = await prostredi();
+    vi.useFakeTimers({ toFake: ["Date"] });
+    const volano: string[] = [];
+    vi.stubGlobal("fetch", async (url: string) => { volano.push(url); return new Response(null, { status: 201 }); });
+    try {
+      vi.setSystemTime(new Date("2026-11-24T00:30:00Z")); // 1:30 SEČ
+      await prihlasit(env, pozadavek("/push/odber", { endpoint: "https://fcm.googleapis.com/fcm/send/noc", keys: await prohlizec(), druhy: ["tipy", "hned"] }));
+      const tip = await (await rozeslat(env, await podepsany({ id: "t1", druh: "tipy", titulek: "Tip" }))).json() as { odeslano: number; odlozeno: number };
+      expect(tip).toMatchObject({ odeslano: 0, odlozeno: 1 });
+      const vazne = await (await rozeslat(env, await podepsany({ id: "v1", druh: "hned", titulek: "Vážné", zavaznost: 8 }))).json() as { odeslano: number };
+      expect(vazne.odeslano).toBe(1);
+      expect(await posliOdlozene(env)).toEqual({ odeslano: 0, selhalo: 0 });
+      vi.setSystemTime(new Date("2026-11-24T06:05:00Z")); // 7:05 SEČ
+      expect(await posliOdlozene(env)).toEqual({ odeslano: 1, selhalo: 0 });
+      expect((sql.prepare("SELECT COUNT(*) AS n FROM push_odlozene").get() as { n: number }).n).toBe(0);
+      expect(volano).toHaveLength(2);
+    } finally {
+      vi.useRealTimers();
+      vi.unstubAllGlobals();
+    }
+  });
+
+  it("vlastní nastavení času se uloží a starší stránka bez času ho nesmaže", async () => {
+    const { sql, env } = await prostredi();
+    const keys = await prohlizec();
+    const endpoint = "https://fcm.googleapis.com/fcm/send/cas";
+    await prihlasit(env, pozadavek("/push/odber", { endpoint, keys, druhy: ["hned"], cas: { od: "08:00", do: "20:00", nocOd: 9 } }));
+    await prihlasit(env, pozadavek("/push/odber", { endpoint, keys, druhy: ["hned", "tipy"] }));
+    expect(JSON.parse((sql.prepare("SELECT cas FROM push_odbery").get() as { cas: string }).cas)).toEqual({ od: "08:00", do: "20:00", nocOd: 9 });
+    await expect(prihlasit(env, pozadavek("/push/odber", { endpoint, keys, druhy: ["hned"], cas: { od: "07:00", do: "21:00", nocOd: 3 } }))).rejects.toMatchObject({ stav: 400 });
+  });
+
   it("bez platného podpisu nic nepošle", async () => {
     const { env } = await prostredi();
     const cas = String(Math.floor(Date.now() / 1000));
@@ -171,5 +206,39 @@ describe("rozeslání", async () => {
     await expect(prihlasit(env, pozadavek("/push/odber", { endpoint: "https://zlo.example/x", keys: await prohlizec(), druhy: ["hned"] }))).rejects.toMatchObject({ stav: 400 });
     await expect(prihlasit(env, pozadavek("/push/odber", { endpoint: "https://fcm.googleapis.com/x", keys: { p256dh: "abc", auth: "def" }, druhy: ["hned"] }))).rejects.toMatchObject({ stav: 400 });
     await expect(prihlasit(env, pozadavek("/push/odber", { endpoint: "https://fcm.googleapis.com/x", keys: await prohlizec(), druhy: [] }))).rejects.toMatchObject({ stav: 400 });
+  });
+});
+
+/* Kdy smí upozornění chodit (24. 11. 2026). Časy v testech jsou UTC; v listopadu platí SEČ (UTC+1). */
+describe("čas doručení podle nastavení odběratele", () => {
+  const t = (iso: string) => new Date(iso);
+  it("výchozí: ve dne všechno, v noci jen naléhavé od 7 z 10", () => {
+    const noc = t("2026-11-24T00:30:00Z"); // 1:30
+    expect(kdyDorucit("hned", 7, VYCHOZI_CAS, noc)).toBeNull();
+    expect(kdyDorucit("hned", 5, VYCHOZI_CAS, noc)?.toISOString()).toBe("2026-11-24T06:00:00.000Z"); // 7:00
+    expect(kdyDorucit("tipy", null, VYCHOZI_CAS, noc)?.toISOString()).toBe("2026-11-24T06:00:00.000Z");
+    expect(kdyDorucit("tipy", null, VYCHOZI_CAS, t("2026-11-24T09:00:00Z"))).toBeNull();
+  });
+  it("večer po 21:00 počká přehled do rána dalšího dne", () => {
+    expect(kdyDorucit("prehled", null, VYCHOZI_CAS, t("2026-11-24T20:30:00Z"))?.toISOString()).toBe("2026-11-25T06:00:00.000Z");
+  });
+  it("přísnější nastavení: v noci jen 9+, nebo nic", () => {
+    const noc = t("2026-11-24T02:00:00Z");
+    expect(kdyDorucit("hned", 8, { ...VYCHOZI_CAS, nocOd: 9 }, noc)).not.toBeNull();
+    expect(kdyDorucit("hned", 9, { ...VYCHOZI_CAS, nocOd: 9 }, noc)).toBeNull();
+    expect(kdyDorucit("hned", 10, { ...VYCHOZI_CAS, nocOd: 11 }, noc)).not.toBeNull();
+  });
+  it("vlastní den, třeba 8:00–20:00", () => {
+    const cas = { od: "08:00", do: "20:00", nocOd: 7 };
+    expect(kdyDorucit("tipy", null, cas, t("2026-11-24T06:30:00Z"))?.toISOString()).toBe("2026-11-24T07:00:00.000Z"); // 7:30 → 8:00
+    expect(kdyDorucit("tipy", null, cas, t("2026-11-24T18:59:00Z"))).toBeNull(); // 19:59
+  });
+  it("nastavení volnější než kanál ani nesmysl neprojde; poškozený zápis = výchozí", () => {
+    expect(normalizujCas({ od: "07:00", do: "21:00", nocOd: 5 })).toBeNull();
+    expect(normalizujCas({ od: "7:00", do: "21:00", nocOd: 7 })).toBeNull();
+    expect(normalizujCas({ od: "07:00", do: "07:00", nocOd: 7 })).toBeNull();
+    expect(normalizujCas({ od: "06:30", do: "22:00", nocOd: 9 })).toEqual({ od: "06:30", do: "22:00", nocOd: 9 });
+    expect(ctiCas("{rozbité")).toEqual(VYCHOZI_CAS);
+    expect(ctiCas(null)).toEqual(VYCHOZI_CAS);
   });
 });

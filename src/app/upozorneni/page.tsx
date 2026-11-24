@@ -68,7 +68,10 @@ export default function Upozorneni() {
               </ul>
             </div>
             <div className="rounded-[18px] bg-plocha p-4 text-male leading-relaxed text-tlum">
-              <b className="font-semibold text-inkoust">Co o vás víme:</b> jen anonymní adresu pro doručení, kterou vydá váš prohlížeč, a co jste si vybrali. Žádné jméno, číslo ani e-mail. Vypnutím se všechno smaže. Podrobně v <Link href="/soukromi/" className="odkaz">Soukromí</Link>.
+              {/* Noční klid (24. 11. 2026): platí pro kanál i pro telefony. */}
+              <b className="font-semibold text-inkoust">Kdy:</b> od 21:00 do 7:00 posíláme jen zprávy se závažností 7 a víc z 10. Tipy, přehledy a menší zprávy chodí jen ve dne; co v noci počká, přijde ráno.
+              <br />
+                            <b className="font-semibold text-inkoust">Co o vás víme:</b> jen anonymní adresu pro doručení, kterou vydá váš prohlížeč, a co jste si vybrali. Žádné jméno, číslo ani e-mail. Vypnutím se všechno smaže. Podrobně v <Link href="/soukromi/" className="odkaz">Soukromí</Link>.
               <br />
               <b className="font-semibold text-inkoust">Co to není:</b> náhrada sirén a oficiálních varování. Doručení zaručit neumíme — při přímém ohrožení se řiďte pokyny HZS, obce a policie.
             </div>

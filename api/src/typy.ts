@@ -75,7 +75,8 @@ export interface Nastaveni {
 export const VYCHOZI_NASTAVENI: Nastaveni = {
   frekvence: "tydne",
   minZavaznost: "vysoka",
-  ticho: null,
+  // Klid v noci je výchozí (24. 11. 2026, provozovatelka): v noci jen vážné.
+  ticho: { od: "21:00", do: "07:00" },
   oblasti: [],
   zpravyIzs: true,
   kraj: null,

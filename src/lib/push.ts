@@ -11,12 +11,21 @@ import { API_URL } from "@/config/web";
 
 /** Klíče odpovídají api/src/push.ts (DRUHY_PUSH). */
 export const DRUHY_UPOZORNENI = [
-  { klic: "hned", nazev: "Naléhavé zprávy", popis: "mimořádná výstraha, vážné případy, opatření v Česku, článek 4/5 NATO — hned" },
+  { klic: "hned", nazev: "Naléhavé zprávy", popis: "mimořádná výstraha, vážné případy, opatření v Česku, článek 4/5 NATO — hned; v noci jen závažnost 7 a víc" },
   { klic: "prehled", nazev: "Krátký přehled", popis: "titulky v 19:30, ráno v 7:30 jen se závažností 7+; bez novinek nepřijde" },
-  { klic: "kratce", nazev: "Menší signály", popis: "krátce, nejvýš jednou za 4 hodiny" },
-  { klic: "tipy", nazev: "Tipy k přípravě", popis: "občas jedna praktická rada" },
+  { klic: "kratce", nazev: "Menší signály", popis: "krátce, nejvýš jednou za 4 hodiny, jen ve dne" },
+  { klic: "tipy", nazev: "Tipy k přípravě", popis: "občas jedna praktická rada, jen 7:00–21:00" },
 ] as const;
 export type DruhUpozorneni = (typeof DRUHY_UPOZORNENI)[number]["klic"];
+
+/*
+  Kdy smí upozornění chodit (24. 11. 2026). Stejný tvar jako v API
+  (api/src/push.ts, CasUpozorneni): den od–do a od jaké závažnosti smí
+  naléhavá zpráva přijít v noci; 11 = v noci nic.
+*/
+export interface CasUpozorneni { od: string; do: string; nocOd: number }
+export const VYCHOZI_CAS: CasUpozorneni = { od: "07:00", do: "21:00", nocOd: 7 };
+export const V_NOCI_NIC = 11;
 export const VYCHOZI_DRUHY: DruhUpozorneni[] = ["hned", "prehled"];
 
 const KLIC_ULOZENI = "cp:upozorneni-druhy";
@@ -75,7 +84,7 @@ function ctiDruhy(): DruhUpozorneni[] | null {
 }
 
 /** Zapne upozornění (nebo uloží nový výběr). Volat jen po kliknutí — jinak prohlížeč o svolení nepožádá. */
-export async function zapnout(druhy: DruhUpozorneni[]): Promise<void> {
+export async function zapnout(druhy: DruhUpozorneni[], cas?: CasUpozorneni): Promise<void> {
   const svoleni = await Notification.requestPermission();
   if (svoleni !== "granted") throw new Error(svoleni === "denied" ? "Upozornění máte v prohlížeči zakázaná. Povolte je v nastavení webu a zkuste to znovu." : "Bez svolení upozornění posílat nemůžeme.");
   const reg = await registrace();
@@ -85,7 +94,7 @@ export async function zapnout(druhy: DruhUpozorneni[]): Promise<void> {
     const { klic } = await api<{ klic: string }>("/push/klic");
     odber = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: zB64u(klic) });
   }
-  await api("/push/odber", { ...odber.toJSON(), druhy });
+  await api("/push/odber", { ...odber.toJSON(), druhy, ...(cas ? { cas } : {}) });
   ulozDruhy(druhy);
 }
 
@@ -98,7 +107,8 @@ export async function vypnout(): Promise<void> {
   ulozDruhy(null);
 }
 
-export async function stavOdberu(): Promise<{ prihlaseno: boolean; druhy?: DruhUpozorneni[]; posledniDoruceni?: string | null }> {
+/** `cas` vrací jen API, které nastavení času umí — podle toho se volba na stránce ukáže. */
+export async function stavOdberu(): Promise<{ prihlaseno: boolean; druhy?: DruhUpozorneni[]; cas?: CasUpozorneni; posledniDoruceni?: string | null }> {
   const odber = await aktualniOdber();
   if (!odber) return { prihlaseno: false };
   return api("/push/stav", { endpoint: odber.endpoint });
