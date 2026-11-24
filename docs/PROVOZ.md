@@ -961,3 +961,22 @@ k noční události ne ve dvě ráno.
   první. Tipy bez pole čekají na odstup dál.
 - Odkazy u typů útoků smějí vést jen na úřady (`testy/typy-utoku.test.ts`);
   přibyl 72h.gov.cz. Média patří do zdrojů tipu, ne do katalogu.
+
+### Polský letecký poplach ve sběru (doplněno 24. 11. 2026)
+
+Výstrahu RCB pro Lublinsko (23. 11., zhruba 22:30–23:53) a narušení
+vzdušného prostoru ruským dronem zachytil sběr až v běhu v 01:02: předchozí
+běh byl ve 22:57 a první polské články vyšly ve 23:05. Přišly bez značky
+naléhavosti, protože spouštěče znaly jen česká a anglická slovesa.
+
+- Spouštěč `vzdusny-prostor-nato` zná polsky „narusz-“, „wlecia-“,
+  „wtargn-“ a „przestrzeń powietrzna“.
+- Nový druh `letecky-poplach-nato` (stupeň 2, platí den): výstraha
+  obyvatelům před útokem ze vzduchu v zemi Aliance — „zagrożenie atakiem
+  z powietrza“, „letecký poplach“, „air raid“. RCB a polská vojvodství
+  stačí jako Polsko. Výstraha RCB před počasím sem nepatří (test).
+- Stupeň 2 = nahoru ve frontě, rámeček „naléhavé“ na webu, box Incidenty na
+  hranicích. Do kanálu jde jen stupeň 1; polský poplach tam pošle člověk
+  (mimořádná zpráva), protože bývá při každém velkém úderu na západ Ukrajiny.
+- Ukrajinské monitorovací kanály (mapy tras dronů) sběr nečte: nejsou ověřené
+  a přesná trasa je víc, než civilista v Česku potřebuje (BEZPECNOST-OBSAHU.md).

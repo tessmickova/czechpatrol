@@ -16970,7 +16970,7 @@
     ],
     "datumUdalosti": "2026-11-23T00:00:00Z",
     "datumZjisteni": "2026-11-23T00:00:00Z",
-    "aktualizovano": "2026-11-23T23:35:05.272Z",
+    "aktualizovano": "2026-11-24T00:05:48.355Z",
     "zavaznost": "Y2",
     "jistota": "vysoka",
     "stav": "neuvedeno",
@@ -17003,6 +17003,14 @@
         "url": "https://kurierlubelski.pl/rosyjski-dron-naruszyl-polska-przestrzen-powietrzna-wojsko-mialo-zgode-na-zestrzelenie/ar/c1p2-29552023",
         "typ": "media",
         "publikovano": "2026-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Rzeczpospolita — Rosyjski dron naruszył przestrzeń powietrzną Polski. Wojsko miało zgodę na zestrzelenie",
+        "url": "https://www.rp.pl/wojsko/art45532721-rosyjski-dron-naruszyl-przestrzen-powietrzna-polski-wojsko-mialo-zgode-na-zestrzelenie",
+        "typ": "media",
+        "publikovano": "2026-11-23T23:08:00Z",
         "primarni": false,
         "jazyk": "pl"
       },
@@ -17045,6 +17053,11 @@
         "kdy": "2026-11-23T23:35:05.272Z",
         "text": "Ověřeno a zveřejněno na pokyn provozovatelky.",
         "novySignal": true
+      },
+      {
+        "kdy": "2026-11-24T00:05:48.355Z",
+        "text": "Doplněn zdroj Rzeczpospolita, který zachytil automatický sběr v 01:02.",
+        "novySignal": false
       }
     ],
     "novy": true,

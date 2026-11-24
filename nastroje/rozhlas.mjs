@@ -804,6 +804,7 @@ const NAZVY_SIGNALU = {
   "hranice-cr": "uzavření hranic ČR",
   "priprava-mobilizace": "přípravy mobilizace v Rusku",
   "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
+  "letecky-poplach-nato": "letecký poplach v zemi Aliance",
 };
 
 

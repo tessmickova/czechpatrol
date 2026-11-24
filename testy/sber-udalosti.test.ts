@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { aktualizujPamet, duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni, zemeZTitulku } from "../sber/udalosti";
+import { aktualizujPamet, duvodOdmitnuti, kandidatId, naliehavost, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni, zemeZTitulku } from "../sber/udalosti";
 import { normalizuj, ocistiText, polozkyZeStranky } from "../sber/nacti";
 
 describe("automatický sběr událostí — pravidla", () => {
@@ -488,5 +488,37 @@ describe("síto rozumí jazykům kanálů, které čte (2. 10. 2026)", async () 
   });
   it("nová slova nedělají Rumunsko z „romantiky“", () => {
     expect(odhadniZemi("Romantická večeře v Praze")?.kod).not.toBe("RO");
+  });
+});
+
+/*
+  Lublinsko 23. 11. 2026: výstrahu RCB a narušení vzdušného prostoru ruským
+  dronem sběr zachytil (TVN24, Rzeczpospolita), ale bez značky naléhavosti,
+  protože spouštěče neznaly polská slova. Texty jsou z těch dvou zpráv.
+*/
+describe("polský letecký poplach a narušení vzdušného prostoru", () => {
+  const tvn = "„Krótkotrwałe naruszenie polskiej przestrzeni”. Alert RCB i komunikat wojska. Doszło do krótkotrwałego naruszenia polskiej przestrzeni powietrznej przez rosyjski bezzałogowy statek powietrzny - poinformowało Dowództwo Operacyjne Rodzajów Sił Zbrojnych (DORSZ). Rządowe Centrum Bezpieczeństwo ogłosiło alert dla województwa lubelskiego - po godzinie został odwołany.";
+  const rp = "Rosyjski dron naruszył przestrzeń powietrzną Polski. Wojsko miało zgodę na zestrzelenie";
+  it("narušení polského vzdušného prostoru je naléhavé (stupeň 2), ne do kanálu", () => {
+    for (const t of [tvn, rp]) {
+      expect(naliehavost(t)?.druh, t.slice(0, 40)).toBe("vzdusny-prostor-nato");
+      expect(naliehavost(t)?.stupen).toBe(2);
+      expect(relevantni(t)).toBe(true);
+    }
+  });
+  it("výstraha před útokem ze vzduchu se zachytí i bez slova dron, polsky i česky", () => {
+    const pl = "Alert RCB w lubelskim. Zagrożenie atakiem z powietrza, znajdź bezpieczne miejsce";
+    const cs = "Polsko vyhlásilo letecký poplach na Lublinsku kvůli ruskému útoku na Ukrajinu";
+    for (const t of [pl, cs]) {
+      expect(relevantni(t), t).toBe(true);
+      expect(odhadniTemata(t).kategorie).toContain("drony");
+      expect(naliehavost(t)?.druh).toBe("letecky-poplach-nato");
+      expect(odhadniZemi(t)?.kod).toBe("PL");
+    }
+  });
+  it("výstraha RCB před počasím není letecký poplach", () => {
+    const t = "Alert RCB: ostrzeżenie przed silnym wiatrem w województwie lubelskim";
+    expect(naliehavost(t)).toBeNull();
+    expect(odhadniTemata(t).kategorie).not.toContain("drony");
   });
 });

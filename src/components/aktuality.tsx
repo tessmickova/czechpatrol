@@ -42,6 +42,7 @@ const NAZVY_NALEHAVOSTI: Record<string, string> = {
   "pravni-stav-cr": "právní stav ČR",
   "hranice-cr": "hranice ČR",
   "vzdusny-prostor-nato": "vzdušný prostor Aliance",
+  "letecky-poplach-nato": "letecký poplach",
 };
 
 /*
