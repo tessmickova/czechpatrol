@@ -1,15 +1,15 @@
 {
-  "aktualizovano": "2026-11-24T08:02:45.738Z",
+  "aktualizovano": "2026-11-24T12:02:54.778Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
-      "popis": "Partially Degraded Service",
+      "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Increased Errors for Durable Objects in Seattle",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/idlaxmxz4unz",
-          "aktualizovano": "2026-11-24T07:26:12.128Z"
+          "nazev": "Magic Transit Degraded Performance",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/no721jcnlrbh",
+          "aktualizovano": "2026-11-24T11:30:01.291Z"
         },
         {
           "nazev": "Cloudflare Workers API – Delayed or Inconsistent Responses",
@@ -24,11 +24,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Americana, Brazil - (QWJ)",
         "Ahmedabad, India - (AMD)",
-        "Albuquerque, United States - (ABQ)"
+        "Albuquerque, United States - (ABQ)",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-24T08:02:45.738Z",
+      "zkontrolovano": "2026-11-24T12:02:54.778Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-24T08:02:45.738Z",
+      "zkontrolovano": "2026-11-24T12:02:54.778Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-24T08:02:45.738Z",
+      "zkontrolovano": "2026-11-24T12:02:54.778Z",
       "chyba": null
     }
   ]
