@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
-import { stojiRanniPrehled, sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou, sestavTip } from "../nastroje/rozhlas.mjs";
+import { stojiRanniPrehled, sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou, sestavTip, jeDen, smiTed, zavaznostZmeny, zavaznostZaznamu, NOC_OD_ZAVAZNOSTI } from "../nastroje/rozhlas.mjs";
 import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
@@ -1060,5 +1060,37 @@ describe("krátká mimořádná s dalšími závažnými (2. 10. 2026)", () => {
     const t = sestavKratkouMimoradnou(i, "Nadpis", [d]);
     expect(t).toContain('<b>Další:</b>\n🟠 Závažnost: 7 z 10 · <a href="https://czechpatrol.cz/incident/dalsi/">Další věc</a>');
     expect(sestavKratkouMimoradnou(i, "Nadpis")).not.toContain("Další:");
+  });
+});
+
+/* Noční klid (24. 11. 2026): 21–7 pražského času jen závažnost 7 a víc. */
+describe("noční klid v kanálu", () => {
+  const t = (iso: string) => Date.parse(iso);
+  it("den je od 7:00 do 21:00 pražského času, i při letním čase", () => {
+    expect(jeDen(t("2026-11-24T05:59:00Z"))).toBe(false); // 6:59 SEČ
+    expect(jeDen(t("2026-11-24T06:00:00Z"))).toBe(true); // 7:00 SEČ
+    expect(jeDen(t("2026-11-24T19:59:00Z"))).toBe(true); // 20:59 SEČ
+    expect(jeDen(t("2026-11-24T20:00:00Z"))).toBe(false); // 21:00 SEČ
+    expect(jeDen(t("2026-07-01T05:00:00Z"))).toBe(true); // 7:00 SELČ
+    expect(jeDen(t("2026-07-01T19:00:00Z"))).toBe(false); // 21:00 SELČ
+  });
+  it("v noci projde jen 7 a víc z 10; bez závažnosti nic", () => {
+    const noc = t("2026-11-24T00:30:00Z");
+    expect(NOC_OD_ZAVAZNOSTI).toBe(7);
+    expect(smiTed(7, noc)).toBe(true);
+    expect(smiTed(6, noc)).toBe(false);
+    expect(smiTed(null, noc)).toBe(false);
+    expect(smiTed(null, t("2026-11-24T09:00:00Z"))).toBe(true);
+  });
+  it("Lublinsko 23. 11. (5 z 10) by v noci počkalo do rána", () => {
+    expect(zavaznostZaznamu({ zavaznost: "Y2" })).toBe(5);
+    expect(smiTed(zavaznostZaznamu({ zavaznost: "Y2" }), t("2026-11-23T23:41:00Z"))).toBe(false);
+    expect(smiTed(zavaznostZaznamu({ zavaznost: "O1" }), t("2026-11-23T23:41:00Z"))).toBe(true);
+  });
+  it("vyhlášení mimořádného stavu nebo článku 4/5 je 9 z 10, ostatní změny počkají", () => {
+    expect(zavaznostZmeny(["právní stav — nouzovy-stav: NE → ANO"])).toBe(9);
+    expect(zavaznostZmeny(["NATO — clanek-5: neověřeno → ANO"])).toBe(9);
+    expect(zavaznostZmeny(["NATO — vychodni-kridlo: ANO → neověřeno"])).toBe(5);
+    expect(zavaznostZmeny(["právní stav — nouzovy-stav: ANO → NE"])).toBe(5);
   });
 });

@@ -980,3 +980,41 @@ naléhavosti, protože spouštěče znaly jen česká a anglická slovesa.
   (mimořádná zpráva), protože bývá při každém velkém úderu na západ Ukrajiny.
 - Ukrajinské monitorovací kanály (mapy tras dronů) sběr nečte: nejsou ověřené
   a přesná trasa je víc, než civilista v Česku potřebuje (BEZPECNOST-OBSAHU.md).
+
+
+## Noční klid a osobní čas upozornění (doplněno 24. 11. 2026)
+
+Provozovatelka 24. 11. 2026: „Tipy k přípravě smí chodit pouze od 7:00 do
+21:00. Nedůležité zprávy, ale podstatné změny také. Pouze závažnost 7+
+smí chodit i v noci.“ A každý si má umět nastavit, kdy mu co chodí —
+jednoduše, podrobnosti pod Pokročilé.
+
+**Kanál a telefony (rozhlas.mjs, `jeDen`, `smiTed`).** Od 21:00 do 7:00
+pražského času odejde jen zpráva se závažností 7 a víc z 10: záznamy O a R,
+mimořádné zprávy z fronty se závažností 7+, mimořádná výstraha (10) a
+vyhlášení mimořádného stavu v ČR, mobilizace, uzavření hranic nebo článku
+4/5 NATO (`zavaznostZmeny` = 9). Všechno ostatní — tipy, malé signály,
+zprávy o internetu, ostatní změny stavů, mimořádné zprávy pod 7 — se
+neoznačí jako odeslané a vezme to první běh po sedmé (7:30). Mimořádná
+zpráva ve frontě s `"iVNoci": true` (a ruční `--mimoradne … --i-v-noci`)
+odejde i v noci; to je výslovné rozhodnutí provozovatelky.
+
+**Osobní čas v telefonu (API, migrace 0011).** Odběr má `cas`
+`{od, do, nocOd}`: den od–do a od jaké závažnosti smí naléhavá zpráva
+přijít v noci (7–10, 11 = v noci nic). Výchozí je totéž co kanál. Volnější
+než kanál to nejde. Zpráva mimo čas odběratele čeká v `push_odlozene` a
+plánovač API ji doručí na začátku jeho dne (`posliOdlozene`, každých
+10 minut); co čeká přes dva dny, se smaže. Rozhlas posílá do API
+`zavaznost` zprávy. Stránka /upozorneni/ ukáže volbu „Kdy smí chodit“
+(tři volby, vlastní hodiny pod Pokročilé) jen tehdy, když API vrátí `cas`
+— dokud nové API neběží, volba se neukáže a nic nepředstírá.
+
+**Účet.** Místo přepínače „bez tichých hodin“ dvě volby: „Ve dne všechno,
+v noci jen vážné“ (výchozí, klid 21:00–7:00) a „Kdykoli“; vlastní hodiny
+pod Pokročilé.
+
+**Pozor: nasazení API od 2. 11. 2026 padá** — token Cloudflare nemá právo
+na Workers Routes (chyba `/zones/…/workers/routes`). Dokud provozovatelka
+tokenu nepřidá Zone · Workers Routes · Edit (a D1 · Edit, Workers Scripts ·
+Edit, jak píše workflow), osobní čas v telefonu ani nový výchozí klid
+u účtů nepoběží. Noční klid kanálu a telefonů na API nezávisí a platí hned.

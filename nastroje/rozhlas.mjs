@@ -983,6 +983,40 @@ export function prazskyCas(ted = Date.now()) {
   return { den: `${c.year}-${c.month}-${c.day}`, hodina: Number(c.hour), minuta: Number(c.minute) };
 }
 
+/*
+  Noční klid (24. 11. 2026, provozovatelka): „Tipy k přípravě smí chodit
+  pouze od 7:00 do 21:00. Nedůležité zprávy, ale podstatné změny také.
+  Pouze závažnost 7+ smí chodit i v noci.“ Platí pro kanál i pro telefony.
+  Co v noci neodejde, se neoznačí jako odeslané — vezme to první běh po
+  sedmé (ranní běhy jsou v 7:30 pražského času).
+*/
+export const DEN_OD_H = 7;
+export const DEN_DO_H = 21;
+export const NOC_OD_ZAVAZNOSTI = 7;
+
+export function jeDen(ted = Date.now()) {
+  const h = prazskyCas(ted).hodina;
+  return h >= DEN_OD_H && h < DEN_DO_H;
+}
+
+/** Smí zpráva s touto závažností (1–10, null = bez závažnosti) odejít teď? */
+export function smiTed(zavaznost, ted = Date.now()) {
+  return jeDen(ted) || (Number(zavaznost) || 0) >= NOC_OD_ZAVAZNOSTI;
+}
+
+export const zavaznostZaznamu = (i) => Z_DESETI[i?.zavaznost] ?? null;
+
+/*
+  Změna oficiálního stavu nemá závažnost záznamu. Vyhlášení mimořádného
+  stavu v ČR, mobilizace, uzavření hranic nebo článku 4/5 NATO je to
+  nejvážnější, co web hlásí (9 z 10) — jde i v noci. Ostatní změny
+  (odvolání, neověřeno, pohotovost) jsou podstatné, ale počkají do rána.
+*/
+const KRITICKE_ZMENY = /— (stav-ohrozeni|valecny-stav|mobilizace|nouzovy-stav|hranice|clanek-4|clanek-5|evakuace): .*→ ANO\s*$/;
+export function zavaznostZmeny(zmeny) {
+  return (zmeny ?? []).some((z) => KRITICKE_ZMENY.test(String(z))) ? 9 : 5;
+}
+
 /** Jméno části dne podle pražského času: do 13:00 ranní přehled, potom večerní. */
 export function castDne(ted = Date.now()) {
   return prazskyCas(ted).hodina < 13 ? "rano" : "vecer";
@@ -1581,10 +1615,11 @@ export function podpisProTelefon(token, cas, telo) {
  * Rozešle zprávu do telefonů. `druh`: hned | prehled | kratce | tipy.
  * Id je otisk textu — opakovaný běh téže zprávy API pozná a nepošle znovu.
  */
-async function posliDoTelefonu(html, druh, odkaz) {
+async function posliDoTelefonu(html, druh, odkaz, zavaznost = null) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   if (!PUSH_API || !token) return;
-  const zakladni = { id: createHash("sha256").update(`${druh}\n${html}`).digest("hex").slice(0, 40), druh, ...doTelefonu(html), ...(odkaz ? { odkaz } : {}) };
+  // Závažnost (24. 11. 2026): podle ní API pozná, co smí přijít v noci podle nastavení odběratele.
+  const zakladni = { id: createHash("sha256").update(`${druh}\n${html}`).digest("hex").slice(0, 40), druh, ...doTelefonu(html), ...(odkaz ? { odkaz } : {}), ...(zavaznost ? { zavaznost } : {}) };
   let od = "", odeslano = 0;
   try {
     // Nejvýš 500 dávek po 20 = 10 000 telefonů; víc zatím nečekáme a smyčka nesmí běžet donekonečna.
@@ -1625,7 +1660,8 @@ async function main() {
   const nacisto = arg.includes("--nacisto");
   const test = arg.includes("--test");
   const posli = async (text, volby) => (nacisto ? (console.log("---\n" + text), { ok: true }) : posliTelegram(text, volby));
-  const telefon = (text, druh, odkaz) => (nacisto ? (console.log(`--- telefon (${druh}): ${JSON.stringify(doTelefonu(text))}`), undefined) : posliDoTelefonu(text, druh, odkaz));
+  const telefon = (text, druh, odkaz, zavaznost = null) => (nacisto ? (console.log(`--- telefon (${druh}${zavaznost ? `, ${zavaznost}/10` : ""}): ${JSON.stringify(doTelefonu(text))}`), undefined) : posliDoTelefonu(text, druh, odkaz, zavaznost));
+  const noc = (co) => console.log(`[rozhlas] noční klid: ${co} počká do ${DEN_OD_H}:00`);
 
   /*
     Pozastavení kanálu (27. 9. 2026, úprava formátu zpráv). Vypínač je
@@ -1680,6 +1716,7 @@ async function main() {
     const stav = ctiStav();
     stav.mimoradne ??= {};
     if (stav.mimoradne[i.id]) { console.log(`[rozhlas] mimořádná k „${slug}" už odešla ${stav.mimoradne[i.id].kdy}`); return; }
+    if (!smiTed(zavaznostZaznamu(i)) && !arg.includes("--i-v-noci")) { noc(`mimořádná „${slug}" (${zavaznostZaznamu(i) ?? "?"}/10)`); return; }
     let ok = true, messageId = null;
     for (const [n, dil] of rozdelZpravu(sestavMimoradnou(i)).entries()) {
       const v = await posli(dil, { nahled: n === 0 });
@@ -1687,7 +1724,7 @@ async function main() {
       messageId ??= v.messageId ?? null;
     }
     if (!ok) process.exit(1);
-    await telefon(sestavMimoradnou(i), "hned");
+    await telefon(sestavMimoradnou(i), "hned", undefined, zavaznostZaznamu(i));
     const kdy = new Date().toISOString();
     stav.mimoradne[i.id] = { kdy, slug, messageId };
     stav.zaznamy[i.id] ??= { kdy, historie: i.historie?.length ?? 0, mimoradne: true };
@@ -1726,8 +1763,9 @@ async function main() {
     if (prvniBeh && !cerstva) {
       stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), ticho: true };
     } else {
+      // Mimořádná výstraha je to nejvážnější, co web má — jde i v noci (10 z 10).
       const v = await posli(sestavVystrahu(vystraha), { nahled: false });
-      if (v.ok) await telefon(sestavVystrahu(vystraha), "hned");
+      if (v.ok) await telefon(sestavVystrahu(vystraha), "hned", undefined, 10);
       if (v.ok) { stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] výstraha neodešla: ${v.chyba}`); }
     }
@@ -1736,6 +1774,8 @@ async function main() {
   /* 0a. mimořádné zprávy z fronty v datech — před vším ostatním kromě výstrahy. */
   if (rezim === "okamzite" && !prvniBeh) {
     for (const { f, i } of vyberMimoradne(ctiFrontuMimoradnych(), zaznamy, stav)) {
+      // `iVNoci: true` ve frontě = provozovatelka výslovně chce i v noci.
+      if (!smiTed(zavaznostZaznamu(i), ted) && f.iVNoci !== true) { noc(`mimořádná „${i.slug}" (${zavaznostZaznamu(i) ?? "?"}/10)`); continue; }
       const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis, ted) : f.styl === "kratka" ? sestavKratkouMimoradnou(i, f.nadpis, (f.dalsi ?? []).map((sl) => zaznamy.find((z) => z.slug === sl)).filter((z) => z && overeny(z)), ted) : sestavMimoradnou(i);
       let ok = true, messageId = null;
       for (const [n, dil] of rozdelZpravu(text).entries()) {
@@ -1744,7 +1784,7 @@ async function main() {
         messageId ??= v.messageId ?? null;
       }
       if (!ok) { selhalo++; continue; }
-      await telefon(text, "hned");
+      await telefon(text, "hned", undefined, zavaznostZaznamu(i));
       const kdy = new Date(ted).toISOString();
       stav.mimoradne ??= {};
       stav.mimoradne[i.id] = { kdy, slug: i.slug, styl: f.styl ?? "mimoradna", messageId };
@@ -1802,8 +1842,9 @@ async function main() {
   // 1. změny oficiálních stavů — vždy hned
   for (const { snimek, zmeny } of vyberZmenyStavu(archiv, stav)) {
     if (prvniBeh) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
+    if (!smiTed(zavaznostZmeny(zmeny), ted)) { noc("změna oficiálního stavu"); continue; }
     const v = await posli(sestavZmenuStavu(snimek, zmeny), { nahled: false });
-    if (v.ok) await telefon(sestavZmenuStavu(snimek, zmeny), "hned");
+    if (v.ok) await telefon(sestavZmenuStavu(snimek, zmeny), "hned", undefined, zavaznostZmeny(zmeny));
     if (v.ok) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; } else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
   }
 
@@ -1827,6 +1868,7 @@ async function main() {
     nove = vyberNove(zaznamy, stav, { rezim, ted });
     davka = nove.slice(0, MAX_ZPRAV_NA_BEH);
     for (const { i, aktualizace } of davka) {
+      if (!smiTed(zavaznostZaznamu(i), ted)) { noc(`záznam „${i.slug}" (${zavaznostZaznamu(i) ?? "?"}/10)`); continue; }
       const dily = rozdelZpravu(sestavZpravu(i, { aktualizace }));
       let ok = true;
       // Id první zprávy si držíme, aby se na ni dala navázat případná oprava.
@@ -1845,12 +1887,13 @@ async function main() {
       */
       const zaznam = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, cesta: "hned" };
       if (!ok && nejisty) stav.zaznamy[i.id] = { ...zaznam, nejistyVysledek: true };
-      if (ok) { stav.zaznamy[i.id] = { ...zaznam, messageId: prvniId }; odeslano += dily.length; await telefon(dily[0], "hned"); }
+      if (ok) { stav.zaznamy[i.id] = { ...zaznam, messageId: prvniId }; odeslano += dily.length; await telefon(dily[0], "hned", undefined, zavaznostZaznamu(i)); }
       else selhalo++;
     }
 
     // 2b. malý signál — dva řádky, nejvýš jeden za 4 hodiny.
-    const kratky = prvniBeh ? null : vyberKratky(zaznamy, stav, { ted });
+    // Malý signál je „nedůležitá zpráva“ — jen ve dne.
+    const kratky = prvniBeh || !jeDen(ted) ? null : vyberKratky(zaznamy, stav, { ted });
     if (kratky) {
       const v = await posli(sestavKratky(kratky), { nahled: false });
       if (v.ok) await telefon(sestavKratky(kratky), "kratce");
@@ -1914,7 +1957,10 @@ async function main() {
   /* 2c. internet v Česku — začátek vlny útoků nebo varování úřadu, nejvýš jednou za 24 hodin. */
   const kyber = ctiKyber();
   if (kyber && rezim === "okamzite") {
-    const volba = vyberKyber(kyber, stav, { ted });
+    // Vlna útoků na weby není závažnost 7+ — v noci počká; stav se nezapíše, ráno ji běh vezme znovu.
+    const kandidat = vyberKyber(kyber, stav, { ted });
+    const volba = jeDen(ted) ? kandidat : null;
+    if (kandidat && !volba) noc("zpráva o internetu");
     const kdy = new Date(ted).toISOString();
     if (volba && prvniBeh) {
       stav.kyber = { ...(stav.kyber ?? {}), stav: kyber.stav, varovani: [...(stav.kyber?.varovani ?? []), ...(volba.zprava ? [volba.zprava.id] : [])] };
@@ -1928,11 +1974,12 @@ async function main() {
       } else { selhalo++; console.log(`[rozhlas] internet neodešel: ${v.chyba}`); }
     }
     // Stav se pamatuje i bez zprávy: konec vlny a nová vlna později = nová zpráva.
-    if (!volba && kyber.nacteno) stav.kyber = { ...(stav.kyber ?? {}), stav: kyber.stav };
+    // Odložená zpráva stav nemění — jinak by ji ranní běh už nepoznal jako novou vlnu.
+    if (!kandidat && kyber.nacteno) stav.kyber = { ...(stav.kyber ?? {}), stav: kyber.stav };
   }
 
   /* 3. tip k přípravě — nejvýš jeden za 20 hodin, za ostatními zprávami, ať nepředbíhá naléhavé. */
-  const tip = vyberTip(ctiTipy(), stav, { ted });
+  const tip = jeDen(ted) ? vyberTip(ctiTipy(), stav, { ted }) : null;
   if (tip) {
     if (prvniBeh) {
       stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), ticho: true };

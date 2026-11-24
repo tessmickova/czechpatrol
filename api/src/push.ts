@@ -2,6 +2,7 @@ import { omez, vLimituCelkem } from "./limit";
 import { b64u, ChybaHttp, json, sha256, stejne, surovyText, ted, telo, zB64u } from "./pomocne";
 import { desifruj, sifrovaniNastaveno, zasifruj } from "./sifrovani";
 import type { Env, Prihlaseny } from "./typy";
+import { konecTicha, vTichu } from "./upozorneni";
 
 /*
   Upozornění do telefonu přes webovou aplikaci (Web Push, 29. 9. 2026).
@@ -33,6 +34,41 @@ export function povolenaAdresa(e: unknown): e is string {
   if (u.protocol !== "https:" || u.port || u.username || u.password) return false;
   const h = u.hostname.toLowerCase();
   return SLUZBY.some((s) => h === s || h.endsWith(`.${s}`));
+}
+
+/*
+  Kdy smí upozornění chodit (24. 11. 2026, provozovatelka). Den od–do podle
+  pražského času; v noci jen naléhavé zprávy od zvolené závažnosti (1–10).
+  Přehledy, menší signály a tipy chodí jen ve dne. Výchozí je totéž, co platí
+  pro kanál: den 7–21, v noci 7 a víc. Přísnější si nastavit jde, volnější
+  ne — co kanál v noci nepošle, nepošleme ani do telefonu.
+*/
+export interface CasUpozorneni { od: string; do: string; nocOd: number }
+export const VYCHOZI_CAS: CasUpozorneni = { od: "07:00", do: "21:00", nocOd: 7 };
+/** nocOd 11 = v noci nic, ani to nejvážnější. */
+export const V_NOCI_NIC = 11;
+const HHMM = /^([01]\d|2[0-3]):[0-5]\d$/;
+
+export function normalizujCas(v: unknown): CasUpozorneni | null {
+  if (!v || typeof v !== "object") return null;
+  const { od, do: do_, nocOd } = v as Record<string, unknown>;
+  if (typeof od !== "string" || typeof do_ !== "string" || !HHMM.test(od) || !HHMM.test(do_) || od === do_) return null;
+  const n = Number(nocOd);
+  if (!Number.isInteger(n) || n < VYCHOZI_CAS.nocOd || n > V_NOCI_NIC) return null;
+  return { od, do: do_, nocOd: n };
+}
+
+/** Nastavení z databáze; poškozený zápis znamená výchozí, ne pád rozesílání. */
+export function ctiCas(ulozeno: string | null | undefined): CasUpozorneni {
+  try { return normalizujCas(ulozeno ? JSON.parse(ulozeno) : null) ?? VYCHOZI_CAS; } catch { return VYCHOZI_CAS; }
+}
+
+/** Kdy zprávu odběrateli doručit: teď (null), nebo na začátku jeho dne. */
+export function kdyDorucit(druh: DruhPush, zavaznost: number | null, cas: CasUpozorneni, ted: Date): Date | null {
+  const noc = { od: cas.do, do: cas.od };
+  if (!vTichu(ted, noc)) return null;
+  if (druh === "hned" && (zavaznost ?? 0) >= cas.nocOd) return null;
+  return konecTicha(ted, noc);
 }
 
 export function normalizujDruhy(v: unknown): DruhPush[] {
@@ -138,7 +174,7 @@ export async function podpisRozhlasu(token: string, cas: string, teloPozadavku: 
   return Array.from(await hmac(klic, kodovac.encode(`${cas}.${teloPozadavku}`)), (b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-interface Odber { id: string; endpoint: string; p256dh: string; auth: string }
+interface Odber { id: string; endpoint: string; p256dh: string; auth: string; cas?: string | null }
 interface Obsah { t: string; b: string; u: string; tag: string }
 type Vysledek = "ok" | "pryc" | "chyba";
 
@@ -187,6 +223,8 @@ async function zapisVysledky(env: Env, odbery: Odber[], vysledky: Vysledek[]): P
         : env.DB.prepare("UPDATE push_odbery SET chyb = chyb + 1 WHERE id = ?").bind(o.id),
   );
   prikazy.push(env.DB.prepare("DELETE FROM push_odbery WHERE chyb >= 10"));
+  // Odložené zprávy zrušených odběrů nikomu nepatří.
+  prikazy.push(env.DB.prepare("DELETE FROM push_odlozene WHERE odber_id NOT IN (SELECT id FROM push_odbery)"));
   await env.DB.batch(prikazy);
 }
 
@@ -214,7 +252,7 @@ export async function rozeslat(env: Env, req: Request): Promise<Response> {
   if (!/^\d{10}$/.test(cas) || Math.abs(Date.now() / 1000 - Number(cas)) > 300) throw new ChybaHttp(401, "Neplatný podpis.");
   if (!stejne(podpis, await podpisRozhlasu(env.TELEGRAM_BOT_TOKEN, cas, text))) throw new ChybaHttp(401, "Neplatný podpis.");
 
-  let t: { id?: unknown; druh?: unknown; titulek?: unknown; text?: unknown; odkaz?: unknown; od?: unknown };
+  let t: { id?: unknown; druh?: unknown; titulek?: unknown; text?: unknown; odkaz?: unknown; od?: unknown; zavaznost?: unknown };
   try { t = JSON.parse(text); } catch { throw new ChybaHttp(400, "Tělo požadavku není platný JSON."); }
   const druh = normalizujDruhy([t.druh])[0];
   if (!druh) throw new ChybaHttp(400, "Neznámý druh zprávy.");
@@ -229,9 +267,11 @@ export async function rozeslat(env: Env, req: Request): Promise<Response> {
   }
 
   const { results: odbery } = await env.DB.prepare(
-    "SELECT id, endpoint, p256dh, auth FROM push_odbery WHERE id > ? AND instr(druhy, ?) > 0 ORDER BY id LIMIT ?",
+    "SELECT id, endpoint, p256dh, auth, cas FROM push_odbery WHERE id > ? AND instr(druhy, ?) > 0 ORDER BY id LIMIT ?",
   ).bind(od, `"${druh}"`, DAVKA).all<Odber>();
-  if (!odbery.length) return json({ odeslano: 0, selhalo: 0, zruseno: 0, dalsi: null });
+  if (!odbery.length) return json({ odeslano: 0, selhalo: 0, zruseno: 0, odlozeno: 0, dalsi: null });
+  const z = Number(t.zavaznost);
+  const zavaznost = Number.isInteger(z) && z >= 1 && z <= 10 ? z : null;
 
   const obsah: Obsah = {
     t: t.titulek.trim().slice(0, 120),
@@ -239,12 +279,27 @@ export async function rozeslat(env: Env, req: Request): Promise<Response> {
     u: cestaOdkazu(env, t.odkaz),
     tag: t.id,
   };
-  const vysledky = await dorucDavce(env, odbery, obsah, druh === "hned");
-  await zapisVysledky(env, odbery, vysledky);
+  // Kdo má teď noc, dostane zprávu na začátku svého dne.
+  const nyni = new Date();
+  const hned: Odber[] = [];
+  const pozdeji: { o: Odber; kdy: Date }[] = [];
+  for (const o of odbery) {
+    const cas = ctiCas(o.cas);
+    const kdy = kdyDorucit(druh, zavaznost, cas, nyni);
+    if (kdy) pozdeji.push({ o, kdy }); else hned.push(o);
+  }
+  if (pozdeji.length) {
+    await env.DB.batch(pozdeji.map(({ o, kdy }) =>
+      env.DB.prepare("INSERT OR IGNORE INTO push_odlozene (odber_id, zprava_id, obsah, urgentni, naplanovano) VALUES (?, ?, ?, ?, ?)")
+        .bind(o.id, t.id as string, JSON.stringify(obsah), druh === "hned" ? 1 : 0, kdy.toISOString())));
+  }
+  const vysledky = hned.length ? await dorucDavce(env, hned, obsah, druh === "hned") : [];
+  if (hned.length) await zapisVysledky(env, hned, vysledky);
   return json({
     odeslano: vysledky.filter((v) => v === "ok").length,
     selhalo: vysledky.filter((v) => v === "chyba").length,
     zruseno: vysledky.filter((v) => v === "pryc").length,
+    odlozeno: pozdeji.length,
     dalsi: odbery.length === DAVKA ? odbery[odbery.length - 1].id : null,
   });
 }
@@ -255,7 +310,7 @@ export async function verejnyKlic(env: Env): Promise<Response> {
   return json({ klic: verejny }, 200, { "Cache-Control": "public, max-age=3600" });
 }
 
-interface TeloOdberu { endpoint?: unknown; keys?: { p256dh?: unknown; auth?: unknown }; druhy?: unknown }
+interface TeloOdberu { endpoint?: unknown; keys?: { p256dh?: unknown; auth?: unknown }; druhy?: unknown; cas?: unknown }
 
 export async function prihlasit(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "push-odber", 10, 60);
@@ -265,12 +320,15 @@ export async function prihlasit(env: Env, req: Request): Promise<Response> {
   const druhy = normalizujDruhy(t.druhy);
   if (!druhy.length) throw new ChybaHttp(400, "Vyberte aspoň jeden druh upozornění.");
   if (!(await vLimituCelkem(env, "push-odber", 5000, 24 * 60))) throw new ChybaHttp(429, "Přihlášek je dnes hodně. Zkuste to prosím zítra.");
+  // Čas je nepovinný: starší stránka ho neposílá a nastavení se jí nesmí smazat.
+  if (t.cas !== undefined && t.cas !== null && !normalizujCas(t.cas)) throw new ChybaHttp(400, "Neplatné nastavení času.");
+  const cas = normalizujCas(t.cas);
   const kdy = ted();
   await env.DB.prepare(
-    `INSERT INTO push_odbery (id, endpoint, p256dh, auth, druhy, vytvoreno, zmeneno, chyb) VALUES (?, ?, ?, ?, ?, ?, ?, 0)
-     ON CONFLICT(id) DO UPDATE SET p256dh = excluded.p256dh, auth = excluded.auth, druhy = excluded.druhy, zmeneno = excluded.zmeneno, chyb = 0`,
-  ).bind(await sha256(t.endpoint), t.endpoint, t.keys!.p256dh, t.keys!.auth, JSON.stringify(druhy), kdy, kdy).run();
-  return json({ ok: true, druhy }, 201);
+    `INSERT INTO push_odbery (id, endpoint, p256dh, auth, druhy, cas, vytvoreno, zmeneno, chyb) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 0)
+     ON CONFLICT(id) DO UPDATE SET p256dh = excluded.p256dh, auth = excluded.auth, druhy = excluded.druhy, cas = COALESCE(excluded.cas, push_odbery.cas), zmeneno = excluded.zmeneno, chyb = 0`,
+  ).bind(await sha256(t.endpoint), t.endpoint, t.keys!.p256dh, t.keys!.auth, JSON.stringify(druhy), cas ? JSON.stringify(cas) : null, kdy, kdy).run();
+  return json({ ok: true, druhy, cas: cas ?? VYCHOZI_CAS }, 201);
 }
 
 async function adresaZTela(req: Request): Promise<string> {
@@ -282,15 +340,20 @@ async function adresaZTela(req: Request): Promise<string> {
 /** Odhlášení. Znalost adresy je jediné oprávnění — vydal ji prohlížeč tomu, kdo se přihlásil. */
 export async function odhlasit(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "push-odhlaseni", 20, 60);
-  await env.DB.prepare("DELETE FROM push_odbery WHERE id = ?").bind(await sha256(await adresaZTela(req))).run();
+  const id = await sha256(await adresaZTela(req));
+  await env.DB.batch([
+    env.DB.prepare("DELETE FROM push_odbery WHERE id = ?").bind(id),
+    env.DB.prepare("DELETE FROM push_odlozene WHERE odber_id = ?").bind(id),
+  ]);
   return json({ ok: true });
 }
 
 /** Co má tenhle prohlížeč zapnuto. */
 export async function stav(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "push-stav", 30, 10);
-  const r = await env.DB.prepare("SELECT druhy, posledni_doruceni FROM push_odbery WHERE id = ?").bind(await sha256(await adresaZTela(req))).first<{ druhy: string; posledni_doruceni: string | null }>();
-  return json(r ? { prihlaseno: true, druhy: normalizujDruhy(JSON.parse(r.druhy)), posledniDoruceni: r.posledni_doruceni } : { prihlaseno: false });
+  const r = await env.DB.prepare("SELECT druhy, cas, posledni_doruceni FROM push_odbery WHERE id = ?").bind(await sha256(await adresaZTela(req))).first<{ druhy: string; cas: string | null; posledni_doruceni: string | null }>();
+  // `cas` v odpovědi zároveň říká stránce, že tohle API nastavení času umí.
+  return json(r ? { prihlaseno: true, druhy: normalizujDruhy(JSON.parse(r.druhy)), cas: ctiCas(r.cas), posledniDoruceni: r.posledni_doruceni } : { prihlaseno: false });
 }
 
 /** Zkušební upozornění jen do tohohle prohlížeče — ať si člověk ověří, že mu to chodí. */
@@ -315,6 +378,30 @@ export async function prehled(env: Env, ucet: Prihlaseny): Promise<Response> {
   }
   const { results: posledni } = await env.DB.prepare("SELECT druh, titulek, vytvoreno FROM push_zpravy ORDER BY vytvoreno DESC LIMIT 10").all();
   return json({ celkem: celkem?.n ?? 0, druhy, posledni });
+}
+
+/**
+ * Doručí odložené zprávy, kterým začal den (volá plánovač API každých
+ * 10 minut). Co čeká déle než dva dny, už není zpráva, ale historie — smaže se.
+ */
+export async function posliOdlozene(env: Env, limit = 60): Promise<{ odeslano: number; selhalo: number }> {
+  const nyni = ted();
+  await env.DB.prepare("DELETE FROM push_odlozene WHERE naplanovano < ?").bind(new Date(Date.now() - 2 * 86_400_000).toISOString()).run();
+  const { results } = await env.DB.prepare(
+    `SELECT l.odber_id, l.zprava_id, l.obsah, l.urgentni, o.endpoint, o.p256dh, o.auth
+     FROM push_odlozene l JOIN push_odbery o ON o.id = l.odber_id
+     WHERE l.naplanovano <= ? ORDER BY l.naplanovano LIMIT ?`,
+  ).bind(nyni, limit).all<{ odber_id: string; zprava_id: string; obsah: string; urgentni: number; endpoint: string; p256dh: string; auth: string }>();
+  let odeslano = 0, selhalo = 0;
+  for (const r of results) {
+    const o: Odber = { id: r.odber_id, endpoint: r.endpoint, p256dh: r.p256dh, auth: r.auth };
+    const [v] = await dorucDavce(env, [o], JSON.parse(r.obsah) as Obsah, r.urgentni === 1);
+    await zapisVysledky(env, [o], [v]);
+    // I neúspěch se maže: služba prohlížeče zprávu nepřijala a další pokus by přišel ještě později.
+    await env.DB.prepare("DELETE FROM push_odlozene WHERE odber_id = ? AND zprava_id = ?").bind(r.odber_id, r.zprava_id).run();
+    if (v === "ok") odeslano++; else selhalo++;
+  }
+  return { odeslano, selhalo };
 }
 
 /** Záznamy o rozeslaných zprávách stačí na měsíc — slouží jen proti zdvojení. */

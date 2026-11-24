@@ -21,6 +21,11 @@ const FREKVENCE: { hodnota: Frekvence; nazev: string; popis: string }[] = [
   { hodnota: "jen-kriticke", nazev: "Jen vážné", popis: "Změna právního stavu ČR, článek 4 nebo 5 NATO, vážná úroveň." },
 ];
 
+const KDY_SMI_CHODIT: { hodnota: "noc" | "kdykoli"; nazev: string; popis: string }[] = [
+  { hodnota: "noc", nazev: "Ve dne všechno, v noci jen vážné", popis: "Doporučené. Od 21:00 do 7:00 přijde jen vyhlášený mimořádný stav nebo krok NATO, ostatní ráno." },
+  { hodnota: "kdykoli", nazev: "Kdykoli", popis: "Všechno důležité přijde hned, i v noci." },
+];
+
 const ZAVAZNOSTI: { hodnota: MinZavaznost; nazev: string; popis: string }[] = [
   { hodnota: "stredni", nazev: "Od střední", popis: "Víc zpráv, včetně signálů, které se teprve skládají." },
   { hodnota: "vysoka", nazev: "Od vysoké", popis: "Doporučené. Věci, kvůli kterým by člověk mohl jednat jinak." },
@@ -436,24 +441,34 @@ function Nastaveni({
             <Volby nazev="Od jaké závažnosti" hodnota={n.minZavaznost} moznosti={ZAVAZNOSTI} onChange={(minZavaznost) => setN({ ...n, minZavaznost })} />
           </div>
           <div className="space-y-2">
-            <Prepinac
-              zapnuto={n.ticho === null}
-              onChange={(z) => setN({ ...n, ticho: z ? null : { od: "22:00", do: "07:00" } })}
-              nazev="Bez tichých hodin"
-              popis="Všechno důležité přijde kdykoli, i v noci. Vypnutím nastavíte klid."
+            {/*
+              Kdy smí chodit (24. 11. 2026, provozovatelka): dvě volby místo
+              přepínače „bez tichých hodin“; vlastní hodiny pod Pokročilé.
+              Stejný jazyk jako u upozornění do telefonu.
+            */}
+            <Popisek>Kdy smí chodit</Popisek>
+            <Volby
+              nazev="Kdy smí chodit"
+              hodnota={n.ticho ? "noc" : "kdykoli"}
+              moznosti={KDY_SMI_CHODIT}
+              onChange={(v) => setN({ ...n, ticho: v === "noc" ? n.ticho ?? { od: "21:00", do: "07:00" } : null })}
             />
             {n.ticho && (
-              <div className="grid grid-cols-2 gap-3 rounded-[22px] border border-linka p-4">
-                <div>
-                  <Popisek pro="od">Ticho od</Popisek>
-                  <input id="od" type="time" value={n.ticho.od} onChange={(e) => setN({ ...n, ticho: { ...n.ticho!, od: e.target.value } })} className={`${POLE} cislice`} />
+              <details className="group rounded-[22px] border border-linka p-4" open={n.ticho.od !== "21:00" || n.ticho.do !== "07:00"}>
+                <summary className="inline-flex cursor-pointer list-none items-center gap-1 text-male font-semibold text-tlum hover:text-inkoust">
+                  Pokročilé: vlastní hodiny klidu <Ikona nazev="dolu" velikost={11} tah={2} trida="transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="mt-3 grid grid-cols-2 gap-3">
+                  <div>
+                    <Popisek pro="od">Klid od</Popisek>
+                    <input id="od" type="time" value={n.ticho.od} onChange={(e) => setN({ ...n, ticho: { ...n.ticho!, od: e.target.value } })} className={`${POLE} cislice`} />
+                  </div>
+                  <div>
+                    <Popisek pro="do">do</Popisek>
+                    <input id="do" type="time" value={n.ticho.do} onChange={(e) => setN({ ...n, ticho: { ...n.ticho!, do: e.target.value } })} className={`${POLE} cislice`} />
+                  </div>
                 </div>
-                <div>
-                  <Popisek pro="do">do</Popisek>
-                  <input id="do" type="time" value={n.ticho.do} onChange={(e) => setN({ ...n, ticho: { ...n.ticho!, do: e.target.value } })} className={`${POLE} cislice`} />
-                </div>
-                <p className="col-span-2 text-male text-tlum2">Vážné změny tiché hodiny nerespektují. Ostatní počkají do rána.</p>
-              </div>
+              </details>
             )}
             {SPUSTENO.izs && <Prepinac
               zapnuto={n.zpravyIzs}

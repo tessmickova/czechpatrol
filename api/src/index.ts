@@ -246,6 +246,13 @@ export default {
           console.error("[e-maily]", e);
         }
         try {
+          // Upozornění do telefonu, která čekala na začátek dne odběratele (24. 11. 2026).
+          const o = await push.posliOdlozene(env);
+          if (o.odeslano || o.selhalo) console.log(`[push] odložené: odesláno ${o.odeslano}, selhalo ${o.selhalo}`);
+        } catch (e) {
+          console.error("[push odložené]", e);
+        }
+        try {
           await push.uklidPush(env);
         } catch (e) {
           console.error("[push]", e);
