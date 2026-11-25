@@ -1,5 +1,81 @@
 [
   {
+    "id": "k-1ae0b3fdb62ed76a",
+    "zachyceno": "2026-11-25T10:20:43.021Z",
+    "publikovano": "2026-11-25T07:53:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/25/8064544/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia calls Poland \"Russophobic\" for protesting missile incursion into its airspace",
+    "titulekPuvodni": "Russia calls Poland \"Russophobic\" for protesting missile incursion into its airspace",
+    "shrnuti": "Russia has accused Poland of \"Russophobia\" and dismissed its diplomatic protest after three Russian missiles violated Polish airspace on 20 November.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "violated+airspace"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia accuses Poland of \"Russophobia\" after missile airspace violation | Ukrainska Pravda\nPhoto: Getty Images\nThe Russian embassy in Poland has said that Warsaw's accusations against Russia following the incursion of Russian missiles into Polish airspace are unfounded. It also expressed outrage at what it called \"Russophobia\" during discussions of the incident.\nSource: European Pravda, citing Polsat News\nDetails: A Russian diplomat arrived at the Polish Foreign Ministry on Tuesday 24 November in connection with Friday's violation of Polish airspace by Russian missiles.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe Russian embassy said on Telegram: \"Georgy Mikhno, Ambassador of the Russian Federation to the Republic of Poland, was summoned to the Foreign Ministry of the host country, where he was presented with a note of protest over our country's alleged 'involvement' in incidents related to the 'violation of Polish airspace' on 20 November 2026.\"\nAccording to the embassy, Mikhno rejected the accusations \"in the strongest possible terms\", describing them as \"groundless, unsubstantiated and unsupported by evidence\".\nHe also said the \"practice of levelling accusations against Russia (...) on the…",
+      "stazeno": "2026-11-25T10:20:43.126Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-767fb7b11ee14084",
+    "zachyceno": "2026-11-25T10:20:41.270Z",
+    "publikovano": "2026-11-25T07:13:49.000Z",
+    "zdroj": {
+      "nazev": "TVN24 (Polsko)",
+      "url": "https://tvn24.pl/polska/rosyjskie-rakiety-spadly-w-polsce-pulkownik-maciej-matysiak-tutaj-nie-ma-przypadku-st9356131?source=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rosyjskie rakiety w polskiej przestrzeni powietrznej. \"Tutaj nie ma przypadku\"",
+    "titulekPuvodni": "Rosyjskie rakiety w polskiej przestrzeni powietrznej. \"Tutaj nie ma przypadku\"",
+    "shrnuti": "Te rakiety mają pokazać, że nasz system nie działa. Chodzi o to, żeby polscy obywatele powiedzieli: to nie nasza wojna - ocenił pułkownik rezerwy Maciej Matysiak z kancelarii premiera w \"Rozmowie Piaseckiego\" w TVN24. Komentował ostatnie naruszenia polskiej przestrzeni powietrznej przez rosyjskie po",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn",
+      "dron"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "narusz+przestrzeni powietrzn"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rosyjskie rakiety spadły w Polsce. Pułkownik Maciej Matysiak: tutaj nie ma przypadku - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nPułkownik Matysiak: celem rosyjskich rakiet jest zniechęcenie Polaków do wspierania Ukrainy\nŹródło wideo: TVN4\nŹródło zdj. gł.: PAP/Wojtek Jargiło\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze…",
+      "stazeno": "2026-11-25T10:20:43.169Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-139b0bc0bbbad66b",
     "zachyceno": "2026-11-24T16:04:10.627Z",
     "publikovano": "2026-11-24T14:29:42.000Z",
@@ -1722,6 +1798,533 @@
     }
   },
   {
+    "id": "k-4be10c7865bb035d",
+    "zachyceno": "2026-11-25T10:20:40.061Z",
+    "publikovano": "2026-11-25T10:18:38.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/pocasi/nasnezi-cesko-dostane-prvni-naloz-mrazu-pokryvka-muze-vydrzet-379931",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nasněží. Česko dostane první nálož mrazu, pokrývka může vydržet",
+    "titulekPuvodni": "Nasněží. Česko dostane první nálož mrazu, pokrývka může vydržet",
+    "shrnuti": "Meteorologové předpovídají, že se do Česka dostanou první výraznější sněhové srážky, zejména jih Moravy může pokrýt silná vrstva sněhu. A pak dorazí mráz.",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "naloz"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Nasněží. Česko dostane první nálož mrazu, pokrývka může vydržet — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nNasněží. Česko dostane první nálož mrazu, pokrývka může vydržet\nMichal Žák ,\nTomáš Karlík\npřed 2 m minutami | Zdroj: ČT24\nIlustrační foto\nZdroj: Pexels/Luke Seago\nMeteorologové předpovídají, že se do Česka dostanou první výraznější sněhové srážky, zejména jih Moravy může pokrýt silná vrstva sněhu. A pak dorazí mráz.\nZávěr listopadu, a tedy i konec meteorologického podzimu, do značné části Evropy přinesl výrazné ochlazení a na řadě míst také sněžení – tedy spíše už zimní než podzimní počasí. Zatímco v uplynulých týdnech počasí v mnoha oblastech ovlivňovalo relativně teplé a vlhké proudění od Atlantiku, o víkendu se cirkulace nad kontinentem začala měnit.\nStudený vzduch ze severních oblastí nyní proniká daleko k jihu a teploty budou místy o pět až patnáct stupňů nižší, než odpovídá dlouhodobému průměru. Zajímavou otázkou je, nakolik tato změna souvisí s mimořádně časným narušením stratosférického polárního víru, k němuž došlo během…",
+      "stazeno": "2026-11-25T10:20:43.809Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e23edc810aef0b86",
+    "zachyceno": "2026-11-25T10:20:42.968Z",
+    "publikovano": "2026-11-25T10:05:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4188412-one-person-killed-four-injured-as-russian-forces-attack-enterprise-in-zhytomyr-region.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "One person killed, four injured as Russian forces attack enterprise in Zhytomyr region",
+    "titulekPuvodni": "One person killed, four injured as Russian forces attack enterprise in Zhytomyr region",
+    "shrnuti": "One person was killed and four others injured in a Russian attack on the Malyn community in the Zhytomyr region.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "One person killed, four injured as Russian forces attack enterprise in Zhytomyr region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nWednesday, 25 November 2026, 12:20\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nOne person was killed and four others injured in a Russian attack on the Malyn community in the Zhytomyr region.\nVitalii Bunechko, Head of the Zhytomyr Regional Military Administration, reported this on Facebook , Ukrinform reports.\n\r\n\r\n&ldquo;Russian forces have been terrorizing the Malyn community since early morning. They struck a local civilian enterprise, injuring one person. The enemy also attacked a car park. Sadly, one person was killed and three others were taken to a local hospital,&rdquo; the official said.\n\r\n\r\nHe added…",
+      "stazeno": "2026-11-25T10:20:45.400Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-d37c13c4368effd0",
+    "zachyceno": "2026-11-25T10:20:41.226Z",
+    "publikovano": "2026-11-25T10:00:00.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/uxYYs54/pre-krymskych-tatarov-bola-ruska-anexia-nocna-mora-z-ktorej-sa-nevedeli-zobudit-rozhovor/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pre Krymských Tatárov bola ruská anexia nočná mora, z ktorej sa nevedeli zobudiť (rozhovor)",
+    "titulekPuvodni": "Pre Krymských Tatárov bola ruská anexia nočná mora, z ktorej sa nevedeli zobudiť (rozhovor)",
+    "shrnuti": "Ruské špeciálne služby nemusia nikomu povedať, že niekoho zadržali, ani to, prečo. Ľudia skrátka zmiznú, a potom ich po dvoch alebo troch rokoch nejaký právnik nájde v ruskom väzení, upozorňuje novinárka.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+rusk",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Pre Krymských Tatárov bola ruská anexia nočná mora, z ktorej sa nevedeli zobudiť (rozhovor) | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n-1 °C -\nBratislava\nstreda 25. 11.\n25. 11.\nKatarína\nSvet dnes 25. Nov 2026 o 11:00\n16 min. čítania\nPridať do Google\nPre Krymských Tatárov bola ruská anexia nočná mora, z ktorej sa nevedeli zobudiť (rozhovor)\n4 fotky v galérii\nBritská novinárka Lily Hyde. Zdroj: Stanislava Harkotová\nStanislava Harkotová Redaktorka zahraničného spravodajstva a publicistiky\nUložiť článok\nRuské špeciálne služby nemusia nikomu povedať, že niekoho zadržali, ani to, prečo. Ľudia skrátka zmiznú, a potom ich po dvoch alebo troch rokoch nejaký právnik nájde v ruskom väzení, upozorňuje novinárka.\nViac ako dve dekády žije v Kyjeve, posledných desať rokov ako novinárka dokumentuje vplyv vojny na zdravie, kultúru a každodenný život na Ukrajine.\nAko jedna z mála západných novinárov mapuje aj život Krymských Tatárov, národa, ktorý Stalin v roku 1944 rozkázal deportovať z Krymu. Po desaťročiach vo vyhnanstve sa Krymskí Tatári vrátili do vlasti, no v roku 2014, po tom, čo Rusko anektovalo ukrajinský polostrov, museli mnohí z nich Krym opäť…",
+      "stazeno": "2026-11-25T10:20:46.264Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2c642e02b072b928",
+    "zachyceno": "2026-11-25T10:20:40.110Z",
+    "publikovano": "2026-11-25T09:57:13.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-ve-lvove-neni-valka-tvrdi-fico-pred-par-dny-tam-rusky-utok-zabil-dva-lidi-40610381",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ve Lvově není válka, tvrdí Fico. Před pěti dny tam ruský útok zabil dva lidi",
+    "titulekPuvodni": "Ve Lvově není válka, tvrdí Fico. Před pěti dny tam ruský útok zabil dva lidi",
+    "shrnuti": "Slovenský premiér Robert Fico prohlásil, že v západoukrajinském Lvově není žádná válka. Uvedl to ve středu na jednání parlamentního výboru pro evropské záležitosti, kde představoval postoje Slovenska před mimořádným summitem Evropské rady. Před pouhými pěti dny přitom ruský útok na železniční stanic",
+    "kodZeme": "SK",
+    "zeme": "Slovensko",
+    "kategorie": [
+      "hybridni",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "zeleznic",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ve Lvově není válka, tvrdí Fico. Před pár dny tam ruský útok zabil dva lidi - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nVe Lvově není válka, tvrdí Fico. Před pár dny tam ruský útok zabil dva lidi\nNatália Jabůrková\n2:31\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 25. 11., 10:57 Bratislava\nSlovenský premiér Robert Fico prohlásil, že v západoukrajinském Lvově není žádná válka. Uvedl to ve středu na jednání parlamentního výboru pro evropské záležitosti, kde představoval postoje Slovenska před mimořádným summitem Evropské rady. Před pouhými pěti dny přitom ruský útok na železniční stanici ve Lvově zabil dva lidi a nejméně deset dalších zranil.\nFoto: FB/ Úrad vlády Slovenskej republiky\nSlovenský premiér Robert Fico\nČlánek\n„Jednoduše ve Lvově není ani náznak nějaké války. Ta válka se tam soustřeďuje především na frontovou linii,“ řekl Fico poslancům během jednání výboru .\nJeho tvrzení pomíjí útoky na město vzdálené od fronty. Při ruském úderu 20. listopadu zahynuli lidé na železniční stanici Sknyliv ve Lvově.\nTo, že by se útoky soustředily pouze na frontovou linii, také jako tvrzení neobstojí, jelikož Rusové pravidelně útočí na civilní cíle, včetně…",
+      "stazeno": "2026-11-25T10:20:48.194Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a0e9694812f0bff3",
+    "zachyceno": "2026-11-25T10:20:42.121Z",
+    "publikovano": "2026-11-25T09:40:18.000Z",
+    "zdroj": {
+      "nazev": "ANSA (Itálie, anglicky)",
+      "url": "https://www.ansa.it/english/news/2026/11/25/pope-laments-hybrid-warfare-increasingly-inhumane-conflicts_bb5430c4-7944-4344-9d0c-79905e1d8826.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Pope laments hybrid warfare, increasingly inhumane conflicts",
+    "titulekPuvodni": "Pope laments hybrid warfare, increasingly inhumane conflicts",
+    "shrnuti": "(ANSA) - ROME, 25 NOV - Pope Leo XIV lamented the spread of hybrid forms of warfare and the increasingly inhuman nature of conflict in his general audience on Wednesday. \"The digital revolution is changing the nature of conflicts,\" the American pontiff said. \"Visible warfare is now accompanied by hy",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "kyber",
+      "hybridni"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber",
+      "hybrid warfare"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Pope laments hybrid warfare, increasingly inhumane conflicts - TopNews - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave; adatto alle tue esigenze.\nSe…",
+      "stazeno": "2026-11-25T10:20:49.252Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ca6b93546e8ca3c3",
+    "zachyceno": "2026-11-25T10:20:43.005Z",
+    "publikovano": "2026-11-25T09:33:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/25/8064558/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "One killed and three injured in yet another Russian attack on Zhytomyr Oblast",
+    "titulekPuvodni": "One killed and three injured in yet another Russian attack on Zhytomyr Oblast",
+    "shrnuti": "Russian forces struck a car park in the Malyn hromada in Zhytomyr Oblast on the morning of 25 November, killing one person and injuring three others after earlier overnight strikes hit regional energy and business sites",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian strike on Zhytomyr Oblast kills one and injures three | Ukrainska Pravda\nStock photo: State Emergency Service of Ukraine\nOne person was killed and three people were injured when Russian forces attacked the Malyn\nhromada\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories\nin Zhytomyr Oblast on the morning of 25 November.  \nSource: Vitalii Bunechko , Head of Zhytomyr Oblast Military Administration\nQuote from Bunechko: \"Since early morning, the enemy has been terrorising the Malyn hromada… a car park has been attacked. Sadly, one person has been killed, and three people with injuries have been taken to a local hospital.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: The blast wave also damaged houses.\nAll the teams needed to respond are working at the impact sites.\nBunechko recalled that one person had been injured as a result of previous Russian strikes on a local civilian business.\n\r\n\r\n\r\n\r\n\r\n\r\nIn a world flooded with AI-generated content, journalism you can trust matters more than ever.\n\r\nEvery Ukrainska Pravda story is verified by experienced reporters, and translated and edited by humans who understand the context…",
+      "stazeno": "2026-11-25T10:20:50.001Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5ae34ce8d9054ea3",
+    "zachyceno": "2026-11-25T10:20:40.197Z",
+    "publikovano": "2026-11-25T09:25:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/pri-ruskem-utoku-v-kyjevske-oblasti-zahynul-muz-v-rusku-hori-rafinerie.A261125_070149_zahranicni_tmps#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrajinci zaútočili na dvě rafinerie v Samarské oblasti, vypukly velké požáry",
+    "titulekPuvodni": "Ukrajinci zaútočili na dvě rafinerie v Samarské oblasti, vypukly velké požáry",
+    "shrnuti": "Ruské útoky ve městě Bila Cerkva a v Charkovské oblasti si vyžádaly dva mrtvé. Pět oblastí Ukrajiny se potýká s výpadky dodávek elektrické energie, uvedly ukrajinské úřady. V Rusku podle médií opět čelily útokům rafinerie.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "potyka s vypadky",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrajinci zaútočili na dvě rafinerie, vypukly velké požáry - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
+      "stazeno": "2026-11-25T10:20:50.048Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5cf9367aa28300b2",
+    "zachyceno": "2026-11-25T10:20:40.401Z",
+    "publikovano": "2026-11-25T09:02:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610205178/bomb-squad-prepares-to-destroy-250-kg-wwii-german-explosive-found-in-parnu-county",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Bomb squad prepares to destroy 250-kg WWII German explosive found in Pärnu County",
+    "titulekPuvodni": "Bomb squad prepares to destroy 250-kg WWII German explosive found in Pärnu County",
+    "shrnuti": "Bomb disposal experts are preparing to destroy a 250-kilogram World War II aerial bomb found in a Pärnu County field at an Estonian Defense Forces' training area, Postimees reported.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Bomb squad prepares to destroy 250-kg WWII German explosive found in Pärnu County | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR News\n{{1795597320000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nBomb disposal operative (photo is illustrative). Source: Rescue Board\nNews\nBomb disposal experts are preparing to destroy a 250-kilogram World War II aerial bomb found in a Pärnu County field at an Estonian Defense Forces' training area, Postimees reported .\nThe bomb, reportedly a German-made device from World War II, was transported under police escort to the central training area in Harju County on Tuesday.\nThe Western Estonia Bomb Disposal Unit (L&auml;&auml;ne-Eesti pommigrupp) is now preparing to render the device safe.\nA metal detectorist had discovered the 250-kilogram aerial bomb about 30 centimeters underground in a field in Lemmetsa village just north of P&auml;rnu City on Sunday.\nThanks to its considerable destructive power, the bomb could not be destroyed at the Rescue Board's usual demolition site in nearby Potsepa.\n\"The bomb disposal team is preparing to destroy the bomb…",
+      "stazeno": "2026-11-25T10:20:52.698Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-eaef8b7c24e7fa74",
+    "zachyceno": "2026-11-25T10:20:43.009Z",
+    "publikovano": "2026-11-25T08:58:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/25/8064554/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Gas facility in Poltava Oblast halts operations due to Russian strike",
+    "titulekPuvodni": "Gas facility in Poltava Oblast halts operations due to Russian strike",
+    "shrnuti": "Acting Naftogaz CEO Serhii Fedorenko reported that a Russian attack on gas production infrastructure in Poltava Oblast overnight on 24-25 November triggered a major fire and halted operations at the facility",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian overnight strike halts operations at gas facility in Poltava Oblast | Ukrainska Pravda\nPhoto: Naftogaz Group\nRussian forces attacked a gas production facility in Poltava Oblast belonging to Naftogaz Group, Ukraine's national oil and gas company, overnight on 24-25 November, causing a major fire and bringing operations to a halt.\nSource: Serhii Fedorenko , acting CEO of Naftogaz\nDetails: Rescue workers from the State Emergency Service were deployed to deal with the aftermath.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nEngineers will determine the extent of the damage and next steps following an inspection, which will begin as soon as it is safe to do so.\nQuote: \"The enemy is deliberately striking gas production in order to deprive Ukrainians of heat in winter.\"\nBackground: On 24 November, Naftogaz reported that Russia has carried out over 800 strikes on its facilities since the beginning of the full-scale invasion.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\ngas\nPoltava Oblast\nattack\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ngas\nNumber of Russian attacks on Naftogaz facilities since start of war exceeds 800\nRussians strike gas service facility and two petrol stations,…",
+      "stazeno": "2026-11-25T10:20:53.375Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a016d80f21da5395",
+    "zachyceno": "2026-11-25T10:20:43.011Z",
+    "publikovano": "2026-11-25T08:50:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/25/8064550/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Police post photos of 16-storey Kyiv apartment block damaged by Russian drone",
+    "titulekPuvodni": "Police post photos of 16-storey Kyiv apartment block damaged by Russian drone",
+    "shrnuti": "Law enforcement officers have posted photos of damaged buildings, a kindergarten, a hotel and cars in Kyiv's Shevchenkivskyi district after Russian drone debris struck a 16-storey residential block on 24 November",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Kyiv Police document aftermath of drone attack on Shevchenkivskyi high-rise | Ukrainska Pravda\nDrone debris. Photo: National Police of Ukraine\nLaw enforcement officers have posted photos showing damage to a 16-storey apartment block in Kyiv's Shevchenkivskyi district after a Russian drone strike on 24 November.\nSource: Kyiv Police\nQuote: \"The attack on the Shevchenkivskyi district caused a fire on the ground and first floors of a 16-storey residential building.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDamage was caused to neighbouring high-rise buildings, a kindergarten, an office space, a hotel and cars.\"\n\r\n\r\n\r\nA building damaged in the attack\n\r\n\r\n\r\nPhoto: National Police of Ukraine\r\n\r\n\r\n\r\nDetails: Three local residents aged 21, 59 and 74 are reported to have been injured. Paramedics treated them at the scene without the need for hospitalisation.\n\r\n\r\n\r\nDrone debris\n\r\n\r\n\r\nPhoto: National Police of Ukraine\r\n\r\n\r\n\r\n\r\n\r\n\r\nA building damaged in the attack\n\r\n\r\n\r\nPhoto: National Police of Ukraine\r\n\r\n\r\n\r\nPolice officers are documenting the aftermath of the Russian attack, recording damage and taking statements from citizens.\n\r\n\r\n\r\nA window shattered in the attack\n\r\n\r\n\r\nPhoto: National Police of…",
+      "stazeno": "2026-11-25T10:20:53.402Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e297c74083424f3d",
+    "zachyceno": "2026-11-25T10:20:43.014Z",
+    "publikovano": "2026-11-25T08:42:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/25/8064551/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine reports new power outages as occupied Zaporizhzhia nuclear plant switches to diesel generators",
+    "titulekPuvodni": "Ukraine reports new power outages as occupied Zaporizhzhia nuclear plant switches to diesel generators",
+    "shrnuti": "Russian attacks have caused new power outages in five Ukrainian oblasts, while the Zaporizhzhia Nuclear Power Plant has lost external power for the 17th time this year.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "power plant",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-0ec4f76861b0d677",
+    "zachyceno": "2026-11-25T10:20:42.978Z",
+    "publikovano": "2026-11-25T08:39:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4188349-injury-toll-in-russian-attack-on-kyiv-rises-to-three.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Injury toll in Russian attack on Kyiv rises to three",
+    "titulekPuvodni": "Injury toll in Russian attack on Kyiv rises to three",
+    "shrnuti": "The number of people injured after a Russian drone struck the courtyard of an apartment building in Kyiv’s Shevchenkivskyi district in the evening of November 24 has risen to three.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-65b9dc4610682e82",
+    "zachyceno": "2026-11-25T10:20:43.017Z",
+    "publikovano": "2026-11-25T08:32:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/25/8064548/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "French foreign minister defends Ukrainian attack on Russian ships in Libya",
+    "titulekPuvodni": "French foreign minister defends Ukrainian attack on Russian ships in Libya",
+    "shrnuti": "French Foreign Minister Jean-Noël Barrot defended Ukraine's maritime drone attack on Russian ships in Libyan waters and accused Vladimir Putin of trying to undermine European unity.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-f43e4e2b4b39b558",
+    "zachyceno": "2026-11-25T10:20:42.981Z",
+    "publikovano": "2026-11-25T08:18:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4188341-russian-forces-strike-zaporizhzhia-in-morning-attack-injuries-damage-reported.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian forces strike Zaporizhzhia in morning attack, injuries, damage reported",
+    "titulekPuvodni": "Russian forces strike Zaporizhzhia in morning attack, injuries, damage reported",
+    "shrnuti": "Three people were injured in a Russian attack on the Shevchenkivskyi district of Zaporizhzhia on Wednesday morning, November 25.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-e8e46ef4b67b18ee",
+    "zachyceno": "2026-11-25T10:20:40.151Z",
+    "publikovano": "2026-11-25T08:12:58.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-sankce-na-papire-v-troskach-ruskych-dronu-se-dal-nachazeji-zapadni-komponenty-40610136",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sankce na papíře. V troskách ruských dronů se dál nacházejí západní komponenty",
+    "titulekPuvodni": "Sankce na papíře. V troskách ruských dronů se dál nacházejí západní komponenty",
+    "shrnuti": "V ruských dronech, vyrobených během letošního roku, se navzdory sankcím našly evropské a americké komponenty. Tvrdí to deník Kyiv Independent s odkazem na zprávu ukrajinských tajných služeb.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "trosk+dron",
+      "dron",
+      "drone",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-79fb738d2e21a202",
+    "zachyceno": "2026-11-25T10:20:42.983Z",
+    "publikovano": "2026-11-25T07:58:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4188329-russian-drone-attack-on-volyn-region-injures-five-fire-at-enterprise-extinguished.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian drone attack on Volyn region injures five, fire at enterprise extinguished",
+    "titulekPuvodni": "Russian drone attack on Volyn region injures five, fire at enterprise extinguished",
+    "shrnuti": "Five people were injured in a Russian attack in the Kovel district of the Volyn region in the evening of November 24.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-788eabab7a225150",
     "zachyceno": "2026-11-25T08:03:28.941Z",
     "publikovano": "2026-11-25T07:53:00.000Z",
@@ -1892,6 +2495,62 @@
       "stazeno": "2026-11-25T08:03:37.685Z",
       "stav": 200
     }
+  },
+  {
+    "id": "k-7eb65c7268fbca1d",
+    "zachyceno": "2026-11-25T10:20:40.246Z",
+    "publikovano": "2026-11-25T05:13:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/ukrajina-hlasi-dva-mrtve-po-ruskych-utocich-v-rusku-hori-rafinerie/2906299?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ukrajina hlásí dva mrtvé po ruských útocích, v Rusku hoří rafinerie",
+    "titulekPuvodni": "Ukrajina hlásí dva mrtvé po ruských útocích, v Rusku hoří rafinerie",
+    "shrnuti": "Kyjev - Ruské útoky ve městě Bila Cerkva a v Charkovské oblasti si vyžádaly dva mrtvé. Pět oblastí Ukrajiny se potýká s výpadky dodávek elektrické energie, uvedly ukrajinské úřady. V Rusku podle médií...",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "potyka s vypadky",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-64645afbcc570f6b",
+    "zachyceno": "2026-11-25T10:20:40.739Z",
+    "publikovano": "2026-11-25T05:00:00.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/france-government-backlash-troop-deployment-ukraine/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "French government faces political backlash over troop deployment in Ukraine",
+    "titulekPuvodni": "French government faces political backlash over troop deployment in Ukraine",
+    "shrnuti": "Lawmakers criticized the executive for sending soldiers on a non-combat mission without informing them.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "soldiers+deploy"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-b70743bbf9c93728",
@@ -9987,719 +10646,6 @@
     "vyrez": {
       "text": "Two bodies recovered from under rubble of apartment block in Dymer | Ukrainska Pravda\nThe destroyed building. Photo: State Emergency Service of Ukraine\nTwo bodies have been recovered from under the rubble of a five-storey apartment building in Dymer, Kyiv Oblast, which was damaged in a Russian attack. The number injured has risen to four .\nSource: Kyiv Oblast Military Administration\nDetails: The regional authorities said that one of those injured is a woman aged about 54 who was suffering from shock.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nMedics are treating her at the scene, and she does not require hospitalisation.\nThe search and rescue operation is ongoing.\nUpdate: At around 14:30, Kyiv Oblast Military Administration reported that the death toll from the Russian attack on Dymer had risen to two after rescue workers recovered another body from under the rubble.\n\r\n\r\n\r\n\r\n\r\n\r\nIn a world flooded with AI-generated content, journalism you can trust matters more than ever.\n\r\nEvery Ukrainska Pravda story is verified by experienced reporters, and translated and edited by humans who understand the context behind the news.\n\r\nSupport our work on Patreon \r\n\r\n\r\n\r\n\r\n\r\nYour support helps us keep reporting…",
       "stazeno": "2026-11-22T14:51:26.152Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a83ad3d6cb9de1e9",
-    "zachyceno": "2026-11-22T12:03:19.550Z",
-    "publikovano": "2026-11-22T09:52:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4187329-russia-launches-approximately-2700-drones-nearly-1460-glide-bombs-and-165-missiles-at-ukraine-in-one-week-zelensky.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russia launches approximately 2,700 drones, nearly 1,460 glide bombs, and 165 missiles at Ukraine in one week – Zelensky",
-    "titulekPuvodni": "Russia launches approximately 2,700 drones, nearly 1,460 glide bombs, and 165 missiles at Ukraine in one week – Zelensky",
-    "shrnuti": "Russia launched approximately 2,700 drones, nearly 1,460 guided aerial bombs, and 165 missiles of various types at Ukraine over the past week. A total of 20 Ukrainian regions came under attack.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russia launches approximately 2,700 drones, nearly 1,460 glide bombs, and 165 missiles at Ukraine in one week – Zelensky\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 22 November 2026, 16:51\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussia launched approximately 2,700 drones, nearly 1,460 guided aerial bombs, and 165 missiles of various types at Ukraine over the past week. A total of 20 Ukrainian regions came under attack.\nAccording to Ukrinform, President Volodymyr Zelensky reported this on Facebook .\n\r\n\r\n\"Since this morning, a search and rescue operation has been underway in Dymer, Kyiv region. Part of a five-story apartment building has collapsed following a Russian drone attack. I thank our first responders for acting…",
-      "stazeno": "2026-11-22T14:51:26.176Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-90e18b9f1188b218",
-    "zachyceno": "2026-11-22T12:03:16.257Z",
-    "publikovano": "2026-11-22T08:59:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/ukrajinske-drony-poprve-uderily-na-kalinigradskou-oblast-ruskou-exklavu-v-evrope.A261122_080812_zahranicni_votr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "První dronový poplach v Kaliningradské oblasti, ruské exklávě v Evropě",
-    "titulekPuvodni": "První dronový poplach v Kaliningradské oblasti, ruské exklávě v Evropě",
-    "shrnuti": "V ruské Kaliningradské oblasti se v sobotu večer rozezněly sirény varující před vzdušným útokem. Podle médií se to stalo poprvé od začátku ruské invaze na Ukrajinu. Gubernátor exklávy označil za důvod podezřelý objekt mířící ze strany Litvy. Tato baltská země uvedla, že s tím nemá nic společného. Sp",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "nato",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "invaz+litv+varuj",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "První dronový poplach v Kaliningradské oblasti, ruské exklávě v Evropě - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v…",
-      "stazeno": "2026-11-22T14:51:26.688Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-68b9d426b689dabe",
-    "zachyceno": "2026-11-22T12:03:16.261Z",
-    "publikovano": "2026-11-22T08:48:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/vypil-caj-a-do-tri-tydnu-zemrel-v-bolestech-jak-kreml-tresta-prebehliky-uz-desitky-let.A261122_090712_zahranicni_remy#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vypil čaj a do tří týdnů zemřel v bolestech. Jak Kreml trestá přeběhlíky už desítky let",
-    "titulekPuvodni": "Vypil čaj a do tří týdnů zemřel v bolestech. Jak Kreml trestá přeběhlíky už desítky let",
-    "shrnuti": "Uteklo 20 let od chvil, kdy svět šokovala fotografie muže bez vlasů, vyhublého na kost a napojeného na přístroje. Tehdy začalo Západu velmi pomalu docházet, že na první pohled jen bizarní špionážní thriller z dob studené války je další ukázkou návratu sovětských praktik do putinovského Ruska. Na pon",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "hybridni",
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+litv+valk",
-      "spionaz",
-      "rusk",
-      "kreml"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Vypil čaj a do tří týdnů zemřel v bolestech: Jak Kreml trestá přeběhlíky už desítky let - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou…",
-      "stazeno": "2026-11-22T14:51:29.505Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2663c0fa288de14e",
-    "zachyceno": "2026-11-22T12:03:19.558Z",
-    "publikovano": "2026-11-22T08:30:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-polytics/4187311-lithuania-denies-involvement-in-attack-on-kaliningrad-region-following-russian-allegations.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Lithuania denies involvement in attack on Kaliningrad region following Russian allegations",
-    "titulekPuvodni": "Lithuania denies involvement in attack on Kaliningrad region following Russian allegations",
-    "shrnuti": "Lithuania’s National Crisis Management Center (NCMC) has commented on reports by Russian media about an alleged drone in the Kaliningrad region that supposedly entered from Lithuanian territory.",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Lithuania denies involvement in attack on Kaliningrad region following Russian allegations\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 22 November 2026, 16:51\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nLithuania&rsquo;s National Crisis Management Center (NCMC) has commented on reports by Russian media about an alleged drone in the Kaliningrad region that supposedly entered from Lithuanian territory.\nAccording to Ukrinform, this was reported by Delfi .\n\r\n\r\nIn a statement issued on Saturday evening, November 21, the NCMC stressed that the Lithuanian Air Force had not detected any drones and that Lithuania does not allow its airspace to be used for attacks.\n\r\n\r\n&ldquo;The Lithuanian Air Force did not detect any drones. Lithuania…",
-      "stazeno": "2026-11-22T14:51:31.096Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-931e7a4062d2d3b0",
-    "zachyceno": "2026-11-23T00:02:54.162Z",
-    "publikovano": "2026-11-22T08:10:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/rusko-zasahlo-panelovy-dum-u-kyjeva-je-nejmene-sest-mrtvych/2905013?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Rusko zasáhlo panelový dům u Kyjeva, je nejméně šest mrtvých",
-    "titulekPuvodni": "Rusko zasáhlo panelový dům u Kyjeva, je nejméně šest mrtvých",
-    "shrnuti": "Kyjev/Kaliningrad - Nejméně šest lidí dnes zabil ruský útok na panelový dům v obci Dymer severně od Kyjeva, informuje agentura Ukrinform. V troskách pětipodlažní stavby navíc může být stále několik osob....",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Rusko zasáhlo panelový dům u Kyjeva, je nejméně šest mrtvých | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRusko zasáhlo panelový dům u Kyjeva, je nejméně šest mrtvých\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 22.11.2026 23:32 \r\nVydáno: 22.11.2026, 09:10 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZáchranář a místní obyvatelé podpírají ženu poté, co identifikovala svého příbuzného vyproštěného z trosek panelového domu v obci Dymer u Kyjeva. Dům (v pozadí) zasáhl a těžce poškodil ruský dron, 22. listopadu 2026. \r\nAP/Evgeniy Maloletka \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyjev/Kaliningrad - Nejméně šest lidí dnes zabil ruský útok na panelový dům v obci Dymer severně od Kyjeva, informuje agentura…",
-      "stazeno": "2026-11-23T00:02:56.812Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-439db27b5a131905",
-    "zachyceno": "2026-11-22T20:02:45.288Z",
-    "publikovano": "2026-11-22T08:10:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/rusko-zasahlo-panelovy-dum-u-kyjeva-jsou-nejmene-tri-mrtvi/2905013?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Rusko zasáhlo panelový dům u Kyjeva, jsou nejméně tři mrtví",
-    "titulekPuvodni": "Rusko zasáhlo panelový dům u Kyjeva, jsou nejméně tři mrtví",
-    "shrnuti": "Kyjev/Kaliningrad - Nejméně tři lidi dnes zabil ruský útok na panelový dům v obci Dymer severně od Kyjeva, informují agentury Ukrinform a Reuters. V troskách pětipodlažní stavby navíc může být stále kolem...",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Rusko zasáhlo panelový dům u Kyjeva, jsou nejméně čtyři mrtví | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRusko zasáhlo panelový dům u Kyjeva, jsou nejméně čtyři mrtví\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 22.11.2026 21:09 \r\nVydáno: 22.11.2026, 09:10 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZáchranář a místní obyvatelé podpírají ženu poté, co identifikovala svého příbuzného vyproštěného z trosek panelového domu v obci Dymer u Kyjeva. Dům (v pozadí) zasáhl a těžce poškodil ruský dron, 22. listopadu 2026. \r\nAP/Evgeniy Maloletka \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyjev/Kaliningrad - Nejméně čtyři lidi dnes zabil ruský útok na panelový dům v obci Dymer severně od Kyjeva, informují agentury…",
-      "stazeno": "2026-11-22T21:00:35.377Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-acea0368226dc0ea",
-    "zachyceno": "2026-11-22T14:51:20.373Z",
-    "publikovano": "2026-11-22T08:05:05.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/kaliningradska-oblast-zrejme-celila-utoku-litva-vinu-odmita-379829",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Útok na Kaliningradskou oblast monitoroval letoun NATO, píše ukrajinský web",
-    "titulekPuvodni": "Útok na Kaliningradskou oblast monitoroval letoun NATO, píše ukrajinský web",
-    "shrnuti": "Ruská Kaliningradská oblast v sobotu večer čelila podle serveru Ukrajinska pravda možným dronovým náletům. Poplašné sirény se v regionu rozezněly poprvé od plnohodnotné ruské invaze na Ukrajinu. Tamní úřady uvedly, že systém reagoval na podezřelý objekt přilétající od Litvy, po prověření ale oznámil",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron",
-      "nato",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "▶ Útok na Kaliningradskou oblast monitoroval letoun NATO, píše ukrajinský web — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nDůležité\nJednání na nejdelší klimatické konferenci OSN v historii zkolabovala Zobrazit\nÚtok na Kaliningradskou oblast monitoroval letoun NATO, píše ukrajinský web\nTamara Kejlová\n22. 11. 2026 před 22 m minutami | Zdroj: Ukrajinska pravda , Kyiv Independent , ČT24 , ČTK , X/Exilenova+ , Militarnyi\nNahrávám video\nPoplach kvůli dronům v Kaliningradské oblasti Zdroj: ČT24\nRuská Kaliningradská oblast v sobotu večer čelila podle serveru Ukrajinska pravda možným dronovým náletům. Poplašné sirény se v regionu rozezněly poprvé od plnohodnotné ruské invaze na Ukrajinu. Tamní úřady uvedly, že systém reagoval na podezřelý objekt přilétající od Litvy, po prověření ale oznámily, že nebezpečí pominulo. Monitorovací kanály mezitím informovaly o explozích a činnosti protivzdušné obrany v přístavním městě Baltijsk, kde se nachází základna ruské Baltské flotily. Litva odpovědnost za možný útok popírá. V noci pokračovaly také vzájemné údery v…",
-      "stazeno": "2026-11-22T14:51:31.953Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ec8de26e62ab4b94",
-    "zachyceno": "2026-11-22T12:03:16.077Z",
-    "publikovano": "2026-11-22T08:02:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/online-prvni-dronovy-utok-na-kaliningradskou-oblast-ukrajinci-utocili-i-na_2611220902_cen",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "První dronový útok na Kaliningradskou oblast. Ukrajinci útočili i na ruskou nákladní loď",
-    "titulekPuvodni": "První dronový útok na Kaliningradskou oblast. Ukrajinci útočili i na ruskou nákladní loď",
-    "shrnuti": "Ukrajinské nepilotované letouny poprvé od začátku ruské invaze útočily v Kaliningradské oblasti. Ta je ruskou přímořskou enklávou mezi Polskem a Litvou. Cílem ukrajinských bojových dronů byl přístav Baltijsk v Gdaňském zálivu.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-22T16:03:02.804Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-8f14cc04479ba34f",
-    "zachyceno": "2026-11-22T08:02:46.186Z",
-    "publikovano": "2026-11-22T07:22:36.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/N43g98Y/kodan-ziada-eu-o-jednotny-postup-proti-rusku-reaguje-zmareny-na-utok-na-ukrajinskeho-rapera/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kodaň žiada EÚ o jednotný postup proti Rusku, reaguje zmarený na útok na ukrajinského rapera",
-    "titulekPuvodni": "Kodaň žiada EÚ o jednotný postup proti Rusku, reaguje zmarený na útok na ukrajinského rapera",
-    "shrnuti": "Zmarenie pokusu o atentát v Kodani sa môže pretaviť do novej línie európskej politiky. Dánsko presadzuje tvrdý balík vízových obmedzení pre Rusov.",
-    "kodZeme": "DK",
-    "zeme": "Dánsko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Kodaň žiada EÚ o jednotný postup proti Rusku, reaguje zmarený na útok na ukrajinského rapera | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n2 °C -\nBratislava\nnedeľa 22. 11.\n22. 11.\nCecília\nSvet dnes 22. Nov 2026 o 08:22\n2 min. čítania\nPridať do Google\nKodaň žiada EÚ o jednotný postup proti Rusku, reaguje zmarený na útok na ukrajinského rapera\n1 fotka v galérii\nDánska vlajka. Zdroj: reuters\nTASR\nAktuality.sk\nUložiť článok\nZmarenie pokusu o atentát v Kodani sa môže pretaviť do novej línie európskej politiky. Dánsko presadzuje tvrdý balík vízových obmedzení pre Rusov.\nDánsko vyzvalo ostatné členské štáty Európskej únie, aby prijali konkrétne opatrenia na zvýšenie tlaku na Rusko. Reagovalo tak na odhalenie údajného pokusu o atentát na ukrajinského rapera v Kodani, za ktorým podľa dánskych bezpečnostných zložiek stáli ruské tajné služby. Vyplýva to z nóty adresovanej vládam členských krajín, o ktorej v sobotu informovala agentúra Reuters.\nDánsko vyzvalo EÚ na zvýšenie tlaku na Rusko.\nDánska polícia zmarila pokus o atentát na ukrajinského rapera.\nNavrhujú sprísniť podmienky vstupu Rusov do Schengenu.\nDánsko chce jednotný postup EÚ proti podobným…",
-      "stazeno": "2026-11-22T08:02:48.521Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2db1dca658324d7c",
-    "zachyceno": "2026-11-22T08:02:44.835Z",
-    "publikovano": "2026-11-22T07:06:50.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/newsletter/2265842/helsinky-hlasi-po-utoku-na-lod-ve-finskem-zalivu-mozne-naruseni-vzdusneho-prostoru-cena-bitcoinu-klesla-na-dvoulete-minimum/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "R5M: Helsinky hlásí po útoku na loď ve Finském zálivu možné narušení vzdušného prostoru | Cena bitcoinu klesla na dvouleté minimum",
-    "titulekPuvodni": "R5M: Helsinky hlásí po útoku na loď ve Finském zálivu možné narušení vzdušného prostoru | Cena bitcoinu klesla na dvouleté minimum",
-    "shrnuti": "",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "naruseni vzdusneho prostoru"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Helsinky hlásí po útoku na loď ve Finském zálivu možné narušení vzdušného prostoru | Cena bitcoinu klesla na dvouleté minimum – Deník N\nVíce o poslechu Deníku N\nDobré ráno, čtete Ranních 5 minut od editorů Minuty N . Tento souhrn zasíláme každé všední ráno v sedm hodin, o víkendu v osm hodin.\nVašich ranních 5 minut\n1.\nFinsko má podezření, že jeho vzdušný prostor narušil ruský vrtulník. Informovalo o tom finské ministerstvo obrany, podle něhož mohlo narušení souviset se zásahem po útoku dronů na nákladní loď ve Finském zálivu.\nRusové dříve včera uvedli, že na nákladní loď plující do Kaliningradu v neutrálních vodách Finského zálivu zaútočily dva drony .\nIncident se měl odehrát tři námořní míle od ruské hranice.\nZa dronovým útokem na ruskou kontejnerovou loď pravděpodobně stojí Ukrajina , uvedlo finské ministerstvo obrany.\n2.\nCena nejznámější kryptoměny bitcoin sestoupila pod 56 000 dolarů (zhruba 1,25 milionu korun), dostala se tak na nejnižší úroveň za dva roky.\nZa poklesem bitcoinu stojí podle agentury Reuters odklon investorů od rizikovějších aktiv v důsledku nejistoty ohledně dalšího vývoje v oblasti umělé inteligence.\n3.\nPremiér Andrej Babiš doufá, že změna financování…",
-      "stazeno": "2026-11-22T08:02:49.977Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-fdd38a8a3b32d231",
-    "zachyceno": "2026-11-22T08:02:45.009Z",
-    "publikovano": "2026-11-22T06:51:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610202968/russian-ship-attack-is-a-consequence-of-russia-s-actions-says-estonia-s-fm-pm",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian ship attack is a consequence of Russia's actions, says Estonia's FM, PM",
-    "titulekPuvodni": "Russian ship attack is a consequence of Russia's actions, says Estonia's FM, PM",
-    "shrnuti": "Minister of Foreign Margus Tsahkna (Eesti 200) said that Saturday morning's drone attack on a Russian cargo ship in the Gulf of Finland is a side effect of Ukraine's self-defense in Russia's war of aggression. Officials once again denied that Estonian airspace is being used to carry out attacks.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian ship attack is a consequence of Russia's actions, says Estonia's FM, PM | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1795330260000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nMargus Tsahkna and Kristen Michal. Source: Ken Mürk/ERR\nNews\nMinister of Foreign Margus Tsahkna (Eesti 200) said that Saturday morning's drone attack on a Russian cargo ship in the Gulf of Finland is a side effect of Ukraine's self-defense in Russia's war of aggression. Officials once again denied that Estonian airspace is being used to carry out attacks.\nA Russian cargo ship, the Sparta II, caught fire after being hit by drones in the Baltic Sea on Saturday and later drifted into Finnish waters. The Finnish armed forces said it is \"likely\" that Ukraine is behind the attack.\nTsahkna said Estonia is closely monitoring the situation in the Gulf of Finland and is in close contact with the Finnish authorities.\n\"At Finland's request, Estonia has sent the Navy vessel Kindral Kurvits to assist with rescue operations, including firefighting and pollution response,\" Tsahkna said.\nHe also spoke with…",
-      "stazeno": "2026-11-22T08:02:50.835Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-de453f10de7ae094",
-    "zachyceno": "2026-11-22T08:02:48.347Z",
-    "publikovano": "2026-11-22T06:27:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/22/8064012/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia attacks Ukraine with 186 drones: hits recorded at 18 locations",
-    "titulekPuvodni": "Russia attacks Ukraine with 186 drones: hits recorded at 18 locations",
-    "shrnuti": "Ukraine's air defence shot down or jammed 161 out of 186 Russian drones overnight, including 56 jet-powered, but hits were recorded at 18 locations.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "shot down",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russia attacks Ukraine with 186 drones overnight, 72 of them jet-powered | Ukrainska Pravda\nA soldier. Stock photo: General Staff of the Armed Forces of Ukraine\nRussian forces attacked Ukraine with 186 drones, 72 of them jet-powered, on the night of 21-22 November. Ukraine's air defence shot down or jammed 161 of the drones.\nSource: Ukraine's Air Force\nDetails: The military reported that Russia launched Shahed and Gerbera attack drones, as well as Parodya-type decoy drones.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAircraft, anti-aircraft missile units, electronic warfare assets, unmanned systems units and mobile fire groups from Ukraine's defence forces have been involved in repelling the attack.  As of 08:00, Ukrainian air defence had shot down or jammed 161 Russian drones, including 56 jet-powered ones.\nHits by drones have been recorded at 18 locations and the fall of downed drones (debris) at six locations.\nThe Air Force noted that the attack is ongoing, with several Russian drones still in Ukrainian airspace at the time of the report.\nSubscribe on Patreon to back our journalism long-term.\nair defence\ndrones\nUkraine's Air Force\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nair defence\nLithuania did…",
-      "stazeno": "2026-11-22T08:02:51.468Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f74915898dedf0f1",
-    "zachyceno": "2026-11-22T06:12:06.996Z",
-    "publikovano": "2026-11-22T04:43:00.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-spanelska-policie-zadrzela-naborare-proruskych-hackeru-doma-mel-arzenal-zbrani-40609839",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Španělská policie zadržela náboráře proruských hackerů. Doma měl arzenál zbraní",
-    "titulekPuvodni": "Španělská policie zadržela náboráře proruských hackerů. Doma měl arzenál zbraní",
-    "shrnuti": "Španělská policie v úterý zadržela v Burgosu v centrálním Španělsku náboráře proruské hackerské skupiny NoName057(16). V pátek o zátahu informovalo španělské ministerstvo vnitra.",
-    "kodZeme": "ES",
-    "zeme": "Španělsko",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+zbran",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Španělská policie zadržela náboráře proruských hackerů. Doma měl arzenál zbraní - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nŠpanělská policie zadržela náboráře proruských hackerů. Doma měl arzenál zbraní\nJana Kotrášová\n3:22\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 22. 11., 5:43\nŠpanělská policie v úterý zadržela v Burgosu v centrálním Španělsku náboráře proruské hackerské skupiny NoName057(16). V pátek o zátahu informovalo španělské ministerstvo vnitra.\nZásah španělské policie proti náboráři proruské hackerské skupiny Video: Španělské ministerstvo vnitra\nČlánek\n„Policisté Národní policie zadrželi minulé úterý v Burgosu muže kvůli jeho údajné příslušnosti k proruské kyberteroristické organizaci NoName057(16) a za oslavování terorismu,“ oznámilo ministerstvo.\nMuž podle vyšetřovatelů představoval fyzickou základnu hackerské skupiny ve Španělsku. „Činnost skupiny se dosud omezovala na kyberprostor, a jeho zatčením se tak podařilo zabránit zahájení násilných akcí,“ doplnilo ministerstvo.\nNáborář kromě získávání nových stoupenců skupiny měl na starosti také propagandu a na sociálních sítích šířil výzvy ke kybernetickým útokům na státní instituce nebo ke…",
-      "stazeno": "2026-11-22T06:12:10.541Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ae36ee269b8695a3",
-    "zachyceno": "2026-11-22T08:02:48.356Z",
-    "publikovano": "2026-11-22T01:34:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/22/8064003/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Smoke reported in Russian city of Krasnodar after drone attack and explosions – photos",
-    "titulekPuvodni": "Smoke reported in Russian city of Krasnodar after drone attack and explosions – photos",
-    "shrnuti": "Drones attacked Krasnodar overnight, causing multiple explosions and smoke near a National Guard compound; the city administration said the attack was repelled.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Drone attack causes explosions near Rosgvardia base in Krasnodar | Ukrainska Pravda\nPhoto: Astra\nSmoke has been reported in the Russian city of Krasnodar following a drone attack and multiple explosions, including near the headquarters of the Russian National Guard (Rosgvardia) in Krasnodar Krai.\nSource: Russian media outlet Astra ; Exilenova+ and other Telegram channels\nDetails: Exilenova+ reported that smoke could be seen near the military compound of Russian National Guard military unit 3702 in Krasnodar following multiple explosions.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nOn the night of 21-22 November, temporary restrictions on aircraft arrivals and departures were announced at Krasnodar Airport.\nThe \"Attention Everyone\" sirens sounded. The city administration said that a drone attack had been repelled.\n\r\n\r\n\r\nSmoke\n\r\n\r\n\r\nPhoto: Astra\r\n\r\n\r\n\r\n\r\n\r\n\r\nSmoke\n\r\n\r\n\r\nPhoto: Astra\r\n\r\n\r\n\r\nIn addition, Astra reported that local residents had complained of a burning smell.\nUpdate: Astra later reported that its analysis indicates that the fire had broken out at an address where a Russian military unit, including its operational deployment brigade, had previously been based. Astra said that the…",
-      "stazeno": "2026-11-22T08:02:51.583Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-057d400e327f02ac",
-    "zachyceno": "2026-11-21T23:46:09.812Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/moldova-finland-report-russian-airspace-violations-day-after-suspected-russian-missiles-flew-into-poland/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Moldova, Finland report Russian airspace violations day after suspected Russian missiles flew into Poland.",
-    "titulekPuvodni": "Moldova, Finland report Russian airspace violations day after suspected Russian missiles flew into Poland.",
-    "shrnuti": "",
-    "kodZeme": "MD",
-    "zeme": "Moldavsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "airspace violation",
-      "violat+airspace",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Moldova, Finland report Russian airspace violations day after suspected Russian missiles flew into Poland 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar Moldova, Finland report Russian airspace violations day after suspected Russian missiles flew into Poland\nNovember 22, 2026 1:35 am • 3 min read\nPrefer on Google\nby Dmytro Basmat\nFor illustrative purposes only. A Fennec military helicopter flies during a military drill on March 16, 2016, at the military air base of Solenzara on the French Mediterranean island of Corsica. (Pascal Pochard-Casabianca/AFP via Getty Images)\nBoth Moldova and Finland reported separate instances of airspace violations by Russia on Nov. 21, officials said, just one day after two suspected Russian missiles and a jet-powered drone fell on Polish territory.\nMoldova's Defense Ministry reported that a Russian drone violated Moldovan airspace twice on Nov. 21 during an attack on western Ukraine.\nAccording to officials, the drone first entered into Moldova airspace near the village of Purcari shortly after…",
-      "stazeno": "2026-11-21T23:46:13.047Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7c6bc981541a0fb5",
-    "zachyceno": "2026-11-21T23:46:10.208Z",
-    "publikovano": "2026-11-21T23:05:47.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/video/2026/11/22/ukraine-dashcam-captures-massive-explosion-on-lviv-street",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukraine: Dashcam captures massive explosion on Lviv street",
-    "titulekPuvodni": "Ukraine: Dashcam captures massive explosion on Lviv street",
-    "shrnuti": "A dashcam captured the moment a Russian projectile struck a building directly ahead of a car in Lviv, forcing the driver to reverse. The attack killed two people and injured at least 10 others.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Video. Ukraine: Dashcam captures massive explosion on Lviv street | Euronews\nLoading the video\nNo Comment\nVideo.\nUkraine: Dashcam captures massive explosion on Lviv street\nCopy/paste the link below:\nCopy\nCopy/paste the article video embed link below:\nCopy\nUpdated: 22 November 2026 - 0:05 GMT+1\nA dashcam captured the moment a Russian projectile struck a building directly ahead of a car in Lviv, forcing the driver to reverse. The attack killed two people and injured at least 10 others.\n&hellip; More\nThe footage, recorded by a driver travelling through Lviv on Friday 20 November, shows the moment a projectile struck a building directly ahead of the vehicle . The impact sent debris across the road and forced the driver to reverse sharply before driving away.\nADVERTISEMENT\nADVERTISEMENT\nTwo people were killed and at least 10 others injured in Lviv’s Zaliznychnyi district as a large-scale Russian missile and drone barrage tore across the western Ukrainian city and its surrounding region, igniting fires in residential blocks and garages. According to Ukrainian authorities, the bombardment left a trail of destruction spanning homes, vehicles, a dormitory, a warehouse and critical energy…",
-      "stazeno": "2026-11-21T23:46:13.387Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-37c360098c61605b",
-    "zachyceno": "2026-11-21T23:46:12.851Z",
-    "publikovano": "2026-11-21T21:40:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4187255-jetpowered-drone-violates-moldovan-airspace-twice.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Jet-powered drone violates Moldovan airspace twice",
-    "titulekPuvodni": "Jet-powered drone violates Moldovan airspace twice",
-    "shrnuti": "A jet-powered drone violated Moldova’s airspace twice on Saturday morning, November 21, amid Russian attacks on Ukraine.",
-    "kodZeme": "MD",
-    "zeme": "Moldavsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "violat+airspace",
-      "dron",
-      "drone",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Jet-powered drone violates Moldovan airspace twice\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 22 November 2026, 01:46\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA jet-powered drone violated Moldova&rsquo;s airspace twice on Saturday morning, November 21, amid Russian attacks on Ukraine.\nThe Moldovan Ministry of Defense reported this, according to NewsMaker , Ukrinform says.\n\r\n\r\nAccording to the ministry, the UAV first entered the country&rsquo;s airspace at 11:20 from the direction of the Ukrainian village of Troitske, heading toward the village of Purcari in the Ștefan Vodă district. Five minutes later, the drone left Moldovan airspace, heading back toward Troitske.\n\r\n\r\nAt 11:31, the same drone crossed the border again from…",
-      "stazeno": "2026-11-21T23:46:13.465Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a7edc10a8ab451e5",
-    "zachyceno": "2026-11-21T23:46:12.854Z",
-    "publikovano": "2026-11-21T21:12:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4187254-three-people-injured-in-russian-attack-on-zaporizhzhia-including-two-children.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Three people injured in Russian attack on Zaporizhzhia, including two children",
-    "titulekPuvodni": "Three people injured in Russian attack on Zaporizhzhia, including two children",
-    "shrnuti": "The number of people injured in the Russian attack on Zaporizhzhia has risen to three, including two children.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Three people injured in Russian attack on Zaporizhzhia, including two children\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 22 November 2026, 01:46\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people injured in the Russian attack on Zaporizhzhia has risen to three, including two children.\nMykhailo Semikin, acting Head of the Zaporizhzhia Regional Military Administration, reported this on Telegram , according to Ukrinform.\n\r\n\r\n&ldquo;The number of injured has risen to three, including two children,&rdquo; the post said.\n\r\n\r\nIn addition, the blast wave damaged apartment buildings.\n\r\n\r\nThe injured received all necessary medical assistance.\n\r\n\r\nRead also: Injury toll in Russian attack on Kryvyi Rih rises to 73, including…",
-      "stazeno": "2026-11-21T23:46:14.400Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-57ab64a3378762a7",
-    "zachyceno": "2026-11-21T23:46:12.859Z",
-    "publikovano": "2026-11-21T20:25:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4187248-injury-toll-in-russian-attack-on-kryvyi-rih-rises-to-73-including-nine-children.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Injury toll in Russian attack on Kryvyi Rih rises to 73, including nine children",
-    "titulekPuvodni": "Injury toll in Russian attack on Kryvyi Rih rises to 73, including nine children",
-    "shrnuti": "The number of people injured in yesterday’s Russian attack on Kryvyi Rih has risen to 73, including nine children.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Injury toll in Russian attack on Kryvyi Rih rises to 73, including nine children\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 22 November 2026, 01:46\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people injured in yesterday&rsquo;s Russian attack on Kryvyi Rih has risen to 73, including nine children.\nOleksandr Vilkul, Head of the Kryvyi Rih Defense Council, reported this on Telegram , according to Ukrinform.\n\r\n\r\nVilkul noted that efforts to deal with the aftermath of the ballistic missile and drone attacks carried out by Russian forces yesterday evening and overnight are still underway in the city.\n\r\n\r\n&ldquo;Two people were killed: a 20-year-old emergency medical technician and a seven-year-old boy... The number of…",
-      "stazeno": "2026-11-21T23:46:14.902Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-5e1e334a3ce134a2",
-    "zachyceno": "2026-11-21T20:03:04.609Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/explosions-reported-near-russian-baltic-fleet-base-in-kaliningrad-oblast-amid-drone-alerts/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts.",
-    "titulekPuvodni": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts.",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts\nNovember 21, 2026 9:01 pm • 2 min read\nPrefer on Google\nT\nby Tamara Nowakowsky\nA nighttime view of a port facility in footage shared by the Exilenova+ Telegram channel amid reports of explosions and drone activity in Baltiysk, Kaliningrad Oblast, on Nov. 21, 2026. (Exilenova+/Telegram)\nExplosions and suspected drone activity were reported near Russia's Baltic Fleet naval base in Baltiysk, Kaliningrad Oblast, on Nov. 21, as air raid sirens sounded across parts of the Russian exclave.\nThe reports come amid heightened security concerns in the Baltic region, with the Russian exclave bordering NATO members Poland and Lithuania. At the time of publication, it remained unclear whether the naval base had been targeted or whether any military facilities had sustained damage.\nUkrainian monitoring Telegram…",
-      "stazeno": "2026-11-21T20:03:06.874Z",
       "stav": 200
     }
   }

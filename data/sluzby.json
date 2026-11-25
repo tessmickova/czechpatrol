@@ -1,21 +1,11 @@
 {
-  "aktualizovano": "2026-11-25T08:03:39.684Z",
+  "aktualizovano": "2026-11-25T10:20:53.440Z",
   "stavy": [
     {
       "klic": "cloudflare",
-      "stav": "vypadek",
-      "popis": "Partial System Outage",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Firewall Configuration Delay",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/xufkpdtfdglk",
-          "aktualizovano": "2026-11-25T07:49:18.356Z"
-        },
-        {
-          "nazev": "Magic Transit Degraded Performance",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/no721jcnlrbh",
-          "aktualizovano": "2026-11-24T14:58:40.337Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -28,25 +18,16 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-25T08:03:39.684Z",
+      "zkontrolovano": "2026-11-25T10:20:53.440Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India",
-          "odkaz": "https://stspg.io/0ksyj3jq48yb",
-          "aktualizovano": "2026-11-24T23:31:09.036-08:00"
-        }
-      ],
-      "postizene": [
-        "Calling (Inbound/Outbound)",
-        "Zoom Phone - APAC"
-      ],
-      "zkontrolovano": "2026-11-25T08:03:39.684Z",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
+      "incidenty": [],
+      "postizene": [],
+      "zkontrolovano": "2026-11-25T10:20:53.440Z",
       "chyba": null
     },
     {
@@ -55,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-25T08:03:39.684Z",
+      "zkontrolovano": "2026-11-25T10:20:53.440Z",
       "chyba": null
     }
   ]
