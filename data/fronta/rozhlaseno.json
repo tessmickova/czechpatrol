@@ -685,6 +685,11 @@
       "kdy": "2026-11-24T06:30:25.275Z",
       "zaznamu": 0,
       "neodeslan": "nic od 7/10"
+    },
+    "2026-11-24-vecer": {
+      "kdy": "2026-11-24T18:30:34.620Z",
+      "zaznamu": 1,
+      "messageId": 78
     }
   },
   "navrhy": {
@@ -1409,9 +1414,10 @@
     },
     "i-2026-11-23-lublin-rcb-dron": {
       "kdy": "2026-11-23T23:41:19.031Z",
-      "historie": 1,
+      "historie": 2,
       "cesta": "hned",
-      "messageId": 75
+      "messageId": 75,
+      "prehled": "2026-11-24-vecer"
     }
   },
   "snimky": {
