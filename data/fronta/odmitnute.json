@@ -1,5 +1,55 @@
 [
   {
+    "id": "k-8855933b2838e4e1",
+    "zachyceno": "2026-11-25T20:06:46.269Z",
+    "publikovano": "2026-11-25T20:06:17.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2641019",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Schooladviezen vaker naar boven bijgesteld na invoering doorstroomtoets",
+    "shrnuti": "Sinds de invoering van de doorstroomtoets wordt het schooladvies voor leerlingen in groep 8 veel vaker naar boven bijgesteld. Dat blijkt uit cijfers van het Centraal Bureau voor de Statistiek (CBS). In het schooljaar 2024-2025 kwam 27 procent van de leerlingen in aanmerking voor een hoger schooladvi",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-39c75bc3ae9ee2f0",
+    "zachyceno": "2026-11-25T20:06:46.824Z",
+    "publikovano": "2026-11-25T20:04:56.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/actualitate/generalul-r-balaceanu-rusia-va-fi-in-continuare-pregatita-pentru-al-doilea-razboi-cu-ucraina-ce-a-spus-despre-marea-neagra-4053141",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Generalul (r) Bălăceanu: Rusia „va fi în continuare pregătită pentru al doilea război cu Ucraina”. Ce a spus despre Marea Neagră",
+    "shrnuti": "În contextul în care șeful NATO a afirmat că, pe lângă forțele armate ale statelor membre ale Alianței, și populația civilă, companiile și instituțiile guvernamentale trebuie să se pregătească pentru un eventual război, generalul în retragere Virgil Bălăceanu a atenționat că Rusia va continua să se ",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a0263da2d3833349",
+    "zachyceno": "2026-11-25T20:06:45.881Z",
+    "publikovano": "2026-11-25T20:03:00.000Z",
+    "zdroj": {
+      "nazev": "SVT Nyheter (Švédsko)",
+      "url": "https://www.svt.se/nyheter/lokalt/dalarna/nytt-fall-av-algsjuka-i-sverige",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nytt fall av älgsjuka i Sverige",
+    "shrnuti": "Ett nytt misstänkt fall av avmagringssjuka hos älg har konstaterats i Dalarna, enligt Statens veterinärmedicinska anstalt (SVA).",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-7218e3d27c74a11e",
     "zachyceno": "2026-11-25T20:03:21.015Z",
     "publikovano": "2026-11-25T20:01:19.000Z",
@@ -111,6 +161,22 @@
     "kategorie": [
       "rusko"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8ca7f411408405f6",
+    "zachyceno": "2026-11-25T20:06:46.795Z",
+    "publikovano": "2026-11-25T19:59:35.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/deportes/futbol/champions-league/2026/11/25/6b073398e9cf4a9b788b45b3.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Gordon y Adeyemi comandan la goleada del Barça ante un Sabah que no pudo ser respondón",
+    "shrnuti": "Dos goles del inglés acaban con los sustos del equipo azrbayano. Adeyemi y Gabriel Jesús redondearon un marcador que permitió a Flick repartir esfuerzo. El lunar fue la lesión de Balde. Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -241,6 +307,22 @@
     },
     "titulek": "Rogobete: Pacienții din România așteaptă aproximativ 1.000 de zile pentru acces la medicamente inovatoare, dublu față de media UE",
     "shrnuti": "Pacienții din România așteaptă aproximativ 1.000 de zile pentru a avea acces la medicamente inovatoare, aproape dublu față de media Uniunii Europene, de circa 500 de zile, iar întârzierile pot avea consecințe grave pentru persoanele cu afecțiuni severe, a declarat miercuri ministrul Sănătății, Alexa",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-403f429802899af8",
+    "zachyceno": "2026-11-25T20:06:44.628Z",
+    "publikovano": "2026-11-25T19:51:20.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/us-news/live/2026/nov/25/donald-trump-jensen-huang-nvidia-pardon-senate-hearing-iowa-abdul-el-sayed-latest-news-updates",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‘I feel free of everything evil’: Kilmar Ábrego García lands in Spain after choosing to leave US - live",
+    "shrnuti": "Before his departure, Immigration and Customs Enforcement agents met him at the airport and removed his ankle monitor, an advocacy group reported Sign up for the Breaking News US email to get newsletter alerts in your inbox US trade representative Jamieson Greer claimed this morning that he did not ",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -741,6 +823,38 @@
     },
     "titulek": "Vance says Jensen Huang doesn’t need pardon after Trump says ‘it’s an option’",
     "shrnuti": "Vice-president says he supports reinstatement of Nvidia CEO after ‘assurances’ from top US officials was ‘under no investigation’ JD Vance said on Wednesday that Jensen Huang , the recently reinstalled Nvidia CEO , was never under criminal investigation and therefore did not need a pardon after Dona",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-65dbf41466eb4d4a",
+    "zachyceno": "2026-11-25T20:06:43.544Z",
+    "publikovano": "2026-11-25T19:36:05.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/69788/6398060",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "FW-EN: Fahrzeug kollidiert mit Baum",
+    "shrnuti": "Sprockhövel (ots) - Am Mittwoch kam ein Fahrzeug auf der Querspange von der Fahrbahn ab und kollidierte mit einem Baum. Gegen 11.40 Uhr wurde die Feuerwehr Sprockhövel alarmiert. Bei Eintreffen der Feuerwehr war die Polizei und der Rettungsdienst ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ee0728ad4a03e005",
+    "zachyceno": "2026-11-25T20:06:43.546Z",
+    "publikovano": "2026-11-25T19:34:52.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/65858/6398059",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-WES: Hünxe - Schwerer Verkehrsunfall mit schwerverletztem Radfahrer - Rettungshubschrauber im Einsatz",
+    "shrnuti": "Wesel (ots) - Am Mittwoch, den 25.011.2026, gegen 14.45 Uhr, befuhr ein 41-jähriger Pkw-Fahrer aus Xanten in Hünxe die Weseler Straße, aus Richtung der BAB A3 kommend, in Fahrtrichtung Hindenburgstraße und beabsichtigte nach rechts auf die ...",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -2849,6 +2963,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-d3ef1d162b630b21",
+    "zachyceno": "2026-11-25T20:06:44.632Z",
+    "publikovano": "2026-11-25T18:24:48.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/us-news/2026/nov/25/iowa-controlled-blast-lead-azide",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Smoke seen from a mile away as army detonates US stockpile of bomb-making chemicals in Iowa",
+    "shrnuti": "Controlled blast to dispose of lead azide risks releasing plumes of toxic chemicals in 100-mile radius The US army detonated the nation’s entire stockpile of the the bomb-making material lead azide in Iowa on Wednesday morning, despite an outpouring of public concern about potential health and envir",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-e6f7221f44555720",
     "zachyceno": "2026-11-25T20:03:21.931Z",
     "publikovano": "2026-11-25T18:23:04.000Z",
@@ -3043,6 +3175,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-f53784d55f3d4217",
+    "zachyceno": "2026-11-25T20:06:43.899Z",
+    "publikovano": "2026-11-25T18:20:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/domaci/pocasi-snih-vystraha-zima-cesky-hydrometeorologicky-ustav.A261125_120646_domaci_ikro#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sníh má zpoždění. Až 20 centimetrů zasype Česko v jiný čas, než se čekalo",
+    "shrnuti": "Český hydrometeorologický ústav (ČHMÚ) ve středu zpřísnil výstrahu před sněžením, které má ve čtvrtek zasáhnout většinu Česka. Na jihu a jihovýchodě země může během dne napadnout až 20 centimetrů bílé pokrývky. Meteorologové varují před komplikacemi v dopravě, zhoršenou viditelností i zpožděním spoj",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-59868783b6bd5b27",
     "zachyceno": "2026-11-25T20:03:19.752Z",
     "publikovano": "2026-11-25T18:20:00.000Z",
@@ -3139,6 +3287,22 @@
     },
     "titulek": "Pariuri la Casa Albă pe data la care Trump își va concedia un ministru. Ce gafe a făcut noul șef al Homeland Security",
     "shrnuti": "Mai mulți angajați ai Casei Albe au organizat un pariu informal pentru a ghici cât timp va mai rămâne în funcție Markwayne Mullin, secretarul american pentru Securitate Internă (Department of Homeland Security).",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-81c6dad25e300652",
+    "zachyceno": "2026-11-25T20:06:46.411Z",
+    "publikovano": "2026-11-25T18:17:25.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/25/mouvement-lyceen-plus-de-400-eleves-exclus-definitivement-de-leur-etablissement_6815162_3224.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mouvement lycéen : plus de 400 élèves exclus définitivement de leur établissement, sur les 3 000 procédures disciplinaires engagées",
+    "shrnuti": "Le ministre a appelé à ne pas regarder « l’arbre qui cache la forêt » et voir que la grande majorité des élèves n’a commis aucun acte répréhensible.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -7987,169 +8151,6 @@
     },
     "titulek": "Každou hodinu zemře pět žen, které zavraždí jejich partner nebo blízký příbuzný",
     "shrnuti": "Dnes je Mezinárodní den boje proti násilí na ženách. Podle aktuální zprávy Organizace spojených národů (OSN) bylo v minulém roce zavražděno kolem 47 tisíc žen a dívek – a to buď partnerem, nebo blízkým příbuzným. To vychází na pět obětí za každou hodinu, tedy 129 za den.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-181b0d509fd4254c",
-    "zachyceno": "2026-11-25T20:03:22.898Z",
-    "publikovano": "2026-11-25T16:22:21.000Z",
-    "zdroj": {
-      "nazev": "NewsMaker (Moldavsko)",
-      "url": "https://newsmaker.md/ru/obyski-v-koll-czentre-v-kishineve-po-podozreniyu-v-moshennicheskoi-sheme",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Обыски в колл-центре в Кишиневе по подозрению в мошеннической схеме",
-    "shrnuti": "В Кишиневе в офисе колл-центра правоохранители проводят обыски вечером 25 ноября. Об этом сообщил Генеральный инспекторат полиции. «Сотрудники Управления по борьбе с организованной преступностью и следователи Национальной следственной инспекции совместно с прокурорами по борьбе с преступностью и осо",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-192f432bdafdfd21",
-    "zachyceno": "2026-11-25T20:03:20.536Z",
-    "publikovano": "2026-11-25T16:21:55.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261125-us-unveils-proposed-tariffs-on-major-partners-including-eu-and-china",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "US unveils proposed tariffs on major partners, including EU and China",
-    "shrnuti": "The United States on Wednesday unveiled proposed tariffs on 14 economies including the European Union and China, after a months-long probe into alleged excess production – the latest move by US President Donald Trump to remake Washington's trade relationships. The new tariffs will need to undergo a ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a17f4b95fb2cf2f0",
-    "zachyceno": "2026-11-25T20:03:22.413Z",
-    "publikovano": "2026-11-25T16:21:48.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/externe/ue/reactia-ue-dupa-ce-administratia-trump-a-propus-aplicarea-unei-taxe-vamale-de-15-respingem-cu-tarie-premisa-4052887",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Reacția UE, după ce administrația Trump a propus aplicarea unei taxe vamale de 15%: „Respingem cu tărie premisa”",
-    "shrnuti": "Comisia Europeană a respins miercuri afirmația Washingtonului potrivit căreia Europa alimentează supracapacitatea industrială la nivel mondial, după ce administrația Trump a propus aplicarea unei taxe vamale de 15% asupra blocului format din 27 de țări, relatează Politico.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2b5c1a5c811c8359",
-    "zachyceno": "2026-11-25T20:03:20.914Z",
-    "publikovano": "2026-11-25T16:21:38.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000351091/fr252heres-topmodel-vera-gr228fin-von-lehndorff-ist-gestorben?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Früheres Topmodel Veruschka ist gestorben",
-    "shrnuti": "Vera Gräfin von Lehndorff starb am Dienstag im Alter von 87 Jahren in Berlin. Sie galt als erstes deutsches Topmodel",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-711b11f8865e50ee",
-    "zachyceno": "2026-11-25T20:03:21.251Z",
-    "publikovano": "2026-11-25T16:21:05.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/elet/20261125_szakma-testulet-kihagy-kidolgoz-torvenymodositas-utonevjegyzek-kormany",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "A szakmai testületet kihagyta, Kósa Lajos ötletét átvette – törvénymódosítást dolgozott ki az utónevekről a kormány",
-    "shrnuti": "Raátz Judit, az Utónév-engedélyezési Bizottság elnökét meglepte, hogy előzetes megkeresésük nélkül született szakmailag vitatható jogszabály-tervezet, amely még Kósa Lajos egyik ötletét is átvette.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1b17fbde0bb070ea",
-    "zachyceno": "2026-11-25T20:03:19.769Z",
-    "publikovano": "2026-11-25T16:21:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/amerikanista-trumpova-intervence-v-nvidii-je-riskantni-nepopularnimu_2611251721_mst",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Amerikanista: Trumpova intervence v Nvidii je riskantní. Nepopulárnímu prezidentovi nepomůže",
-    "shrnuti": "Americký prezident Donald Trump vydělal na akciích Nvidie díky jejich silnému růstu až 15 milionů dolarů (asi 335 milionů korun). Upozornil na to The Guardian. Akcie zpevnily o více než 30 procent v reakci na překvapivý návrat Jensena Huanga zpět do funkce ředitele. Trump čelí za svou angažovanost k",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5e1a78121a34b89c",
-    "zachyceno": "2026-11-25T20:03:20.538Z",
-    "publikovano": "2026-11-25T16:20:57.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261125-iranian-family-seeks-release-of-twin-sisters-facing-death-penalty-and-25-years-in-prison",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Iranian family seeks release of twin sisters facing death penalty and 25 years in prison",
-    "shrnuti": "Twin sisters Taraneh and Romina Rahimi are awaiting their sentences in Iran. They were arrested in January 2026, at the age of just 19, for taking part in protests against the Iranian regime. Taraneh is facing the death penalty, while Romina has been sentenced to 25 years in prison. Their family has",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-fcf98f9ac3fc4f2c",
-    "zachyceno": "2026-11-25T20:03:21.733Z",
-    "publikovano": "2026-11-25T16:20:20.000Z",
-    "zdroj": {
-      "nazev": "NRK (Norsko)",
-      "url": "https://www.nrk.no/buskerud/en-femtemann-fortsatt-siktet-etter-jonas-drapet_-_-belastende-1.18084062",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "En femtemann fortsatt siktet etter Jonas-drapet: – Belastende",
-    "shrnuti": "Mannens forsvarer reagerer på at hans klient fortsatt må leve i uvisshet.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bc13ca65d2cb6991",
-    "zachyceno": "2026-11-25T20:03:22.447Z",
-    "publikovano": "2026-11-25T16:20:13.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/externe/rusia/reactia-kremlinului-dupa-dezvaluirile-potrivit-carora-peste-700-000-de-soldati-rusi-au-murit-in-ucraina-4052699",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Reacția Kremlinului după dezvăluirile potrivit cărora peste 700.000 de soldați ruși au murit în Ucraina",
-    "shrnuti": "Estimarea de peste 700.000, mult mai ridicată decât bilanțurile cunoscute anterior, se bazează pe documente oficiale obținute de două grupări de hackeri care au pătruns în sistemele informatice ale agenției ruse de statistică Rosstat. Datele au fost analizate de mai multe publicații independente, ca",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b26d994a6e41b101",
-    "zachyceno": "2026-11-25T20:03:22.925Z",
-    "publikovano": "2026-11-25T16:20:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-society/4188592-dnipro-sets-up-additional-emergency-assistance-points-amid-power-supply-problems.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Dnipro sets up additional emergency assistance points amid power supply problems",
-    "shrnuti": "Emergency responders have set up additional assistance points for residents of Dnipro amid the difficult electricity supply situation in the city.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
