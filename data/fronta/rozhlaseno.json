@@ -60,6 +60,10 @@
     "emp-elektronika-2026-11": {
       "kdy": "2026-11-24T06:30:25.275Z",
       "messageId": 77
+    },
+    "czujni-aplikace-2026-11": {
+      "kdy": "2026-11-25T06:31:02.909Z",
+      "messageId": 79
     }
   },
   "prehledy": {
@@ -690,6 +694,11 @@
       "kdy": "2026-11-24T18:30:34.620Z",
       "zaznamu": 1,
       "messageId": 78
+    },
+    "2026-11-25-rano": {
+      "kdy": "2026-11-25T06:31:02.909Z",
+      "zaznamu": 0,
+      "neodeslan": "nic od 7/10"
     }
   },
   "navrhy": {
