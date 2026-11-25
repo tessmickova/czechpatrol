@@ -1,30 +1,26 @@
 {
-  "nacteno": "2026-11-25T01:31:50.355Z",
-  "odeslano": "2026-11-24T10:57:33.000Z",
-  "identifikator": "2.49.0.0.203.0.CZ.261124105733.XOCZ50_OKPR_000418",
+  "nacteno": "2026-11-25T12:01:30.776Z",
+  "odeslano": "2026-11-25T10:32:48.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.261125103248.XOCZ50_OKPR_000419",
   "vystrahy": [
     {
-      "id": "chmi:Rizikové sněhové jevy:2026-11-26T05:00:00.000Z:Hlavní město Praha,Jihočeský,Pardubický,Olomoucký,Moravskoslezský",
+      "id": "chmi:Rizikové sněhové jevy:2026-11-26T16:00:00.000Z:Hlavní město Praha",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "kraje",
         "kraje": [
-          "Hlavní město Praha",
-          "Jihočeský",
-          "Pardubický",
-          "Olomoucký",
-          "Moravskoslezský"
+          "Hlavní město Praha"
         ]
       },
       "titulek": "Rizikové sněhové jevy",
-      "text": "Sněžení s tvorbou sněhové pokrývky o výšce 4 až 10 cm.\nPravděpodobné komplikace v silniční dopravě. Hůře sjízdné a schůdné trasy a komunikace, zhoršená viditelnost, omezení v řízení vozidla. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
+      "text": "Sněžení s tvorbou sněhové pokrývky o výšce 3 až 10 cm. Pravděpodobné komplikace v silniční dopravě. Hůře sjízdné a schůdné trasy a komunikace, zhoršená viditelnost, omezení v řízení vozidla. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
       "textJe": "zneni-vydavatele",
       "pokyn": "Jezdit a chodit velmi opatrně, přizpůsobit jízdu stavu komunikace. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky, na horách i sněhové řetězy. Na horách dodržovat pokyny Horské služby.",
-      "vydavatel": "ČHMÚ, Tomáš Mejstřík",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-24T10:57:33.000Z",
-      "platiOd": "2026-11-26T05:00:00.000Z",
-      "platiDo": "2026-11-27T05:00:00.000Z",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T16:00:00.000Z",
+      "platiDo": "2026-11-27T08:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
       "coNevime": [],
@@ -33,20 +29,43 @@
       "detail": null
     },
     {
-      "id": "chmi:Rizikové sněhové jevy:2026-11-26T05:00:00.000Z:nezname",
+      "id": "chmi:Rizikové sněhové jevy:2026-11-26T16:00:00.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
-        "popis": "Středočeský kraj (Benešov, Brandýs nad Labem-Stará Boleslav, Čáslav, Černošice, Český Brod, Dobříš, Kolín, Kutná Hora, Lysá nad Labem, Nymburk, Poděbrady, Příbram, Říčany, Sedlčany, Vlašim, Votice), Plzeňský kraj (Sušice), Královéhradecký kraj (Broumov, Dobruška, Dvůr Králové nad Labem, Hradec Králové, Jaroměř, Kostelec nad Orlicí, Náchod, Nové Město nad Metují, Nový Bydžov, Rychnov nad Kněžnou, Trutnov), Kraj Vysočina (Bystřice nad Pernštejnem, Havlíčkův Brod, Humpolec, Chotěboř, Jihlava, Nové Město na Moravě, Pacov, Pelhřimov, Světlá nad Sázavou, Telč, Velké Meziříčí, Žďár nad Sázavou), Jihomoravský kraj (Blansko, Boskovice, Kuřim, Tišnov, Vyškov), Zlínský kraj (Bystřice pod Hostýnem, Holešov, Kroměříž, Luhačovice, Otrokovice, Rožnov pod Radhoštěm, Valašské Klobouky, Valašské Meziříčí, Vizovice, Vsetín, Zlín)"
+        "popis": "Středočeský kraj (Benešov, Brandýs nad Labem-Stará Boleslav, Čáslav, Černošice, Český Brod, Dobříš, Kolín, Kutná Hora, Lysá nad Labem, Nymburk, Poděbrady, Příbram, Říčany, Sedlčany, Vlašim, Votice), Jihočeský kraj (Blatná, Milevsko, Písek, Strakonice, Vimperk, Vodňany), Plzeňský kraj (Sušice), Kraj Vysočina (Světlá nad Sázavou)"
       },
       "titulek": "Rizikové sněhové jevy",
-      "text": "Sněžení s tvorbou sněhové pokrývky o výšce 4 až 10 cm.\nPravděpodobné komplikace v silniční dopravě. Hůře sjízdné a schůdné trasy a komunikace, zhoršená viditelnost, omezení v řízení vozidla. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
+      "text": "Sněžení s tvorbou sněhové pokrývky o výšce 3 až 10 cm. Pravděpodobné komplikace v silniční dopravě. Hůře sjízdné a schůdné trasy a komunikace, zhoršená viditelnost, omezení v řízení vozidla. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
       "textJe": "zneni-vydavatele",
       "pokyn": "Jezdit a chodit velmi opatrně, přizpůsobit jízdu stavu komunikace. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky, na horách i sněhové řetězy. Na horách dodržovat pokyny Horské služby.",
-      "vydavatel": "ČHMÚ, Tomáš Mejstřík",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-24T10:57:33.000Z",
-      "platiOd": "2026-11-26T05:00:00.000Z",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T16:00:00.000Z",
+      "platiDo": "2026-11-27T08:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    },
+    {
+      "id": "chmi:Rizikové sněhové jevy:2026-11-26T11:00:00.000Z:nezname",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "nezname",
+        "popis": "Jihočeský kraj (České Budějovice, Český Krumlov, Prachatice, Soběslav, Tábor, Týn nad Vltavou), Kraj Vysočina (Bystřice nad Pernštejnem, Havlíčkův Brod, Humpolec, Jihlava, Nové Město na Moravě, Pacov, Pelhřimov, Velké Meziříčí, Žďár nad Sázavou), Jihomoravský kraj (Blansko, Boskovice, Kuřim, Tišnov, Vyškov), Olomoucký kraj (Prostějov, Přerov), Zlínský kraj (Bystřice pod Hostýnem, Holešov, Kroměříž, Otrokovice)"
+      },
+      "titulek": "Rizikové sněhové jevy",
+      "text": "Sněžení s tvorbou sněhové pokrývky o výšce 3 až 10 cm. Pravděpodobné komplikace v silniční dopravě. Hůře sjízdné a schůdné trasy a komunikace, zhoršená viditelnost, omezení v řízení vozidla. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Jezdit a chodit velmi opatrně, přizpůsobit jízdu stavu komunikace. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky, na horách i sněhové řetězy. Na horách dodržovat pokyny Horské služby.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T11:00:00.000Z",
       "platiDo": "2026-11-27T05:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
@@ -56,21 +75,117 @@
       "detail": null
     },
     {
-      "id": "chmi:Velmi rizikové sněhové jevy:2026-11-26T05:00:00.000Z:nezname",
+      "id": "chmi:Velmi rizikové sněhové jevy:2026-11-26T09:00:00.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
-        "popis": "Kraj Vysočina (Moravské Budějovice, Náměšť nad Oslavou, Třebíč), Jihomoravský kraj (Brno, Břeclav, Bučovice, Hodonín, Hustopeče, Ivančice, Kyjov, Mikulov, Moravský Krumlov, Pohořelice, Rosice, Slavkov u Brna, Šlapanice, Veselí nad Moravou, Znojmo, Židlochovice), Zlínský kraj (Uherské Hradiště, Uherský Brod)"
+        "popis": "Jihočeský kraj (Dačice, Jindřichův Hradec, Kaplice, Trhové Sviny, Třeboň), Kraj Vysočina (Moravské Budějovice, Náměšť nad Oslavou, Telč, Třebíč), Jihomoravský kraj (Brno, Břeclav, Bučovice, Hodonín, Hustopeče, Ivančice, Kyjov, Mikulov, Moravský Krumlov, Pohořelice, Rosice, Slavkov u Brna, Šlapanice, Veselí nad Moravou, Znojmo, Židlochovice), Zlínský kraj (Luhačovice, Rožnov pod Radhoštěm, Uherské Hradiště, Uherský Brod, Valašské Klobouky, Valašské Meziříčí, Vizovice, Vsetín, Zlín)"
       },
       "titulek": "Velmi rizikové sněhové jevy",
-      "text": "Vydatné sněžení s tvorbou vysoké sněhové pokrývky o výšce kolem 10 cm, ojediněle až 15 cm. Riziko silného sněžení se sníženou dohledností a rychlou tvorbou sněhové pokrývky kolem 2 cm/1h.\n\nČetné komplikace v dopravě, špatně sjízdné a schůdné trasy a komunikace, špatná viditelnost, řízení vozidla problematické. Omezení nebo přerušení provozu na velkém počtu dopravních cest, zvýšené množství uzavírek, výluk, zpoždění spojů a zvýšený výskyt dopravních nehod.",
+      "text": "Vydatné sněžení s tvorbou vysoké sněhové pokrývky o výšce 8 až 20 cm. Riziko silného sněžení se sníženou dohledností a rychlou tvorbou sněhové pokrývky 2 cm/1h. Četné komplikace v dopravě, energetice a ve službách. Špatně sjízdné a schůdné trasy a komunikace, špatná viditelnost, řízení vozidla problematické. Omezení nebo přerušení provozu na velkém počtu dopravních cest, zvýšené množství uzavírek, výluk, zpoždění spojů a zvýšený výskyt dopravních nehod. Riziko škod na stavbách, narušení statiky plochých střech. Riziko úrazu v důsledku pádu sněhu ze střech. Riziko lámání větví stromů a pádu na elektrická a trakční vedení, následné výpadky v dodávkách elektřiny. Částečné omezení zásobování a služeb.",
       "textJe": "zneni-vydavatele",
       "pokyn": "Omezit nebo přeplánovat cestování, pokud je to možné. Vyjíždět autem jen v nutných případech a počítat s prodloužením doby jízdy. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky a sněhové řetězy. Zajistit úklid sněhu ze střech. Dbát na bezpečnost s ohledem na nebezpečí pádu většího objemu sněhu ze střech. Nepřibližovat se k spadlým drátům elektrického vedení a být připraven na možné výpadky elektřiny. Na horách omezit túry, sledovat a dodržovat pokyny Horské služby. Aktuální situaci sledovat na výstupu z meteorologických radarů v mobilní aplikaci ČHMÚ nebo na webových stránkách www.chmi.cz.",
-      "vydavatel": "ČHMÚ, Tomáš Mejstřík",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-24T10:57:33.000Z",
-      "platiOd": "2026-11-26T05:00:00.000Z",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T09:00:00.000Z",
       "platiDo": "2026-11-27T05:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    },
+    {
+      "id": "chmi:Rizikové sněhové jevy:2026-11-26T16:00:00.000Z:Pardubický",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "kraje",
+        "kraje": [
+          "Pardubický"
+        ]
+      },
+      "titulek": "Rizikové sněhové jevy",
+      "text": "Sněžení s tvorbou sněhové pokrývky o výšce 3 až 10 cm. V kombinaci prachového sněhu a silnějšího větru se budou tvořit sněhové jazyky. Pravděpodobné komplikace v silniční dopravě. Hůře sjízdné a schůdné trasy a komunikace, zhoršená viditelnost, omezení v řízení vozidla. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Jezdit a chodit velmi opatrně, přizpůsobit jízdu stavu komunikace. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky, na horách i sněhové řetězy. Na horách dodržovat pokyny Horské služby.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T16:00:00.000Z",
+      "platiDo": "2026-11-27T08:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    },
+    {
+      "id": "chmi:Rizikové sněhové jevy:2026-11-26T16:00:00.000Z:nezname",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "nezname",
+        "popis": "Královéhradecký kraj (Broumov, Dobruška, Dvůr Králové nad Labem, Hradec Králové, Jaroměř, Kostelec nad Orlicí, Náchod, Nové Město nad Metují, Nový Bydžov, Rychnov nad Kněžnou, Trutnov), Kraj Vysočina (Chotěboř), Olomoucký kraj (Hranice, Konice, Lipník nad Bečvou, Litovel, Mohelnice, Olomouc, Šternberk, Šumperk, Uničov, Zábřeh)"
+      },
+      "titulek": "Rizikové sněhové jevy",
+      "text": "Sněžení s tvorbou sněhové pokrývky o výšce 3 až 10 cm. V kombinaci prachového sněhu a silnějšího větru se budou tvořit sněhové jazyky. Pravděpodobné komplikace v silniční dopravě. Hůře sjízdné a schůdné trasy a komunikace, zhoršená viditelnost, omezení v řízení vozidla. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Jezdit a chodit velmi opatrně, přizpůsobit jízdu stavu komunikace. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky, na horách i sněhové řetězy. Na horách dodržovat pokyny Horské služby.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T16:00:00.000Z",
+      "platiDo": "2026-11-27T08:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    },
+    {
+      "id": "chmi:Velmi rizikové sněhové jevy:2026-11-26T16:00:00.000Z:Moravskoslezský",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "kraje",
+        "kraje": [
+          "Moravskoslezský"
+        ]
+      },
+      "titulek": "Velmi rizikové sněhové jevy",
+      "text": "Vydatné sněžení s tvorbou vysoké sněhové pokrývky o výšce 8 až 20 cm. V kombinaci prachového sněhu a silnějšího větru se budou tvořit sněhové jazyky. Riziko silného sněžení se sníženou dohledností a rychlou tvorbou sněhové pokrývky 2 cm/1h. Četné komplikace v dopravě, energetice a ve službách. Špatně sjízdné a schůdné trasy a komunikace, špatná viditelnost, řízení vozidla problematické. Omezení nebo přerušení provozu na velkém počtu dopravních cest, zvýšené množství uzavírek, výluk, zpoždění spojů a zvýšený výskyt dopravních nehod. Riziko škod na stavbách, narušení statiky plochých střech. Riziko úrazu v důsledku pádu sněhu ze střech. Riziko lámání větví stromů a pádu na elektrická a trakční vedení, následné výpadky v dodávkách elektřiny. Částečné omezení zásobování a služeb.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Omezit nebo přeplánovat cestování, pokud je to možné. Vyjíždět autem jen v nutných případech a počítat s prodloužením doby jízdy. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky a sněhové řetězy. Zajistit úklid sněhu ze střech. Dbát na bezpečnost s ohledem na nebezpečí pádu většího objemu sněhu ze střech. Nepřibližovat se k spadlým drátům elektrického vedení a být připraven na možné výpadky elektřiny. Na horách omezit túry, sledovat a dodržovat pokyny Horské služby. Aktuální situaci sledovat na výstupu z meteorologických radarů v mobilní aplikaci ČHMÚ nebo na webových stránkách www.chmi.cz.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T16:00:00.000Z",
+      "platiDo": "2026-11-27T11:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    },
+    {
+      "id": "chmi:Velmi rizikové sněhové jevy:2026-11-26T16:00:00.000Z:nezname",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "nezname",
+        "popis": "Olomoucký kraj (Jeseník)"
+      },
+      "titulek": "Velmi rizikové sněhové jevy",
+      "text": "Vydatné sněžení s tvorbou vysoké sněhové pokrývky o výšce 8 až 20 cm. V kombinaci prachového sněhu a silnějšího větru se budou tvořit sněhové jazyky. Riziko silného sněžení se sníženou dohledností a rychlou tvorbou sněhové pokrývky 2 cm/1h. Četné komplikace v dopravě, energetice a ve službách. Špatně sjízdné a schůdné trasy a komunikace, špatná viditelnost, řízení vozidla problematické. Omezení nebo přerušení provozu na velkém počtu dopravních cest, zvýšené množství uzavírek, výluk, zpoždění spojů a zvýšený výskyt dopravních nehod. Riziko škod na stavbách, narušení statiky plochých střech. Riziko úrazu v důsledku pádu sněhu ze střech. Riziko lámání větví stromů a pádu na elektrická a trakční vedení, následné výpadky v dodávkách elektřiny. Částečné omezení zásobování a služeb.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Omezit nebo přeplánovat cestování, pokud je to možné. Vyjíždět autem jen v nutných případech a počítat s prodloužením doby jízdy. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky a sněhové řetězy. Zajistit úklid sněhu ze střech. Dbát na bezpečnost s ohledem na nebezpečí pádu většího objemu sněhu ze střech. Nepřibližovat se k spadlým drátům elektrického vedení a být připraven na možné výpadky elektřiny. Na horách omezit túry, sledovat a dodržovat pokyny Horské služby. Aktuální situaci sledovat na výstupu z meteorologických radarů v mobilní aplikaci ČHMÚ nebo na webových stránkách www.chmi.cz.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-11-25T10:32:48.000Z",
+      "platiOd": "2026-11-26T16:00:00.000Z",
+      "platiDo": "2026-11-27T11:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
       "coNevime": [],
