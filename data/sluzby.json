@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-25T04:03:12.185Z",
+  "aktualizovano": "2026-11-25T08:03:39.684Z",
   "stavy": [
     {
       "klic": "cloudflare",
-      "stav": "omezeni",
-      "popis": "Minor Service Outage",
+      "stav": "vypadek",
+      "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Firewall Configuration Delay",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/xufkpdtfdglk",
+          "aktualizovano": "2026-11-25T07:49:18.356Z"
+        },
         {
           "nazev": "Magic Transit Degraded Performance",
           "odkaz": "https://www.cloudflarestatus.com/incidents/no721jcnlrbh",
@@ -23,16 +28,25 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-25T04:03:12.185Z",
+      "zkontrolovano": "2026-11-25T08:03:39.684Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-25T04:03:12.185Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India",
+          "odkaz": "https://stspg.io/0ksyj3jq48yb",
+          "aktualizovano": "2026-11-24T23:31:09.036-08:00"
+        }
+      ],
+      "postizene": [
+        "Calling (Inbound/Outbound)",
+        "Zoom Phone - APAC"
+      ],
+      "zkontrolovano": "2026-11-25T08:03:39.684Z",
       "chyba": null
     },
     {
@@ -41,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-25T04:03:12.185Z",
+      "zkontrolovano": "2026-11-25T08:03:39.684Z",
       "chyba": null
     }
   ]
