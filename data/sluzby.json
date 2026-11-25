@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-25T12:03:52.160Z",
+  "aktualizovano": "2026-11-25T20:03:27.973Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Elevated R2 errors for buckets in APAC region",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/2quqh864hxdi",
+          "aktualizovano": "2026-11-25T17:23:55.811Z"
+        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -18,7 +23,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-25T12:03:52.160Z",
+      "zkontrolovano": "2026-11-25T20:03:27.973Z",
       "chyba": null
     },
     {
@@ -27,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-25T12:03:52.160Z",
+      "zkontrolovano": "2026-11-25T20:03:27.973Z",
       "chyba": null
     },
     {
@@ -36,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-25T12:03:52.160Z",
+      "zkontrolovano": "2026-11-25T20:03:27.973Z",
       "chyba": null
     }
   ]
