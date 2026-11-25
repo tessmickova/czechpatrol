@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-25T00:03:30.650Z",
+  "aktualizovano": "2026-11-25T01:33:56.773Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
-        {
-          "nazev": "R2 elevated errors and timeouts for requests from South America",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/k8utv1c3ubf2",
-          "aktualizovano": "2026-11-24T21:54:41.590Z"
-        },
         {
           "nazev": "Magic Transit Degraded Performance",
           "odkaz": "https://www.cloudflarestatus.com/incidents/no721jcnlrbh",
@@ -28,7 +23,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-25T00:03:30.650Z",
+      "zkontrolovano": "2026-11-25T01:33:56.773Z",
       "chyba": null
     },
     {
@@ -37,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-25T00:03:30.650Z",
+      "zkontrolovano": "2026-11-25T01:33:56.773Z",
       "chyba": null
     },
     {
@@ -46,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-25T00:03:30.650Z",
+      "zkontrolovano": "2026-11-25T01:33:56.773Z",
       "chyba": null
     }
   ]
