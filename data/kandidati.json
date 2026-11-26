@@ -1797,44 +1797,283 @@
     }
   },
   {
-    "id": "k-fa668825eaafdece",
-    "zachyceno": "2026-11-05T08:02:48.236Z",
-    "publikovano": "2026-11-05T06:07:40.000Z",
+    "id": "k-9c4abf3908553fec",
+    "zachyceno": "2026-11-26T08:03:06.779Z",
+    "publikovano": "2026-11-26T07:55:19.000Z",
     "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-lide-se-silnymi-svitilnami-k-polskym-hranicim-dorazili-cerni-rusove-40606809",
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/26/kushner-blames-stalled-peace-talks-on-alleged-ukrainian-attack-on-putin-s-residence-an-attack-both-u-s-intelligence-and-trump-say-did-not-happen",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "K polským hranicím dorazili Černí Rusové",
-    "titulekPuvodni": "K polským hranicím dorazili Černí Rusové",
-    "shrnuti": "Pohyb ruské sabotážní skupiny Černí Rusové byl důvodem rozsáhlé operace polských bezpečnostních sil u hranic s ruskou Kaliningradskou oblastí. Uvedl to polský veřejnoprávní rozhlas Polskie Radio 24. Varšava na severovýchodě svého území zřídila speciální jednotku. Reagovala tak na varování rozvědky p",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
+    "titulek": "Kushner blames stalled peace talks on alleged Ukrainian attack on Putin’s residence — an attack both U.S. intelligence and Trump say did not happen",
+    "titulekPuvodni": "Kushner blames stalled peace talks on alleged Ukrainian attack on Putin’s residence — an attack both U.S. intelligence and Trump say did not happen",
+    "shrnuti": "U.S. presidential envoy Jared Kushner said peace negotiations between Ukraine and Russia stalled in early 2026 after an alleged Ukrainian attack on Vladimir Putin’s residence in Valdai. He made the comments in an interview with Axel Springer CEO Mathias Döpfner for Döpfner’s podcast MD Meets.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
     "kategorie": [
-      "sabotaz",
-      "hranice",
-      "rusko",
-      "cr"
+      "hybridni",
+      "rusko"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "sabotaz",
-      "hranice",
-      "rusk",
-      "rozhlas"
+      "attack on",
+      "russia"
     ],
-    "naliehave": {
-      "druh": "hranice-nato",
-      "stupen": 2,
-      "proc": "operace+hranic"
-    },
+    "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "K polským hranicím dorazili Černí Rusové - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nK polským hranicím dorazili Černí Rusové\nTaťána Voců\n3:04\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 5. 11., 7:07\nPohyb ruské sabotážní skupiny Černí Rusové byl důvodem rozsáhlé operace polských bezpečnostních sil u hranic s ruskou Kaliningradskou oblastí. Uvedl to polský veřejnoprávní rozhlas Polskie Radio 24. Varšava na severovýchodě svého území zřídila speciální jednotku. Reagovala tak na varování rozvědky před možnými ruskými sabotážemi a vpády přes hranice.\nFoto: Kuba Stezycki, Reuters\nPolští vojáci z 18. mechanizované divize hlídají polskou hranici s Běloruskem\nČlánek\n„V reakci na hrozbu sabotáží posílily polské bezpečnostní složky ochranu hranic,“ vysvětlila stanice přesuny na polské straně hranice s ruskou Kaliningradskou oblastí. Velení polských bezpečnostních sil vyslalo do Podlaského a Varmijsko-mazurského vojvodství posily, včetně příslušníků polské speciální jednotky GROM, dalších příslušníků pohraniční stráže a policejních protiteroristických jednotek.\nPodle polského premiéra Donalda Tuska se posily aktivovaly, když pohraničníci v noci na úterý zaznamenali…",
-      "stazeno": "2026-11-05T08:02:50.920Z",
+      "text": "Kushner blames stalled peace talks on alleged Ukrainian attack on Putin’s residence — an attack both U.S. intelligence and Trump say did not happen — Meduza\nSkip to main content\nKushner blames stalled peace talks on alleged Ukrainian attack on Putin’s residence — an attack both U.S. intelligence and Trump say did not happen\nNovember 26, 2026, 7:55 am\nSource: MD Meets\nU.S. presidential envoy Jared Kushner said peace negotiations between Ukraine and Russia stalled in early 2026 after an alleged Ukrainian attack on Vladimir Putin’s residence in Valdai. He made the comments in an interview with Axel Springer CEO Mathias Döpfner for Döpfner’s podcast MD Meets.\nKushner said he was asked to join the peace talks in November 2025, when the U.S. “started making some progress.”\n“Then there was the attack the Ukrainians did on Putin’s house at the end of December which I think pushed [Putin] back,” Kushner said.\nHe added that the U.S. tried again starting in February to make progress in the talks, but “it seemed like there wasn’t really a way forward at that time,” because Ukraine and Russia wanted to see whether they could gain ground on the battlefield.\n“Between February and September…",
+      "stazeno": "2026-11-26T08:03:06.882Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-cac3f2b42d2e23f1",
+    "zachyceno": "2026-11-26T08:03:06.749Z",
+    "publikovano": "2026-11-26T06:16:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/26/8064725/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrainian air defences down 87 Russian drones overnight, strikes recorded at 20 locations",
+    "titulekPuvodni": "Ukrainian air defences down 87 Russian drones overnight, strikes recorded at 20 locations",
+    "shrnuti": "Ukrainian air defences destroyed 87 Russian drones overnight. Strikes were recorded at 20 locations, while downed drones or their debris fell at six others.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+fell",
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia attacks Ukraine with missiles and 113 drones overnight, 87 drones destroyed | Ukrainska Pravda\nInfographic: Ukraine's Air Force\nRussian forces attacked Ukraine with ballistic missiles and 113 drones on the night of 25-26 November. Air defences have destroyed or jammed 87 UAVs.\nSource: Ukraine's Air Force\nDetails: Starting at 18:00 on 25 November, the Russians attacked Ukraine with Iskander-M/Zircon/S-400 ballistic missiles from Russia's Bryansk and Kursk oblasts as well as 113 Shahed (76 jet-powered) and Gerbera attack drones and Parodiya decoy UAVs. The drones were launched from the Russian cities of Oryol, Bryansk, Primorsko-Akhtarsk and Millerovo as well as from temporarily occupied Donetsk and Hvardiiske in Crimea.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAircraft, anti-aircraft missile units, electronic warfare assets, unmanned systems units and mobile fire groups from Ukraine's defence forces have been involved in repelling the attack.\nEarly reports indicated that as of 08:00, Ukrainian air defence forces had destroyed or jammed 87 Shahed (52 jet-powered), Gerbera and other types of drones.\nHits by drones have been recorded at 20 locations and the fall of downed UAVs (debris) at six…",
+      "stazeno": "2026-11-26T08:03:06.897Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b1aede6ea7fca1ed",
+    "zachyceno": "2026-11-26T08:03:06.683Z",
+    "publikovano": "2026-11-26T06:00:04.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/video-ucraina-foloseste-un-laser-pentru-a-dobori-o-drona-rusa-este-pentru-prima-data-kievul-testeaza-noul-sistem-de-aparare.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "VIDEO Ucraina folosește un laser pentru a doborî o dronă rusă / „Este pentru prima dată” / Kievul testează noul sistem de apărare",
+    "titulekPuvodni": "VIDEO Ucraina folosește un laser pentru a doborî o dronă rusă / „Este pentru prima dată” / Kievul testează noul sistem de apărare",
+    "shrnuti": "Ucraina a doborât pentru prima dată o dronă rusă folosind un laser de luptă, relatează presa italiană. Această realizare, considerată o premieră mondială, a fost anunțată de Serghei Beskrestnov, consilierul președintelui Volodymyr Zelenski în domeniul tehnologiilor de apărare. Ukraine has shot down ",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "shot down",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "VIDEO Ucraina folosește un laser pentru a doborî o dronă rusă / „Este pentru prima dată” / Kievul testează noul sistem de apărare\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nHome » Analize » VIDEO Ucraina folosește un laser pentru a doborî o dronă rusă / „Este pentru prima dată” / Kievul testează noul sistem de apărare\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVIDEO Ucraina folosește un laser pentru a doborî o dronă rusă / „Este pentru prima dată” / Kievul testează noul sistem de apărare\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n26 nov. 2026 \r\n\r\n&bull; 807\n\r\n\r\n\r\nAugustin Majearu &bull;\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSHARE: \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSursa foto: Captură video\n\r\n\r\n\r\n\r\n\r\n\r\nAdaugă-ne ca sursă preferată\nUrmărește-ne in Discover\n\r\n\r\nAscultă articolul\n\r\n\r\n\r\n\r\n\r\n\r\nUcraina a doborât pentru prima dată o dronă rusă folosind un laser de luptă, relatează presa italiană.\nAceastă realizare, considerată o premieră mondială, a fost anunțată de Serghei Beskrestnov, consilierul președintelui Volodymyr Zelenski în domeniul tehnologiilor de apărare.\nUkraine has shot down a Russian jet-powered Shahed drone using a laser air defense system for the first time in history, presidential…",
+      "stazeno": "2026-11-26T08:03:06.925Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-1981c57469e078fd",
+    "zachyceno": "2026-11-26T08:03:03.771Z",
+    "publikovano": "2026-11-26T05:43:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/spolecnost/byli-pripraveni-branit-ceskoslovenske-hranice-jejich-pribehy-ted-chteji-v_2611260643_tez",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Byli připraveni bránit československé hranice. Jejich příběhy teď chtějí v Deštném oživit a připomínat",
+    "titulekPuvodni": "Byli připraveni bránit československé hranice. Jejich příběhy teď chtějí v Deštném oživit a připomínat",
+    "shrnuti": "V Deštném v Orlických horách připomenou vojáky, kteří tam před druhou světovou válkou připravovali obranu československých hranic. Spolek pro obnovu lehkého opevnění Deštné-Zákoutí plánuje novou expozici, naučnou stezku i opravu bunkrů. Členové navíc pátrají po fotografiích a dalších památkách na te",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "hranice",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "hranic+vojak",
+      "hranice",
+      "vojak"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-26T08:03:07.877Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-c1536e739e29b884",
+    "zachyceno": "2026-11-26T08:03:04.407Z",
+    "publikovano": "2026-11-26T05:16:17.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/nov/26/japanese-journalist-yuki-imai-detained-in-russia-wife-pleads-his-release",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‘Trapped in grief’: wife of Japanese journalist detained by Russia pleads for his release",
+    "titulekPuvodni": "‘Trapped in grief’: wife of Japanese journalist detained by Russia pleads for his release",
+    "shrnuti": "Yuki Imai being held in Moscow on allegations he conducted ‘espionage’ while working for a newspaper in Sakhalin island in Russia’s far east The wife of a Japanese journalist who has been detained in Russia for more than a month on suspicion of spying has issued an emotive appeal for his release. Yu",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested+spy",
+      "espionage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "‘Trapped in grief’: wife of Japanese journalist detained by Russia pleads for his release | Japan | The Guardian\nSkip to main content Skip to navigation\nYuki Imai with his wife, Nozomi, and their daughter in front of the Sakhalin Regional Museum in Yuzhno-Sakhalinsk, Russia, on 19 September 2025. Photograph: Nozomi Imai\nView image in fullscreen\nYuki Imai with his wife, Nozomi, and their daughter in front of the Sakhalin Regional Museum in Yuzhno-Sakhalinsk, Russia, on 19 September 2025. Photograph: Nozomi Imai\n‘Trapped in grief’: wife of Japanese journalist detained by Russia pleads for his release\nYuki Imai being held in Moscow on allegations he conducted ‘espionage’ while working for a newspaper in Sakhalin island in Russia’s far east\nThe wife of a Japanese journalist who has been detained in Russia for more than a month on suspicion of spying has issued an emotive appeal for his release.\nYuki Imai, a reporter for the Hokkaido Shimbun, was arrested in mid-October as he was preparing to return to Japan from a two-year assignment at the Japanese newspaper’s bureau in the city of Yuzhno-Sakhalinsk, on the island of Sakhalin in Russia’s far east.\nRussian authorities alleged that…",
+      "stazeno": "2026-11-26T08:03:07.929Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-61ca90a70c5c1ce5",
+    "zachyceno": "2026-11-26T08:03:06.755Z",
+    "publikovano": "2026-11-26T05:09:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/26/8064721/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russians strike apartment building in Kharkiv, killing two people",
+    "titulekPuvodni": "Russians strike apartment building in Kharkiv, killing two people",
+    "shrnuti": "Two people have been killed in a Russian drone attack on Kharkiv's Novobavarskyi district on 26 November. Three people were previously reported injured, with others potentially trapped under the rubble.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian Shahed drone strike on Kharkiv apartment building kills two people | Ukrainska Pravda\nA firefighter. Stock photo: State Emergency Service of Ukraine on Telegram\nTwo people have been killed in a Russian strike on a residential building in Kharkiv on the morning of 26 November.\nSource: Kharkiv Mayor Ihor Terekhov\nQuote: \"One person has been killed as a result of a strike on a high-rise residential building.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Terekhov later added that another body had been found in the apartment struck by a Russian Shahed drone.\nBackground: A Russian drone struck a high-rise residential building in Kharkiv's Novobavarskyi district in the early morning, injuring three people. It was also reported that people might be trapped under the rubble.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKharkiv\ncivilian casualties\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKharkiv\nTwo injured in Russian drone strike on apartment building in Kharkiv\nRussian Shahed drone hits kindergarten in Kharkiv, leaving four injured\nRussians attack outskirts of Kharkiv, injuring two people\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-11-26T08:03:07.944Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ea368e0418de4236",
+    "zachyceno": "2026-11-26T08:03:06.759Z",
+    "publikovano": "2026-11-26T04:40:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/26/8064717/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Number of people injured in Russian ballistic missile attack on Kyiv rises to seven, two in serious condition",
+    "titulekPuvodni": "Number of people injured in Russian ballistic missile attack on Kyiv rises to seven, two in serious condition",
+    "shrnuti": "Two people are in a serious condition following a Russian missile attack on the Ukrainian capital overnight. Early reports indicate that non-residential buildings were struck in the Desnianskyi district.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian ballistic missile attack on Kyiv leaves seven people injured | Ukrainska Pravda\nRescue workers. Stock photo: State Emergency Service of Ukraine in Kyiv\nSeven people have been injured in a Russian ballistic missile attack on the city of Kyiv on the night of 25-26 November.\nSource: Kyiv City Military Administration\nQuote: \"Seven people have been injured as a result of an overnight enemy attack on the capital.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Russia attacked Kyiv with ballistic missiles on the evening of 25 November. The all-clear was given after midnight.\nEarly reports also indicate that non-residential buildings in the city's Desnianskyi district were struck.\nBackground: Kyiv Mayor Vitali Klitschko previously reported that two people were in a serious condition.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKyiv\nattack\nmissile strike\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv\nRussian drone damages Dovzhenko Film Studio hostel in Kyiv – video, photos\nPolice post photos of 16-storey Kyiv apartment block damaged by Russian drone\nRussian drone debris hits residential building in Kyiv, causing fire and injuring two people\nLatest…",
+      "stazeno": "2026-11-26T08:03:07.962Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-eae69481483fdf90",
+    "zachyceno": "2026-11-26T08:03:06.765Z",
+    "publikovano": "2026-11-26T00:45:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/26/8064710/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US envoy Kushner claims Ukraine delayed peace talks with last year's attack on Putin's house",
+    "titulekPuvodni": "US envoy Kushner claims Ukraine delayed peace talks with last year's attack on Putin's house",
+    "shrnuti": "US Special Envoy Jared Kushner has claimed that an alleged Ukrainian attack on Vladimir Putin's residence in December 2025 hindered peace negotiations. He also said that talks are currently deadlocked over the territorial issue.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Kushner blames alleged attack on Putin's residence for setback in Ukraine-Russia peace talks | Ukrainska Pravda\nJared Kushner. Photo: Yuliia Ovsiannikova / Ukrinform / NurPhoto via Getty Images\nUS President Donald Trump's Special Envoy Jared Kushner has accused Ukraine of delaying negotiations with Russia due to an alleged \"attack\" on Kremlin leader Vladimir Putin's residence in 2025. He has also said that the talks have now reached an impasse over the territorial issue.\nSource: Kushner in an interview with Mathias Döpfner, CEO of media group Axel Springer, on the MD Meets podcast\nQuote: \"So I got asked to work on this about a year ago and we started making some progress in about November and we started working. Then there was the attack the Ukrainians did on Putin's house at the end of December which I think pushed him back.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"Between February and September we were in constant communication but we didn't see a lot of flexibility or opening from the sides where there would be overlap.\"\nDetails: Kushner was describing the progress made in negotiations between Russia and Ukraine over the past year of his involvement, up until the meetings with Putin and…",
+      "stazeno": "2026-11-26T08:03:07.984Z",
       "stav": 200
     }
   },
@@ -10469,250 +10708,6 @@
       "text": "Death toll from Russian strike on supermarket in Vyshneve rises to three\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 22 November 2026, 22:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe death toll from the Russian attack on a store in Vyshneve, Bucha district, Kyiv region, on the evening of November 22 has risen to three. Fifteen people were injured, including three children.\nVyshneve Mayor Illia Dikov announced this on Facebook , according to Ukrinform.\n\r\n\r\n&ldquo;A Shahed drone crashed into the NOVUS supermarket in the city of Vyshneve. The roof and the store premises were damaged. A fire engine from our community, police officers, and an ambulance were promptly dispatched to the scene,&rdquo; Dikov reported.\n\r\n\r\nThree…",
       "stazeno": "2026-11-22T20:02:53.713Z",
       "stav": 200
-    }
-  },
-  {
-    "id": "k-b6e5d54f978fc8e7",
-    "zachyceno": "2026-11-22T20:02:48.589Z",
-    "publikovano": "2026-11-22T19:29:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/22/8064075/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Child rescued alive from under the rubble in Dymer",
-    "titulekPuvodni": "Child rescued alive from under the rubble in Dymer",
-    "shrnuti": "Tymur Tkachenko has confirmed a third body was recovered from a partially destroyed five-storey apartment building in Dymer after a Russian drone strike.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+recovered",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Dymer strike death toll rises to three as rescue workers search rubble in Kyiv Oblast | Ukrainska Pravda\nThe damage in Dymer. Photo: State Emergency Service of Ukraine\nRescuers have recovered a third body and pulled a child alive from beneath the rubble of a residential building in Dymer, Kyiv Oblast.\nSource: Tymur Tkachenko , Head of Kyiv Oblast Military Administration\nQuote: \"Rescue workers have recovered the body of a third victim from beneath the rubble of a residential building in Dymer.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nUpdate: At 18:55, Tkachenko reported that during search and rescue operations in Dymer, rescue workers pulled a child out alive.\nBackground:\nIt had previously been reported that two people had been killed and four injured as a result of the Russian attack. One of those killed was an 18-year-old man.\nRescue workers were searching for 11 people, including two children.\nPresident Volodymyr Zelenskyy previously reported that a section of a five-storey apartment building in Dymer had been partially destroyed in a Russian drone strike. Nine people were evacuated, and 14 others were unaccounted for .\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKyiv…",
-      "stazeno": "2026-11-22T20:02:55.056Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-0a9708feba14dbc9",
-    "zachyceno": "2026-11-23T08:03:27.746Z",
-    "publikovano": "2026-11-22T19:15:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/22/8064095/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russians drop aerial bomb on Sloviansk, causing casualties – photo",
-    "titulekPuvodni": "Russians drop aerial bomb on Sloviansk, causing casualties – photo",
-    "shrnuti": "A Russian guided aerial bomb hit an apartment building in Sloviansk, Donetsk Oblast, on 22 November, damaging nine residential buildings and leaving several civilians with blast injuries.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian FAB-500 bomb strike on Sloviansk kills two and injures three | Ukrainska Pravda\nDestruction in Sloviansk. Photo: National Police of Ukraine\nTwo people have been killed and three injured in a Russian attack on Sloviansk in Donetsk Oblast.\nSource: National Police of Ukraine in Donetsk Oblast; Donetsk Oblast Prosecutor's Office\n\r\n\r\n\r\n\r\n\r\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\nDetails: The attack occurred at 14:57 on 22 November. The Russians struck the city with a FAB-500 bomb fitted with a UMPK (Universal Gliding and Correction Module) .\nThe guided aerial bomb hit one section of an apartment building. Nine apartment buildings were damaged.\nA 56-year-old man and a woman were killed in the attack. Two men aged 42 and 78 and a 62-year-old woman were injured. Those injured suffered blast injuries, concussion and multiple wounds.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nDonetsk Oblast\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDonetsk Oblast\nEleven injured in Russian attacks on Donetsk and Kherson oblasts\nKremlin says Putin and Trump did not discuss \"humanitarian mission\" in Kostiantynivka\nFour people killed in Russian attacks on Donetsk Oblast, including married…",
-      "stazeno": "2026-11-25T04:03:12.151Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-0a72272c8d43a3ce",
-    "zachyceno": "2026-11-22T20:02:45.754Z",
-    "publikovano": "2026-11-22T18:50:56.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials",
-    "titulekPuvodni": "Russian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials",
-    "shrnuti": "No one has claimed responsibility for the strike on the vessel, which had docked on its way back to Russia A suspected Ukrainian drone attack caused an explosion on a Russian warship docked at the naval base in the Libyan port city of Benghazi, Libyan officials have said. The strike severely damaged",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials | Russia | The Guardian\nSkip to main content Skip to navigation\nSmoke rises from a fire after an explosion on Merkury, a Russian warship docked at Benghazi port, Libya. Photograph: 2026 Planet Labs PBC/Reuters\nView image in fullscreen\nSmoke rises from a fire after an explosion on Merkury, a Russian warship docked at Benghazi port, Libya. Photograph: 2026 Planet Labs PBC/Reuters\nRussian ship hit in Benghazi by suspected Ukrainian drone attack, say Libyan officials\nNo one has claimed responsibility for the strike on the vessel, which had docked on its way back to Russia\nA suspected Ukrainian drone attack caused an explosion on a Russian warship docked at the naval base in the Libyan port city of Benghazi, Libyan officials have said.\nThe strike severely damaged the Merkury, a Russian navy warship, and ignited a fire at the naval base, they said. Several Ukrainian sea drones were launched at the ship from a base run by Ukrainian forces in western Libya , according to an initial investigation into the attack. At least four drones were intercepted and destroyed, while two hit the warship, the…",
-      "stazeno": "2026-11-22T20:02:55.236Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-98ecb510e81cfa1e",
-    "zachyceno": "2026-11-22T20:02:46.031Z",
-    "publikovano": "2026-11-22T18:43:06.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/ausland/afrika/russisches-schiff-libyen-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Explosion auf russischem Schiff in Libyen - Behörden vermuten Drohnenangriff",
-    "titulekPuvodni": "Explosion auf russischem Schiff in Libyen - Behörden vermuten Drohnenangriff",
-    "shrnuti": "In einem Hafen der ostlibyschen Stadt Bengasi hat es eine Explosion auf einem russischen Kriegsschiff gegeben. Die Behörden gehen von einem Angriff mit Drohnen aus. Berichten zufolge wird die Ukraine verantwortlich gemacht.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Explosion auf russischem Schiff in Libyen - Behörden vermuten Drohnenangriff | tagesschau.de\nHauptnavigation\nNebennavigation\nInhalt\nFußzeile\nMutmaßlicher Drohnenangriff\nExplosion auf russischem Schiff in Libyen\nStand: 22.11.2026 • 19:43 Uhr\nIn einem Hafen der ostlibyschen Stadt Bengasi hat es eine Explosion auf einem russischen Kriegsschiff gegeben. Die Behörden gehen von einem Angriff mit Drohnen aus. Berichten zufolge wird die Ukraine verantwortlich gemacht.\nAn einer Marinebasis im östlichen Libyen hat sich auf einem russischen Kriegsschiff eine schwere Explosion ereignet. Die Regierung im Osten des faktisch gespaltenen Landes teilte mit, vermutlich sei das Schiff mit Drohnen angegriffen worden. Die Nachrichtenagentur dpa will aus Kreisen der Militärbasis in Bengasi erfahren haben, sechs ukrainische Drohnenboote hätten das Schiff angegriffen. Ein libyscher Fernsehsender berichtete, vier dieser sechs Drohnenboote seien daraufhin untauglich gemacht worden.\nExperten zufolge handelt es sich bei dem Schiff um die Korvette \"Merkury\" der russischen Marine. Sie sei durch die Explosion höchstwahrscheinlich zerstört worden.\nDie Ukraine wurde schon für mehrere Angriffe auf russische…",
-      "stazeno": "2026-11-22T20:02:55.292Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9a6b24124c0fd954",
-    "zachyceno": "2026-11-22T20:02:48.557Z",
-    "publikovano": "2026-11-22T18:38:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4187456-death-toll-from-russian-attack-on-supermarket-in-vyshneve-rises-to-two.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Death toll from Russian attack on supermarket in Vyshneve rises to two",
-    "titulekPuvodni": "Death toll from Russian attack on supermarket in Vyshneve rises to two",
-    "shrnuti": "The number of people killed in the Russian attack on a store in Vyshneve, Bucha district, Kyiv region, on the evening of November 22 has risen to two.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Death toll from Russian attack on supermarket in Vyshneve rises to two\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 22 November 2026, 22:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people killed in the Russian attack on a store in Vyshneve, Bucha district, Kyiv region, on the evening of November 22 has risen to two.\nThe head of the Regional Military Administration, Tymur Tkachenko, announced this on Telegram , according to Ukrinform.\n\r\n\r\n&ldquo;Unfortunately, the death toll from the strike on Vyshneve has risen to two. The number of injured has increased to eight,&rdquo; Tkachenko said.\n\r\n\r\nRead also: Russian forces pound Dnipropetrovsk region with over 40 attacks, one killed, several injured \r\n\r\nAs previously…",
-      "stazeno": "2026-11-22T20:02:56.134Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-432ab3b6d4b7ee1a",
-    "zachyceno": "2026-11-22T20:02:45.085Z",
-    "publikovano": "2026-11-22T18:02:21.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/vsechny-tri-objekty-ktere-v-patek-vletely-do-polskeho-prostoru-byly-ruske-strely-379844",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Všechny tři objekty, které v pátek vletěly do polského prostoru, byly ruské střely",
-    "titulekPuvodni": "Všechny tři objekty, které v pátek vletěly do polského prostoru, byly ruské střely",
-    "shrnuti": "Všechny tři objekty, které v pátek vletěly do polského vzdušného prostoru a zřítily se, byly ruské střely s plochou dráhou letu Ch-101. Podle agentury Reuters to uvedli polští vyšetřovatelé. Původně se mluvilo o dvou střelách a jednom dronu. Předběžné výsledky zkoumání zbytků střel ukazují na to, že",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zritil",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Všechny tři objekty, které v pátek vletěly do polského prostoru, byly ruské střely — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nVšechny tři objekty, které v pátek vletěly do polského prostoru, byly ruské střely\nČTK\n, oms\npřed 2 h hodinami | Zdroj: ČTK\nPolští vojáci nedaleko místa, na nějž spadlo několik objektů, později identifikovaných jako ruské střely (20. listopadu 2026)\nZdroj: Reuters/Kacper Pempel\nVšechny tři objekty, které v pátek vletěly do polského vzdušného prostoru a zřítily se, byly ruské střely s plochou dráhou letu Ch-101. Podle agentury Reuters to uvedli polští vyšetřovatelé. Původně se mluvilo o dvou střelách a jednom dronu. Předběžné výsledky zkoumání zbytků střel ukazují na to, že byly vyrobeny v posledním čtvrtletí letošního roku v Moskevské oblasti.\nPolský premiér Donald Tusk incident už v pátek označil za provokaci a poukázal na možnou souvislost s tím, že Polsko hostí cvičení vojáků koalice ochotných sdružující země podporující Ukrajinu.\nodkaz\nV Polsku se zřítily ruské střely a dron. Varšava mluví o provokaci\nJak podotýká…",
-      "stazeno": "2026-11-22T20:02:56.541Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-aa634bad14baeeaf",
-    "zachyceno": "2026-11-22T20:02:45.028Z",
-    "publikovano": "2026-11-22T18:02:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/rusko-zacalo-z-baltskeho-more-odtahovat-zasazenou-nakladni-lod-hasit-ji-pomahalo_2611221902_dns",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rusko začalo z Baltského moře odtahovat zasaženou nákladní loď. Hasit ji pomáhalo Finsko i Estonsko",
-    "titulekPuvodni": "Rusko začalo z Baltského moře odtahovat zasaženou nákladní loď. Hasit ji pomáhalo Finsko i Estonsko",
-    "shrnuti": "Ruská záchranná loď začala v neděli z finských vod odtahovat poškozenou ruskou nákladní loď Sparta II, kterou v sobotu v Baltském moři zasáhly drony. Informovala o tom agentura Reuters s odvoláním na finskou pobřežní stráž. Zásahu předcházelo dvoudenní hašení požáru. Všech 16 členů posádky bylo evak",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-22T20:02:58.148Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
     }
   }
 ]
