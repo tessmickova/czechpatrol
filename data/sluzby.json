@@ -1,21 +1,11 @@
 {
-  "aktualizovano": "2026-11-26T16:04:19.956Z",
+  "aktualizovano": "2026-11-26T20:03:15.007Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Cloudflare Dashboard and Cloudflare API service issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/xiqj67vl5pqm",
-          "aktualizovano": "2026-11-26T16:03:50.006Z"
-        },
-        {
-          "nazev": "AI Gateway – Elevated errors for Gemini 4 models using Unified Billing",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/filussqshtfq",
-          "aktualizovano": "2026-11-26T15:36:40.346Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -28,7 +18,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-26T16:04:19.956Z",
+      "zkontrolovano": "2026-11-26T20:03:15.007Z",
       "chyba": null
     },
     {
@@ -37,7 +27,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-26T16:04:19.956Z",
+      "zkontrolovano": "2026-11-26T20:03:15.007Z",
       "chyba": null
     },
     {
@@ -46,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-26T16:04:19.956Z",
+      "zkontrolovano": "2026-11-26T20:03:15.007Z",
       "chyba": null
     }
   ]
