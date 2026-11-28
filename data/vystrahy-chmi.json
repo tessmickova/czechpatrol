@@ -1,7 +1,7 @@
 {
-  "nacteno": "2026-11-28T08:01:26.318Z",
-  "odeslano": "2026-11-27T19:00:47.000Z",
-  "identifikator": "2.49.0.0.203.0.CZ.261127190047.XOCZ50_OKPR_000422",
+  "nacteno": "2026-11-28T12:01:20.574Z",
+  "odeslano": "2026-11-28T09:08:20.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.261128090820.XOCZ50_OKPR_000423",
   "vystrahy": [
     {
       "id": "chmi:Silný mráz:2026-11-28T17:00:00.000Z:Moravskoslezský",
@@ -18,7 +18,7 @@
       "pokyn": "Prověřit funkčnost všech systémů vytápění a systémů záložních zdrojů energie u citlivých provozů. Pečlivě plánovat cesty a sledovat aktuální situaci v dopravě, u elektromobilů sledovat stav nabití akumulátoru a včas dobíjet.",
       "vydavatel": "ČHMÚ, Marjan Sandev",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-27T19:00:47.000Z",
+      "vydano": "2026-11-28T09:08:20.000Z",
       "platiOd": "2026-11-28T17:00:00.000Z",
       "platiDo": "2026-11-29T08:00:00.000Z",
       "odvolano": null,
@@ -41,7 +41,7 @@
       "pokyn": "Prověřit funkčnost všech systémů vytápění a systémů záložních zdrojů energie u citlivých provozů. Pečlivě plánovat cesty a sledovat aktuální situaci v dopravě, u elektromobilů sledovat stav nabití akumulátoru a včas dobíjet.",
       "vydavatel": "ČHMÚ, Marjan Sandev",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-27T19:00:47.000Z",
+      "vydano": "2026-11-28T09:08:20.000Z",
       "platiOd": "2026-11-28T17:00:00.000Z",
       "platiDo": "2026-11-29T08:00:00.000Z",
       "odvolano": null,
@@ -52,7 +52,7 @@
       "detail": null
     },
     {
-      "id": "chmi:Silná zátěž chladem:2026-11-27T18:57:32.000Z:nezname",
+      "id": "chmi:Silná zátěž chladem:2026-11-28T09:06:33.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
@@ -64,8 +64,8 @@
       "pokyn": "Dbát na vhodné oblečení, omezit venkovní aktivity, zejména v nejchladnější části dne (většinou ráno). Plánovat zvýšenou fyzickou zátěž na teplejší část dne. Sledovat svůj zdravotní stav. Plánovat cesty s ohledem na aktuální situaci v dopravě.",
       "vydavatel": "ČHMÚ, Marjan Sandev",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-27T19:00:47.000Z",
-      "platiOd": "2026-11-27T18:57:32.000Z",
+      "vydano": "2026-11-28T09:08:20.000Z",
+      "platiOd": "2026-11-28T09:06:33.000Z",
       "platiDo": "2026-11-29T05:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
@@ -75,7 +75,7 @@
       "detail": null
     },
     {
-      "id": "chmi:Silný vítr:2026-11-27T23:00:00.000Z:nezname",
+      "id": "chmi:Silný vítr:2026-11-28T09:06:33.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
@@ -87,8 +87,8 @@
       "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
       "vydavatel": "ČHMÚ, Marjan Sandev",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-27T19:00:47.000Z",
-      "platiOd": "2026-11-27T23:00:00.000Z",
+      "vydano": "2026-11-28T09:08:20.000Z",
+      "platiOd": "2026-11-28T09:06:33.000Z",
       "platiDo": "2026-11-28T17:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
@@ -98,7 +98,7 @@
       "detail": null
     },
     {
-      "id": "chmi:Rizikové sněhové jevy:2026-11-27T18:57:32.000Z:nezname",
+      "id": "chmi:Rizikové sněhové jevy:2026-11-28T09:06:33.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
@@ -110,32 +110,9 @@
       "pokyn": "Jezdit a chodit velmi opatrně, přizpůsobit jízdu stavu komunikace. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky, na horách i sněhové řetězy. Na horách dodržovat pokyny Horské služby.",
       "vydavatel": "ČHMÚ, Marjan Sandev",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-27T19:00:47.000Z",
-      "platiOd": "2026-11-27T18:57:32.000Z",
+      "vydano": "2026-11-28T09:08:20.000Z",
+      "platiOd": "2026-11-28T09:06:33.000Z",
       "platiDo": "2026-11-28T20:00:00.000Z",
-      "odvolano": null,
-      "opraveno": null,
-      "coNevime": [],
-      "jistota": "Likely",
-      "puvod": "ČHMÚ, výstražná služba (CAP)",
-      "detail": null
-    },
-    {
-      "id": "chmi:Kluzké povrchy:2026-11-27T19:00:00.000Z:nezname",
-      "typ": "oficialni-pokyn",
-      "uzemi": {
-        "druh": "nezname",
-        "popis": "Středočeský kraj (Příbram), Jihočeský kraj (Blatná, České Budějovice, Český Krumlov, Kaplice, Písek, Prachatice, Strakonice, Trhové Sviny, Třeboň, Týn nad Vltavou, Vimperk, Vodňany), Plzeňský kraj (Horažďovice, Klatovy, Nepomuk, Sušice)"
-      },
-      "titulek": "Kluzké povrchy",
-      "text": "Kluzké komunikace v důsledku namrznutí.\n\nPravděpodobné komplikace zejména v silniční dopravě. Hůře sjízdné a schůdné kluzké trasy a komunikace. Nebezpečí úrazu v důsledku uklouznutí. Omezení v řízení vozidla v důsledku namrznutí komunikace. Riziko smyku zejména při náhlém brždění, v zatáčkách a při prudším zrychlování. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
-      "textJe": "zneni-vydavatele",
-      "pokyn": "Při pohybu venku chodit velmi opatrně, dlažba a nadchody namrzají nejdříve. Starší nebo méně mobilní lidé by měli omezit vycházení ven. Jezdit velmi opatrně, přizpůsobit jízdu stavu komunikace, mosty a estakády namrzají nejdříve. Počítat s prodloužením doby jízdy. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky.",
-      "vydavatel": "ČHMÚ, Miloš Dvořák",
-      "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-27T19:00:47.000Z",
-      "platiOd": "2026-11-27T19:00:00.000Z",
-      "platiDo": "2026-11-28T09:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
       "coNevime": [],
