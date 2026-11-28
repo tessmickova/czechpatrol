@@ -1,13 +1,12 @@
 {
-  "kdy": "2026-11-28T04:11:47.431Z",
+  "kdy": "2026-11-28T08:01:26.318Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
-      "ok": false,
-      "stav": 403,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "HTTP 403",
-      "vysledek": "chyba"
+      "vysledek": "obsah"
     },
     {
       "klic": "vlada",
@@ -197,10 +196,11 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "bmi-de",
