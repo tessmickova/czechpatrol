@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-27T22:38:08.495Z",
+  "aktualizovano": "2026-11-28T08:03:28.340Z",
   "stavy": [
     {
       "klic": "cloudflare",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
+      "stav": "vypadek",
+      "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Email Delivery Delays",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/27xnfvjy0n6j",
+          "aktualizovano": "2026-11-28T07:21:38.096Z"
+        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -18,7 +23,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-27T22:38:08.495Z",
+      "zkontrolovano": "2026-11-28T08:03:28.340Z",
       "chyba": null
     },
     {
@@ -27,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-27T22:38:08.495Z",
+      "zkontrolovano": "2026-11-28T08:03:28.340Z",
       "chyba": null
     },
     {
@@ -36,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-27T22:38:08.495Z",
+      "zkontrolovano": "2026-11-28T08:03:28.340Z",
       "chyba": null
     }
   ]
