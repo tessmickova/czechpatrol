@@ -1,12 +1,13 @@
 {
-  "kdy": "2026-11-28T04:01:19.072Z",
+  "kdy": "2026-11-28T04:11:47.431Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": 403,
       "pocetPolozek": 0,
-      "vysledek": "obsah"
+      "chyba": "HTTP 403",
+      "vysledek": "chyba"
     },
     {
       "klic": "vlada",
@@ -204,9 +205,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
